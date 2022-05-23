@@ -18,6 +18,10 @@
   <input type="submit" value="Submit">
 </form>
 
+<form>
+  <button type="submit" formaction="">Sign up></button>
+</form>
+
 
 </body>
 
