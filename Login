@@ -10,9 +10,12 @@
 
 <h1>NUSPlanner</h1>
 <h2>Welcome</h2>
-<form>
+<form action="/main_page.php">
   <label for="username">Username:</label>
-  <input type="text" id="username" name="username">
+  <input type="text" id="username" name="username"><br>
+  <label for="password">Password:</label>
+  <input type="text" id="password" name="password"><br>
+  <input type="submit" value="Submit">
 </form>
 
 
