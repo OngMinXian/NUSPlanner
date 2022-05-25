@@ -31,30 +31,40 @@ export default function Signup() {
     }
   return (
     <> 
-      <Card> 
-          <Card.Body>
-              <h2 className = "text-center mb-4"> Sign Up </h2>
+              <h2> Sign Up </h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit = {handleSubmit}>
-                  <Form.Group id = "email">
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control type = "email" ref = {emailRef} required />
-                  </Form.Group>
 
-                  <Form.Group id = "password">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type = "password" ref = {passwordRef} required />
-                  </Form.Group>
+                  <form>
+                      <label>Email:</label>
+                      <input 
+                        type="text"
+                        required="required"
+                        ref={emailRef}
+                        ></input>
+                  </form>
 
-                  <Form.Group id = "password-confirm">
-                      <Form.Label>Password Confirmation</Form.Label>
-                      <Form.Control type = "password" ref = {passwordConfirmRef} required />
-                  </Form.Group>
-                  <Button disabled = {loading} className = "w-100" type = "submit">Sign up</Button>
+                  <form>
+                      <label>Password:</label>
+                      <input 
+                        type="text"
+                        required="required"
+                        ref={passwordRef}
+                        ></input>
+                  </form>
+
+                  <form>
+                      <label>Password Confrimation:</label>
+                      <input 
+                        type="text"
+                        required="required"
+                        ref={passwordConfirmRef}
+                        ></input>
+                  </form>
+
+                  <button disabled = {loading} type = "submit">Sign up</button>
               </Form>
-          </Card.Body>
-      </Card>
-      <div className = "w-100 text-center mt-2"> Already have an account? <Link to = "/login"> Log In </Link> 
+      <div > Already have an account? <Link to = "/login"> Log In </Link> 
       </div>
     </>
   )
