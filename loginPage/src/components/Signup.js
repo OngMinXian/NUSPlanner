@@ -32,43 +32,53 @@ export default function Signup() {
         setLoading(false)
     }
   return (
-    <> 
-              <img src={Icon} />
-              <h1>NUSPlanner</h1>
-              <h2> Sign Up </h2>
-              {error && <Alert variant="danger">{error}</Alert>}
-              <Form onSubmit = {handleSubmit}>
+    <>
+    <div className="row">
+        <div className='column left'>
+            <div className="logo">
+                <img src={Icon} className="icon"></img>
+                <h1 className='iconName'>NUSPlanner</h1>
+            </div>
+            <div className='inputs'>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    className="form_input"
+                    required="required"
+                    ref={emailRef}
+                    placeholder="Email"
+                ></input><br></br>
 
-                      <label>Email:</label>
-                      <input 
-                        type="text"
-                        required="required"
-                        ref={emailRef}
-                        ></input>
+                <input
+                    type="password"
+                    className="form_input"
+                    required="required"
+                    ref={passwordRef}
+                    placeholder="Password"
+                ></input><br></br>
 
+                <input
+                    type="password"
+                    className="form_input"
+                    required="required"
+                    ref={passwordConfirmRef}
+                    placeholder="Confirmation Password"
+                ></input><br></br>
 
-                      <label>Password:</label>
-                      <input 
-                        type="text"
-                        required="required"
-                        ref={passwordRef}
-                        ></input>
+                <button className='button-green' disabled={loading} type="submit">Create Account</button><br></br>
+                {error && <Alert variant="danger" className='errorMsg'>{error}</Alert>}
+            </form>
+            </div>
+        </div>
 
-
-
-                      <label>Password Confirmation:</label>
-                      <input 
-                        type="text"
-                        required="required"
-                        ref={passwordConfirmRef}
-                        ></input>
-
-
-                  <button disabled = {loading} type = "submit">Sign up</button>
-              </Form>
-      <img src={Background} />
-      <div > <h2>Already have an account?</h2> <Link to = "/login"> Log In </Link> 
-      </div>
-    </>
+        <div className='column right'>
+              <img src={Background} className="background" />  
+              <div className='centered'>
+                <h1>Already have an account?</h1>
+                <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
+              </div>     
+        </div>
+    </div>
+</>
   )
 }

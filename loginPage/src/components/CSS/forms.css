@@ -125,12 +125,12 @@
 .background {
   position: relative;
   float: right;
-  height: 110%;
+  height: 200%;
   width: 120%;
 }
 
 .centered {
   color: #FFFFFF;
   position: relative;
-  transform: translate(-9%, -55%);
+  transform: translate(-9%, -72.5%);
 }
