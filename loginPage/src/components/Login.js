@@ -100,9 +100,11 @@ export default function Login() {
                 </div>
 
                 <div className='column right'>
-                    <img src={Background} className="background" />
-                        <h2 class="suggestSignUp">Haven't created an account yet?</h2>
+                      <img src={Background} className="background" />  
+                      <div className='centered'>
+                        <h1>Haven't created an account yet?</h1>
                         <Link to="/signup"><button className='button-white'> Sign Up Now! </button></Link>
+                      </div>     
                 </div>
             </div>
         </>

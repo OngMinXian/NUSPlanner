@@ -64,6 +64,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+
 }
   
 .button-white:hover {
@@ -108,6 +109,8 @@
 }
 .column.right {
     width: 25%;
+    position: relative;
+    text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,7 +120,14 @@
   }
 
 .background {
+  position: relative;
   float: right;
-  height: 120%;
+  height: 110%;
   width: 120%;
+}
+
+.centered {
+  color: #FFFFFF;
+  position: relative;
+  transform: translate(-9%, -55%);
 }
