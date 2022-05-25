@@ -2,6 +2,8 @@ import React, {useRef,useState} from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
+import Icon from "../images/icon.png"
+import Background from "../images/background1.jpg"
 
 export default function Signup() {
     const emailRef = useRef()
@@ -31,6 +33,8 @@ export default function Signup() {
     }
   return (
     <> 
+              <img src={Icon} />
+              <h1>NUSPlanner</h1>
               <h2> Sign Up </h2>
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit = {handleSubmit}>
@@ -64,7 +68,8 @@ export default function Signup() {
 
                   <button disabled = {loading} type = "submit">Sign up</button>
               </Form>
-      <div > Already have an account? <Link to = "/login"> Log In </Link> 
+      <img src={Background} />
+      <div > <h2>Already have an account?</h2> <Link to = "/login"> Log In </Link> 
       </div>
     </>
   )

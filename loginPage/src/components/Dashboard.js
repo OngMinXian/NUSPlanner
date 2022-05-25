@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import { Card, Button, Alert } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from "../components/contexts/AuthContext"
+import Icon from "../images/icon.png"
 
 export default function Dashboard() {
     const [error, setError] = useState("")
