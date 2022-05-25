@@ -38,50 +38,7 @@ export default function Login() {
                     {error && <Alert variant="danger">{error}</Alert>}
                     <form onSubmit={handleSubmit}>
 
-                        <form>
-                            <label>Email:</label>
-                            <input
-                                type="text"
-                                required="required"
-                                ref={emailRef}
-                            ></input>
-                        </form>
-
-                        <form>
-                            <label>Password:</label>
-                            <input
-                                type="text"
-                                required="required"
-                                ref={passwordRef}
-                            ></input>
-                        </form>
-
-                        <button disabled={loading} type="submit">Log in</button>
-                    </form>
-                    <div>
-                        <Link to="/forgot-password">Forgot Password?</Link>
-                    </div>
-                </div>
-                <div className = "logo">
-                    <img src={Background} height = "1023" width = "509" />
-                    <div>
-                        <h2>Haven't created an account yet?</h2>
-                        <h3>Sign up now!</h3>
-                        <Link to='/signup'> Sign Up </Link>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-  return (
-    <> 
-              <img src={Icon} />
-              <h1>NUSPlanner</h1>
-              <h2> Log In </h2>
-              {error && <Alert variant="danger">{error}</Alert>}
-              <form onSubmit = {handleSubmit}>
-
-                      <input 
+                    <input 
                         type="text"
                         className="form_input"
                         required="required"
@@ -89,26 +46,29 @@ export default function Login() {
                         placeholder="Email"
                         ></input><br></br>
 
-                      <input 
+                        <input 
                         type="password"
                         className="form_input"
                         required="required"
                         ref={passwordRef}
                         placeholder="Password"
                         ></input>
-                  
-                  <button className='button-green' disabled = {loading}  type = "submit">Log in</button>
-              </form>
-              <div>
-                  <Link to = "/forgot-password" className='link'>Forgot Password?</Link>
-              </div>
 
-      <img src={Background} />
-      <div> 
-          <h2>Haven't created an account yet?</h2>
-          <button className='button-white' to = '/signup'> Sign Up Now! </button> 
-      </div>
-    </>
-  )
+                        <button className='button-green' disabled={loading} type="submit">Log in</button>
+                    </form>
+                    <div>
+                        <Link to="/forgot-password" className='Link'>Forgot Password?</Link>
+                    </div>
+                </div>
+                <div className = "logo">
+                    <img src={Background} height = "1023" width = "509" />
+                    <div>
+                        <h2>Haven't created an account yet?</h2>
+                        <button className='button-white' to = '/signup'> Sign Up Now! </button> 
+                    </div>
+                </div>
+            </div>
+        </>
+    )
 }
 
