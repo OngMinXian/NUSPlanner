@@ -51,7 +51,7 @@ export default function Login() {
                         placeholder="Password"
                         ></input>
                   
-                  <button className='button-login' disabled = {loading}  type = "submit">Log in</button>
+                  <button className='button-green' disabled = {loading}  type = "submit">Log in</button>
               </form>
               <div>
                   <Link to = "/forgot-password">Forgot Password?</Link>
@@ -60,8 +60,7 @@ export default function Login() {
       <img src={Background} />
       <div> 
           <h2>Haven't created an account yet?</h2>
-          <h3>Sign up now!</h3>
-          <Link to = '/signup'> Sign Up </Link> 
+          <button className='button-white' to = '/signup'> Sign Up Now! </button> 
       </div>
     </>
   )
