@@ -57,7 +57,7 @@ export default function Login() {
                         <button className='button-green' disabled={loading} type="submit">Log in</button>
                     </form>
                     <div>
-                        <Link to="/forgot-password" className='Link'>Forgot Password?</Link>
+                        <Link to="/forgot-password" className='link'>Forgot Password?</Link>
                     </div>
                 </div>
                 <div className = "logo">
