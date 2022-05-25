@@ -51,7 +51,7 @@ export default function Login() {
                         placeholder="Password"
                         ></input>
                   
-                  <button disabled = {loading}  type = "submit">Log in</button>
+                  <button className='button-login' disabled = {loading}  type = "submit">Log in</button>
               </form>
               <div>
                   <Link to = "/forgot-password">Forgot Password?</Link>
