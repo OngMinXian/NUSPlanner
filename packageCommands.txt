@@ -1,0 +1,12 @@
+## Within my-app of React ##
+
+1. Downloading Firebase 
+npm i firebase
+
+2. Downloading bootstrap 
+npm install bootstrap@3
+
+3. Downloading React
+npx create-react-app my-app
+cd my-app
+npm start
