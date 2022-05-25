@@ -13,38 +13,38 @@
     transition: all 0.3s;
     outline: none;
     margin-bottom: 1.2%;
-    
+
 }
 
 .form_input:focus {
     box-shadow: #a7a7a7 5px 7px 12px;
-    transform: scale(1.02) ;
+    transform: scale(1.02);
 }
 
 .button-green {
-  background-color: #60DCC6;
-  box-shadow: #a7a7a7 2px 3px 6px;
-  border-radius: 50px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-  padding: 10px 80px;
-  width: 35%;
-  text-align: center;
-  text-decoration: none;
-  transition: all 250ms;
-  border: 0;
-  font-size: 2rem;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-left: 32.5%;
+    background-color: #60DCC6;
+    box-shadow: #a7a7a7 2px 3px 6px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 10px 80px;
+    width: 35%;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 2rem;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: 32.5%;
 }
 
 .button-green:hover {
     box-shadow: #a7a7a7 5px 7px 12px;
-    transform: scale(1.02) ;
+    transform: scale(1.02);
 }
 
 .button-white {
@@ -54,7 +54,7 @@
     color: #000000;
     cursor: pointer;
     display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
     padding: 10px 80px;
     text-align: center;
     text-decoration: none;
@@ -65,10 +65,10 @@
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-  
+
 .button-white:hover {
     box-shadow: #a7a7a7 5px 7px 12px;
-    transform: scale(1.02) ;
+    transform: scale(1.02);
 }
 
 .link {
@@ -78,12 +78,12 @@
 }
 
 .link:hover {
-  color: #a7a7a7;
-  transform: scale(1.02);
+    color: #a7a7a7;
+    transform: scale(1.02);
 }
 
 .linkParent {
-  text-align: center;
+    text-align: center;
 }
 
 .logo {
@@ -103,21 +103,27 @@
 .column {
     float: left;
 }
+
 .column.left {
     width: 75%;
 }
+
 .column.right {
     width: 25%;
 }
 
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-      width: 100%;
+    .column.side,
+    .column.middle {
+        width: 100%;
     }
-  }
+}
 
 .background {
-  float: right;
+    flex: 1;
+    width: '100%';
+    height: '100%';
+        /* float: right;
   height: 120%;
-  width: 120%;
+  width: 120%; */
 }
