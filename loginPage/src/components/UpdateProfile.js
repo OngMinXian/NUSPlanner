@@ -47,32 +47,31 @@ export default function UpdateProfile() {
           <h2>Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
-            <form>
+
                 <label>Email:</label>
                 <input 
                   type="text"
                   required="required"
                   ref={emailRef}
                   ></input>
-            </form>
 
-            <form>
+
+
                 <label>Password:</label>
                 <input 
                   type="text"
                   required="required"
                   ref={passwordRef}
                   ></input>
-            </form>
 
-            <form>
+
                 <label>Password Confirmation:</label>
                 <input 
                   type="text"
                   required="required"
                   ref={passwordConfirmRef}
                   ></input>
-            </form>
+
 
             <button disabled={loading} type="submit">
               Update

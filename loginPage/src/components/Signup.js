@@ -39,32 +39,30 @@ export default function Signup() {
               {error && <Alert variant="danger">{error}</Alert>}
               <Form onSubmit = {handleSubmit}>
 
-                  <form>
                       <label>Email:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={emailRef}
                         ></input>
-                  </form>
 
-                  <form>
+
                       <label>Password:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={passwordRef}
                         ></input>
-                  </form>
 
-                  <form>
+
+
                       <label>Password Confrimation:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={passwordConfirmRef}
                         ></input>
-                  </form>
+
 
                   <button disabled = {loading} type = "submit">Sign up</button>
               </Form>

@@ -34,23 +34,23 @@ export default function Login() {
               {error && <Alert variant="danger">{error}</Alert>}
               <form onSubmit = {handleSubmit}>
 
-                  <form>
+                  
                       <label>Email:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={emailRef}
                         ></input>
-                  </form>
+                  
 
-                  <form>
+                  
                       <label>Password:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={passwordRef}
                         ></input>
-                  </form>
+                  
 
                   <button disabled = {loading}  type = "submit">Log in</button>
               </form>

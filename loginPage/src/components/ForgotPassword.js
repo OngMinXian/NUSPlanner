@@ -35,14 +35,14 @@ export default function ForgotPassword() {
               {message && <Alert variant="success">{message}</Alert>}
               <Form onSubmit = {handleSubmit}>
 
-                  <form>
+
                       <label>Email:</label>
                       <input 
                         type="text"
                         required="required"
                         ref={emailRef}
                         ></input>
-                  </form>
+
 
                   <button disabled = {loading}  type = "submit">Reset Password</button>
               </Form>
