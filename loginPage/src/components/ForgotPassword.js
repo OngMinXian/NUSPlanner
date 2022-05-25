@@ -27,32 +27,67 @@ export default function ForgotPassword() {
         setLoading(false)
     }
   return (  
-    <> 
-              <img src={Icon} />
-              <h1>NUSPlanner</h1>
-              <h2> Password Reset </h2>
-              {error && <Alert variant="danger">{error}</Alert>}
-              {message && <Alert variant="success">{message}</Alert>}
-              <Form onSubmit = {handleSubmit}>
+    // <> 
+    //           <img src={Icon} />
+    //           <h1>NUSPlanner</h1>
+    //           <h2> Password Reset </h2>
+    //           {error && <Alert variant="danger">{error}</Alert>}
+    //           {message && <Alert variant="success">{message}</Alert>}
+    //           <Form onSubmit = {handleSubmit}>
 
 
-                      <label>Email:</label>
-                      <input 
-                        type="text"
-                        required="required"
-                        ref={emailRef}
-                        ></input>
+    //                   <label>Email:</label>
+    //                   <input 
+    //                     type="text"
+    //                     required="required"
+    //                     ref={emailRef}
+    //                     ></input>
 
 
-                  <button disabled = {loading}  type = "submit">Reset Password</button>
-              </Form>
-              <div>
-                  <Link to = "/login">Login</Link>
-              </div>
-      <img src={Background} />
-      <div> <h2>Need an account?</h2> <Link to = '/signup'> Sign Up </Link> 
-      </div>
-    </>
+    //               <button disabled = {loading}  type = "submit">Reset Password</button>
+    //           </Form>
+    //           <div>
+    //               <Link to = "/login">Login</Link>
+    //           </div>
+    //   <img src={Background} />
+    //   <div> <h2>Need an account?</h2> <Link to = '/signup'> Sign Up </Link> 
+    //   </div>
+    // </>
+
+    <>
+            <div className="row">
+                <div className='column left'>
+                    <div className="logo">
+                        <img src={Icon} className="icon"></img>
+                        <h1 className='iconName'>NUSPlanner</h1>
+                    </div>
+                    <div className='inputs'>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            className="form_input"
+                            required="required"
+                            ref={emailRef}
+                            placeholder="Email"
+                        ></input><br></br>
+
+                        <button className='button-green' disabled={loading} type="submit">Reset Password</button><br></br>
+
+                        {error && <Alert variant="danger" className='errorMsg'>{error}</Alert>}
+                    </form>
+                    </div>
+                </div>
+
+                <div className='column right'>
+                      <img src={Background} className="background" />  
+                      <div className='centered'>
+                        <h1>Remember your password now?</h1>
+                        <Link to="/signup"><button className='button-white'> Sign In Now! </button></Link>
+                      </div>     
+                </div>
+            </div>
+        </>
+    
   )
 }
 
