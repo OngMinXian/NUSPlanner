@@ -68,8 +68,8 @@ export default function Login() {
                         </div>
                 </div>
             </div> */}
-
-                <div className='leftBox'>
+            <div className="row">
+                <div className='column left'>
                     <div className="logo">
                         <img src={Icon} className="icon"></img>
                         <h1 className='iconName'>NUSPlanner</h1>
@@ -93,17 +93,18 @@ export default function Login() {
                         ></input><br></br>
 
                         <button className='button-green' disabled={loading} type="submit">Log in</button><br></br>
-                        <Link to="/forgot-password" className='link'>Forgot Password?</Link>
+                        <div className='linkParent'><Link to="/forgot-password" className='link'>Forgot Password?</Link></div>
+                        {error && <Alert variant="danger" className='errorMsg'>{error}</Alert>}
                     </form>
                     </div>
                 </div>
 
-                <div className='rightBox'>
+                <div className='column right'>
                     <img src={Background} className="background" />
                         <h2 class="suggestSignUp">Haven't created an account yet?</h2>
                         <Link to="/signup"><button className='button-white'> Sign Up Now! </button></Link>
                 </div>
-  
+            </div>
         </>
 
         

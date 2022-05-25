@@ -64,9 +64,6 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    position: absolute;
-    top: 1050px;
-    right: 300px; 
 }
   
 .button-white:hover {
@@ -78,7 +75,6 @@
     color: #a7a7a7;
     text-decoration: None;
     font-size: 1.8rem;
-    margin-left: 57.5%;
 }
 
 .link:hover {
@@ -86,12 +82,13 @@
   transform: scale(1.02);
 }
 
-.icon {
-    max-width: 100%;
-    max-height: 100%;
-    margin-left: 42.5%;
-    margin-top: 7%;
-    margin-bottom: 5%;
+.linkParent {
+  text-align: center;
+}
+
+.logo {
+    text-align: center;
+    margin: 70px;
 }
 
 .icon:hover {
@@ -99,20 +96,28 @@
     transition: 1s;
 }
 
-.iconName {
-
+.errorMsg {
+    width: 94.80%;
 }
 
-.leftBox {
+.column {
     float: left;
-    width: 70%;
+}
+.column.left {
+    width: 75%;
+}
+.column.right {
+    width: 25%;
 }
 
-.rightBox {
-    float: left;
-    width: 30%;
-}
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
 
 .background {
-    position: fixed;
+  float: right;
+  height: 120%;
+  width: 120%;
 }
