@@ -32,7 +32,7 @@ export default function Login() {
         <>
             <div className ="container-1">
                 <div>
-                    <img src={Icon} height="247" width="170" />
+                    <img src={Icon} height="247" width="170" className="icon"/>
                     <h1>NUSPlanner</h1>
                     <h2> Log In </h2>
                     {error && <Alert variant="danger">{error}</Alert>}

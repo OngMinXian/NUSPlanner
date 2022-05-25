@@ -78,3 +78,7 @@
   color: #a7a7a7;
   transform: scale(1.02);
 }
+
+.icon:hover {
+    transform: scale(1.05);
+}
