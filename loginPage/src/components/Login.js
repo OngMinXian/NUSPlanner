@@ -4,7 +4,6 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
-import "./CSS/style.css"
 import "./CSS/forms.css"
 
 export default function Login() {
@@ -32,7 +31,7 @@ export default function Login() {
         <>
             <div className ="container-1">
                 <div>
-                    <img src={Icon} height="247" width="170" className="icon"/>
+                    <img src={Icon} className="icon"/>
                     <h1>NUSPlanner</h1>
                     <h2> Log In </h2>
                     {error && <Alert variant="danger">{error}</Alert>}
@@ -61,7 +60,7 @@ export default function Login() {
                     </div>
                 </div>
                 <div className = "logo">
-                    <img src={Background} height = "1023" width = "509" />
+                    <img src={Background} className="background"  />
                     <div>
                         <h2>Haven't created an account yet?</h2>
                         <button className='button-white' to = '/signup'> Sign Up Now! </button> 
