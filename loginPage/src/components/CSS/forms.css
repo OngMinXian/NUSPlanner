@@ -91,9 +91,11 @@
 
 .icon:hover {
     transform: scale(1.05);
+    transition: 1s;
 }
 
 .background {
-    height: 100%; 
+    height: 200%; 
     width: 30%;
+    float: right;
 }
