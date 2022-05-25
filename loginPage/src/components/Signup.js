@@ -56,7 +56,7 @@ export default function Signup() {
 
 
 
-                      <label>Password Confrimation:</label>
+                      <label>Password Confirmation:</label>
                       <input 
                         type="text"
                         required="required"
