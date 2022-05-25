@@ -29,7 +29,7 @@ export default function Login() {
     }
     return (
         <>
-            <div className="container-1">
+            {/* <div className="container-1">
                 <div>
                     <img src={Icon} className="icon" />
                     <h1>NUSPlanner</h1>
@@ -61,15 +61,54 @@ export default function Login() {
                     </div>
                 </div>
                 <div className="fill" >
-                    <div>
+                    <img src={Background} className="background" />
                         <div className = "text-block">
                             <h2>Haven't created an account yet?</h2>
-                            <button className='button-white' to='/signup'> Sign Up Now! </button>
+                            <Link to="/signup"><button className='button-white'> Sign Up Now! </button></Link>
                         </div>
+                </div>
+            </div> */}
+
+                <div className='leftBox'>
+                    <div className="logo">
+                        <img src={Icon} className="icon"></img>
+                        <h1 className='iconName'>NUSPlanner</h1>
+                    </div>
+                    <div className='inputs'>
+                    <form onSubmit={handleSubmit}>
+                        <input
+                            type="text"
+                            className="form_input"
+                            required="required"
+                            ref={emailRef}
+                            placeholder="Email"
+                        ></input><br></br>
+
+                        <input
+                            type="password"
+                            className="form_input"
+                            required="required"
+                            ref={passwordRef}
+                            placeholder="Password"
+                        ></input><br></br>
+
+                        <button className='button-green' disabled={loading} type="submit">Log in</button><br></br>
+                        <Link to="/forgot-password" className='link'>Forgot Password?</Link>
+                    </form>
                     </div>
                 </div>
-            </div>
+
+                <div className='rightBox'>
+                    <img src={Background} className="background" />
+                    <div className='suggestSignUp'>
+                        <h2>Haven't created an account yet?</h2>
+                        <Link to="/signup"><button className='button-white'> Sign Up Now! </button></Link>
+                    </div>
+                </div>
+  
         </>
+
+        
     )
 }
 
