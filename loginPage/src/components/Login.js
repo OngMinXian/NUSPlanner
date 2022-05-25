@@ -4,7 +4,7 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
-import styles from "./CSS/forms.css"
+import "./CSS/forms.css"
 
 export default function Login() {
     const emailRef = useRef()
@@ -54,7 +54,7 @@ export default function Login() {
                   <button className='button-green' disabled = {loading}  type = "submit">Log in</button>
               </form>
               <div>
-                  <Link to = "/forgot-password">Forgot Password?</Link>
+                  <Link to = "/forgot-password" className='link'>Forgot Password?</Link>
               </div>
 
       <img src={Background} />
