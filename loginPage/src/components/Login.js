@@ -29,41 +29,43 @@ export default function Login() {
     }
     return (
         <>
-            <div className ="container-1">
+            <div className="container-1">
                 <div>
-                    <img src={Icon} className="icon"/>
+                    <img src={Icon} className="icon" />
                     <h1>NUSPlanner</h1>
                     <h2> Log In </h2>
                     {error && <Alert variant="danger">{error}</Alert>}
                     <form onSubmit={handleSubmit}>
 
-                    <input 
-                        type="text"
-                        className="form_input"
-                        required="required"
-                        ref={emailRef}
-                        placeholder="Email"
+                        <input
+                            type="text"
+                            className="form_input"
+                            required="required"
+                            ref={emailRef}
+                            placeholder="Email"
                         ></input><br></br>
 
-                        <input 
-                        type="password"
-                        className="form_input"
-                        required="required"
-                        ref={passwordRef}
-                        placeholder="Password"
+                        <input
+                            type="password"
+                            className="form_input"
+                            required="required"
+                            ref={passwordRef}
+                            placeholder="Password"
                         ></input>
 
                         <button className='button-green' disabled={loading} type="submit">Log in</button>
                     </form>
+
                     <div>
                         <Link to="/forgot-password" className='link'>Forgot Password?</Link>
                     </div>
                 </div>
-                <div className = "logo">
-                    <img src={Background} className="background"  />
+                <div className="fill" >
                     <div>
-                        <h2>Haven't created an account yet?</h2>
-                        <button className='button-white' to = '/signup'> Sign Up Now! </button> 
+                        <div className = "text-block">
+                            <h2>Haven't created an account yet?</h2>
+                            <button className='button-white' to='/signup'> Sign Up Now! </button>
+                        </div>
                     </div>
                 </div>
             </div>
