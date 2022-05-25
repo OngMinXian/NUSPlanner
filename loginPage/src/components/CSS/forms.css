@@ -1,0 +1,14 @@
+.form_input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 2rem;
+        margin: 0 auto;
+    padding: 1.5rem 2rem;
+    border-radius: 2.5rem;
+    background-color: #ECECEC;
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+}

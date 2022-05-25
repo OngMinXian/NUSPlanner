@@ -4,6 +4,7 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
+import styles from "./CSS/forms.css"
 
 export default function Login() {
     const emailRef = useRef()
@@ -34,24 +35,22 @@ export default function Login() {
               {error && <Alert variant="danger">{error}</Alert>}
               <form onSubmit = {handleSubmit}>
 
-                  
-                      <label>Email:</label>
                       <input 
                         type="text"
+                        className="form_input"
                         required="required"
                         ref={emailRef}
-                        ></input>
-                  
+                        placeholder="Email"
+                        ></input><br></br>
 
-                  
-                      <label>Password:</label>
                       <input 
-                        type="text"
+                        type="password"
+                        className="form_input"
                         required="required"
                         ref={passwordRef}
+                        placeholder="Password"
                         ></input>
                   
-
                   <button disabled = {loading}  type = "submit">Log in</button>
               </form>
               <div>
