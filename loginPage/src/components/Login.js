@@ -100,10 +100,8 @@ export default function Login() {
 
                 <div className='rightBox'>
                     <img src={Background} className="background" />
-                    <div className='suggestSignUp'>
-                        <h2>Haven't created an account yet?</h2>
+                        <h2 class="suggestSignUp">Haven't created an account yet?</h2>
                         <Link to="/signup"><button className='button-white'> Sign Up Now! </button></Link>
-                    </div>
                 </div>
   
         </>
