@@ -130,11 +130,11 @@
     position: absolute;
     z-index: 1;
     margin-bottom: 5px;
-    width: 600px;
-    height: 1000px;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
+    width: 130%;
+    height: 125%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
     background: url("../../images/background1.jpg");
 }
 
@@ -142,9 +142,17 @@
     z-index: 2;
     position: relative;
     text-align: center;
-    top:400px;
-    width: 500px;
-    height: 500px;
-    bottom: 500px;
-    left: -50px;
+    margin-top: 125%;
+    margin-left: -34%;
+    width: 500px; /* difficult to scale width and height to %, which may have caused left alignment to be inconsistent */
+    height: 500px; 
+    bottom: 60%; 
+    /* left: -34%; */
+}
+
+.centered h1 {
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 156.25%;
+    left: 0%;
 }
