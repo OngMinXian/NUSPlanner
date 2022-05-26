@@ -113,7 +113,6 @@
     width: 25%;
     position: relative;
     text-align: center;
-    height: 100%;
 }
 
 
@@ -131,28 +130,32 @@
     z-index: 1;
     margin-bottom: 5px;
     width: 130%;
-    height: 125%;
+    height: 200%;
     top: 0%;
     right: 0%;
     bottom: 0%;
     background: url("../../images/background1.jpg");
 }
-
 .centered {
     z-index: 2;
     position: relative;
     text-align: center;
     margin-top: 125%;
-    margin-left: -34%;
-    width: 500px; /* difficult to scale width and height to %, which may have caused left alignment to be inconsistent */
-    height: 500px; 
+    margin-left: -5%;
+    width: 80%; /* difficult to scale width and height to %, which may have caused left alignment to be inconsistent */
+    height: 40%; 
     bottom: 60%; 
     /* left: -34%; */
 }
 
-.centered h1 {
-    word-wrap: break-word;
-    white-space: normal;
-    font-size: 156.25%;
-    left: 0%;
+.backgroundMX {
+    position: relative;
+    float: right;
+    width: 120%;
+}
+
+.centeredMX {
+    color: #FFFFFF;
+    position: relative;
+    transform: translate(-9%, -52.5%);
 }

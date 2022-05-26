@@ -1,9 +1,11 @@
-import React, {useRef,useState} from 'react'
+import React, {useRef,useState, useEffect} from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
+import ScreenSize from "./ScreenSize"
+
 
 export default function Signup() {
     const emailRef = useRef()
@@ -13,6 +15,26 @@ export default function Signup() {
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
+
+    const [windowDimenion, detectHW] = useState({
+        winWidth: window.innerWidth,
+        winHeight: window.innerHeight,
+      })
+    
+      const detectSize = () => {
+        detectHW({
+          winWidth: window.innerWidth,
+          winHeight: window.innerHeight,
+        })
+      }
+    
+      useEffect(() => {
+        window.addEventListener('resize', detectSize)
+    
+        return () => {
+          window.removeEventListener('resize', detectSize)
+        }
+      }, [windowDimenion])
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -72,10 +94,11 @@ export default function Signup() {
         </div>
 
         <div className='column right'>
-              <img src={Background} className="background" />  
-              <div className='centered'>
+            <h1>{ScreenSize}</h1>
+              <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight+50}} />  
+              <div className='centeredMX'>
                 <h1>Already have an account?</h1>
-                <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
+                <Link to="/login"><button className='button-white'> Sign In Now!</button></Link>
               </div>     
         </div>
     </div>

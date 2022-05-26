@@ -82,7 +82,7 @@ export default function ForgotPassword() {
                       <img src={Background} className="background" />  
                       <div className='centered'>
                         <h1>Remember your password now?</h1>
-                        <Link to="/signup"><button className='button-white'> Sign In Now! </button></Link>
+                        <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
                       </div>     
                 </div>
             </div>

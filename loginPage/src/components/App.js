@@ -1,6 +1,5 @@
 import React from "react"
 import Signup from "./Signup";
-import { Container } from 'react-bootstrap'
 import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' //Switch replaced with Routes
 import Today from "./Today"
