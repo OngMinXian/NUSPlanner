@@ -144,7 +144,7 @@
     text-align: center;
     margin-top: 125%;
     margin-left: -5%;
-    width: 80%; /* difficult to scale width and height to %, which may have caused left alignment to be inconsistent */
+    width: 80%; 
     height: 40%; 
     bottom: 60%; 
     /* left: -34%; */
