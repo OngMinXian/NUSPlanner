@@ -162,3 +162,7 @@
     position: relative;
     transform: translate(-9%, -52.5%);
 }
+
+.centerHeading {
+    text-align: center;
+}

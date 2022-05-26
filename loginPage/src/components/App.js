@@ -20,7 +20,7 @@ function App() {
                     <Routes>
                         <Route exact path="/" element={
                             <PrivateRoute>
-                                <Login />
+                                <Today />
                             </PrivateRoute>} />
                         <Route path="/update-profile" element={
                             <PrivateRoute>

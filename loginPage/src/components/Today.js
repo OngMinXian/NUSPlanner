@@ -8,6 +8,7 @@ function Today() {
     return (
         <>
             <SideBar></SideBar>
+            <h1 className = "centerHeading">Calendar</h1>
             <CalendarContainer>
                 <Calendar calendarType='US' />
             </CalendarContainer>
