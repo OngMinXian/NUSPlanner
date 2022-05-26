@@ -14,30 +14,31 @@ import Settings from "./Settings"
 
 function App() {
     return (
-            <div>
-                <Router>
-                    <AuthProvider>
-                        <Routes>
-                            <Route exact path = "/" element = {
-                                <PrivateRoute> 
-                            <Today />
+        <div>
+            <Router>
+                <AuthProvider>
+                    <Routes>
+                        <Route exact path="/" element={
+                            <PrivateRoute>
+                                <Login />
                             </PrivateRoute>} />
-                            <Route path = "/update-profile" element = {
-                            <PrivateRoute> 
-                            <UpdateProfile />
+                        <Route path="/update-profile" element={
+                            <PrivateRoute>
+                                <UpdateProfile />
                             </PrivateRoute>} />
-                            <Route path = "/signup" exact element = {<Signup />} />
-                            <Route path = "/login" exact element = {<Login />} />
-                            <Route path = "/forgot-password" exact element = {<ForgotPassword />} />
-                            <Route path = "/dashboard" exact element = {<DashBoard />} />
-                            <Route path = "/progress-report" exact element = {<ProgressReport />} />
-                            <Route path = "/profile" exact element = {<Profile />} />
-                            <Route path = "/settings" exact element = {<Settings />} />
-                        </Routes>
-                    </AuthProvider>
-                    
-                </Router>
-            </div>
+                        <Route path="/signup" exact element={<Signup />} />
+                        <Route path="/login" exact element={<Login />} />
+                        <Route path="/forgot-password" exact element={<ForgotPassword />} />
+                        <Route path="/dashboard" exact element={<DashBoard />} />\
+                        <Route path="/today" exact element={<Today />} />
+                        <Route path="/progress-report" exact element={<ProgressReport />} />
+                        <Route path="/profile" exact element={<Profile />} />
+                        <Route path="/settings" exact element={<Settings />} />
+                    </Routes>
+                </AuthProvider>
+
+            </Router>
+        </div>
     )
 }
 
