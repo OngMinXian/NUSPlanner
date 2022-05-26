@@ -3,7 +3,7 @@ import Signup from "./Signup";
 import { Container } from 'react-bootstrap'
 import { AuthProvider } from "./contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom' //Switch replaced with Routes
-import Dashboard from "./Dashboard"
+import Today from "./Today"
 import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
@@ -17,7 +17,7 @@ function App() {
                         <Routes>
                             <Route exact path = "/" element = {
                                 <PrivateRoute> 
-                            <Dashboard />
+                            <Today />
                             </PrivateRoute>} />
                             <Route path = "/update-profile" element = {
                             <PrivateRoute> 
