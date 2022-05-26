@@ -1,4 +1,4 @@
-import React, {useRef,useState} from 'react'
+import React, {useRef,useState, useEffect} from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from "../components/contexts/AuthContext"
 import { Link } from "react-router-dom"
@@ -11,6 +11,26 @@ export default function ForgotPassword() {
     const [error, setError] = useState("")
     const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
+
+    const [windowDimenion, detectHW] = useState({
+        winWidth: window.innerWidth,
+        winHeight: window.innerHeight,
+      })
+    
+      const detectSize = () => {
+        detectHW({
+          winWidth: window.innerWidth,
+          winHeight: window.innerHeight,
+        })
+      }
+    
+      useEffect(() => {
+        window.addEventListener('resize', detectSize)
+    
+        return () => {
+          window.removeEventListener('resize', detectSize)
+        }
+      }, [windowDimenion])
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -27,32 +47,6 @@ export default function ForgotPassword() {
         setLoading(false)
     }
   return (  
-    // <> 
-    //           <img src={Icon} />
-    //           <h1>NUSPlanner</h1>
-    //           <h2> Password Reset </h2>
-    //           {error && <Alert variant="danger">{error}</Alert>}
-    //           {message && <Alert variant="success">{message}</Alert>}
-    //           <Form onSubmit = {handleSubmit}>
-
-
-    //                   <label>Email:</label>
-    //                   <input 
-    //                     type="text"
-    //                     required="required"
-    //                     ref={emailRef}
-    //                     ></input>
-
-
-    //               <button disabled = {loading}  type = "submit">Reset Password</button>
-    //           </Form>
-    //           <div>
-    //               <Link to = "/login">Login</Link>
-    //           </div>
-    //   <img src={Background} />
-    //   <div> <h2>Need an account?</h2> <Link to = '/signup'> Sign Up </Link> 
-    //   </div>
-    // </>
 
     <>
             <div className="row">
@@ -79,8 +73,8 @@ export default function ForgotPassword() {
                 </div>
 
                 <div className='column right'>
-                      <img src={Background} className="background" />  
-                      <div className='centered'>
+                      <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
+                      <div className='centeredMX'>
                         <h1>Remember your password now?</h1>
                         <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
                       </div>     

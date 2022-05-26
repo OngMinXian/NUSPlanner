@@ -1,10 +1,10 @@
 import React from 'react'
 import SideBar from "./Sidebar"
 
-function Dashboard() {
+function Settings() {
   return (
       <SideBar></SideBar>
   )
 }
 
-export default Dashboard
+export default Settings

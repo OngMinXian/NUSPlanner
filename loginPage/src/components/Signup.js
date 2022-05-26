@@ -4,8 +4,6 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
-import ScreenSize from "./ScreenSize"
-
 
 export default function Signup() {
     const emailRef = useRef()
@@ -55,7 +53,7 @@ export default function Signup() {
     }
   return (
     <>
-    <div className="row">
+    <div className="row" >
         <div className='column left'>
             <div className="logo">
                 <img src={Icon} className="icon"></img>
@@ -94,8 +92,7 @@ export default function Signup() {
         </div>
 
         <div className='column right'>
-            <h1>{ScreenSize}</h1>
-              <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight+50}} />  
+              <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
               <div className='centeredMX'>
                 <h1>Already have an account?</h1>
                 <Link to="/login"><button className='button-white'> Sign In Now!</button></Link>

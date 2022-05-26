@@ -2,7 +2,9 @@ import { React, useState } from 'react'
 import { Card, Button, Alert } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from "./contexts/AuthContext"
-import Icon from "../images/icon.png"
+import SideBar from './Sidebar.js';
+
+
 
 export default function Today() {
     const [error, setError] = useState("")
@@ -19,7 +21,8 @@ export default function Today() {
         }
     }
     return (
-        <>
+        <>  
+        <SideBar></SideBar>
                     <h2> Profile </h2>
                     {error && <Alert variant="danger"> {error} </Alert>}
                     <strong> Email:</strong> {currentUser.email}
@@ -29,6 +32,8 @@ export default function Today() {
             <div>
                 <button variant="link" onClick={handleLogout}>Log Out </button>
             </div>
+            
+            
         </>
     )
 }

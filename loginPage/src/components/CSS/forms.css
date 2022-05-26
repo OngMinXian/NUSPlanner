@@ -39,7 +39,6 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-    margin-left: 32.5%;
 }
 
 .button-green:hover {
@@ -107,6 +106,9 @@
 
 .column.left {
     width: 75%;
+    position: relative;
+    text-align: center;
+    
 }
 
 .column.right {
@@ -118,8 +120,8 @@
 
 @media screen and (max-width: 600px) {
 
-    .column.side,
-    .column.middle {
+    .column.left,
+    .column.right {
         width: 100%;
     }
 }
@@ -152,6 +154,7 @@
     position: relative;
     float: right;
     width: 120%;
+    display: block;
 }
 
 .centeredMX {
