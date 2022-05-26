@@ -113,24 +113,38 @@
     width: 25%;
     position: relative;
     text-align: center;
+    height: 100%;
 }
 
+
 @media screen and (max-width: 600px) {
+
     .column.side,
     .column.middle {
         width: 100%;
     }
 }
 
-.background {
-  position: relative;
-  float: right;
-  height: 200%;
-  width: 120%;
+
+.bg-box {
+    position: absolute;
+    z-index: 1;
+    margin-bottom: 5px;
+    width: 600px;
+    height: 1000px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url("../../images/background1.jpg");
 }
 
 .centered {
-  color: #FFFFFF;
-  position: relative;
-  transform: translate(-9%, -72.5%);
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    top:400px;
+    width: 500px;
+    height: 500px;
+    bottom: 500px;
+    left: -50px;
 }
