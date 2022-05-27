@@ -1,26 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import SideBar from "./Sidebar"
-import { addDoc, collection, getDocs, deleteDoc, doc, where, query } from "firebase/firestore";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy } from "firebase/firestore";
 import { db, auth } from "../firebase";
+import "./CSS/task.css"
+import { BsFillTrashFill } from 'react-icons/bs';
+import Popup from "./Popup"
 
 function ProgressReport() {
 
-  const [title, setTitle] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
   const [task, setTask] = useState("");
+  const [time, setTime] = useState("");
 
-  const [test, setTest] = useState([]);
-  const test2 = [1,2,3,4,5];
+  const [allTask, setallTask] = useState([]);
 
-  const taskRef = collection(db, "ToDoList");
+  const col = collection(db, "ToDoList");
+  const taskRef = query(col, orderBy("time"));
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  }
 
   const createTask = async (e) => {
     e.preventDefault();
     await addDoc(taskRef, {
-      title,
       task,
+      time,
       author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
     });
-    setTitle(""); 
     setTask("");
     window.location.reload(false);
   };
@@ -33,7 +41,7 @@ function ProgressReport() {
 
   const getTasks = async () => {
     const data = await getDocs(taskRef);
-    setTest(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    setallTask(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   }
   
   useEffect (() => {
@@ -48,41 +56,49 @@ function ProgressReport() {
   return (
     <>
       <SideBar></SideBar>
-      <div className="createPostPage">
-      <div className="cpContainer">
-        <h1>Create A Task</h1>
-        <div className="inputGp">
-          <label> Task:</label>
-          <input
-            placeholder="Title..."
-            onChange={(event) => {
-              setTitle(event.target.value);
-            }}
-          />
-        </div>
-        <div className="inputGp">
-          <label> Description:</label>
-          <textarea
-            placeholder="..."
-            onChange={(event) => {
-              setTask(event.target.value);
-            }}
-          />
-        </div>
-        <button onClick={createTask}> Create Task</button>
-      </div>
 
-      <div>
-      {test.map((i) => (
-        <div>
-          <h1 key={i.id}>{i.id}-{i.title}:{i.task}</h1>
-          <button onClick={() => delTask(i.id)}>X</button>
-        </div>
+      <div className="box">
         
-      ))}
-    </div>
+        <div>
+        <button onClick={togglePopup} className="button-popup">+</button>
+        {isOpen && <Popup content= {<>
+          
+      <div className='box popup' >
+        <h1 style={{color:"#FFF"}} >Create A Task</h1>
+        <div>
+          <input
+            placeholder='Task'
+            onChange={(event) => {
+              setTask(event.target.value); }}
+              className="form_input"
+              /><br></br>
+          <input 
+              placeholder='Time'
+              type="time" onChange={(event) => {
+              setTime(event.target.value);}} 
+              className="form_input"
+              />  
+        </div>
 
+        <button onClick={createTask} className="button-green"> Create Task</button>
+      </div>
+        </>} handleClose={togglePopup} />}
     </div>
+    <h1 style={{color:"#FFF"}}>Today's Tasks:</h1>
+      {allTask.map((t) => {
+        return (
+        <>
+        <div className="taskBox">
+          <h2 className='text Task'>{t.task} &nbsp;</h2>
+          <h2 className='text Time'>at {t.time}</h2>
+          <button onClick={() => delTask(t.id)} className="buttonTransparent "><BsFillTrashFill /></button>
+        </div>
+        </>
+        )
+      
+        })}
+    </div>
+    
     </>
     
   )}
