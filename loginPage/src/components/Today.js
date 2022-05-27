@@ -1,6 +1,110 @@
+//npm install --save react-big-calendar --legacy-peer-deps
+//npm i react-datepicker
+//npm i date-fns
+
+/* CODE HERE IS THE SECOND ATTEMPT AT CALENDAR */
+import SideBar from "./Sidebar"
+import "./CSS/forms.css"
+import { Calendar, dateFnsLocalizer } from "react-big-calendar"
+import format from "date-fns/format"
+import parse from "date-fns/parse"
+import startOfWeek from "date-fns/startOfWeek"
+import getDay from "date-fns/getDay"
+import "react-big-calendar/lib/css/react-big-calendar.css"
+import { useState } from "react"
+import "react-datepicker/dist/react-datepicker.css"
+import DatePicker from "react-datepicker"
+
+function Today() {
+
+  /* Initialise calendar */
+  const locales = {
+    "en-US": require("date-fns/locale/en-US"),
+  }
+
+  const localizer = dateFnsLocalizer({
+    format,
+    parse,
+    startOfWeek,
+    getDay,
+    locales
+  })
+
+  const events = [
+    {
+      title: "Big Meeting",
+      allDay: true,
+      start: new Date(2022, 4, 0),
+      end: new Date(2022, 4, 0)
+    },
+    {
+      title: "Vacation",
+      start: new Date(2022, 4, 7),
+      end: new Date(2022, 4, 10)
+    },
+    {
+      title: "Conference",
+      start: new Date(2022, 4, 20),
+      end: new Date(2022, 4, 23)
+    },
+  ]
+
+  /* Creating state to input events */
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" })
+  const [allEvents, setAllEvents] = useState(events)
+
+  /* Functions to handle events */
+  function handleAddEvent() {
+    setAllEvents([...allEvents, newEvent])
+  }
+
+  return (
+
+    <>
+      <SideBar></SideBar>
+      <h1 className="centerHeading">Calendar</h1>
+      <h2 className="centerHeading">Add New Event</h2>
+        <div className="eventInput">
+          <input
+            type="text"
+            placeholder="Add Title"
+            style={{ width: "20%" , marginRight: "10px" }} 
+            value={newEvent.title}
+            onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} 
+            className = "inputChild"/>
+
+          <DatePicker
+            placeholderText="Start Date"
+            selected={newEvent.start}
+            onChange={(start) => setNewEvent({ ...newEvent, start })} 
+            className = "inputChild"/>
+
+          <DatePicker
+            placeholderText="End Date"
+            selected={newEvent.end}
+            onChange={(end) => setNewEvent({ ...newEvent, end })} 
+            className = "inputChild"/>
+        </div>
+
+        <button style={{ marginTop: "10px"}} onClick={handleAddEvent} className = "centerButton">Add Event</button>
+
+      <Calendar
+        localizer={localizer}
+        events={allEvents}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 500, margin: "50px" }} />
+    </>
+  )
+}
+export default Today
+
+/* CODE BELOW IS THE FIRST ATTEMPT AT CALENDAR */
+
+
 //npm install react-calendar
 
-import SideBar from "./Sidebar"
+/* import SideBar from "./Sidebar"
 import Calendar from 'react-calendar';
 import styled from 'styled-components';
 
@@ -68,7 +172,7 @@ const CalendarContainer = styled.div`
       box-shadow: 0 0 6px 2px red;
     }
   }
-  /* ~~~ neighboring month & weekend styles ~~~ */
+  
   .react-calendar__month-view__days__day--neighboringMonth {
     opacity: 0.7;
   }
@@ -87,4 +191,5 @@ const CalendarContainer = styled.div`
       max-width: initial !important;
     }
   }
-`;
+`; 
+*/

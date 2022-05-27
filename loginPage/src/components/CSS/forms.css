@@ -108,7 +108,7 @@
     width: 75%;
     position: relative;
     text-align: center;
-    
+
 }
 
 .column.right {
@@ -138,15 +138,16 @@
     bottom: 0%;
     background: url("../../images/background1.jpg");
 }
+
 .centered {
     z-index: 2;
     position: relative;
     text-align: center;
     margin-top: 125%;
     margin-left: -5%;
-    width: 80%; 
-    height: 40%; 
-    bottom: 60%; 
+    width: 80%;
+    height: 40%;
+    bottom: 60%;
     /* left: -34%; */
 }
 
@@ -165,4 +166,17 @@
 
 .centerHeading {
     text-align: center;
+}
+
+.eventInput {
+    display: flex;
+}
+
+.inputChild {
+    padding: 10px;
+}
+
+.centerButton {
+    margin: 0 auto;
+    display: block;
 }
