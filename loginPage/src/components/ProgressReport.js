@@ -8,6 +8,9 @@ function ProgressReport() {
   const [title, setTitle] = useState("");
   const [task, setTask] = useState("");
 
+  const [test, setTest] = useState([]);
+  const test2 = [1,2,3,4,5];
+
   const taskRef = collection(db, "ToDoList");
 
   const createTask = async (e) => {
@@ -21,18 +24,25 @@ function ProgressReport() {
     setTask("");
     window.location.reload(false);
   };
+
+  const delTask = async (id) => {
+    const taskDoc = doc(db, "ToDoList", id);
+    await deleteDoc(taskDoc);
+    window.location.reload(false);
+  };
+
+  const getTasks = async () => {
+    const data = await getDocs(taskRef);
+    setTest(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  }
   
   useEffect (() => {
-    const getTasks = async () => {
-      const data = await getDocs(taskRef);
-      data.forEach(doc => {
-        console.log(doc.data());
-    })
-    }
+
     return () => {
       getTasks();
-    }
-    
+
+    }  
+
   }, [])
 
   return (
@@ -61,12 +71,20 @@ function ProgressReport() {
         </div>
         <button onClick={createTask}> Create Task</button>
       </div>
+
+      <div>
+      {test.map((i) => (
+        <div>
+          <h1 key={i.id}>{i.id}-{i.title}:{i.task}</h1>
+          <button onClick={() => delTask(i.id)}>X</button>
+        </div>
+        
+      ))}
     </div>
 
-    <div>
-      
     </div>
     </>
+    
   )}
 
 export default ProgressReport
