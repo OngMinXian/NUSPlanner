@@ -12,26 +12,6 @@ export default function ForgotPassword() {
     const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
 
-    const [windowDimenion, detectHW] = useState({
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
-      })
-    
-      const detectSize = () => {
-        detectHW({
-          winWidth: window.innerWidth,
-          winHeight: window.innerHeight,
-        })
-      }
-    
-      useEffect(() => {
-        window.addEventListener('resize', detectSize)
-    
-        return () => {
-          window.removeEventListener('resize', detectSize)
-        }
-      }, [windowDimenion])
-
     async function handleSubmit(e) {
         e.preventDefault()
 
@@ -73,12 +53,14 @@ export default function ForgotPassword() {
                 </div>
 
                 <div className='column right'>
-                      <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
-                      <div className='centeredMX'>
+                    <div className="bg-box">
+                    </div>
+                    <div className='centered'>
                         <h1>Remember your password now?</h1>
                         <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
-                      </div>     
+                    </div>
                 </div>
+
             </div>
         </>
     

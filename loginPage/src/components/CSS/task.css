@@ -31,10 +31,6 @@
     font-size: 450%;
 }   
 
-.text.Time {
-
-}
-
 .buttonTransparent {
   background-color: transparent;
   border: none;
@@ -48,7 +44,7 @@
 
   }
 
-.form_input {
+.formInput {
     font-family: 'Roboto', sans-serif;
     color: #333;
     font-size: 2rem;
@@ -65,12 +61,12 @@
 
 }
 
-.form_input:focus {
+.formInput:focus {
     box-shadow: #a7a7a7 5px 7px 12px;
     transform: scale(1.02);
 }
 
-.button-green {
+.buttonGreen {
     background-color: #60DCC6;
     box-shadow: #a7a7a7 2px 3px 6px;
     border-radius: 50px;
@@ -92,7 +88,7 @@
 
 }
 
-.button-green:hover {
+.buttonGreen:hover {
     box-shadow: #a7a7a7 5px 7px 12px;
     transform: scale(1.02);
 }

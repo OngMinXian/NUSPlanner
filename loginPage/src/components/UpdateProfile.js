@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
+import SideBar from "./Sidebar"
 import Icon from "../images/icon.png"
 
 export default function UpdateProfile() {
@@ -44,6 +45,7 @@ export default function UpdateProfile() {
 
   return (
     <>
+        <SideBar></SideBar>
           <h2>Update Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
@@ -79,7 +81,7 @@ export default function UpdateProfile() {
           </Form>
 
       <div>
-        <Link to="/">Cancel</Link>
+        <Link to="/profile">Cancel</Link>
       </div>
     </>
   )

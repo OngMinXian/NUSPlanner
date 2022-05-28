@@ -16,7 +16,7 @@ function ProgressReport() {
   const [allTask, setallTask] = useState([]);
 
   const col = collection(db, "ToDoList");
-  const taskRef = query(col, orderBy("time"));
+  const taskRef = query(col, where("userid", "==", auth.currentUser.uid), orderBy("time"))
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -24,10 +24,10 @@ function ProgressReport() {
 
   const createTask = async (e) => {
     e.preventDefault();
-    await addDoc(taskRef, {
+    await addDoc(col, {
       task,
       time,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+      userid: auth.currentUser.uid,
     });
     setTask("");
     window.location.reload(false);
@@ -42,6 +42,7 @@ function ProgressReport() {
   const getTasks = async () => {
     const data = await getDocs(taskRef);
     setallTask(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    
   }
   
   useEffect (() => {
@@ -70,17 +71,17 @@ function ProgressReport() {
             placeholder='Task'
             onChange={(event) => {
               setTask(event.target.value); }}
-              className="form_input"
+              className="formInput"
               /><br></br>
           <input 
               placeholder='Time'
               type="time" onChange={(event) => {
               setTime(event.target.value);}} 
-              className="form_input"
+              className="formInput"
               />  
         </div>
 
-        <button onClick={createTask} className="button-green"> Create Task</button>
+        <button onClick={createTask} className="buttonGreen"> Create Task</button>
       </div>
         </>} handleClose={togglePopup} />}
     </div>

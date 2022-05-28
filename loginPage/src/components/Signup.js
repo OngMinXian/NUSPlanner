@@ -4,8 +4,10 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy } from "firebase/firestore";
 
 export default function Signup() {
+    const usernameRef = useRef();
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -14,25 +16,14 @@ export default function Signup() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-    const [windowDimenion, detectHW] = useState({
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
-      })
-    
-      const detectSize = () => {
-        detectHW({
-          winWidth: window.innerWidth,
-          winHeight: window.innerHeight,
-        })
-      }
-    
-      useEffect(() => {
-        window.addEventListener('resize', detectSize)
-    
-        return () => {
-          window.removeEventListener('resize', detectSize)
-        }
-      }, [windowDimenion])
+    const users = collection(db, "Users");
+
+    const createUser = async (e) => {
+        e.preventDefault();
+        await addDoc(users, {
+            
+        });
+      };
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -61,6 +52,15 @@ export default function Signup() {
             </div>
             <div className='inputs'>
             <form onSubmit={handleSubmit}>
+
+            <input
+                    type="text"
+                    className="form_input"
+                    required="required"
+                    ref={usernameRef}
+                    placeholder="Username"
+                ></input><br></br>
+
                 <input
                     type="text"
                     className="form_input"
@@ -92,12 +92,14 @@ export default function Signup() {
         </div>
 
         <div className='column right'>
-              <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
-              <div className='centeredMX'>
-                <h1>Already have an account?</h1>
-                <Link to="/login"><button className='button-white'> Sign In Now!</button></Link>
-              </div>     
-        </div>
+                    <div className="bg-box">
+                    </div>
+                    <div className='centered'>
+                        <h1>Already have an account?</h1>
+                        <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
+                    </div>
+                </div>
+
     </div>
 </>
   )
