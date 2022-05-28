@@ -92,12 +92,14 @@ export default function Signup() {
         </div>
 
         <div className='column right'>
-              <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
-              <div className='centeredMX'>
-                <h1>Already have an account?</h1>
-                <Link to="/login"><button className='button-white'> Sign In Now!</button></Link>
-              </div>     
-        </div>
+                    <div className="bg-box">
+                    </div>
+                    <div className='centered'>
+                        <h1>Already have an account?</h1>
+                        <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
+                    </div>
+                </div>
+
     </div>
 </>
   )

@@ -70,17 +70,17 @@ function ProgressReport() {
             placeholder='Task'
             onChange={(event) => {
               setTask(event.target.value); }}
-              className="form_input"
+              className="formInput"
               /><br></br>
           <input 
               placeholder='Time'
               type="time" onChange={(event) => {
               setTime(event.target.value);}} 
-              className="form_input"
+              className="formInput"
               />  
         </div>
 
-        <button onClick={createTask} className="button-green"> Create Task</button>
+        <button onClick={createTask} className="buttonGreen"> Create Task</button>
       </div>
         </>} handleClose={togglePopup} />}
     </div>

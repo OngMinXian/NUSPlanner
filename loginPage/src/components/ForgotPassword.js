@@ -73,12 +73,14 @@ export default function ForgotPassword() {
                 </div>
 
                 <div className='column right'>
-                      <img src={Background} className="backgroundMX" style={{height:windowDimenion.winHeight}} />  
-                      <div className='centeredMX'>
+                    <div className="bg-box">
+                    </div>
+                    <div className='centered'>
                         <h1>Remember your password now?</h1>
                         <Link to="/login"><button className='button-white'> Sign In Now! </button></Link>
-                      </div>     
+                    </div>
                 </div>
+
             </div>
         </>
     

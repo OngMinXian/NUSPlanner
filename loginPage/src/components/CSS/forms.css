@@ -148,6 +148,8 @@
     width: 80%;
     height: 40%;
     bottom: 60%;
+    color: white;
+    text-shadow: 0.5px 0.5px 2px #000000;
     /* left: -34%; */
 }
 
