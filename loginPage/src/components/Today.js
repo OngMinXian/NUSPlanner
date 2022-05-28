@@ -2,7 +2,6 @@
 //npm i react-datepicker
 //npm i date-fns
 
-/* CODE HERE IS THE SECOND ATTEMPT AT CALENDAR */
 import SideBar from "./Sidebar"
 import "./CSS/forms.css"
 import { Calendar, dateFnsLocalizer } from "react-big-calendar"
@@ -13,11 +12,16 @@ import getDay from "date-fns/getDay"
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import { useState } from "react"
 import "react-datepicker/dist/react-datepicker.css"
-import DatePicker from "react-datepicker"
+import DateTimePicker from 'react-datetime-picker'
+import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
+import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 function Today() {
 
   /* Initialise calendar */
+  const DnDCalendar = withDragAndDrop(Calendar)
+
   const locales = {
     "en-US": require("date-fns/locale/en-US"),
   }
@@ -37,11 +41,13 @@ function Today() {
       start: new Date(2022, 4, 0),
       end: new Date(2022, 4, 0)
     },
+
     {
       title: "Vacation",
       start: new Date(2022, 4, 7),
       end: new Date(2022, 4, 10)
     },
+
     {
       title: "Conference",
       start: new Date(2022, 4, 20),
@@ -50,12 +56,28 @@ function Today() {
   ]
 
   /* Creating state to input events */
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" })
   const [allEvents, setAllEvents] = useState(events)
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" })
 
   /* Functions to handle events */
   function handleAddEvent() {
     setAllEvents([...allEvents, newEvent])
+  }
+
+  function onEventDrag({ event, start, end }) {
+    const idx = allEvents.indexOf(event)
+    const updatedEvent = {...event, start, end}
+    allEvents.splice(idx,1,updatedEvent)
+    return allEvents
+  }
+
+  function onSelectEvent(pEvent) {
+    const r = window.confirm("Would you like to remove this event?")
+    if (r === true) {
+      const reqIndex = allEvents.indexOf(pEvent)
+      allEvents.splice(reqIndex, 1)
+      return { allEvents }
+    }
   }
 
   return (
@@ -64,132 +86,48 @@ function Today() {
       <SideBar></SideBar>
       <h1 className="centerHeading">Calendar</h1>
       <h2 className="centerHeading">Add New Event</h2>
-        <div className="eventInput">
-          <input
-            type="text"
-            placeholder="Add Title"
-            style={{ width: "20%" , marginRight: "10px" }} 
-            value={newEvent.title}
-            onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} 
-            className = "inputChild"/>
+      <div className="eventInput">
+        <input
+          type="text"
+          placeholder="Add Title"
+          style={{ width: "20%", marginRight: "10px", marginTop: "10px", height: "20%" }}
+          value={newEvent.title}
+          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+          className="inputChild" />
 
-          <DatePicker
-            placeholderText="Start Date"
-            selected={newEvent.start}
-            onChange={(start) => setNewEvent({ ...newEvent, start })} 
-            className = "inputChild"/>
+        <DateTimePicker
+          //placeholderText="Start Date"
+          value={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })
+          }
+          className="inputChild" />
 
-          <DatePicker
-            placeholderText="End Date"
-            selected={newEvent.end}
-            onChange={(end) => setNewEvent({ ...newEvent, end })} 
-            className = "inputChild"/>
-        </div>
+        <DateTimePicker
+          placeholderText="End Date"
+          value={newEvent.end}
+          onChange={(end) => setNewEvent({ ...newEvent, end })
+          }
+          className="inputChild" />
 
-        <button style={{ marginTop: "10px"}} onClick={handleAddEvent} className = "centerButton">Add Event</button>
+        <button style={{ marginTop: "10px" }} onClick={handleAddEvent} className="inputChild">Add Event</button>
 
-      <Calendar
+      </div>
+
+
+      <DnDCalendar
         localizer={localizer}
         events={allEvents}
         startAccessor="start"
         endAccessor="end"
+        onSelectEvent={ event => onSelectEvent(event) }
+        onEventDrop={ onEventDrag }
+        onEventResize={ onEventDrag }
+        selectable
+        resizable
         style={{ height: 500, margin: "50px" }} />
     </>
   )
 }
-export default Today
-
-/* CODE BELOW IS THE FIRST ATTEMPT AT CALENDAR */
-
-
-//npm install react-calendar
-
-/* import SideBar from "./Sidebar"
-import Calendar from 'react-calendar';
-import styled from 'styled-components';
-
-function Today() {
-    return (
-        <>
-            <SideBar></SideBar>
-            <h1 className = "centerHeading">Calendar</h1>
-            <CalendarContainer>
-                <Calendar calendarType='US' />
-            </CalendarContainer>
-
-        </>
-    )
-}
 
 export default Today
 
-const CalendarContainer = styled.div`
-
-  max-width: 600px;
-  margin: auto;
-  margin-top: 20px;
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 3px;
-
-  .react-calendar__navigation {
-    display: flex;
-    .react-calendar__navigation__label {
-      font-weight: bold;
-    }
-    .react-calendar__navigation__arrow {
-      flex-grow: 0.333;
-    }
-  }
-  
-  .react-calendar__month-view__weekdays {
-    text-align: center;
-  }
- 
-  button {
-    margin: 3px;
-    background-color: #60DCC6;
-    border: 0;
-    border-radius: 3px;
-    color: white;
-    padding: 5px 0;
-    &:hover {
-      background-color: #0A64BC; 
-    }
-    &:active {
-      background-color: #60DCC6;
-    }
-  }
-  
-  .react-calendar__month-view__days {
-    display: grid !important;
-    grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.2%; 
-    
-    .react-calendar__tile {
-      max-width: initial !important;
-    }
-    .react-calendar__tile--range {
-      box-shadow: 0 0 6px 2px red;
-    }
-  }
-  
-  .react-calendar__month-view__days__day--neighboringMonth {
-    opacity: 0.7;
-  }
-  .react-calendar__month-view__days__day--weekend {
-    color: white;
-  }
-  
-  .react-calendar__year-view__months, .react-calendar__decade-view__years, .react-calendar__century-view__decades {
-    display: grid !important;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    &.react-calendar__year-view__months {
-      grid-template-columns: 33.3% 33.3% 33.3%;
-    }
-    
-    .react-calendar__tile {
-      max-width: initial !important;
-    }
-  }
-`; 
-*/

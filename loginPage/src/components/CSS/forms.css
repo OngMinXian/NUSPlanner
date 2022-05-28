@@ -170,13 +170,11 @@
 
 .eventInput {
     display: flex;
+    justify-content: center;
 }
 
 .inputChild {
     padding: 10px;
-}
-
-.centerButton {
-    margin: 0 auto;
-    display: block;
+    margin-bottom: 200px;
+    align-items: center;
 }
