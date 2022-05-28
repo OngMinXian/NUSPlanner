@@ -16,7 +16,6 @@ function Today() {
   const [allTask, setallTask] = useState([]);
 
   const col = collection(db, "ToDoList");
-  const taskRef = query(col, where("userid", "==", auth.currentUser.uid), orderBy("time"))
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -38,13 +37,14 @@ function Today() {
     await deleteDoc(taskDoc);
     window.location.reload(false);
   };
-
-  const getTasks = async () => {
-    const data = await getDocs(taskRef);
-    setallTask(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  }
   
   useEffect (() => {
+    const taskRef = query(col, where("userid", "==", auth.currentUser.uid), orderBy("time"))
+    const getTasks = async () => {
+      const data = await getDocs(taskRef);
+      setallTask(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+
     return () => {
       getTasks();
     }  
