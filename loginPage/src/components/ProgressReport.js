@@ -16,7 +16,7 @@ function ProgressReport() {
   const [allTask, setallTask] = useState([]);
 
   const col = collection(db, "ToDoList");
-  const taskRef = query(col, where("id", "==", auth.currentUser.uid), orderBy("time"))
+  const taskRef = query(col, where("userid", "==", auth.currentUser.uid), orderBy("time"))
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -27,7 +27,7 @@ function ProgressReport() {
     await addDoc(col, {
       task,
       time,
-      id: auth.currentUser.uid,
+      userid: auth.currentUser.uid,
     });
     setTask("");
     window.location.reload(false);
