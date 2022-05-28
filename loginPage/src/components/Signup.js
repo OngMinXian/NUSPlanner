@@ -4,9 +4,8 @@ import { useAuth } from "../components/contexts/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
 import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
-import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy } from "firebase/firestore";
 
-export default function Signup() {
+const Signup = () => {
     const usernameRef = useRef();
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -16,15 +15,6 @@ export default function Signup() {
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-    const users = collection(db, "Users");
-
-    const createUser = async (e) => {
-        e.preventDefault();
-        await addDoc(users, {
-            
-        });
-      };
-
     async function handleSubmit(e) {
         e.preventDefault()
 
@@ -33,15 +23,16 @@ export default function Signup() {
         }
 
         try {
-            setError("")
-            setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
-            navigate("/")
+            setError("");
+            setLoading(true);
+            await signup(emailRef.current.value, passwordRef.current.value);
+            navigate("/create-user-doc", {state:{usernameProp:usernameRef.current.value, emailProp: emailRef.current.value}});
         } catch {
             setError('Failed to create an account')
         }
         setLoading(false)
     }
+
   return (
     <>
     <div className="row" >
@@ -104,3 +95,5 @@ export default function Signup() {
 </>
   )
 }
+
+export default Signup;

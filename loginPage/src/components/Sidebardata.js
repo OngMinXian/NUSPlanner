@@ -12,7 +12,7 @@ export const SidebarData = [
   },
 
   {
-    title: 'Planner',
+    title: 'Today',
     path: '/',
     icon: <IoIcons.IoIosPaper />,
     // iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -20,23 +20,17 @@ export const SidebarData = [
 
     // subNav: [
     //   {
-    //     title: 'Today',
-    //     path: '/',
+    //     title: 'Calender',
+    //     path: '/month-year',
     //     icon: <IoIcons.IoIosPaper />,
     //     cName: 'sub-nav'
     //   },
-    //   {
-    //     title: 'Month',
-    //     path: '/',
-    //     icon: <IoIcons.IoIosPaper />,
-    //     cName: 'sub-nav'
-    //   },
-    //   {
-    //     title: 'Year',
-    //     path: '/',
-    //     icon: <IoIcons.IoIosPaper />
-    //   }
     // ]
+  },
+  {
+    title: 'Calender',
+    path: '/month-year',
+    icon: <FaIcons.FaCartPlus />
   },
   {
     title: 'Progress Report',

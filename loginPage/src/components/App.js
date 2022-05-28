@@ -11,6 +11,8 @@ import DashBoard from "./Dashboard";
 import ProgressReport from "./ProgressReport";
 import Profile from "./Profile"
 import Settings from "./Settings"
+import CreateUserDoc from "./CreateUserDoc"
+import MonthYear from "./MonthYear"
 
 function App() {
     return (
@@ -31,8 +33,10 @@ function App() {
                         <Route path="/forgot-password" exact element={<ForgotPassword />} />
                         <Route path="/dashboard" exact element={<DashBoard />} />\
                         <Route path="/today" exact element={<Today />} />
+                        <Route path="/month-year" exact element={<MonthYear />} />
                         <Route path="/progress-report" exact element={<ProgressReport />} />
                         <Route path="/profile" exact element={<Profile />} />
+                        <Route path="/create-user-doc" exact element={<CreateUserDoc />} />
                         <Route path="/settings" exact element={<Settings />} />
                     </Routes>
                 </AuthProvider>

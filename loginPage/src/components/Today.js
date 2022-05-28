@@ -1,131 +1,103 @@
-//npm install --save react-big-calendar --legacy-peer-deps
-//npm i react-datepicker
-//npm i date-fns
-
+import React, { useState, useEffect } from 'react'
 import SideBar from "./Sidebar"
-import "./CSS/forms.css"
-import { Calendar, dateFnsLocalizer } from "react-big-calendar"
-import format from "date-fns/format"
-import parse from "date-fns/parse"
-import startOfWeek from "date-fns/startOfWeek"
-import getDay from "date-fns/getDay"
-import "react-big-calendar/lib/css/react-big-calendar.css"
-import { useState } from "react"
-import "react-datepicker/dist/react-datepicker.css"
-import DateTimePicker from 'react-datetime-picker'
-import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
-import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
-import "react-big-calendar/lib/css/react-big-calendar.css";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy } from "firebase/firestore";
+import { db, auth } from "../firebase";
+import "./CSS/task.css"
+import { BsFillTrashFill } from 'react-icons/bs';
+import Popup from "./Popup"
 
 function Today() {
 
-  /* Initialise calendar */
-  const DnDCalendar = withDragAndDrop(Calendar)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const locales = {
-    "en-US": require("date-fns/locale/en-US"),
+  const [task, setTask] = useState("");
+  const [time, setTime] = useState("");
+
+  const [allTask, setallTask] = useState([]);
+
+  const col = collection(db, "ToDoList");
+  const taskRef = query(col, where("userid", "==", auth.currentUser.uid), orderBy("time"))
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
   }
 
-  const localizer = dateFnsLocalizer({
-    format,
-    parse,
-    startOfWeek,
-    getDay,
-    locales
-  })
+  const createTask = async (e) => {
+    e.preventDefault();
+    await addDoc(col, {
+      task,
+      time,
+      userid: auth.currentUser.uid,
+    });
+    setTask("");
+    window.location.reload(false);
+  };
 
-  const events = [
-    {
-      title: "Big Meeting",
-      allDay: true,
-      start: new Date(2022, 4, 0),
-      end: new Date(2022, 4, 0)
-    },
+  const delTask = async (id) => {
+    const taskDoc = doc(db, "ToDoList", id);
+    await deleteDoc(taskDoc);
+    window.location.reload(false);
+  };
 
-    {
-      title: "Vacation",
-      start: new Date(2022, 4, 7),
-      end: new Date(2022, 4, 10)
-    },
-
-    {
-      title: "Conference",
-      start: new Date(2022, 4, 20),
-      end: new Date(2022, 4, 23)
-    },
-  ]
-
-  /* Creating state to input events */
-  const [allEvents, setAllEvents] = useState(events)
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" })
-
-  /* Functions to handle events */
-  function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent])
+  const getTasks = async () => {
+    const data = await getDocs(taskRef);
+    setallTask(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   }
-
-  function onEventDrag({ event, start, end }) {
-    const idx = allEvents.indexOf(event)
-    const updatedEvent = {...event, start, end}
-    allEvents.splice(idx,1,updatedEvent)
-    return allEvents
-  }
-
-  function onSelectEvent(pEvent) {
-    const r = window.confirm("Would you like to remove this event?")
-    if (r === true) {
-      const reqIndex = allEvents.indexOf(pEvent)
-      allEvents.splice(reqIndex, 1)
-      return { allEvents }
-    }
-  }
+  
+  useEffect (() => {
+    return () => {
+      getTasks();
+    }  
+  }, [])
 
   return (
-
     <>
       <SideBar></SideBar>
-      <h1 className="centerHeading">Calendar</h1>
-      <h2 className="centerHeading">Add New Event</h2>
-      <div className="eventInput">
-        <input
-          type="text"
-          placeholder="Add Title"
-          style={{ width: "20%", marginRight: "10px", marginTop: "10px", height: "20%" }}
-          value={newEvent.title}
-          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
-          className="inputChild" />
 
-        <DateTimePicker
-          //placeholderText="Start Date"
-          value={newEvent.start}
-          onChange={(start) => setNewEvent({ ...newEvent, start })
-          }
-          className="inputChild" />
+      <div className="box">
+        
+        <div>
+        <button onClick={togglePopup} className="button-popup">+</button>
+        {isOpen && <Popup content= {<>
+          
+      <div className='box popup' >
+        <h1 style={{color:"#FFF"}} >Create A Task</h1>
+        <div>
+          <input
+            placeholder='Task'
+            onChange={(event) => {
+              setTask(event.target.value); }}
+              className="formInput"
+              /><br></br>
+          <input 
+              placeholder='Time'
+              type="time" onChange={(event) => {
+              setTime(event.target.value);}} 
+              className="formInput"
+              />  
+        </div>
 
-        <DateTimePicker
-          placeholderText="End Date"
-          value={newEvent.end}
-          onChange={(end) => setNewEvent({ ...newEvent, end })
-          }
-          className="inputChild" />
-
-        <button style={{ marginTop: "10px" }} onClick={handleAddEvent} className="inputChild">Add Event</button>
-
+        <button onClick={createTask} className="buttonGreen"> Create Task</button>
       </div>
-
-
-      <DnDCalendar
-        localizer={localizer}
-        events={allEvents}
-        startAccessor="start"
-        endAccessor="end"
-        onSelectEvent={ event => onSelectEvent(event) }
-        onEventDrop={ onEventDrag }
-        onEventResize={ onEventDrag }
-        selectable
-        resizable
-        style={{ height: 500, margin: "50px" }} />
+        </>} handleClose={togglePopup} />}
+    </div>
+    <h1 style={{color:"#FFF"}}>Today's Tasks:</h1>
+      {allTask.map((t) => {
+        return (
+        <>
+        <div className="taskBox">
+          <h2 className='text Task'>{t.task} &nbsp;</h2>
+          <h2 className='text Time'>at {t.time}</h2>
+          <button onClick={() => delTask(t.id)} className="buttonTransparent "><BsFillTrashFill /></button>
+        </div>
+        </>
+        )
+      
+        })}
+    </div>
+    
     </>
+    
   )
 }
 
