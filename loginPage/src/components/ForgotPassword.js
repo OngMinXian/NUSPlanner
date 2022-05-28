@@ -12,26 +12,6 @@ export default function ForgotPassword() {
     const [message, setMessage] = useState("")
     const [loading, setLoading] = useState(false)
 
-    const [windowDimenion, detectHW] = useState({
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
-      })
-    
-      const detectSize = () => {
-        detectHW({
-          winWidth: window.innerWidth,
-          winHeight: window.innerHeight,
-        })
-      }
-    
-      useEffect(() => {
-        window.addEventListener('resize', detectSize)
-    
-        return () => {
-          window.removeEventListener('resize', detectSize)
-        }
-      }, [windowDimenion])
-
     async function handleSubmit(e) {
         e.preventDefault()
 

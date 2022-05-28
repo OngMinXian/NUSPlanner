@@ -6,6 +6,7 @@ import Icon from "../images/icon.png"
 import Background from "../images/background1.jpg"
 
 export default function Signup() {
+    const usernameRef = useRef();
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -13,26 +14,6 @@ export default function Signup() {
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
-
-    const [windowDimenion, detectHW] = useState({
-        winWidth: window.innerWidth,
-        winHeight: window.innerHeight,
-      })
-    
-      const detectSize = () => {
-        detectHW({
-          winWidth: window.innerWidth,
-          winHeight: window.innerHeight,
-        })
-      }
-    
-      useEffect(() => {
-        window.addEventListener('resize', detectSize)
-    
-        return () => {
-          window.removeEventListener('resize', detectSize)
-        }
-      }, [windowDimenion])
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -61,6 +42,15 @@ export default function Signup() {
             </div>
             <div className='inputs'>
             <form onSubmit={handleSubmit}>
+
+            <input
+                    type="text"
+                    className="form_input"
+                    required="required"
+                    ref={usernameRef}
+                    placeholder="Username"
+                ></input><br></br>
+
                 <input
                     type="text"
                     className="form_input"
