@@ -22,18 +22,13 @@ function CreateUserDoc() {
             course: "-",
             matricyear: "-",
             gradyear: "-",
+            picSet: false,
         }) 
       };
-
-    const createProfilePic = async () => {
-      const imgRef = ref(storage, `profilePics/${auth.currentUser.uid}/profilepic`);
-      await uploadBytes(imgRef, dp);
-    }
 
     useEffect(() => {
         return () => {
             createUser();
-            createProfilePic();
             navigate("/");
           }       
     }, [])
