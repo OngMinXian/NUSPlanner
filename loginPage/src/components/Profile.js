@@ -1,11 +1,12 @@
 import { React, useState, useEffect } from 'react'
-import { Card, Button, Alert } from 'react-bootstrap'
+import { Image, Alert } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from "./contexts/AuthContext"
 import SideBar from './Sidebar.js';
 import { db, auth, storage } from "../firebase";
 import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage"
+import "./CSS/profile.css"
 
 export default function Profile() {
   const [error, setError] = useState("")
@@ -47,7 +48,7 @@ export default function Profile() {
 
   const handleChange = async (e) => {
     e.preventDefault();
-    await updateDoc(userRef, 
+    await updateDoc(userRef,
       {
         username: username,
         email: email,
@@ -62,9 +63,9 @@ export default function Profile() {
 
   const editProfilePic = async () => {
     if (img == null) { return; }
-      const imgRef = ref(storage, `profilePics/${auth.currentUser.uid}/profilepic`);
-      await uploadBytes(imgRef, img);
-      window.location.reload(false);  
+    const imgRef = ref(storage, `profilePics/${auth.currentUser.uid}/profilepic`);
+    await uploadBytes(imgRef, img);
+    window.location.reload(false);
   }
 
   async function handleLogout() {
@@ -77,72 +78,105 @@ export default function Profile() {
     }
   }
 
-  useEffect (() => {
+  useEffect(() => {
     return () => {
       getInfo();
-    }  
+    }
   }, [])
 
   return (
     <>
-      <SideBar></SideBar>      
+      <SideBar></SideBar>
       {error && <Alert variant="danger"> {error} </Alert>}
-      <img src={imgurl} style={{height:"300px", width:"300px" }}/>
-      <div>
+      <Image src={imgurl} className="rounded-circle center-block" />
+      <br></br>
+      <div className = "center-div" >
+        <h1 className = "center-with-padding"> Profile Picture </h1>
+      </div>
+
+      <div className = "edit-profile-div">
+        <input type="file" 
+        onChange={(event) => { setImg(event.target.files[0]) }}></input>
+        <button onClick={editProfilePic} >Confirm Changes</button>
+      </div>
+
+      <div className = "center-div">
+
         <form onSubmit={handleChange}>
-          <label>Username:</label>
-          <input 
-          type="text" 
-          value={username}
-          onChange={(event) => {setUsername(event.target.value); }}
-          ></input><br></br>
+          <table>
+            <tr>
+              <td> <b> Username: </b> </td>
+              <td> <input
+                type="text"
+                className = "table-bottom"
+                value={username}
+                onChange={(event) => { setUsername(event.target.value); }}
+              ></input> </td> <br></br>
+            </tr>
 
-          <label>Email:</label>
-          <input 
-          type="text" 
-          value={email}
-          onChange={(event) => {setEmail(event.target.value); }}
-          ></input><br></br>
+            <tr>
+              <td> <b> Email: </b> </td>
+              <td> <input
+                className = "table-bottom"
+                type="text"
+                value={email}
+                onChange={(event) => { setEmail(event.target.value); }}
+              ></input></td><br></br>
+            </tr>
 
-          <label>Faculty:</label>
-          <input 
-          type="text" 
-          value={faculty}
-          onChange={(event) => {setFaculty(event.target.value); }}
-          ></input><br></br>
+            <tr>
+              <td> <b> Faculty: </b> </td>
+              <td> <input
+                className = "table-bottom"
+                type="text"
+                value={faculty}
+                onChange={(event) => { setFaculty(event.target.value); }}
+              ></input></td><br></br>
+            </tr>
 
-          <label>Course:</label>
-          <input 
-          type="text" 
-          value={course}
-          onChange={(event) => {setCourse(event.target.value); }}
-          ></input><br></br>
+            <tr>
+              <td> <b> Course: </b> </td>
+              <td> <input
+                className = "table-bottom"
+                type="text"
+                value={course}
+                onChange={(event) => { setCourse(event.target.value); }}
+              ></input></td><br></br>
+            </tr>
 
-          <label>Matriculation Year:</label>
-          <input 
-          type="text" 
-          value={matricyear}
-          onChange={(event) => {setMatricyear(event.target.value); }}
-          ></input><br></br>
+            <tr>
+              <td> <b> Matriculation Year: </b> </td>
+              <td> <input
+                className = "table-bottom"
+                type="text"
+                value={matricyear}
+                onChange={(event) => { setMatricyear(event.target.value); }}
+              ></input> </td> <br></br>
+            </tr>
 
-          <label>Graduation Year:</label>
-          <input 
-          type="text" 
-          value={gradyear}
-          onChange={(event) => {setGradyear(event.target.value); }}
-          ></input><br></br>
-
-          <button type="submit">Update Profile</button><br></br>
+            <tr>
+              <td> <b> Graduation Year: </b> </td>
+              <td> <input
+                className = "table-bottom"
+                type="text"
+                value={gradyear}
+                onChange={(event) => { setGradyear(event.target.value); }}
+              ></input></td><br></br>
+            </tr>
+            <br></br>
+          </table>
         </form>
       </div>
-      <div>
-        <input type="file" onChange={(event) => {setImg(event.target.files[0])}}></input>
-        <button onClick={editProfilePic}>Edit Profile Picture</button>
-      </div>
-      <div>
-        <button variant="link" onClick={handleLogout}>Log Out </button>
-      </div>
 
+      <button type="submit" 
+      className = "center-single-button"
+      >Update Profile</button><br></br>
+
+      <div>
+        <button variant="link" 
+        className = "center-single-button" 
+        onClick={handleLogout}>Log Out </button>
+      </div>
 
     </>
   )

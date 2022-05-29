@@ -85,7 +85,7 @@ function MonthYear() {
     <>
       <SideBar></SideBar>
       <h1 className="centerHeading">Calendar</h1>
-      <h2 className="centerHeading">Add New Event</h2>
+      <h3 className="centerHeading"><u>Add New Event</u></h3>
       <div className="eventInput">
         <input
           type="text"
