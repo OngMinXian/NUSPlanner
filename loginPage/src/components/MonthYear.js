@@ -10,12 +10,14 @@ import parse from "date-fns/parse"
 import startOfWeek from "date-fns/startOfWeek"
 import getDay from "date-fns/getDay"
 import "react-big-calendar/lib/css/react-big-calendar.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "react-datepicker/dist/react-datepicker.css"
 import DateTimePicker from 'react-datetime-picker'
 import withDragAndDrop from "react-big-calendar/lib/addons/dragAndDrop";
 import "react-big-calendar/lib/addons/dragAndDrop/styles.css";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { db, auth } from "../firebase";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, setDoc } from "firebase/firestore";
 
 function MonthYear() {
 
@@ -34,35 +36,28 @@ function MonthYear() {
     locales
   })
 
-  const events = [
-    {
-      title: "Big Meeting",
-      allDay: true,
-      start: new Date(2022, 4, 0),
-      end: new Date(2022, 4, 0)
-    },
+  const [Loaded, setLoaded] = useState(false);
 
-    {
-      title: "Vacation",
-      start: new Date(2022, 4, 7),
-      end: new Date(2022, 4, 10)
-    },
-
-    {
-      title: "Conference",
-      start: new Date(2022, 4, 20),
-      end: new Date(2022, 4, 23)
-    },
-  ]
+  const col = collection(db, "Event");
 
   /* Creating state to input events */
-  const [allEvents, setAllEvents] = useState(events)
-  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" })
+  const [allEvents, setAllEvents] = useState([])
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "", id: "" })
 
   /* Functions to handle events */
   function handleAddEvent() {
-    setAllEvents([...allEvents, newEvent])
+    addEventToDoc();
+    setAllEvents([...allEvents, newEvent]);
   }
+
+  const addEventToDoc = async (e) => {
+    await setDoc(doc(col, auth.currentUser.uid+newEvent.title+newEvent.start+newEvent.end), {
+        title: newEvent.title,
+        start: newEvent.start,
+        end: newEvent.end,
+        id: auth.currentUser.uid,       
+    });
+  };
 
   function onEventDrag({ event, start, end }) {
     const idx = allEvents.indexOf(event)
@@ -71,19 +66,41 @@ function MonthYear() {
     return allEvents
   }
 
-  function onSelectEvent(pEvent) {
+  const onSelectEvent = async (pEvent) => {
     const r = window.confirm("Would you like to remove this event?")
     if (r === true) {
-      const reqIndex = allEvents.indexOf(pEvent)
-      allEvents.splice(reqIndex, 1)
-      return { allEvents }
+      const DocId = auth.currentUser.uid+pEvent.title+pEvent.start.toString()+pEvent.end.toString();
+      console.log(DocId);
+      const eventDoc = doc(db, "Event", DocId);
+      await deleteDoc(eventDoc);
+      window.location.reload(false);
     }
   }
+
+  const getAllEvents = async (e) => {
+    const eventsRef = query(col, where("id", "==", auth.currentUser.uid))
+    const data = await getDocs(eventsRef);
+    data.docs.map((doc) => (
+      allEvents.push({
+        title: doc.data().title,
+        start: doc.data().start.toDate(),
+        end: doc.data().end.toDate(),
+      })
+    ));
+    setLoaded(true);
+  }
+
+  useEffect (() => {
+    return () => {
+      getAllEvents();
+    }
+  }, [])
 
   return (
 
     <>
       <SideBar></SideBar>
+      {Loaded && <div>
       <h1 className="centerHeading">Calendar</h1>
       <h3 className="centerHeading"><u>Add New Event</u></h3>
       <div className="eventInput">
@@ -125,6 +142,8 @@ function MonthYear() {
         selectable
         resizable
         style={{ height: 500, margin: "50px" }} />
+        </div>  
+        }  
     </>
   )
 }
