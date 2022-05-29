@@ -3,8 +3,9 @@ import { Card, Button, Alert } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from "./contexts/AuthContext"
 import SideBar from './Sidebar.js';
-import { db, auth } from "../firebase";
+import { db, auth, storage } from "../firebase";
 import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
+import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage"
 
 export default function Profile() {
   const [error, setError] = useState("")
@@ -18,7 +19,11 @@ export default function Profile() {
   const [matricyear, setMatricyear] = useState("");
   const [gradyear, setGradyear] = useState("");
 
+  const [img, setImg] = useState(null);
+  const [imgurl, setImgurl] = useState("");
+
   const userRef = doc(db, "Users", auth.currentUser.uid)
+  const imgListRef = ref(storage, `profilePics/${auth.currentUser.uid}`)
 
   const getInfo = async () => {
     const docu = await getDoc(userRef);
@@ -29,6 +34,15 @@ export default function Profile() {
     setCourse(userData.course);
     setMatricyear(userData.matricyear);
     setGradyear(userData.gradyear);
+
+    listAll(imgListRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImgurl(url);
+        })
+      })
+    })
+
   }
 
   const handleChange = async (e) => {
@@ -44,6 +58,13 @@ export default function Profile() {
       }
     );
     window.location.reload(false);
+  }
+
+  const editProfilePic = async () => {
+    if (img == null) { return; }
+      const imgRef = ref(storage, `profilePics/${auth.currentUser.uid}/profilepic`);
+      await uploadBytes(imgRef, img);
+      window.location.reload(false);  
   }
 
   async function handleLogout() {
@@ -66,6 +87,7 @@ export default function Profile() {
     <>
       <SideBar></SideBar>      
       {error && <Alert variant="danger"> {error} </Alert>}
+      <img src={imgurl} style={{height:"300px", width:"300px" }}/>
       <div>
         <form onSubmit={handleChange}>
           <label>Username:</label>
@@ -112,6 +134,10 @@ export default function Profile() {
 
           <button type="submit">Update Profile</button><br></br>
         </form>
+      </div>
+      <div>
+        <input type="file" onChange={(event) => {setImg(event.target.files[0])}}></input>
+        <button onClick={editProfilePic}>Edit Profile Picture</button>
       </div>
       <div>
         <button variant="link" onClick={handleLogout}>Log Out </button>
