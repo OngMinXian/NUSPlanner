@@ -23,8 +23,9 @@ export default function Profile() {
   const [img, setImg] = useState(null);
   const [imgurl, setImgurl] = useState("");
 
-  const userRef = doc(db, "Users", auth.currentUser.uid)
-  const imgListRef = ref(storage, `profilePics/${auth.currentUser.uid}`)
+  const userRef = doc(db, "Users", auth.currentUser.uid);
+  const imgDefault = ref(storage, `profilePics/Default`);
+  const imgListRef = ref(storage, `profilePics/${auth.currentUser.uid}`);
 
   const getInfo = async () => {
     const docu = await getDoc(userRef);
@@ -36,13 +37,24 @@ export default function Profile() {
     setMatricyear(userData.matricyear);
     setGradyear(userData.gradyear);
 
-    listAll(imgListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImgurl(url);
+    if (!userData.picSet) {
+      await listAll(imgDefault).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImgurl(url);
+          })
         })
       })
-    })
+    }
+    else {
+      await listAll(imgListRef).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImgurl(url);
+          })
+        })
+      })
+    }
 
   }
 
@@ -65,6 +77,7 @@ export default function Profile() {
     if (img == null) { return; }
     const imgRef = ref(storage, `profilePics/${auth.currentUser.uid}/profilepic`);
     await uploadBytes(imgRef, img);
+    await updateDoc(userRef, {picSet: true})
     window.location.reload(false);
   }
 
@@ -170,6 +183,7 @@ export default function Profile() {
 
       <button type="submit" 
       className = "center-single-button"
+      onClick={handleChange}
       >Update Profile</button><br></br>
 
       <div>
