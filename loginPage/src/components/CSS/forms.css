@@ -3,22 +3,25 @@
     color: #333;
     font-size: 2rem;
     margin: 0 auto;
-    padding: 1.5rem 2rem;
     border-radius: 50px;
     background-color: #ECECEC;
     border: none;
     width: 35%;
-    display: block;
+    height: 40px;
     border-bottom: 0.3rem solid transparent;
     transition: all 0.3s;
     outline: none;
-    margin-bottom: 1.2%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 
 }
 
 .form_input:focus {
     box-shadow: #a7a7a7 5px 7px 12px;
     transform: scale(1.02);
+    display: flex;
+    justify-content: center;
 }
 
 .button-green {
@@ -27,9 +30,7 @@
     border-radius: 50px;
     color: #FFFFFF;
     cursor: pointer;
-    display: inline-block;
     font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
-    padding: 10px 80px;
     width: 35%;
     text-align: center;
     text-decoration: none;
@@ -39,6 +40,9 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    display:block;
+    margin:auto;
+    height: 40px;
 }
 
 .button-green:hover {
@@ -63,7 +67,8 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
-
+    height: 40px;
+    text-align:center;
 }
 
 .button-white:hover {
@@ -86,14 +91,17 @@
     text-align: center;
 }
 
-.logo {
-    text-align: center;
-    margin: 70px;
-}
 
 .icon:hover {
     transform: scale(1.03);
     transition: 1s;
+}
+
+.icon {
+    display: block;
+    margin:auto;
+    height: 300px;
+    width: 200px;
 }
 
 .errorMsg {
@@ -127,44 +135,11 @@
 }
 
 
-.bg-box {
-    position: absolute;
-    z-index: 1;
-    margin-bottom: 5px;
-    width: 130%;
-    height: 200%;
-    top: 0%;
-    right: 0%;
-    bottom: 0%;
-    background: url("../../images/background1.jpg");
-}
-
 .centered {
-    z-index: 2;
-    position: relative;
-    text-align: center;
-    margin-top: 125%;
-    margin-left: -5%;
-    width: 80%;
-    height: 40%;
-    bottom: 60%;
-    color: white;
-    text-shadow: 0.5px 0.5px 2px #000000;
-    /* left: -34%; */
+    margin-top: 60%;
+    margin-left: 20%;
 }
 
-.backgroundMX {
-    position: relative;
-    float: right;
-    width: 120%;
-    display: block;
-}
-
-.centeredMX {
-    color: #FFFFFF;
-    position: relative;
-    transform: translate(-9%, -52.5%);
-}
 
 .centerHeading {
     text-align: center;
@@ -179,4 +154,23 @@
     padding: 10px;
     margin-bottom: 200px;
     align-items: center;
+}
+
+.bg {
+    background-image: url("../../images/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.plannerName {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin-bottom: 50px;
+}
+
+.whiteText {
+    color: white
 }
