@@ -14,6 +14,7 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
+    padding: 1%;
 
 }
 
@@ -102,6 +103,7 @@
     margin:auto;
     height: 300px;
     width: 200px;
+    margin-top: 10%;
 }
 
 .errorMsg {
