@@ -1,3 +1,4 @@
 # Team name: NUSPlanner
-# Team members: Shanice Sng and Ong Min Xian![Icon V2](https://user-images.githubusercontent.com/79785001/170935587-96de3add-edc4-4e23-8d80-833318c43b2c.png)
-<hr>
+![Icon V2](https://user-images.githubusercontent.com/79785001/170935952-31d8123b-84d3-4d9c-86c2-f47bb8658157.png)
+
+# Team members: Ong Min Xian and Sng Wei Zhen Shanice 
