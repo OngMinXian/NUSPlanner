@@ -1,7 +1,7 @@
 import React from "react"
 import Signup from "./Signup";
 import { AuthProvider } from "./contexts/AuthContext";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //Switch replaced with Routes
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; //Switch replaced with Routes
 import Today from "./Today";
 import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
