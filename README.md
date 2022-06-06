@@ -29,7 +29,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
 
-## Installation and Set-Up :gear:
+## Installation and Set-Up :hammer_and_wrench:
 1. Install react-js from [create-react-app](https://github.com/facebook/create-react-app)
 2. Clone from GitHub repository: https://github.com/OngMinXian/NUSPlanner
 3. Navigate to the src folder and instll the following dependencies 
