@@ -155,7 +155,7 @@ npm i firebase
   - [x] Read and upload data into Firebase
   - [x]  Create login and authentication system
 
-### 2. Before: Evaluation Milestone 2 (27 Jun 2022).
+### :two: Before: Evaluation Milestone 2 (27 Jun 2022).
 
 - [x] Complete the code and design for the Calendar page **_by 13 June 2022_** 
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
@@ -173,7 +173,7 @@ npm i firebase
     - [ ] Render the data above and output it in a user-friendly layout
 - [ ] Implement feature where user can share their timetable with others by generating a PDF
 
-### 3. Before: Evaluation Milestone 3 (25 Jul 2022)
+### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [ ] Complete the dashboard page of the planner 
 
     
