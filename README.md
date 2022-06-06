@@ -174,8 +174,17 @@ npm i firebase
 - [ ] Implement feature where user can share their timetable with others by generating a PDF
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
-- [ ] Complete the dashboard page of the planner 
-
+- [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_**
+  - [ ]  Code and design for productive hours to be expressed in a progress bar 
+  - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
+  - [ ]  User input to be stored in Firebase 
+- [ ] Complete the Dashboard page of the planner 
+    - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_**
+      - [ ] Code and design for overall mood of the day to be represented as 5 different emojis and assigned a score 
+      - [ ] User input to be stored in Firebase 
+      - [ ] Average score for mood to be assigned to user 
+    - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_**
+      - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
     
 
 
