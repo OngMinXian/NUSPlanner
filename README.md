@@ -95,7 +95,7 @@ npm i firebase
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
-### 5. Academics Planning page :bookmark_tabs:
+### 5. Modules page :bookmark_tabs:
   - **Advanced feature for Artemis -> Integration with NUSMODs**
   - Users can plan their modules for every Academic Year/Semester using the following features from the NUSMODs Integration: 
     - **_Search for modules in web application based on the following criteria:_** 
