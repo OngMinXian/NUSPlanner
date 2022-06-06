@@ -1,2 +1,5 @@
-readme can be found here: 
-https://docs.google.com/document/d/1MVw4hA50ckLC3r85MQIkC8K9H65xbIeVPaBwaX5XRtU/edit?usp=sharing
+# NUSPlanner
+A web application integrated with NUSMODs that helps students to optimise their time in the areas of work, academics and extracurricular activities.
+
+## Proposed level of achievement 
+Artemis 
