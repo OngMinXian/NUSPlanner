@@ -51,12 +51,12 @@ npm i firebase
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
 ## Proposed core features :desktop_computer:
-### 1. Login and authentication system ### 	:lock:
+### 1. Login and authentication system :lock:
   - Login page
   - Sign-up page 
   - Forget password page 
   
-### 2. Dashboard page (Landing page upon login) ### :chart_with_upwards_trend:
+### 2. Dashboard page (Landing page upon login) :chart_with_upwards_trend:
   - **_Descriptive statistics_** for the following 3 segments:
     - #### Productivity ####
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
@@ -95,7 +95,7 @@ npm i firebase
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
-### 5. Progress Report page ### :card_index_dividers:
+### 5. Progress Report page :card_index_dividers:
   - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
     - #### Tracking of academic progress ####
       - CAP for individual semesters as well as cumulative CAP
@@ -105,7 +105,7 @@ npm i firebase
     - #### Monitoring progress in the work and extracurricular activities ####
       - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
 
-### 6. Profile page ### :bust_in_silhouette:
+### 6. Profile page :bust_in_silhouette:
   - Allows users to **_adjust their account details_** 
     - #### Aspects that can be changed ####
       - Username 
@@ -115,7 +115,7 @@ npm i firebase
       - Matriculation year 
       - Year of graduation
 
-#### 7. Settings page #### :gear:
+#### 7. Settings page  :gear:
   - Users can **_input/update their grades for each module_** per semester
 
     
