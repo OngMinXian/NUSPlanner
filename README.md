@@ -157,24 +157,24 @@ npm i firebase
 
 ### :two: Before: Evaluation Milestone 2 (27 Jun 2022).
 
-- [x] Complete the code and design for the Calendar page **_by 13 June 2022_** 
+- [x] Complete the code and design for the Calendar page **_by 13 June 2022_** :calendar:
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
     - [x] Ensure that interactivity for drag and drop + resizing works as expected **-> Completed in MS1**
     - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
     - [ ] Link data for calendar events to Firebase
-- [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** 
+- [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for created events to Firebase **-> Completed in MS1**
     - [ ] Link data to be reflected on the calendar in the Calendar page
 - [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories **_by 25 June 2022_**
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
     - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data 
-- [ ] Complete the code and design for the Modules page **_by 20 June 2022_** -> Integration with NUSMODs, Artemis advanced feature 
+- [ ] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
     - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
     - [ ] Render the data above and output it in a user-friendly layout
 - [ ] Implement feature where user can share their timetable with others by generating a PDF
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
-- [ ] Complete the Dashboard page of the planner 
+- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend:
     - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_**
       - [ ]  Code and design for productive hours to be expressed in a progress bar 
       - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
@@ -185,7 +185,7 @@ npm i firebase
       - [ ] Average score for mood to be assigned to user 
     - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_**
       - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
-- [ ] Complete the Progress Report page of the planner 
+- [ ] Complete the Progress Report page of the planner :card_index_dividers:
 
     
 
