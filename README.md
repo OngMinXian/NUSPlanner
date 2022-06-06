@@ -50,6 +50,9 @@ npm i firebase
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
+## Proposed system architecture 	:label:
+![MS1 Overall Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172174212-c7665734-6d6b-4e4d-bd1e-ac4f0c59bcb3.png)
+
 ## Proposed core features :desktop_computer:
 ### 1. Login and authentication system :lock:
   - Login page
