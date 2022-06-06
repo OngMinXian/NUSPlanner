@@ -112,6 +112,7 @@ npm i firebase
 ### 6. Progress Report page :card_index_dividers:
   - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
     - #### Tracking of academic progress ####
+      - Users can input/update their grades for each module per semester
       - CAP for individual semesters as well as cumulative CAP
       - Data representation of CAP trend
       - Progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
@@ -128,9 +129,6 @@ npm i firebase
       - Course 
       - Matriculation year 
       - Year of graduation
-
-### 8. Settings page  :gear:
-  - Users can **_input/update their grades for each module_** per semester
 
 ## Timeline and Executables :alarm_clock:
 
