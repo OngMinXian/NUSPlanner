@@ -82,7 +82,7 @@ npm i firebase
     - #### Dragging and dropping events #### 
       - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
 
-- Users can **_add events with "special" tags_** which belong to either the work or extracurricular categories
+- Users can **_add events with "special" tags_** which belong to the work or extracurricular categories
   - #### Adding events with a "special" tag ####
     - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
     - #### Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
@@ -90,12 +90,26 @@ npm i firebase
       - Description of duties undertaken
       - Duration taken to complete assigned tasks 
       - Name of organisation that user is employed under
-    - #### Example 2: When the extra-curriculars special tag is selected, the user will have to fill up the following additional fields: 
+    - #### Example 2: When the extracurriculars special tag is selected, the user will have to fill up the following additional fields: 
       - User’s role or responsibility in their co-curricular activity
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
-### 5. Progress Report page :card_index_dividers:
+### 5. Academics Planning page :bookmark_tabs:
+  - **Advanced feature for Artemis -> Integration with NUSMODs**
+  - Users can plan their modules for every Academic Year/Semester using the following features from the NUSMODs Integration: 
+    - Search for modules in application based on the following criteria: 
+      - Name
+      - Module Code
+      - Semester offered
+      - No exam
+      - Number of MCs
+      - Has S/U options
+      - Time
+      - Lessons in school
+      - Venue (Will require extra effort since it involves geographical location, implement if time permits)
+
+### 6. Progress Report page :card_index_dividers:
   - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
     - #### Tracking of academic progress ####
       - CAP for individual semesters as well as cumulative CAP
@@ -105,7 +119,7 @@ npm i firebase
     - #### Monitoring progress in the work and extracurricular activities ####
       - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
 
-### 6. Profile page :bust_in_silhouette:
+### 7. Profile page :bust_in_silhouette:
   - Allows users to **_adjust their account details_** 
     - #### Fields that can be changed ####
       - Username 
@@ -117,6 +131,8 @@ npm i firebase
 
 ### 7. Settings page  :gear:
   - Users can **_input/update their grades for each module_** per semester
+
+
 
     
 
