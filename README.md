@@ -95,6 +95,8 @@ npm i firebase
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
+### 5. Progress Report Page ###
+
 
     
 
