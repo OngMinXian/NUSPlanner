@@ -200,7 +200,14 @@ npm i firebase
     - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities
       - [ ] Code and design for users to view all events they have logged under these categories
    
-    
+ ### Before: Splashdown (22 Aug 2022)
+ - [ ] Create project poster and video
+ - [ ] Publish web app online
+ - [ ] Test web application and fix bugs
+ - [ ] If there is enough time, the feature below will be implemented:
+    - [ ] Incorporate Telegram link to modules in the Module page 
+      - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
+
 
 
 
