@@ -107,13 +107,13 @@ npm i firebase
 
 ### 6. Profile page ###
   - Allows users to **_adjust their account details_** 
-    - #### Adjusting account details ####
-      - Change username 
-      - Change email 
-      - Change profile picture (default profile picture is set if no pictures are specified)
-      - Change course 
-      - Change matriculation year 
-      - Change year of graduation
+    - #### Aspects that can be changed ####
+      - Username 
+      - Email 
+      - Profile picture (default profile picture is set if no pictures are specified)
+      - Course 
+      - Matriculation year 
+      - Year of graduation
 
 #### 7. Settings page ####
   - Users can **_input/update their grades for each module_** per semester
