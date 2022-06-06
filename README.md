@@ -70,7 +70,7 @@ npm i firebase
   - Users can **_create tasks and delete tasks for that very day_**. 
     - Tasks are displayed in chronological order. 
 
-### 4. Calendar Page ###
+### 4. Calendar page ###
   - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
     - #### Adding events ####
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
@@ -95,8 +95,28 @@ npm i firebase
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
-### 5. Progress Report Page ###
+### 5. Progress Report page ###
+  - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
+    - #### Tracking of academic progress ####
+      - CAP for individual semesters as well as cumulative CAP
+      - Data representation of CAP trend
+      - Progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
+      - (If applicable) Features here extended to second degree/major/minor
+    - #### Monitoring progress in the work and extracurricular activities ####
+      - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
 
+### 6. Profile page ###
+  - Allows users to **_adjust their account details_** 
+    - #### Adjusting account details ####
+      - Change username 
+      - Change email 
+      - Change profile picture (default profile picture is set if no pictures are specified)
+      - Change course 
+      - Change matriculation year 
+      - Change year of graduation
+
+#### 7. Settings page ####
+  - Users can **_input/update their grades for each module_** per semester
 
     
 
