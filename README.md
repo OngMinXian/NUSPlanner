@@ -129,7 +129,7 @@ npm i firebase
       - Matriculation year 
       - Year of graduation
 
-### 7. Settings page  :gear:
+### 8. Settings page  :gear:
   - Users can **_input/update their grades for each module_** per semester
 
 ## Timeline and Executables :alarm_clock:
