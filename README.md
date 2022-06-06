@@ -28,3 +28,24 @@ With this problem in mind, we hope to design a user-friendly application that wi
 2. As a student, I want to be able to look at overall progress I have made during the time I was in NUS.
 
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
+
+## Installation and Set-Up :wrench:
+1. Install react-js from [create-react-app](https://github.com/facebook/create-react-app)
+2. Clone from GitHub repository: https://github.com/OngMinXian/NUSPlanner
+3. Navigate to the src folder and instll the following dependencies 
+``` bash 
+npm i react-router-dom
+npm i react-bootstrap
+npm install --save react-big-calendar --legacy-peer-deps
+npm i react-datepicker
+npm i date-fns
+npm i styled-components
+npm i react-icons
+```
+5. Install the dependencies for the Firebase database:
+```bash 
+npm i firebase
+```
+6. Create the .env.local file containing the Firebase API keys
+  - This file should be created on the same level as the src folder
+  - Email Shanice at e0774411@u.nus.edu for details.
