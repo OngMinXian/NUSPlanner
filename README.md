@@ -98,7 +98,7 @@ npm i firebase
 ### 5. Academics Planning page :bookmark_tabs:
   - **Advanced feature for Artemis -> Integration with NUSMODs**
   - Users can plan their modules for every Academic Year/Semester using the following features from the NUSMODs Integration: 
-    - Search for modules in application based on the following criteria: 
+    - **_Search for modules in web application based on the following criteria:_** 
       - Name
       - Module Code
       - Semester offered
