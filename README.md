@@ -58,11 +58,11 @@ npm i firebase
   
 ### 2. Dashboard page (Landing page upon login) ###
   - Descriptive statistics for the following 3 segments:
-    - Productivity
+    - #### Productivity ####
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
-    - Wellness
+    - #### Wellness ####
       - Overall mood of each day to be rated and given an average score over a period of time 
-    - Summary 
+    - #### Summary ####
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
      
 ### 3. Today page ###
