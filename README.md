@@ -22,14 +22,14 @@ As of 2020, being **ONE in the 33% of Singaporean degree holders** translates to
 
 With this problem in mind, we hope to design a user-friendly application that will help undergraduates remain cognisant of both their working portfolio and academic progress early on in their university journey. This way, much despair and anxiety can be averted, as one can do the necessary homework and preparation needed to land his dream job
 
-## User stories :open_book:
+## User stories :page_facing_up:
 1. As a student, I want to be able to plan and track my progress I have or plan to make in NUS, be it academically, work-related or extracurricular.
 
 2. As a student, I want to be able to look at overall progress I have made during the time I was in NUS.
 
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
 
-## Installation and Set-Up :wrench:
+## Installation and Set-Up :gear:
 1. Install react-js from [create-react-app](https://github.com/facebook/create-react-app)
 2. Clone from GitHub repository: https://github.com/OngMinXian/NUSPlanner
 3. Navigate to the src folder and instll the following dependencies 
@@ -42,7 +42,7 @@ npm i date-fns
 npm i styled-components
 npm i react-icons
 ```
-5. Install the dependencies for the Firebase database:
+5. Within the src folder, install the dependencies for the Firebase database:
 ```bash 
 npm i firebase
 ```
@@ -50,4 +50,3 @@ npm i firebase
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details.
 
-## Proposed core features
