@@ -139,6 +139,23 @@ npm i firebase
 
 ## Timeline and Executables :alarm_clock:
 
+1. Before: Evaluation Milestone 1 (30 May 2022)
+
+- Planning Stage:
+  - [x] UI Design using Figma
+  - [x] Design diagrams
+  - [x] Set up Firebase backend and plan data storage
+  - [ ] Set up Google Analytics 
+  - [ ] Request for NUSMODS API
+
+- Set up Stage:
+- []Create basic theme and structure for the app
+- Install packages and softwares
+- Learn all relevant tech stacks
+- Familiarise ourselves with NUSMODS API
+- Read and upload data into Firebase
+- Create login and authentication system
+
     
 
 
