@@ -49,3 +49,5 @@ npm i firebase
 6. Create the .env.local file containing the Firebase API keys
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details.
+
+## Proposed core features
