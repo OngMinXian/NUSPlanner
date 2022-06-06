@@ -22,7 +22,7 @@ As of 2020, being **ONE in the 33% of Singaporean degree holders** translates to
 
 With this problem in mind, we hope to design a user-friendly application that will help undergraduates remain cognisant of both their working portfolio and academic progress early on in their university journey. This way, much despair and anxiety can be averted, as one can do the necessary homework and preparation needed to land his dream job
 
-## User stories :page_facing_up:
+## User stories :memo::pencil:
 1. As a student, I want to be able to plan and track my progress I have or plan to make in NUS, be it academically, work-related or extracurricular.
 
 2. As a student, I want to be able to look at overall progress I have made during the time I was in NUS.
