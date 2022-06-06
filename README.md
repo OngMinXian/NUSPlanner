@@ -132,7 +132,7 @@ npm i firebase
 ### 7. Settings page  :gear:
   - Users can **_input/update their grades for each module_** per semester
 
-
+## Progress for Milestone 1
 
     
 
