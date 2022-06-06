@@ -65,12 +65,12 @@ npm i firebase
     - #### Summary ####
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
      
-### 3. Today page ### :round_pushpin:
+### 3. Today page :round_pushpin:
   - Displays the tasks that users have assigned themselves for the day 
   - Users can **_create tasks and delete tasks for that very day_**. 
     - Tasks are displayed in chronological order. 
 
-### 4. Calendar page ### :calendar:
+### 4. Calendar page :calendar:
   - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
     - #### Adding events ####
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
