@@ -58,7 +58,7 @@ npm i firebase
   
 ### 2. Dashboard page (Landing page upon login) ###
   - Descriptive statistics for the following 3 segments:
-    - Productivity 
+    - Productivity
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
     - Wellness
       - Overall mood of each day to be rated and given an average score over a period of time 
@@ -81,6 +81,20 @@ npm i firebase
       - This allows the number of days that the event spans and the event duration to be adjusted with ease 
     - Dragging and dropping events 
       - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
+- Users can add events with "special" tags which belong to either the work orextracurricular categories
+  - Adding events with a "special" tag 
+    - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
+    - Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
+      - User’s role in the workplace
+      - Description of duties undertaken
+      - Duration taken to complete assigned tasks 
+      - Name of organisation that user is employed under
+    - Example 2: When the extra-curriculars special tag is selected, the user will have to fill up the following additional fields: 
+      - User’s role or responsibility in their co-curricular activity
+      - Hours committed to each activity
+      - Name of organisation that user is a part of 
+
+
     
 
 
