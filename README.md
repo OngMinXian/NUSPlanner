@@ -85,12 +85,12 @@ npm i firebase
 - Users can **_add events with "special" tags_** which belong to either the work or extracurricular categories
   - #### Adding events with a "special" tag ####
     - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
-    - #### Example 1: #### When the work special tag is selected, the user will have to fill up the following additional fields: 
+    - #### Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
       - User’s role in the workplace
       - Description of duties undertaken
       - Duration taken to complete assigned tasks 
       - Name of organisation that user is employed under
-    - #### Example 2: #### When the extra-curriculars special tag is selected, the user will have to fill up the following additional fields: 
+    - #### Example 2: When the extra-curriculars special tag is selected, the user will have to fill up the following additional fields: 
       - User’s role or responsibility in their co-curricular activity
       - Hours committed to each activity
       - Name of organisation that user is a part of 
