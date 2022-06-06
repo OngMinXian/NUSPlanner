@@ -57,7 +57,7 @@ npm i firebase
   - Forget password page 
   
 ### 2. Dashboard page (Landing page upon login) ###
-  - Descriptive statistics for the following 3 segments:
+  - **_Descriptive statistics_** for the following 3 segments:
     - #### Productivity ####
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
     - #### Wellness ####
@@ -67,7 +67,7 @@ npm i firebase
      
 ### 3. Today page ###
   - Displays the tasks that users have assigned themselves for the day 
-  - Users can create tasks and delete tasks for that very day. 
+  - Users can **_create tasks and delete tasks for that very day_**. 
     - Tasks are displayed in chronological order. 
 
 ### 4. Calendar Page ###
