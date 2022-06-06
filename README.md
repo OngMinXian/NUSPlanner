@@ -72,14 +72,14 @@ npm i firebase
 
 ### 4. Calendar Page ###
   - Displays a calendar that allows users to add, remove, resize, and drag and drop events
-    - ### Adding events ###
+    - #### Adding events ####
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
-    - ### Removing events ###
+    - #### Removing events ####
       - Events can be removed by double clicking on the event, which will trigger a pop up asking the user to confirm the deletion
     - ### Resizing events ###
       - Events can be resized by dragging the top and bottom/ left and right limits of the rectangle that the event spans 
       - This allows the number of days that the event spans and the event duration to be adjusted with ease 
-    - ### Dragging and dropping events ### 
+    - #### Dragging and dropping events #### 
       - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
 
 - Users can add events with "special" tags which belong to either the work or extracurricular categories
