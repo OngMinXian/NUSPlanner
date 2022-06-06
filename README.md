@@ -149,7 +149,7 @@ npm i firebase
   - [ ] Request for NUSMODS API
 
 - Set up Stage:
-  - [ ]Create basic theme and structure for the app
+  - [] Create basic theme and structure for the app
   - Install packages and softwares
   - Learn all relevant tech stacks
   - Familiarise ourselves with NUSMODS API
