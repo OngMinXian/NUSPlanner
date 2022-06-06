@@ -71,7 +71,7 @@ npm i firebase
     - Tasks are displayed in chronological order. 
 
 ### 4. Calendar Page ###
-  - Displays a calendar that allows users to ** _add, remove, resize, and drag and drop events_ **
+  - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
     - #### Adding events ####
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
     - #### Removing events ####
