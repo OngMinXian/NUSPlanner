@@ -185,6 +185,8 @@ npm i firebase
       - [ ] Average score for mood to be assigned to user 
     - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_**
       - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
+- [ ] Complete the Progress Report page of the planner 
+
     
 
 
