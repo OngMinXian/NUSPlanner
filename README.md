@@ -159,11 +159,11 @@ npm i firebase
 
 - [x] Complete the code and design for the Calendar page by 13 June 2022 
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
-    - [x] Ensure that interactivity for drag and drop + resizing works as expected -> Completed in MS1
-    - [x] User is able to add events by day, time and title, as well as to delete events -> Completed in MS1
+    - [x] Ensure that interactivity for drag and drop + resizing works as expected **-> Completed in MS1**
+    - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
     - [ ] Link data for calendar events to Firebase
 - [x] Complete the code and design required for the user to create events in the Today page by 6 June 2022 
-    - [x] Link data for created events to Firebase -> Completed in MS1
+    - [x] Link data for created events to Firebase **-> Completed in MS1**
     - [ ] Link data to be reflected on the calendar in the Calendar page
 - [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories by 25 June 2022
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
@@ -172,6 +172,9 @@ npm i firebase
     - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
     - [ ] Render the data above and output it in a user-friendly layout
 - [ ] Implement feature where user can share their timetable with others by generating a PDF
+
+### 3. Before: Evaluation Milestone 3 (25 Jul 2022)
+- [ ] Complete the dashboard page of the planner 
 
     
 
