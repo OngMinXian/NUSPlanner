@@ -157,18 +157,18 @@ npm i firebase
 
 ### 2. Before: Evaluation Milestone 2 (27 Jun 2022).
 
-- [x] Complete the code and design for the Calendar page by 13 June 2022 
+- [x] Complete the code and design for the Calendar page **_by 13 June 2022_** 
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
     - [x] Ensure that interactivity for drag and drop + resizing works as expected **-> Completed in MS1**
     - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
     - [ ] Link data for calendar events to Firebase
-- [x] Complete the code and design required for the user to create events in the Today page by 6 June 2022 
+- [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** 
     - [x] Link data for created events to Firebase **-> Completed in MS1**
     - [ ] Link data to be reflected on the calendar in the Calendar page
-- [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories by 25 June 2022
+- [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories **_by 25 June 2022_**
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
     - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data 
-- [ ] Complete the code and design for the Modules page by 20 June 2022 -> Integration with NUSMODs, Artemis advanced feature 
+- [ ] Complete the code and design for the Modules page **_by 20 June 2022_** -> Integration with NUSMODs, Artemis advanced feature 
     - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
     - [ ] Render the data above and output it in a user-friendly layout
 - [ ] Implement feature where user can share their timetable with others by generating a PDF
