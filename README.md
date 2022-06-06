@@ -81,8 +81,9 @@ npm i firebase
       - This allows the number of days that the event spans and the event duration to be adjusted with ease 
     - Dragging and dropping events 
       - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
-- Users can add events with "special" tags which belong to either the work orextracurricular categories
-  - Adding events with a "special" tag 
+
+- Users can add events with "special" tags which belong to either the work or extracurricular categories
+  - <u> Adding events with a "special" tag </u>
     - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
     - Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
       - User’s role in the workplace
