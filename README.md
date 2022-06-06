@@ -158,7 +158,7 @@ npm i firebase
 ### 2. Before: Evaluation Milestone 2 (27 Jun 2022).
 
 - [x] Complete the code and design for the Calendar page by 13 June 2022 
-    - [x] Month and year layout for calendar to be completed -> Completed in MS1
+    - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
     - [x] Ensure that interactivity for drag and drop + resizing works as expected -> Completed in MS1
     - [x] User is able to add events by day, time and title, as well as to delete events -> Completed in MS1
     - [ ] Link data for calendar events to Firebase
