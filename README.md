@@ -154,6 +154,10 @@ npm i firebase
   - [x] Familiarise ourselves with NUSMODS API
   - [x] Read and upload data into Firebase
   - [x]  Create login and authentication system
+  - [x]  Complete the code and design for the Profile page 
+    - [x] User can edit all fields in their profile and set a profile picture 
+    - [x] User can log out of their account
+    - [x] Default profile picture is displayed if the user does not set a profile picture
 
 ### :two: Before: Evaluation Milestone 2 (27 Jun 2022).
 
