@@ -202,14 +202,13 @@ npm i firebase
    
  ### Before: Splashdown (22 Aug 2022)
  - [ ] Create project poster and video
- - [ ] Publish web app online
+ - [ ] Publish web application online
  - [ ] Test web application and fix bugs
  - [ ] If there is enough time, the feature below will be implemented:
     - [ ] Incorporate Telegram link to modules in the Module page 
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
-
-
-
-
-
+## Progress in Milestone 1 
+### Technical progress
+![MS1 Current Progress Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172189893-8475d118-ae11-4d5f-a638-cf69ae1d985b.png)
+### Screenshots of pages
