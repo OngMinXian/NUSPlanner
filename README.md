@@ -48,5 +48,17 @@ npm i firebase
 ```
 6. Create the .env.local file containing the Firebase API keys
   - This file should be created on the same level as the src folder
-  - Email Shanice at e0774411@u.nus.edu for details.
+  - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
+
+## Proposed core features 
+1. Login and authentication system 
+  - Login page
+  - Sign-up page 
+  - Forget password page 
+2. Dashboard page (Landing page upon login) 
+  - Descriptive statistics for the following 3 segments:
+    - Productivity 
+      - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
+
+
 
