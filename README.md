@@ -65,6 +65,24 @@ npm i firebase
     - Summary 
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
      
+### 3. Today page ###
+  - Displays the tasks that users have assigned themselves for the day 
+  - Users can create tasks and delete tasks for that very day. 
+    - Tasks are displayed in chronological order. 
+
+### 4. Calendar Page ###
+  - Displays a calendar that allows users to add, remove, resize, and drag and drop events
+    - Adding events 
+      - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
+    - Removing events 
+      - Events can be removed by double clicking on the event, which will trigger a pop up asking the user to confirm the deletion
+    - Resizing events 
+      - Events can be resized by dragging the top and bottom/ left and right limits of the rectangle that the event spans 
+      - This allows the number of days that the event spans and the event duration to be adjusted with ease 
+    - Dragging and dropping events 
+      - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
+    
+
 
 
 
