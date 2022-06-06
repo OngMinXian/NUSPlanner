@@ -139,7 +139,7 @@ npm i firebase
 
 ## Timeline and Executables :alarm_clock:
 
-### 1. Before: Evaluation Milestone 1 (30 May 2022)
+### :one: Before: Evaluation Milestone 1 (30 May 2022)
 
 #### Planning Stage:
   - [x] UI Design using Figma 
