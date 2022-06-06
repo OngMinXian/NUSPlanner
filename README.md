@@ -50,13 +50,13 @@ npm i firebase
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
-## Proposed core features 
-### 1. Login and authentication system ###
+## Proposed core features :desktop_computer:
+### 1. Login and authentication system ### 	:lock:
   - Login page
   - Sign-up page 
   - Forget password page 
   
-### 2. Dashboard page (Landing page upon login) ###
+### 2. Dashboard page (Landing page upon login) ### :chart_with_upwards_trend:
   - **_Descriptive statistics_** for the following 3 segments:
     - #### Productivity ####
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
@@ -65,12 +65,12 @@ npm i firebase
     - #### Summary ####
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
      
-### 3. Today page ###
+### 3. Today page ### :round_pushpin:
   - Displays the tasks that users have assigned themselves for the day 
   - Users can **_create tasks and delete tasks for that very day_**. 
     - Tasks are displayed in chronological order. 
 
-### 4. Calendar page ###
+### 4. Calendar page ### :calendar:
   - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
     - #### Adding events ####
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
@@ -95,7 +95,7 @@ npm i firebase
       - Hours committed to each activity
       - Name of organisation that user is a part of 
 
-### 5. Progress Report page ###
+### 5. Progress Report page ### :card_index_dividers:
   - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
     - #### Tracking of academic progress ####
       - CAP for individual semesters as well as cumulative CAP
@@ -105,7 +105,7 @@ npm i firebase
     - #### Monitoring progress in the work and extracurricular activities ####
       - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
 
-### 6. Profile page ###
+### 6. Profile page ### :bust_in_silhouette:
   - Allows users to **_adjust their account details_** 
     - #### Aspects that can be changed ####
       - Username 
@@ -115,7 +115,7 @@ npm i firebase
       - Matriculation year 
       - Year of graduation
 
-#### 7. Settings page ####
+#### 7. Settings page #### :gear:
   - Users can **_input/update their grades for each module_** per semester
 
     
