@@ -217,7 +217,7 @@ npm i firebase
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
-| Figma Prototype |  1.   Drafted out the design elements of all pages in the web application <br /> 2.   Transitions and animations added for all relevant features  | [Link to Figma prototype](https://www.figma.com/proto/mvXHFUbWjlcstcUr1ZB1MB/Mentor-Matching-Prototype-(Extra-Effects-Added)?node-id=3%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2) <br /> [Link to Figma demo video](https://drive.google.com/file/d/1voxKLLNQAammyWgwaj2RplNJAg7oiw5U/view?usp=sharing) |
+| Figma Prototype |  1. Drafted out the design elements of all pages in the web application <br /><br/><br/> 2. Transitions and animations added for all relevant features  | [Link to Figma prototype](https://www.figma.com/proto/mvXHFUbWjlcstcUr1ZB1MB/Mentor-Matching-Prototype-(Extra-Effects-Added)?node-id=3%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2) <br /> [Link to Figma demo video](https://drive.google.com/file/d/1voxKLLNQAammyWgwaj2RplNJAg7oiw5U/view?usp=sharing) |
 | Login and Authentication system  | 1. Login, sign-up and forget password feature has been completed <br /> 2. For the forget password functionality, an email will be sent to the user, prompting him to reset his password <br /> 3. Firebase provides the authentication database that allows us to store users' UID, email and passwords. <br /> A “Users” collection in the Firestore database has been created to store user objects  | Not applicable |
 
 ### Screenshots of pages :camera:
