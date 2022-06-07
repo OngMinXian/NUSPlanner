@@ -214,6 +214,7 @@ npm i firebase
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
+
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- |
 | Prototype of the web application with Figma  |  Scope out the design elements of all pages in the application <br /> Transitions and animations added for all relevant features  | [Link to Figma prototype] (https://www.figma.com/proto/mvXHFUbWjlcstcUr1ZB1MB/Mentor-Matching-Prototype-(Extra-Effects-Added)?node-id=3%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2) <br /> [Link to Figma demo video] (https://drive.google.com/file/d/1voxKLLNQAammyWgwaj2RplNJAg7oiw5U/view?usp=sharing) |
