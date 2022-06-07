@@ -249,7 +249,9 @@ Finally, we **integrated the users' account information and in-application data 
 ### Project management and planning 
 We **keep track of our tasks and executables using a combination of Google Docs and Google sheets** 
 
-The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. We also ensure that we update the Google docs with the relevant links or new information each time after we receive emails from the programme supervisor or our student mentor. 
+The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. 
+
+We also ensure that we update the Google docs with the relevant links or new information each time after we receive emails from the programme supervisor or our student mentor. 
 
 Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
 :-------------------------:|:-------------------------:
