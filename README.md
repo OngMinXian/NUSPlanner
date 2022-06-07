@@ -142,10 +142,10 @@ npm i firebase
 ### :one: Before: Evaluation Milestone 1 (30 May 2022)
 
 #### Planning Stage:
-  - [x] UI Design using Figma 
-  - [x] Design diagrams
-  - [x] Set up Firebase backend and plan data storage
-  - [x] Set up Google Analytics 
+  - [x] UI Design using Figma <br/>
+  - [x] Design diagrams <br/>
+  - [x] Set up Firebase backend and plan data storage <br/>
+  - [x] Set up Google Analytics <br/>
 
 #### Set up Stage:
   - [x] Create basic theme and structure for the app
