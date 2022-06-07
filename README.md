@@ -258,7 +258,9 @@ Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
 :-------------------------:|:-------------------------:
 ![Screenshot 2022-06-07 at 7 53 44 PM](https://user-images.githubusercontent.com/79785001/172375940-575f8b7d-e270-4200-93a0-a9ad3a0eb7f4.png) | ![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
 
-Our **project log in Google sheets allows us to delegate roles to each other effectively and monitor each others' progress on tasks**. The details of every task assigned to each member is logged down consistently, along with the duration taken to accomplish each task. The assigned tasks and their associated deadlines are influenced by the **Timeline and Executables** section of this markdown document, facilitating the process of planning to meet deadlines. Furthermore, we have incorporated a **column that records the tasks completed by our team in our project log**, giving us a clear idea of our productivity as a team.
+Our **project log in Google sheets allows us to delegate roles to each other effectively and monitor each others' progress on tasks**. The details of every task assigned to each member is logged down consistently, along with the duration taken to accomplish each task. Furthermore, we have incorporated a **column that records the tasks completed by our team in our project log**, giving us a clear idea of our productivity as a team.
+
+The assigned tasks and their associated deadlines are influenced by the **Timeline and Executables** section of this markdown document, facilitating the process of planning to meet deadlines. 
 
 Project log on Google Sheets| Timeline and Executables section on GitHub
 :-------------------------:|:-------------------------:
