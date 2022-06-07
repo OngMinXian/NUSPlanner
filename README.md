@@ -237,7 +237,10 @@ npm i firebase
 
 ## Software Engineering Practices 
 ### Approach to software design 
-We adopted a bottom-up approach towards multi-level design in Milestone 1. Given our lack of familiarity with the tech stacks, we started by watching YouTube introductory videos and reading online guides to prepare ourselves for the technical rigours of producing code. We then proceeded to enhance our understanding of the tech-stacks by starting on the website design and layout, which is heavily reliant on HTML, CSS, as well as frameoworks like react-bootstrap. Developing advanced features like integration with Firebase, routing and interactivity followed after we gained proficiency in the basics of web development. <br /><br />
+We adopted a [bottom-up approach](https://www.geeksforgeeks.org/difference-between-top-down-and-bottom-up-integration-testing/) towards multi-level design in Milestone 1. 
+![top2](https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png)
+
+Given our lack of familiarity with the tech stacks, we started by watching YouTube introductory videos and reading online guides to prepare ourselves for the technical rigours of producing code. We then proceeded to enhance our understanding of the tech-stacks by starting on the website design and layout, which is heavily reliant on HTML, CSS, as well as frameoworks like react-bootstrap. Developing advanced features like integration with Firebase, routing and interactivity followed after we gained proficiency in the basics of web development. <br /><br />
 
 This approach to software design has been effective for us as we were able to fine-tune our advanced features based on the basic features that we built. Moving ahead, we will continue to adopt this approach to software design.
 
