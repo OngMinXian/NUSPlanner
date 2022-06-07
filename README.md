@@ -274,7 +274,7 @@ On top of this, we **add succinct commit messages** on GitHub wherever possible 
 ## Technical difficulties encountered :toolbox:
 
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | Standardising layout of web page components across all screen sizes | - [x] 3 | Solved | Consulted student advisor, solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
 | Content Cell  | Content Cell  |
 
