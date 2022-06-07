@@ -267,7 +267,7 @@ Project log on Google Sheets| Timeline and Executables section on GitHub
 ![Screenshot 2022-06-07 at 8 26 54 PM](https://user-images.githubusercontent.com/79785001/172379314-5cc32389-c9f6-4a09-ae11-9935c8e07010.png) |![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
 
 ### Version control and workflow management :file_cabinet:
-We constantly run the code on the deployment server and ensure that there are no errors before submitting pushing the code onto GitHub. Branching is being used to implement new features and pull requests are issued each time a merge is initiated. We add succinct commit messages on GitHub wherever possible to track changes made to the code and ensure the consistency of our code at all times.
+We constantly run the code on the deployment server and ensure that there are no errors before pushing the code onto GitHub. Branching is being used to implement new features and pull requests are issued each time a merge is initiated. On top of this, we add succinct commit messages on GitHub wherever possible to track changes made to the code and ensure the consistency of our code at all times.
 
 ### Screenshots of pages :camera:
  
