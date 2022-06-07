@@ -240,9 +240,11 @@ npm i firebase
 We adopted a [bottom-up approach](https://www.geeksforgeeks.org/difference-between-top-down-and-bottom-up-integration-testing/) towards multi-level design in Milestone 1. 
 ![top2](https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png)
 
-Given our lack of familiarity with the tech stacks, we started by watching YouTube introductory videos and reading online guides to prepare ourselves for the technical rigours of producing code. We then proceeded to enhance our understanding of the tech-stacks by starting on the website design and layout, which is heavily reliant on HTML, CSS, as well as frameoworks like react-bootstrap. Developing advanced features like integration with Firebase, routing and interactivity followed after we gained proficiency in the basics of web development. <br /><br />
+As novices in software engineering, producing code for the layout and design of the web application was our first priority as it would allow us to produce a user interface, as well as to hone our understanding of HTML, CSS and ReactJS. 
 
-This approach to software design has been effective for us as we were able to fine-tune our advanced features based on the basic features that we built. Moving ahead, we will continue to adopt this approach to software design.
+We then proceeded to develop more technical features that involved routing, hooks and interactivity after we gained proficiency in styling our web page. During this rudimentary stage, we directed our focus to develop the basic functionalities required for each web page before adding in any interactive features that would be triggered by user input (eg. Coding out the calendar layout properly in the Calendar Page before implementing the drag and drop functionality). This bottom-up approach helped us to understand the limitations of our code and the packages that we chose to use, enabling us to make well-informed decisions about the features that we wished to implement.
+
+Finally, we integrated the users' account information and in-application data to Firebase. This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product.
 
 ### Screenshots of pages :camera:
  
