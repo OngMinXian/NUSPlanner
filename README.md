@@ -195,7 +195,7 @@ npm i firebase
       - [ ] Calculation of CAP for individual semesters as well as cumulative CAP
       - [ ] Data representation of CAP trend
       - [ ] User input to be stored in Firebase 
-      - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion <br /> <br />
+      - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion 
       - [ ] Extend features to second degree/major/minor <br /> <br />
     - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: 
       - [ ] Code and design for users to view all events they have logged under these categories
@@ -221,7 +221,7 @@ npm i firebase
 | Login and Authentication system :lock:  | 1. The login, sign-up and forget password features have been completed <br /><br /> 2. For the forget password feature, an email will be sent to the user, prompting him to reset his password <br /><br /> 3. Firebase provides the authentication database that allows us to store users' UID, email and passwords. <br /><br /> 4. A “Users” collection in the Firestore database has been created to store user objects  | Not applicable |
 | Today page :round_pushpin: | 1. Today page displays the tasks users have assigned for themselves for the day <br /> <br /> 2. Users can create tasks and delete tasks <br /><br /> 3. Tasks created by the user are sorted in chronological order. <br /><br /> 4. Tasks created by the user are stored in the “Tasks” collection on the Firestore database. | Not applicable |
 | Calendar page :calendar: | 1. Calendar page displays a calendar that is equipped with the following functionalities: adding, removing, resizing, and dragging and dropping events <br /><br /> 2. Users add an event by assigning a title, start date + time and end date + time to the event <br /> <br /> 3. Events created by the user are stored in the “Events” collection on the Firestore database. | Not applicable |
-| Profile Page :bust_in_silhouette: | 1. Profile page is linked to Firebase and reflects any edits that a user maks to his profile <br /><br /> 1. Upon creating an account, a new “user” object is created into the “Users” collection in Firebase. Some fields are left as “-” by default before the user edits the profile. <br /><br /> 2. Users can upload a profile picture from their computer onto the website. This picture is stored in the storage database. <br /><br /> 3. If no ptofile picture has been uploaded by the user, a default profile picture which has been stored in the storage database will be displayed | Not applicable |
+| Profile Page :bust_in_silhouette: | 1. Profile page is linked to Firebase and reflects any edits that a user maks to his profile <br /><br /> 2. Upon creating an account, a new “user” object is created into the “Users” collection in Firebase. Some fields are left as “-” by default before the user edits the profile. <br /><br /> 3. Users can upload a profile picture from their computer onto the website. This picture is stored in the storage database. <br /><br /> 4. If no ptofile picture has been uploaded by the user, a default profile picture which has been stored in the storage database will be displayed | Not applicable |
 
 
 ### Screenshots of pages :camera:
