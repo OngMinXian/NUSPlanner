@@ -37,10 +37,10 @@ With this problem in mind, we hope to design a user-friendly application that wi
 | Tech | Purpose | Reasons behind choice 
 | ------------- | ------------- | ------------- |
 | HTML  | To structure the layout of the web page and its components  | 1. Required to create a website
-| CSS  | To align and style the components in the web page | 1. Consistent design </br> 2. Compatible across different screen sizes |
-| Javascript | To enable interactivity for the web page | 1. Easy to learn <br /> 2. Simple to use |
-| ReactJS | For web page design and interactivity | 1. Free <br /> 2. Easy to learn |
-| Firebase | Database to store user information and in-application data | 1. Simple to use <br /> 2. Free |
+| CSS  | To align and style the components in the web page | 1. Consistent design </br></br> 2. Compatible across different screen sizes |
+| Javascript | To enable interactivity for the web page | 1. Easy to learn <br /></br> 2. Simple to use |
+| ReactJS | For web page design and interactivity | 1. Free <br /></br> 2. Easy to learn |
+| Firebase | Database to store user information and in-application data | 1. Simple to use <br /></br> 2. Free |
 | Google Analytics SDK | To analyse user accounts and user submitted reviews | 1. Powerful in helping us analyse user behaviour and data. |
 | NUSMODs API | To collect all information pertaining to modules offered in NUS | 1. NUSMODs contains all the information on every module and is free for access upon request |
 
