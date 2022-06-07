@@ -271,5 +271,8 @@ We constantly **run the code on the deployment server** and ensure that there ar
 
 On top of this, we **add succinct commit messages** on GitHub wherever possible to track changes made to the code and to ensure the consistency of our code at all times.
 
+## Technical Difficulties during Milestone 1 	:toolbox:
+
+
 
  
