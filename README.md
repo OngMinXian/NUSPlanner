@@ -197,7 +197,7 @@ npm i firebase
       - [ ] User input to be stored in Firebase 
       - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion <br /> <br />
       - [ ] Extend features to second degree/major/minor <br /> <br />
-    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: <br /> <br />
+    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: 
       - [ ] Code and design for users to view all events they have logged under these categories
    
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
