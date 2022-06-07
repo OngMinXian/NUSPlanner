@@ -246,7 +246,8 @@ We then **proceeded to develop more technical features that involved routing, ho
 
 Finally, we **integrated the users' account information and in-application data to Firebase.** This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product. We strongly feel that the bottom-up approach helped us to develop the fundamental aspects of our web application effectively, thus we will continue to use this approach for future milestones.
 
-### Project management and planning 
+### Project management and planning :spiral_notepad:
+
 We **keep track of our tasks and executables using a combination of Google Docs, Github and Google sheets** 
 
 The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. 
@@ -259,9 +260,11 @@ Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
 
 Our **project log in Google sheets allows us to delegate roles to each other effectively and monitor each others' progress on tasks**. The details of every task assigned to each member is logged down consistently, along with the duration taken to accomplish each task. The assigned tasks and their associated deadlines are influenced by the **Timeline and Executables** section of this markdown document, facilitating the process of planning to meet deadlines. Furthermore, we have incorporated a **column that records the tasks completed by our team in our project log**, giving us a clear idea of our productivity as a team.
 
-Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
+Project log on Google Sheets| Timeline and Executables section on GitHub
 :-------------------------:|:-------------------------:
 ![Screenshot 2022-06-07 at 8 26 54 PM](https://user-images.githubusercontent.com/79785001/172379314-5cc32389-c9f6-4a09-ae11-9935c8e07010.png) |![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
+
+### Version control and workflow management :file_cabinet:
 
 ### Screenshots of pages :camera:
  
