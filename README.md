@@ -144,10 +144,10 @@ npm i firebase
 | Stage  | Task |
 | ------------- | ------------- |
 | Planning  |   - [x] UI Design using Figma <br />
-                - [x] Design diagrams (<br />)
-                - [x] Set up Firebase backend and plan data storage (<br />)
+                - [x] Design diagrams <br />
+                - [x] Set up Firebase backend and plan data storage <br />
                 - [x] Set up Google Analytics   |
-| Set up  |   - [x] Create basic theme and structure for the app
+| Set up  |   - [x] Create basic theme and structure for the app |
   - [x] Install packages and softwares
   - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
   - [x] Familiarise ourselves with NUSMODS API
