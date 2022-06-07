@@ -165,16 +165,16 @@ npm i firebase
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
     - [x] Ensure that interactivity for drag and drop + resizing works as expected **-> Completed in MS1**
     - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
-    - [ ] Link data for calendar events to Firebase
+    - [ ] Link data for calendar events to Firebase <br /><br />
 - [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for created events to Firebase **-> Completed in MS1**
-    - [ ] Link data to be reflected on the calendar in the Calendar page
+    - [ ] Link data to be reflected on the calendar in the Calendar page <br /> <br />
 - [ ] Complete the code and design for events with "special" tags, Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
-    - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data 
+    - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data <br /> <br />
 - [ ] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
     - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
-    - [ ] Render the data above and output it in a user-friendly layout
+    - [ ] Render the data above and output it in a user-friendly layout <br /> <br />
 - [ ] Implement feature where user can share their timetable with others by generating a PDF :clipboard:
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
