@@ -169,7 +169,7 @@ npm i firebase
 - [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for created events to Firebase **-> Completed in MS1**
     - [ ] Link data to be reflected on the calendar in the Calendar page
-- [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
+- [ ] Complete the code and design for events with "special" tags, Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
     - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data 
 - [ ] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
