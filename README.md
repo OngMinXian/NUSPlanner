@@ -247,9 +247,9 @@ We then **proceeded to develop more technical features that involved routing, ho
 Finally, we **integrated the users' account information and in-application data to Firebase.** This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product. We strongly feel that the bottom-up approach helped us to develop the fundamental aspects of our web application effectively, thus we will continue to use this approach for future milestones.
 
 ### Project management and planning 
-We keep track of our tasks and executables using a combination of Google Docs and Google sheets. 
+We **keep track of our tasks and executables using a combination of Google Docs and Google sheets** 
 
-The checklist and table functions in Google Docs help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. We also ensure that we update the Google docs with the relavent links or new information each time after we receive emails from the programme supervisor or our student mentor. 
+The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. We also ensure that we update the Google docs with the relevant links or new information each time after we receive emails from the programme supervisor or our student mentor. 
 
 Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
 :-------------------------:|:-------------------------:
