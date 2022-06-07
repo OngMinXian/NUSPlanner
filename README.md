@@ -190,9 +190,9 @@ npm i firebase
     - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_** :page_facing_up:
       - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
 - [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
-    - [ ] Complete the section which allows users to track their academic progress :books:
+    - [ ] Complete the section which allows users to track their academic progress 	:notebook:
       - [ ] Users can input/update their grades for each module per semester 
-      - [ ] Calculation ofCAP for individual semesters as well as cumulative CAP
+      - [ ] Calculation of CAP for individual semesters as well as cumulative CAP
       - [ ] Data representation of CAP trend
       - [ ] User input to be stored in Firebase 
       - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
