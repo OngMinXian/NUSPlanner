@@ -143,9 +143,9 @@ npm i firebase
 
 | Stage  | Task |
 | ------------- | ------------- |
-| Planning  |   - [x] UI Design using Figma 
-                - [x] Design diagrams
-                - [x] Set up Firebase backend and plan data storage
+| Planning  |   - [x] UI Design using Figma (<br />)
+                - [x] Design diagrams (<br />)
+                - [x] Set up Firebase backend and plan data storage (<br />)
                 - [x] Set up Google Analytics   |
 | Set up  |   - [x] Create basic theme and structure for the app
   - [x] Install packages and softwares
