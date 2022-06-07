@@ -214,6 +214,7 @@ npm i firebase
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
+- All the deliverables required for Milestone 1 are completed, along with a few deliverables for Milestone 2
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -223,6 +224,11 @@ npm i firebase
 | Calendar page :calendar: | 1. Calendar page displays a calendar that is equipped with the following functionalities: adding, removing, resizing, and dragging and dropping events <br /><br /> 2. Users add an event by assigning a title, start date + time and end date + time to the event <br /> <br /> 3. Events created by the user are stored in the “Events” collection on the Firestore database. | Not applicable |
 | Profile Page :bust_in_silhouette: | 1. Profile page is linked to Firebase and reflects any edits that a user maks to his profile <br /><br /> 2. Upon creating an account, a new “user” object is created into the “Users” collection in Firebase. Some fields are left as “-” by default before the user edits the profile. <br /><br /> 3. Users can upload a profile picture from their computer onto the website. This picture is stored in the storage database. <br /><br /> 4. If no ptofile picture has been uploaded by the user, a default profile picture which has been stored in the storage database will be displayed | Not applicable |
 
+## Software Engineering Practices 
+### Approach to software design 
+We adopted a bottom-up approach towards multi-level design in Milestone 1. Given our lack of familiarity with the tech stacks, we started by watching YouTube introductory videos and reading online guides to prepare ourselves for the technical rigours of producing code. We then proceeded to enhance our understanding of the tech-stacks by starting on the website design and layout, which is heavily reliant on HTML, CSS, as well as frameoworks like react-bootstrap. Developing advanced features like integration with Firebase, routing and interactivity followed after we gained proficiency in the basics of web development. <br /><br />
+
+This approach to software design has been effective for us as we were able to fine-tune our advanced features based on the basic features that we built. Moving ahead, we will continue to adopt this approach to software design.
 
 ### Screenshots of pages :camera:
  
