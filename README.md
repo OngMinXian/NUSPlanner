@@ -236,7 +236,7 @@ npm i firebase
 | Profile Page :bust_in_silhouette: | 1. Profile page is linked to Firebase and reflects any edits that a user maks to his profile <br /><br /> 2. Upon creating an account, a new “user” object is created into the “Users” collection in Firebase. Some fields are left as “-” by default before the user edits the profile. <br /><br /> 3. Users can upload a profile picture from their computer onto the website. This picture is stored in the storage database. <br /><br /> 4. If no ptofile picture has been uploaded by the user, a default profile picture which has been stored in the storage database will be displayed | Not applicable |
 
 ## Software Engineering Practices :gear:
-### Approach to software design 	:computer:
+### Approach to software design :computer:
 We adopted a [bottom-up approach](https://www.geeksforgeeks.org/difference-between-top-down-and-bottom-up-integration-testing/) towards multi-level design in Milestone 1. 
 ![top2](https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png)
 
@@ -245,6 +245,16 @@ As novices in software engineering, **producing code for the layout and design o
 We then **proceeded to develop more technical features that involved routing, hooks and interactivity** after we gained proficiency in styling our web page. During this rudimentary stage, we directed our focus to develop the basic functionalities required for each web page before adding in any interactive features that would be triggered by user input (eg. Coding out the calendar layout properly in the Calendar Page before implementing the drag and drop functionality). This bottom-up approach helped us to understand the limitations of our code and the packages that we chose to use, enabling us to make well-informed decisions about the features that we wished to implement.
 
 Finally, we **integrated the users' account information and in-application data to Firebase.** This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product. We strongly feel that the bottom-up approach helped us to develop the fundamental aspects of our web application effectively, thus we will continue to use this approach for future milestones.
+
+### Project management and planning 
+We keep track of our tasks and executables using a combination of Google Docs and Google sheets. 
+
+The checklist and table functions in Google Docs help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. We also ensure that we update the Google docs with the relavent links or new information each time after we receive emails from the programme supervisor or our student mentor. 
+
+Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
+:-------------------------:|:-------------------------:
+![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172374468-b8e1b812-0721-4da2-90c5-aaac01965b72.png)
+  |  ![Screenshot 2022-06-07 at 7 53 44 PM](https://user-images.githubusercontent.com/79785001/172374497-1443dfca-58ce-4829-9105-26a83bf54be2.png)
 
 ### Screenshots of pages :camera:
  
