@@ -253,8 +253,8 @@ The checklist and table functions in Google Docs help us to list down the criter
 
 Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
 :-------------------------:|:-------------------------:
-<img src =![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172374468-b8e1b812-0721-4da2-90c5-aaac01965b72.png) width = "425" />
-  |  <img src = ![Screenshot 2022-06-07 at 7 53 44 PM](https://user-images.githubusercontent.com/79785001/172374497-1443dfca-58ce-4829-9105-26a83bf54be2.png) width = "425"/>
+![Screenshot 2022-06-07 at 8 10 53 PM](https://user-images.githubusercontent.com/79785001/172375779-915fa5dd-dbb2-4652-9348-b7e9c7972774.png)
+
 
 ### Screenshots of pages :camera:
  
