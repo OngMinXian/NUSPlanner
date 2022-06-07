@@ -65,11 +65,11 @@ npm i firebase
   
 ### 2. Dashboard page (Landing page upon login) :chart_with_upwards_trend:
   - **_Descriptive statistics_** for the following 3 segments:
-    - #### Productivity #### :fountain_pen:
+    - #### Productivity :fountain_pen:
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
-    - #### Wellness #### :leaves:
+    - #### Wellness :leaves:
       - Overall mood of each day to be rated and given an average score over a period of time 
-    - #### Summary #### :page_facing_up:
+    - #### Summary :page_facing_up:
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
      
 ### 3. Today page :round_pushpin:
@@ -79,18 +79,18 @@ npm i firebase
 
 ### 4. Calendar page :calendar:
   - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
-    - #### Adding events ####
+    - #### Adding events :heavy_plus_sign:
       - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
     - #### Removing events ####
       - Events can be removed by double clicking on the event, which will trigger a pop up asking the user to confirm the deletion
-    - #### Resizing events ####
+    - #### Resizing events :heavy_minus_sign:
       - Events can be resized by dragging the top and bottom/ left and right limits of the rectangle that the event spans 
       - This allows the number of days that the event spans and the event duration to be adjusted with ease 
-    - #### Dragging and dropping events #### 
+    - #### Dragging and dropping events :left_right_arrow:
       - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
 
-- Users can **_add events with "special" tags_** which belong to the work or extracurricular categories
-  - #### Adding events with a "special" tag ####
+- Users can **_add events with "special" tags_** which belong to the work or extracurricular categories :briefcase:
+  - #### Adding events with a "special" tag :bookmark:
     - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
     - #### Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
       - User’s role in the workplace
@@ -117,14 +117,14 @@ npm i firebase
       - Venue (Will require extra effort since it involves geographical location, implement if time permits)
 
 ### 6. Progress Report page :card_index_dividers:
-  - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_**
-    - #### Tracking of academic progress ####
+  - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_** 
+    - #### Tracking of academic progress :notebook:
       - Users can input/update their grades for each module per semester
       - CAP for individual semesters as well as cumulative CAP
       - Data representation of CAP trend
       - Progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
       - (If applicable) Features here extended to second degree/major/minor
-    - #### Monitoring progress in the work and extracurricular activities ####
+    - #### Monitoring progress in the work and extracurricular activities :briefcase:
       - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
 
 ### 7. Profile page :bust_in_silhouette:
