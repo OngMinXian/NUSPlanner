@@ -153,8 +153,8 @@ npm i firebase
   - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
   - [x] Familiarise ourselves with NUSMODS API
   - [x] Read and upload data into Firebase
-  - [x]  Create login and authentication system
-  - [x]  Complete the code and design for the Profile page 
+  - [x]  Create login and authentication system :lock:
+  - [x]  Complete the code and design for the Profile page :bust_in_silhouette:
     - [x] User can edit all fields in their profile and set a profile picture 
     - [x] User can log out of their account
     - [x] Default profile picture is displayed if the user does not set a profile picture
@@ -200,7 +200,7 @@ npm i firebase
     - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities
       - [ ] Code and design for users to view all events they have logged under these categories
    
- ### Before: Splashdown (22 Aug 2022)
+ ### Before: Splashdown (22 Aug 2022) :checkered_flag:
  - [ ] Create project poster and video
  - [ ] Publish web application online
  - [ ] Test web application and fix bugs
@@ -208,8 +208,8 @@ npm i firebase
     - [ ] Incorporate Telegram link to modules in the Module page 
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
-## Progress in Milestone 1 
-### Technical progress
+## Progress in Milestone 1 :triangular_flag_on_post: :one:
+### Technical progress :keyboard:
 ![MS1 Current Progress Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172189893-8475d118-ae11-4d5f-a638-cf69ae1d985b.png)
-### Screenshots of pages
+### Screenshots of pages :camera:
 
