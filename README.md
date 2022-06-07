@@ -141,6 +141,23 @@ npm i firebase
 
 ### :one: Before: Evaluation Milestone 1 (30 May 2022)
 
+| Stage  | Task |
+| ------------- | ------------- |
+| Planning  |   - [x] UI Design using Figma 
+                - [x] Design diagrams
+                - [x] Set up Firebase backend and plan data storage
+                - [x] Set up Google Analytics   |
+| Set up  |   - [x] Create basic theme and structure for the app
+  - [x] Install packages and softwares
+  - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
+  - [x] Familiarise ourselves with NUSMODS API
+  - [x] Read and upload data into Firebase
+  - [x]  Create login and authentication system :lock:
+  - [x]  Complete the code and design for the Profile page :bust_in_silhouette:
+    - [x] User can edit all fields in their profile and set a profile picture 
+    - [x] User can log out of their account
+    - [x] Default profile picture is displayed if the user does not set a profile picture  |
+
 #### Planning Stage:
   - [x] UI Design using Figma 
   - [x] Design diagrams
