@@ -169,35 +169,35 @@ npm i firebase
 - [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for created events to Firebase **-> Completed in MS1**
     - [ ] Link data to be reflected on the calendar in the Calendar page
-- [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories **_by 25 June 2022_**
+- [ ] Complete the code and design for events with "special" tags which fall under the Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
     - [ ] Ensure that special "tags" are being set-up in the Calendar page 
     - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data 
 - [ ] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
     - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
     - [ ] Render the data above and output it in a user-friendly layout
-- [ ] Implement feature where user can share their timetable with others by generating a PDF
+- [ ] Implement feature where user can share their timetable with others by generating a PDF :clipboard:
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend:
-    - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_**
+    - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_** :fountain_pen:
       - [ ]  Code and design for productive hours to be expressed in a progress bar 
       - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
       - [ ]  User input to be stored in Firebase 
-    - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_**
+    - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_** :leaves:
       - [ ] Code and design for overall mood of the day to be represented as 5 different emojis and assigned a score 
       - [ ] User input to be stored in Firebase 
       - [ ] Average score for mood to be assigned to user 
-    - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_**
+    - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_** :page_facing_up:
       - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
 - [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
-    - [ ] Complete the section which allows users to track their academic progress 
+    - [ ] Complete the section which allows users to track their academic progress :closed_book:
       - [ ] Users can input/update their grades for each module per semester 
       - [ ] Calculation ofCAP for individual semesters as well as cumulative CAP
       - [ ] Data representation of CAP trend
       - [ ] User input to be stored in Firebase 
       - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
       - [ ] Extend features to second degree/major/minor
-    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities
+    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase:
       - [ ] Code and design for users to view all events they have logged under these categories
    
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
