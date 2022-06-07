@@ -4,7 +4,7 @@ A web application integrated with NUSMODs that helps students to optimise their 
 ## Proposed level of achievement :bar_chart:
 Artemis 
 
-## Links to project materials 
+## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing) <br />
 :link: [Project Poster](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I) <br />
