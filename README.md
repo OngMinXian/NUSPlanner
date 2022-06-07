@@ -275,7 +275,7 @@ On top of this, we **add succinct commit messages** on GitHub wherever possible 
 
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
 | ------------- | ------------- | ------------- | ------------- |
-| Standardising layout of web page components across all screen sizes | - [x] https://github.com/OngMinXian/NUSPlanner/issues/3 | Solved | Consulted student advisor, solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
+| Standardising layout of web page components across all screen sizes | [Issue 3](https://github.com/OngMinXian/NUSPlanner/issues/3) | Solved | Consulted student advisor, solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
 | Content Cell  | Content Cell  |
 
 
