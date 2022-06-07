@@ -153,7 +153,7 @@ npm i firebase
   - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
   - [x] Familiarise ourselves with NUSMODS API
   - [x] Read and upload data into Firebase
-  - [x]  Create login and authentication system :lock:
+  - [x]  Create login and authentication system :lock: <br /> <br />
   - [x]  Complete the code and design for the Profile page :bust_in_silhouette:
     - [x] User can edit all fields in their profile and set a profile picture 
     - [x] User can log out of their account
@@ -178,26 +178,26 @@ npm i firebase
 - [ ] Implement feature where user can share their timetable with others by generating a PDF :clipboard:
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
-- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend:
+- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend: <br /> <br />
     - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_** :fountain_pen:
       - [ ]  Code and design for productive hours to be expressed in a progress bar 
       - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
-      - [ ]  User input to be stored in Firebase 
+      - [ ]  User input to be stored in Firebase <br /> <br />
     - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_** :leaves:
       - [ ] Code and design for overall mood of the day to be represented as 5 different emojis and assigned a score 
       - [ ] User input to be stored in Firebase 
-      - [ ] Average score for mood to be assigned to user 
+      - [ ] Average score for mood to be assigned to user <br /> <br />
     - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_** :page_facing_up:
-      - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year
-- [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
+      - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year <br /> <br />
+- [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers: <br /> <br />
     - [ ] Complete the section which allows users to track their academic progress 	:notebook:
       - [ ] Users can input/update their grades for each module per semester 
       - [ ] Calculation of CAP for individual semesters as well as cumulative CAP
       - [ ] Data representation of CAP trend
       - [ ] User input to be stored in Firebase 
-      - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
-      - [ ] Extend features to second degree/major/minor
-    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase:
+      - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion <br /> <br />
+      - [ ] Extend features to second degree/major/minor <br /> <br />
+    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: <br /> <br />
       - [ ] Code and design for users to view all events they have logged under these categories
    
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
