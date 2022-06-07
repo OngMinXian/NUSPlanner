@@ -144,7 +144,7 @@ npm i firebase
 | Stage  | Task |
 | ------------- | ------------- |
 | Planning  | :white_check_mark: UI Design using Figma <br /> :white_check_mark: Design diagrams <br /> :white_check_mark: Set up Firebase backend and plan data storage <br /> :white_check_mark: Set up Google Analytics   |
-| Set up  |   <input type="checkbox" disabled checked /> Create basic theme and structure for the app <br /> :white_check_mark: Install packages and softwares <br /> :white_check_mark: Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox) <br /> :white_check_mark: Familiarise ourselves with NUSMODS API <br /> :white_check_mark: Read and upload data into Firebase <br /> :white_check_mark:  Create login and authentication system :lock: <br /> :white_check_mark:  Complete the code and design for the Profile page :bust_in_silhouette: <br />
+| Set up  |   :heavy_check_mark: Create basic theme and structure for the app <br /> :white_check_mark: Install packages and softwares <br /> :white_check_mark: Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox) <br /> :white_check_mark: Familiarise ourselves with NUSMODS API <br /> :white_check_mark: Read and upload data into Firebase <br /> :white_check_mark:  Create login and authentication system :lock: <br /> :white_check_mark:  Complete the code and design for the Profile page :bust_in_silhouette: <br />
     - :white_check_mark: User can edit all fields in their profile and set a profile picture 
     - :white_check_mark: User can log out of their account
     - :white_check_mark: Default profile picture is displayed if the user does not set a profile picture|
