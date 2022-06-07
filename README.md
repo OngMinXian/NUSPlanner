@@ -143,8 +143,8 @@ npm i firebase
 
 | Stage  | Task |
 | ------------- | ------------- |
-| Planning  | - [x] UI Design using Figma <br /> - [x] Design diagrams <br /> - [x] Set up Firebase backend and plan data storage <br /> - [x] Set up Google Analytics   |
-| Set up  |   - [x] Create basic theme and structure for the app |
+| Planning  | :white_check_mark: UI Design using Figma <br /> :white_check_mark: Design diagrams <br /> :white_check_mark: Set up Firebase backend and plan data storage <br /> :white_check_mark: Set up Google Analytics   |
+| Set up  |   :white_check_mark: Create basic theme and structure for the app |
   - [x] Install packages and softwares
   - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
   - [x] Familiarise ourselves with NUSMODS API
