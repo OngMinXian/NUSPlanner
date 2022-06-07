@@ -275,8 +275,9 @@ On top of this, we **add succinct commit messages** on GitHub wherever possible 
 
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
 | ------------- | ------------- | ------------- | ------------- |
-| Standardising layout of web page components across all screen sizes | [Issue 3](https://github.com/OngMinXian/NUSPlanner/issues/3) | Solved | Consulted student advisor, solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
-| Content Cell  | Content Cell  |
+| Standardising layout of web page components across all screen sizes | [Issue 3](https://github.com/OngMinXian/NUSPlanner/issues/3) | Solved | Consulted student advisor <br /> <br /> Solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
+| Challenges deploying web application on Firebase and GitHub | [Issue 4](https://github.com/OngMinXian/NUSPlanner/issues/4) | Open | Awaiting response from student advisor |
+| Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Open | Awaiting response from student advisor |
 
 
  
