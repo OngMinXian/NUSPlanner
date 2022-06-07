@@ -280,5 +280,9 @@ On top of this, we **add succinct commit messages** on GitHub wherever possible 
 | Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Open | Awaiting response from student advisor |
 
 ## Direction for Milestone 2 :arrow_right:
-We will act on our student advisor's comments of **deploying the application** and work towards including **detailed evidence of good software engineering in our Project README**. Additionally, we will update our mentor on our progress for milestone 1 and request for feedback. For the technical aspect, we hope to accomplish all the deliverables we have planned under the **Timeline and Executables** section for Milestone 2 and to **resolve all existing technical difficulties**. If time permits, we will also gear our application towards integrated user testing using Mocha or other frameworks.
+We will act on our student advisor's comments of **deploying the application** and work towards including **detailed evidence of good software engineering in our Project README**. Additionally, we will update our mentor on our progress for milestone 1 and request for feedback. 
+
+For the technical aspect, we hope to accomplish all the deliverables we have planned under the **Timeline and Executables** section for Milestone 2 and to **resolve all existing technical difficulties**. 
+
+If time permits, we will also gear our application towards integrated user testing using Mocha or other frameworks.
  
