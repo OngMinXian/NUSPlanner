@@ -4,6 +4,14 @@ A web application integrated with NUSMODs that helps students to optimise their 
 ## Proposed level of achievement :bar_chart:
 Artemis 
 
+## Links to project materials 
+:link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) 
+:link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing)
+:link: [Project Poster](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I)
+:link: [Project Video](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I)
+:link: [Figma Prototype](https://www.figma.com/proto/mvXHFUbWjlcstcUr1ZB1MB/Mentor-Matching-Prototype-(Extra-Effects-Added)?node-id=3%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=3%3A2)
+:link: [Figma Video](https://drive.google.com/file/d/1voxKLLNQAammyWgwaj2RplNJAg7oiw5U/view?usp=sharing)
+
 ## Project description :memo:
 NUSPlanner is a productivity-centric web application that utilises statistics and visual summaries to give users a clear view of their time-management in three areas: work, academics and extracurricular activities. This empowers users to manage their priorities effectively so that they can acquire the relevant skills to boost their employability and differentiate themselves from their peers. 
 
