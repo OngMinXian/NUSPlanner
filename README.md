@@ -61,6 +61,7 @@ npm i react-router-dom
 npm i react-bootstrap
 npm install --save react-big-calendar --legacy-peer-deps
 npm i react-datepicker
+npm i react-datetime-picker
 npm i date-fns
 npm i styled-components
 npm i react-icons
