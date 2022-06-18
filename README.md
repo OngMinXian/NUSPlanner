@@ -58,7 +58,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. Navigate to the src folder and instll the following dependencies 
 ``` bash 
 npm i react-router-dom
-npm i react-bootstrap
+npm install react-bootstrap bootstrap@3
 npm install --save react-big-calendar --legacy-peer-deps
 npm i react-datepicker
 npm i react-datetime-picker
