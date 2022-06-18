@@ -65,6 +65,7 @@ npm i react-datetime-picker
 npm i date-fns
 npm i styled-components
 npm i react-icons
+npm i react-select
 ```
 5. Within the src folder, install the dependencies for the Firebase database:
 ```bash 
