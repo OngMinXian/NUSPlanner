@@ -58,7 +58,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. Navigate to the src folder and instll the following dependencies 
 ``` bash 
 npm i react-router-dom
-npm install react-bootstrap bootstrap@4.6.0
+npm install react-bootstrap bootstrap@5 (command has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0)
 npm install --save react-big-calendar --legacy-peer-deps
 npm i react-datepicker
 npm i react-datetime-picker
@@ -67,6 +67,8 @@ npm i styled-components
 npm i react-icons
 npm i react-select
 ```
+**IMPORTANT: bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit [https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working] for troubleshooting if this issue is encountered**
+
 5. Within the src folder, install the dependencies for the Firebase database:
 ```bash 
 npm i firebase
