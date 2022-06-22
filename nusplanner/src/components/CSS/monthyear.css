@@ -1,0 +1,46 @@
+.tag-label-space {
+    margin-left: 5px;
+    margin-top: 2.5px;
+}
+
+.eventInput_ {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 60px;
+}
+
+.add-event-main-button {
+    margin-top: 10px;
+    margin-left: auto;
+    height: 40px;
+}
+
+.pad-dropdown {
+    margin-top: 10px; 
+    margin-left: 20px;
+}
+
+.pad-bottom {
+    margin-bottom: 10px;
+}
+
+.inline-display {
+    display: inline-block;
+}  
+
+.pad-top-and-bottom {
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+.flex-display {
+    display: flex;
+}
+
+.push-right {
+    margin-left: auto;
+}
+
+.canvas-delete-button {
+    margin-left: 100px;
+}

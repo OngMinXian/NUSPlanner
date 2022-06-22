@@ -1,12 +1,4 @@
 ## Within my-app of React ##
 
-1. Downloading Firebase 
-npm i firebase
-
-2. Downloading bootstrap 
-npm install bootstrap@3
-
-3. Downloading React
-npx create-react-app my-app
-cd my-app
-npm start
+npm i react-router-dom react-bootstrap bootstrap@5 react-datepicker react-datetime-picker date-fns styled-components react-icons react-select firebase
+npm install --save react-big-calendar --legacy-peer-deps

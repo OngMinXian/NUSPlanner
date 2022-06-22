@@ -1,18 +1,18 @@
 import React from "react"
 import Signup from "./Signup";
 import { AuthProvider } from "./contexts/AuthContext";
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; //Switch replaced with Routes
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //Switch replaced with Routes
 import Today from "./Today";
 import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
-import UpdateProfile from "./UpdateProfile";
 import DashBoard from "./Dashboard";
 import ProgressReport from "./ProgressReport";
-import Profile from "./Profile"
-import Settings from "./Settings"
-import CreateUserDoc from "./CreateUserDoc"
-import MonthYear from "./MonthYear"
+import Profile from "./Profile";
+import CreateUserDoc from "./CreateUserDoc";
+import MonthYear from "./MonthYear";
+import Modules from "./Modules";
+import EditModCap from "./EditModAndCap";
 
 function App() {
     return (
@@ -24,10 +24,7 @@ function App() {
                             <PrivateRoute>
                                 <Today />
                             </PrivateRoute>} />
-                        <Route path="/update-profile" element={
-                            <PrivateRoute>
-                                <UpdateProfile />
-                            </PrivateRoute>} />
+                       
                         <Route path="/signup" exact element={<Signup />} />
                         <Route path="/login" exact element={<Login />} />
                         <Route path="/forgot-password" exact element={<ForgotPassword />} />
@@ -37,7 +34,9 @@ function App() {
                         <Route path="/progress-report" exact element={<ProgressReport />} />
                         <Route path="/profile" exact element={<Profile />} />
                         <Route path="/create-user-doc" exact element={<CreateUserDoc />} />
-                        <Route path="/settings" exact element={<Settings />} />
+                        <Route path="/modules" exact element={<Modules />} />
+                        <Route path="/editmodcap" exact element={<EditModCap />} />
+                        <Route path="/todaynew" exact element={<Today />} />
                     </Routes>
                 </AuthProvider>
 

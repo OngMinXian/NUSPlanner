@@ -1,0 +1,17 @@
+.bottom-spacing {
+    margin-bottom: 20px; 
+}
+
+.modCode {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.modGrade {
+    margin-bottom: 20px;
+}
+
+.addModButton {
+    display: flex;
+    justify-content: center;
+}

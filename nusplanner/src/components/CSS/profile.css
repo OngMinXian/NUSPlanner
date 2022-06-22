@@ -1,0 +1,36 @@
+.display-pic {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 160px;
+    width: 160px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.top-spacing {
+    margin-top: 50px;
+}
+
+.file-and-profile-div {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.file-input {
+    display: inline-block;
+}
+
+.confirm-image {
+    white-space: nowrap;
+}
+
+.confim-profile-update {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+

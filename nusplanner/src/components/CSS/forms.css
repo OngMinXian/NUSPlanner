@@ -101,8 +101,8 @@
 .icon {
     display: block;
     margin:auto;
-    height: 300px;
-    width: 200px;
+    height: 70px;
+    width: 50px;
     margin-top: 10%;
 }
 
@@ -169,6 +169,7 @@
 .plannerName {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     height: 40px;
     margin-bottom: 50px;
 }
@@ -176,3 +177,19 @@
 .whiteText {
     color: white
 }
+
+.centerHeading_ {
+    text-align: center;
+    margin-top: 50px;
+} 
+
+.eventInput_ {
+    display: flex;
+    margin-top: 20px;
+    margin-right: 60px;
+} 
+
+.inputChild_ {
+    padding: 10px;
+    align-items: center;
+} 
