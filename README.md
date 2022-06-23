@@ -44,9 +44,9 @@ With this problem in mind, we hope to design a user-friendly application that wi
 ## Feature list :spiral_notepad:
 
 **Keys for scheme used to categorise requirements in feature list**
-- :red_square: High priority 
-- :yellow_square: Medium priority 
-- :green_square: Low priority
+- **\[High]** High priority 
+- **\[Medium]** Medium priority 
+- **\[Low]** Low priority
 
 **In order of delivery, our proposed features are:**
 
