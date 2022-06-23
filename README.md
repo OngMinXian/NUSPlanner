@@ -85,12 +85,8 @@ npm i firebase
 - **\[High]** High priority
 - **\[Medium]** Medium priority
 - **\[Low]** Low priority
-
-
-
-
-
-
+<br></br>
+<br></br>
 
 ### 1. \[High] Login and authentication system :lock:
   - Login page
