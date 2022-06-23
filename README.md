@@ -42,7 +42,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
 
 ## Feature list :spiral_notepad:
-In order of delivery, our proposed features are: 
+In order of delivery, our proposed features are: <br />
 **\[High]** 1. Login and authentication system 
    - Login 
    - Create account
