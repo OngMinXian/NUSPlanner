@@ -81,10 +81,14 @@ npm i firebase
 ![MS1 Overall Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172174212-c7665734-6d6b-4e4d-bd1e-ac4f0c59bcb3.png)
 
 ## Proposed core features :desktop_computer:
-#### Keys used to prioritise requirements :key:
+### Keys used to prioritise requirements :key:
 - **\[High]** High priority
 - **\[Medium]** Medium priority
 - **\[Low]** Low priority
+
+
+
+
 
 
 
