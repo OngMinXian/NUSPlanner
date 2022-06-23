@@ -43,7 +43,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 ## Feature list :spiral_notepad:
 
-**Keys for scheme used to categorise requirements in feature list**
+**Keys used to categorise requirements in feature list**
 - **\[High]** High priority 
 - **\[Medium]** Medium priority 
 - **\[Low]** Low priority
