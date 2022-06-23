@@ -18,7 +18,7 @@ NUSPlanner is a productivity-centric web application that utilises statistics an
 Adhering to its core focus of catering to student demographics, NUSPlanner is integrated with NUSMODS, a popular module planning website for students, so that students can also track their modular progress. This ensures that users of NUSPlanner remain focused on their goals and stay ahead of the game at all times.
 
 ## Motivation :fire:
-Contrary to popular belief, education is no longer the golden ticket to employment in Singapore.
+Contrary to popular belief, education is no longer the ticket to employment in Singapore.
 
 According to a report by professional networking platform LinkedIn, **39% of companies in Singapore look for employees with technical skills, which is nearly 2 times higher than companies who value traditional qualifications such as education and working experience[^1].**
 
@@ -41,6 +41,21 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
 
+## Feature list :spiral_notepad:
+In order of delivery, our proposed features are: 
+**\[High]** 1. Login and authentication system 
+   - Login 
+   - Create account
+   - Reset password 
+**\[High]** 2. Profile page 
+- Edit user profile eg. email linked to account 
+- Input academic data
+  - Modules taken
+    - **\[Medium]** Verify module code using link to NUSMODs API
+  - Corresponding grades 
+  - Semester that the modules were taken
+  - **\[Low]** Second major/minor/degree (if applicable)
+
 ## Tech stacks involved :electric_plug:
 | Tech | Purpose | Reasons behind choice 
 | ------------- | ------------- | ------------- |
@@ -49,7 +64,6 @@ With this problem in mind, we hope to design a user-friendly application that wi
 | Javascript | To enable interactivity for the web page | 1. Easy to learn <br /></br> 2. Simple to use |
 | ReactJS | For web page design and interactivity | 1. Free <br /></br> 2. Easy to learn |
 | Firebase | Database to store user information and in-application data | 1. Simple to use <br /></br> 2. Free |
-| Google Analytics SDK | To analyse user accounts and user submitted reviews | 1. Powerful in helping us analyse user behaviour and data. |
 | NUSMODs API | To collect all information pertaining to modules offered in NUS | 1. NUSMODs contains all the information on every module and is free for access upon request |
 
 ## Installation and Set-Up :hammer_and_wrench:
