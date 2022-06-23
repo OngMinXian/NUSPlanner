@@ -82,9 +82,9 @@ npm i firebase
 
 ## Proposed core features :desktop_computer:
 **Keys used to prioritise requirements**
-\[High] High priority
-\[Medium] Medium priority
-\[Low] Low priority
+- \[High] High priority
+- \[Medium] Medium priority
+-\[Low] Low priority
 
 ### 1. \[High] Login and authentication system :lock:
   - Login page
