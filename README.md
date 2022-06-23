@@ -48,17 +48,18 @@ With this problem in mind, we hope to design a user-friendly application that wi
 - :yellow_square: Medium priority 
 - :green_square: Low priority
 
-<hr></hr>
+**In order of delivery, our proposed features are:**
 
-In order of delivery, our proposed features are: 
-
-1. Login and authentication system 
+1. :red_square: Login and authentication system 
+  - Login 
+  - Create account 
+  - Reset password
 2. Profile page 
-3. Calendar page 
-4. Modules page 
-5. Today page
-6. Dashboard page 
-7. Progress report page 
+4. Calendar page 
+5. Modules page 
+6. Today page
+7. Dashboard page 
+8. Progress report page 
 
 ## Tech stacks involved :electric_plug:
 | Tech | Purpose | Reasons behind choice 
