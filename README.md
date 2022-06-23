@@ -35,11 +35,22 @@ As of 2020, being **ONE in the 33% of Singaporean degree holders[^2]** translate
 With this problem in mind, we hope to design a user-friendly application that will help undergraduates remain cognisant of both their working portfolio and academic progress early on in their university journey. This way, much despair and anxiety can be averted, as one can do the necessary homework and preparation needed to land his dream job
 
 ## User stories :page_facing_up:
-1. As a student, I want to be able to plan and track my progress I have or plan to make in NUS, be it academically, work-related or extracurricular.
+1. \[Epic] As a student, I want to be able to ***track my progress in NUS***, be it academically, work-related or extracurricular, so that I can optimise how I spend my time
+  - As a student, I can view the proportion of time that I spend across all categories of events that I log into the calendar 
+  - As a student, I can store and view important details for events that matter to my portfolio
+  - As a student, I can create an academic plan for future semesters and view my degree progress
 
-2. As a student, I want to be able to look at overall progress I have made during the time I was in NUS.
+2. As a student, I want to be ***more conscious of my physical and emotional health*** so that I can improve my wellbeing
+  - Conditions
+    - [x] Provide a range of moods (eg. stressed, relaxed etc.) for users' to select their mood for the day
+    - [ ] Provide a range of acitivities (eg. studying, exercising) that users can associate with their mood for the day
+    - [x] Create a sleep tracking system where users can indicate their sleep quality and the number of hours that they have rested for the day
 
-3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
+3. As a student, I want a ***customisable planning system that is tailored to all aspects of my life*** so that I can stay organised with ease
+  - Conditions
+    - [x] Design custom user tags for users to add and track different categories of activities
+    - [x] Users can input their modules taken and their grades for each module 
+    - [ ] Users can view descriptive summaries generated for all categories of events that they log into the calendar
 
 
 ## Tech stacks involved :electric_plug:
@@ -58,7 +69,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. Navigate to the src folder and instll the following dependencies 
 ``` bash 
 npm i react-router-dom
-npm install react-bootstrap bootstrap@5 (command has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0)
+npm install react-bootstrap bootstrap@5 //command has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0
 npm install --save react-big-calendar --legacy-peer-deps
 npm i react-datepicker
 npm i react-datetime-picker
@@ -67,7 +78,7 @@ npm i styled-components
 npm i react-icons
 npm i react-select
 ```
-**IMPORTANT: bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit [https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working] for troubleshooting if this issue is encountered**
+**IMPORTANT: bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if this issue is encountered**
 
 5. Within the src folder, install the dependencies for the Firebase database:
 ```bash 
@@ -80,20 +91,48 @@ npm i firebase
 ## Proposed system architecture :label:
 ![MS1 Overall Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172174212-c7665734-6d6b-4e4d-bd1e-ac4f0c59bcb3.png)
 
-## Proposed core features :desktop_computer:
-### Keys used to prioritise requirements :key:
+## Feature list :desktop_computer:
+#### Keys used to prioritise requirements :key:
 - **\[High]** High priority
 - **\[Medium]** Medium priority
 - **\[Low]** Low priority
 <br></br>
-<br></br>
 
 ### 1. \[High] Login and authentication system :lock:
-  - Login page
-  - Sign-up page 
-  - Forget password page 
+1. Login page
+2. Sign-up page 
+3. Forget password page 
+
+### 2. \[High] Today page :round_pushpin:
+
+| Feature | Components|
+| ------------- | ------------- |
+| Mood tracking system | <br></br> 1. Mood of the day <br></br> 2. Category associated with mood of the day <br></br> |
+| Sleep tracking system  | <br></br> 1. Quality of sleep <br></br> 2. Number of hours of sleep <br></br> |
+| Checklist for events that start and end on that day itself | <br></br> 1. Add event <br></br> 2. Delete event <br></br> 3. Display events in chronological order <br></br> | 
+| Display for calendar events that fall on that day itself | <br></br> 1. Add event <br></br> 2. Delete event <br></br> 3. Display events in chronological order <br></br> 4. Create custom tags <br></br> |
+
+  - Mood tracking system 
+    - Mood of the day
+    - Category associated with mood of the day 
+  - Sleep tracking system 
+    - Quality of sleep 
+    - Number of hours of sleep 
+  - Checklist for events that start and end on that day itself
+    - Add event 
+    - Delete event 
+    - Display events in chronological order
+  - Display for calendar events that fall on that day itself
+    - Add event 
+    - Delete event 
+    - Display events in chronological order
+    - Create custom tags
+
+### 3. Calendar page :calendar:
+- 
+
   
-### 2. \[High] Dashboard page (Landing page upon login) :chart_with_upwards_trend:
+### 3. Dashboard page (Landing page upon login) \[High] :chart_with_upwards_trend:
   - **_Descriptive statistics_** for the following 3 segments:
     - #### Productivity :fountain_pen:
       - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
@@ -101,11 +140,6 @@ npm i firebase
       - Overall mood of each day to be rated and given an average score over a period of time 
     - #### Summary :page_facing_up:
       - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
-     
-### 3. Today page :round_pushpin:
-  - Displays the tasks that users have assigned themselves for the day 
-  - Users can **_create tasks and delete tasks for that very day_**. 
-    - Tasks are displayed in chronological order. 
 
 ### 4. Calendar page :calendar:
   - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
