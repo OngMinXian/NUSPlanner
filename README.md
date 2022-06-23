@@ -54,12 +54,40 @@ With this problem in mind, we hope to design a user-friendly application that wi
   - Login 
   - Create account 
   - Reset password
-2. Profile page 
-4. Calendar page 
-5. Modules page 
-6. Today page
-7. Dashboard page 
-8. Progress report page 
+2. :red_square: Profile page 
+  - Edit user profile eg. email linked to account 
+  - Input academic data
+    - Modules taken
+      - :yellow_square: Verify module code using link to NUSMODs API
+    - Corresponding grades 
+    - Semester that the modules were taken
+    - :green_square: Second major/minor/degree (if applicable)
+3. :red_square: Calendar page 
+  - Add events
+  - Edit events 
+    - Delete events 
+    - Change details of previously logged events (eg. date, time) 
+  - Creating tagged events – assigning categories to events created 
+    - Set 3 default tags for the work, academic and extracurricular categories 
+    - Enable the creation and deletion of custom tags – Each tag is defined by a colour and a label
+    - Trigger extra input fields to log important details in the work and extracurriculars categories 
+4. :red_square: Modules page – Linked to NUSMODs API
+  - Search and filter function
+  - :green_square: Telegram link to group chat for module – Parse TeleNUS to obtain data
+5. :red_square: Today page
+  - Tracks users’ wellbeing 
+    - Mood 
+      - :yellow_square: Include option to select activities which were associated with the chosen mood
+    - Sleep quality 
+  - Quick checklist for events that start and end on the day itself 
+  - Display for calendar events that happen on that day 
+6. :red_square: Dashboard page 
+  - Summary statistics for users’ wellbeing and the events they have logged into the calendar
+7. :red_square: Progress report page 
+  - View history of events logged by category 
+  - View a trend in academic data 
+    - Best and poorest faring modules 
+    - CAP progression by year
 
 ## Tech stacks involved :electric_plug:
 | Tech | Purpose | Reasons behind choice 
