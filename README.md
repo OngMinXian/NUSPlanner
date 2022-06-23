@@ -42,20 +42,23 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. As a student, I want to be able to summarise how my recent workload has been divided, in order to determine where my time is being spent.
 
 ## Feature list :spiral_notepad:
+
+**Keys for scheme used to categorise requirements in feature list**
+- :red_square: High priority 
+- :yellow_square: Medium priority 
+- :green_square: Low priority
+
+< hr/>
+
 In order of delivery, our proposed features are: 
 
-**\[High]** 1. Login and authentication system 
-   - Login 
-   - Create account
-   - Reset password 
-**\[High]** 2. Profile page 
-- Edit user profile eg. email linked to account 
-- Input academic data
-  - Modules taken
-    - **\[Medium]** Verify module code using link to NUSMODs API
-  - Corresponding grades 
-  - Semester that the modules were taken
-  - **\[Low]** Second major/minor/degree (if applicable)
+1. Login and authentication system 
+2. Profile page 
+3. Calendar page 
+4. Modules page 
+5. Today page
+6. Dashboard page 
+7. Progress report page 
 
 ## Tech stacks involved :electric_plug:
 | Tech | Purpose | Reasons behind choice 
