@@ -48,7 +48,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 - :yellow_square: Medium priority 
 - :green_square: Low priority
 
-< hr/>
+<hr></hr>
 
 In order of delivery, our proposed features are: 
 
