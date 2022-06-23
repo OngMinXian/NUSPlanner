@@ -50,11 +50,11 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 **In order of delivery, our proposed features are:**
 
-1. **\[High]** Login and authentication system 
+1. **\[High]** Login and authentication system :lock:
   - Login 
   - Create account 
   - Reset password
-2. **\[High]** Profile page 
+2. **\[High]** Profile page :bust_in_silhouette:
   - Edit user profile eg. email linked to account 
   - Input academic data
     - Modules taken
@@ -62,7 +62,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
     - Corresponding grades 
     - Semester that the modules were taken
     - **\[Low]** Second major/minor/degree (if applicable)
-3. **\[High]** Calendar page 
+3. **\[High]** Calendar page :calendar:
   - Add events
   - Edit events 
     - Delete events 
@@ -71,19 +71,19 @@ With this problem in mind, we hope to design a user-friendly application that wi
     - Set 3 default tags for the work, academic and extracurricular categories 
     - Enable the creation and deletion of custom tags – Each tag is defined by a colour and a label
     - Trigger extra input fields to log important details in the work and extracurriculars categories 
-4. **\[High]** Modules page – Linked to NUSMODs API
+4. **\[High]** Modules page – Linked to NUSMODs API :bookmark_tabs:
   - Search and filter function
   - **\[Low]** Telegram link to group chat for module – Parse TeleNUS to obtain data
-5. **\[High]** Today page
+5. **\[High]** Today page :round_pushpin:
   - Tracks users’ wellbeing 
     - Mood 
       - **\[Medium]** Include option to select activities which were associated with the chosen mood
     - Sleep quality 
   - Quick checklist for events that start and end on the day itself 
   - Display for calendar events that happen on that day 
-6. **\[High]** Dashboard page 
+6. **\[High]** Dashboard page :chart_with_upwards_trend:
   - Summary statistics for users’ wellbeing and the events they have logged into the calendar
-7. **\[High]** Progress report page 
+7. **\[High]** Progress report page :card_index_dividers:
   - View history of events logged by category 
   - View a trend in academic data 
     - Best and poorest faring modules 
