@@ -50,19 +50,19 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 **In order of delivery, our proposed features are:**
 
-1. :red_square: Login and authentication system 
+1. \[High] Login and authentication system 
   - Login 
   - Create account 
   - Reset password
-2. :red_square: Profile page 
+2. \[High] Profile page 
   - Edit user profile eg. email linked to account 
   - Input academic data
     - Modules taken
-      - :yellow_square: Verify module code using link to NUSMODs API
+      - \[Medium] Verify module code using link to NUSMODs API
     - Corresponding grades 
     - Semester that the modules were taken
-    - :green_square: Second major/minor/degree (if applicable)
-3. :red_square: Calendar page 
+    - \[Low] Second major/minor/degree (if applicable)
+3. \[High] Calendar page 
   - Add events
   - Edit events 
     - Delete events 
