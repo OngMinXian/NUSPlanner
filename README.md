@@ -173,10 +173,10 @@ npm i firebase
 ### 7. Profile page :bust_in_silhouette:
   - #### Course details segment [High]
     - Modules taken
-    - Verify module code using link to NUSMODs API [Medium]
+    - Verify module code using link to NUSMODs API **[Medium]**
     - Corresponding grades for modules taken
     - Semester that the modules were taken
-    - Second major/minor/degree (if applicable) [Low]
+    - Second major/minor/degree (if applicable) **[Low]**
     - Add semester 
     - Remove semester
   - #### Account settings segment [High]
