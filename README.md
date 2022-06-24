@@ -189,7 +189,10 @@ npm i firebase
     - Year of graduation
 
 ## Use Cases
-  #### Use Case: UC1 - Creating a new event in the Calendar 
+
+  ![MS1 Architecture Diagram-Use Case Diagram drawio](https://user-images.githubusercontent.com/79785001/175489810-17f6cc50-466f-433a-a991-4e768d13f03f.png)
+
+  #### Use Case: UC1 - Creating events
     - System: NUSPlanner
     - Actor: User 
     - Precondition: User is logged in 
@@ -222,7 +225,7 @@ npm i firebase
         *b3. Event is not displayed in the Calendar upon closing the pop-up tab  
         Use case ends
         
-  #### Use Case: UC2 - Updating account settings 
+  #### Use Case: UC2 - Editing account settings
     - System: NUSPlanner
     - Actor: User 
     - Precondition: User is logged in 
@@ -241,7 +244,7 @@ npm i firebase
         *Steps a1-a2 are repeated until the data entered are correct.
       Use case resumes from step 2
   
-  #### Use Case: UC3 - Entering/Updating modules taken
+  #### Use Case: UC3 - Editing course details
     - System: NUSPlanner
     - Actor: User 
     - Precondition: User is logged in 
