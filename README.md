@@ -357,4 +357,3 @@ We will act on our student advisor's comments of **deploying the application** a
 For the technical aspect, we hope to accomplish all the deliverables we have planned under the **Timeline and Executables** section for Milestone 2 and to **resolve all existing technical difficulties**. 
 
 If time permits, we will also gear our application towards integrated user testing using Mocha or other frameworks.
- 
