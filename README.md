@@ -99,60 +99,94 @@ npm i firebase
 <br></br>
 
 ### 1. Login and authentication system :lock:
-
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Login page | Not applicable | High |
-|2 | Sign-up page | Not applicable | High |
-|3 | Forget password page | Not applicable | High |
+- #### Login page [High]
+- #### Sign-up page [High]
+- #### Forget password page [High]
 
 ### 2. Today page :round_pushpin: - Landing page upon login
 
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Mood tracking system  | a. Mood of the day <br></br> b. Categories associated with mood of the day | High <br></br> Medium |
-|2 | Sleep tracking system  | a. Quality of sleep <br></br> b. Number of hours of sleep | High |
-|3 | Checklist for events that start and end on that day itself | a. Add event <br></br> b. Delete event <br></br> c. Display events in chronological order| High|
-|4 | Display for calendar events that fall on that day itself | a. Add event <br></br> b. Delete event <br></br> c. Display events in chronological order <br></br> d. Create custom tags - Refer to "Create custom tags" category under the next section for more details <br></br> e. Delete custom tags | High
+  - #### Mood tracking system [High]
+    - Mood of the day
+    - Categories associated with mood of the day [Medium]
+  - #### Sleep tracking system [High]
+    - Quality of sleep 
+    - Number of hours of sleep 
+  - #### Checklist for events that start and end on that day itself [High]
+    - Add event 
+    - Delete event 
+    - Display events in chronological order
+  - #### Display for calendar events that fall on that day itself [High]
+    - Add event 
+    - Delete event 
+    - Display events in chronological order
+    - Create custom tags - Refer to "Create custom tags" category under the next section for more details
+    - Delete custom tags
 
 ### 3. Calendar page :calendar:
 
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Add events | a. Event title <br></br> b. Start date and time <br></br> c. End date and time <br></br> d. Event tag <br></br> e. Extra input fields -- when the work/extracurriculars tag is selected <br></br> - Organisation name <br></br> - Description of users' role <br></br> - Description of duties undertaken by the user <br></br> - Event description | High |
-|2 | Edit events | a. Drag and drop events across timeslots/days <br></br> b. Resize events to span across different timeslots/days <br></br> c. Delete events | High |
-|3 | Create custom tags | a. Tag label <br></br> b. Tag colour | High |
-|4 | Delete custom tags|  Not applicable | High |
+- #### Add Events [High]
+  - Event title 
+  - Start date and time 
+  - End date and time 
+  - Event tag 
+  - Extra input fields -- when the work/extracurriculars tag is selected 
+    - Organisation name 
+    - Description of user's role 
+    - Description of duties undertaken by the user
+    - Event description
+- #### Edit Events [High]
+  - Drag and drop events across timeslots/days 
+  - Resize events to span across different timeslots/days
+  - Delete events 
+- #### Create custom tags [High]
+  - Tag label
+  - Tag colour
+- #### Delete custom tags [High]
 
 ### 4. Dashboard page :chart_with_upwards_trend:
-
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Productivity | a. Productive hours expressed as: <br></br> - Percentage in a progress bar <br></br> - Trend in a line graph | High |
-|2 | Wellness | a. Overall mood of each day to be rated and given an average score <br></br> b. Identify activities most commonly associated with a particular mood <br></br> c. Identify trends in sleep quality and duration | High |
-|3 | Summary | a. Pie chart for user to get a breakdown of the duration that they devote to all categories specified in the calendar tags per week/month/year | High |
+- #### Productivity [High]
+  - Productive hours expressed as:
+    - Percentage in a progress bar
+    - Trend in a line graph
+- #### Wellness [High]
+  - Overall mood of each day to be rated and given an average score 
+  - Identify activities most commonly associated with a particular mood
+  - Identify trends in sleep quality and duration
+- #### Summary [High] 
+  - Pie chart for user to get a breakdown of the duration that they devote to each all categories specified in the calendar tags per week/month/year
 
 ### 5. Progress Report page :card_index_dividers:
-
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | View history of events logged by tag category | Not applicable | High |
-|2 | View a trend in academic data | a. Best and poorest faring modules <br></br> b. CAP progression by year | High |
+  - #### View history of events logged by tag category [High]
+  - #### View a trend in academic data [High]
+      - Best and poorest performing modules
+      - CAP progression by year
 
 ### 6. Modules page :bookmark_tabs: - Advanced Artemis feature
-
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Search modules by module code | Not applicable | High |
-|2 | Filter modules by multiple criteria | a. Semester offered <br></br> b. Has exam  <br></br> c. Number of modular credits (MCs) <br></br> d. Has S/U options | High |
-|3 | Telegram link to group chat for module | Not applicable | Low |
+  - #### Search modules by module code [High]
+  - #### Filter modules by multiple criteria [High]
+    - Semester offered 
+    - Has exam 
+    - Number of modular credits (MCs)
+    - Has S/U options
+  - #### Telegram link to group chat for module [Low]
 
 ### 7. Profile page :bust_in_silhouette:
-
-| Number | Feature | Components | Priority |
-| ------------- | ------------- | ------------- | ------------- |
-|1 | Course details segment | a. Modules taken <br></br> b. Verify module code using link to NUSMODs API <br></br> c. Corresponding grades for modules taken <br></br> d. Semester that the modules were taken <br></br> e. Second major/minor/degree (if applicable) <br></br> f. Add semester <br></br> g. Remove semester | High <br></br> Medium <br></br> High <br></br> High <br></br> Low <br></br> High <br></br> High |
-|2 | Account settings segment | a. Profile picture - default profile picture is set if no picture is specified <br></br> b. Username <br></br> c. Email <br></br> d. Faculty <br></br> e. Course <br></br> f. Matriculation year <br></br> g. Year of graduation | High |
+  - #### Course details segment [High]
+    - Modules taken
+    - Verify module code using link to NUSMODs API **[Medium]**
+    - Corresponding grades for modules taken
+    - Semester that the modules were taken
+    - Second major/minor/degree (if applicable) **[Low]**
+    - Add semester 
+    - Remove semester
+  - #### Account settings segment [High]
+    - Profile picture (default profile picture is set if no pictures are specified)
+    - Username 
+    - Email 
+    - Faculty
+    - Course 
+    - Matriculation year 
+    - Year of graduation
 
 ## Use Cases
 
@@ -306,7 +340,7 @@ npm i firebase
       - [x] Code and design for users to view all events they have logged under these categories **-> Completed in MS2**
 - [ ] Style all website components that have been implemented <br /> <br />
    
- ### :checkered_flag: Before: Splashdown (22 Aug 2022) 
+ ### Before: Splashdown (22 Aug 2022) :checkered_flag:
  - [ ] Create project poster and video
  - [ ] Publish web application online
  - [ ] Test web application and fix bugs
@@ -315,10 +349,12 @@ npm i firebase
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
 ## Progress in Milestone 1 :triangular_flag_on_post: :one:
+### Technical progress :keyboard:
+![MS1 Current Progress Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172189893-8475d118-ae11-4d5f-a638-cf69ae1d985b.png)
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
-- All the deliverables required for Milestone 1 were completed, along with a few deliverables for Milestone 2
+- All the deliverables required for Milestone 1 are completed, along with a few deliverables for Milestone 2
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -341,7 +377,28 @@ Finally, we **integrated the users' account information and in-application data 
 
 ### Project management and planning :spiral_notepad:
 
+We **keep track of our tasks and executables using a combination of Google Docs, Github and Google sheets** 
 
+The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. 
+
+We also ensure that we update the Google docs with the relevant links or new information each time after we receive emails from the programme supervisor or our student mentor. 
+
+Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
+:-------------------------:|:-------------------------:
+![Screenshot 2022-06-07 at 7 53 44 PM](https://user-images.githubusercontent.com/79785001/172375940-575f8b7d-e270-4200-93a0-a9ad3a0eb7f4.png) | ![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
+
+Our **project log in Google sheets allows us to delegate roles to each other effectively and monitor each others' progress on tasks**. The details of every task assigned to each member is logged down consistently, along with the duration taken to accomplish each task. Furthermore, we have incorporated a **column that records the tasks completed by our team in our project log**, giving us a clear idea of our productivity as a team.
+
+The assigned tasks and their associated deadlines are influenced by the **Timeline and Executables** section of this markdown document, facilitating the process of planning to meet deadlines. 
+
+Project log on Google Sheets| Timeline and Executables section on GitHub
+:-------------------------:|:-------------------------:
+![Screenshot 2022-06-07 at 8 26 54 PM](https://user-images.githubusercontent.com/79785001/172379314-5cc32389-c9f6-4a09-ae11-9935c8e07010.png) |![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
+
+### Version control and workflow management :file_cabinet:
+We constantly **run the code on the deployment server** and ensure that there are no errors before pushing the code onto GitHub. **Branching** is being used to implement new features and **pull requests** are initiated each time a merge is initiated. 
+
+On top of this, we **add succinct commit messages** on GitHub wherever possible to track changes made to the code and to ensure the consistency of our code at all times.
 
 ## Technical difficulties encountered :toolbox:
 
