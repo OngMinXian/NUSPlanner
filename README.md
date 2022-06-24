@@ -315,12 +315,10 @@ npm i firebase
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
 ## Progress in Milestone 1 :triangular_flag_on_post: :one:
-### Technical progress :keyboard:
-![MS1 Current Progress Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172189893-8475d118-ae11-4d5f-a638-cf69ae1d985b.png)
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
-- All the deliverables required for Milestone 1 are completed, along with a few deliverables for Milestone 2
+- All the deliverables required for Milestone 1 were completed, along with a few deliverables for Milestone 2
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -343,28 +341,7 @@ Finally, we **integrated the users' account information and in-application data 
 
 ### Project management and planning :spiral_notepad:
 
-We **keep track of our tasks and executables using a combination of Google Docs, Github and Google sheets** 
 
-The **checklist and table functions in Google Docs** help us to list down the criteria that each component of our milestone submission is expected to address. Following the fulfillment of a certain criteria, each box is checked off accordingly. 
-
-We also ensure that we update the Google docs with the relevant links or new information each time after we receive emails from the programme supervisor or our student mentor. 
-
-Checklist for Artemis Requirements |  Criteria to meet for milestone submissions
-:-------------------------:|:-------------------------:
-![Screenshot 2022-06-07 at 7 53 44 PM](https://user-images.githubusercontent.com/79785001/172375940-575f8b7d-e270-4200-93a0-a9ad3a0eb7f4.png) | ![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
-
-Our **project log in Google sheets allows us to delegate roles to each other effectively and monitor each others' progress on tasks**. The details of every task assigned to each member is logged down consistently, along with the duration taken to accomplish each task. Furthermore, we have incorporated a **column that records the tasks completed by our team in our project log**, giving us a clear idea of our productivity as a team.
-
-The assigned tasks and their associated deadlines are influenced by the **Timeline and Executables** section of this markdown document, facilitating the process of planning to meet deadlines. 
-
-Project log on Google Sheets| Timeline and Executables section on GitHub
-:-------------------------:|:-------------------------:
-![Screenshot 2022-06-07 at 8 26 54 PM](https://user-images.githubusercontent.com/79785001/172379314-5cc32389-c9f6-4a09-ae11-9935c8e07010.png) |![Screenshot 2022-06-07 at 7 53 05 PM](https://user-images.githubusercontent.com/79785001/172375902-71d037ec-54db-45e9-af1c-03a976adc273.png)|
-
-### Version control and workflow management :file_cabinet:
-We constantly **run the code on the deployment server** and ensure that there are no errors before pushing the code onto GitHub. **Branching** is being used to implement new features and **pull requests** are initiated each time a merge is initiated. 
-
-On top of this, we **add succinct commit messages** on GitHub wherever possible to track changes made to the code and to ensure the consistency of our code at all times.
 
 ## Technical difficulties encountered :toolbox:
 
