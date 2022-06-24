@@ -189,7 +189,74 @@ npm i firebase
     - Year of graduation
 
 ## Use Cases
-  - #### Use case 1 
+  #### Use Case: UC1 - Creating a new event in the Calendar 
+    - System: NUSPlanner
+    - Actor: User 
+    - Precondition: User is logged in 
+    - Guarantees: 
+      - Event will be logged only if the event start date and time + event end date and time are specified
+      - Extra details for work and extracurriculars tags will be logged only if they are specified by the user 
+  
+    - MSS: 
+      1. User chooses to add a new event
+      2. NUSPlanner opens a pop-up tab that requests for the event details
+      3. User enters the required details
+      4. User confirms 
+      5. User input is submitted and stored in the Firestore database 
+      6. Event is displayed in the Calendar upon closing the pop up tab
+      Use case ends
+ 
+    - Extensions 
+      3a. User selects the work/extracurriculars tag 
+        3a1. An extra pop-up window with additional text fields are triggered, prompting the user to specify the:
+          - Organisation name 
+          - Role in organisation
+          - Duties undertaken for the activity that he is involved in 
+       3a2. User fills in the required details
+       3a3. User confirms in the extra-pop up window 
+       Use case resumes from step 4
+     
+      3b. User chooses to omit either the start date and time/end date and time of the event
+        *b1. NUSPlanner detects the error 
+        *b2. Event details are not submittied and stored in the Firestore database 
+        *b3. Event is not displayed in the Calendar upon closing the pop-up tab  
+        Use case ends
+        
+  #### Use Case: UC2 - Updating account settings 
+    - System: NUSPlanner
+    - Actor: User 
+    - Precondition: User is logged in 
+    
+    - MSS: 
+      1. User enters the required details 
+      2. User confirms 
+      3. User input is submitted and stored in the Firestore database 
+      4. Page refreshes and updated details are displayed as placeholders in the input fields 
+      Use case ends
+    
+    - Extensions 
+      1a. NUSPlanner detects an error in the entered data.
+        *a1. NUSPlanner requests for the correct data.
+        *a2. User enters new data.
+        *Steps a1-a2 are repeated until the data entered are correct.
+      Use case resumes from step 2
+  
+  #### Use Case: UC3 - Entering/Updating modules taken
+    - System: NUSPlanner
+    - Actor: User 
+    - Precondition: User is logged in 
+    
+    - MSS: 
+      1. User selects the year and semester that he wants to input/edit modules for 
+      2. User enters the module name and grade attained for that module 
+      3. User confirms his changes
+      4. User input is submitted and stored in the Firestore database 
+      5. Page refreshes and updated details are being displayed in a tabular format
+      Use case ends
+      
+    - Extensions 
+      1a. User adds/removes a semester
+
 
 ## Timeline and Executables :alarm_clock:
 
