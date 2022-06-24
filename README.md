@@ -275,12 +275,13 @@ npm i firebase
   - [x] Install packages and softwares
   - [x] Learn all relevant tech stacks (HTML, CSS, ReactJS, Firebase, Flexbox)
   - [x] Familiarise ourselves with NUSMODS API
-  - [x] Read and upload data into Firebase
+  - [x] Read and upload data into Firestore
   - [x]  Create login and authentication system :lock: 
   - [x]  Complete the code and design for the Profile page :bust_in_silhouette:
     - [x] User can edit all fields in their profile and set a profile picture 
     - [x] User can log out of their account
     - [x] Default profile picture is displayed if the user does not set a profile picture
+  - [x] Style all website components that have been implemented
 
 ### :two: Before: Evaluation Milestone 2 (27 Jun 2022).
 
@@ -288,40 +289,56 @@ npm i firebase
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
     - [x] Ensure that interactivity for drag and drop + resizing works as expected **-> Completed in MS1**
     - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
-    - [ ] Link data for calendar events to Firebase <br /><br />
-- [x] Complete the code and design required for the user to create events in the Today page **_by 6 June 2022_** :round_pushpin:
-    - [x] Link data for created events to Firebase **-> Completed in MS1**
-    - [ ] Link data to be reflected on the calendar in the Calendar page <br /> <br />
-- [ ] Complete the code and design for events with "special" tags, Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
-    - [ ] Ensure that special "tags" are being set-up in the Calendar page 
-    - [ ] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data <br /> <br />
-- [ ] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
-    - [ ] Retrieve data from NUSMODs and sort it based on the search criteria specified in the web application 
-    - [ ] Render the data above and output it in a user-friendly layout <br /> <br />
-- [ ] Implement feature where user can share their timetable with others by generating a PDF :clipboard:
+    - [x] Link data for calendar events to Firestore
+    - [x] Link data for calendar tags to Firestore <br /><br />  
+- [x] Complete the code and design required for the user to create events and log their mood + sleep quality in the Today page **_by 6 June 2022_** :round_pushpin:
+    - [x] Link data for events created in the checklist to Firestore **-> Completed in MS1**
+    - [x] Link data for events created in the events section to the Calendar Page and Firestore
+    - [x] Implement mood tracking feature where users can select their mood for the day 
+      - [x] Link user input to Firestore
+    - [x] Implement sleep tracking feature where users can select their sleep quality and the number of hours of sleep that they had
+      - [x] Link user input to Firestore <br /> <br />
+- [x] Complete the code and design for events with "special" tags, Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
+    - [x] Ensure that default "tags" for work, academics and extracurriculars are being set-up in the Calendar page 
+    - [x] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data
+      - [x] Store user input in Firestore 
+    - [x] Allow users to create custom tags by choosing a name and colour for the tag 
+      - [x] Users can only delete custom tags  
+      - [x] Link new tags created to Firestore <br /> <br />
+- [x] Complete the code and design for the Modules page **_by 20 June 2022_** :bookmark_tabs: -> Integration with NUSMODs, Artemis advanced feature 
+    - [x] Retrieve data from NUSMODs and sort it based on the search criteria specified 
+    - [x] Render the data above in a user-friendly layout 
+    - [x] Implement search filters <br></br>
+- [x] Develop the profile page further :bust_in_silhouette:
+  - [x] Allow users to add and delete semesters 
+  - [x] Create feature where users can add module codes and the grades attained in their modules
+  - [x] Users can edit module codes and names that have been previously input 
+  - [x] User input is linked to Firestore
+- [x] Style all website components that have been implemented <br /> <br />
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
-- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend: <br /> <br />
+- [ ] Add additional user input for mood to the Today page :round_pushpin: (if time permits) 
+  - [ ] User can select a range of activities that are associated with their mood of the day  <br /> <br />
+- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend:
     - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_** :fountain_pen:
       - [ ]  Code and design for productive hours to be expressed in a progress bar 
       - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
-      - [ ]  User input to be stored in Firebase <br /> <br />
+      - [x]  User input to be stored in Firebase **-> Completed in MS2**  <br /> <br />
     - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_** :leaves:
-      - [ ] Code and design for overall mood of the day to be represented as 5 different emojis and assigned a score 
-      - [ ] User input to be stored in Firebase 
-      - [ ] Average score for mood to be assigned to user <br /> <br />
+      - [ ] Express duration slept and sleep quality in terms of graphics and descriptive summaries
+      - [ ] Analyse data from the mood input system to identify sentiments most commonly experienced by the user 
+      - [ ] Analyse data from the mood input system to associate activities most likely to trigger the onset of certain emotions  <br /> <br />
     - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_** :page_facing_up:
       - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year <br /> <br />
-- [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers: <br /> <br />
+- [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
     - [ ] Complete the section which allows users to track their academic progress 	:notebook:
-      - [ ] Users can input/update their grades for each module per semester 
       - [ ] Calculation of CAP for individual semesters as well as cumulative CAP
       - [ ] Data representation of CAP trend
-      - [ ] User input to be stored in Firebase 
       - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion 
-      - [ ] Extend features to second degree/major/minor <br /> <br />
-    - [ ] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: 
-      - [ ] Code and design for users to view all events they have logged under these categories
+      - [ ] Extend features to second degree/major/minor (if time permits)
+    - [x] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: 
+      - [x] Code and design for users to view all events they have logged under these categories **-> Completed in MS2**
+- [ ] Style all website components that have been implemented <br /> <br />
    
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
  - [ ] Create project poster and video
