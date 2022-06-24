@@ -381,7 +381,7 @@ Approximately 12 man days, the equivalent of 96 hours, was channelled towards th
 
 A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
 
-![MS1 Architecture Diagram-MS1 PERT drawio](https://user-images.githubusercontent.com/79785001/175532207-ccbe3cc5-7de4-43b8-ae02-a067c8ed6e27.png)
+![MS1 Architecture Diagram-MS1 PERT drawio (1)](https://user-images.githubusercontent.com/79785001/175554224-07d3f801-9c6e-4dff-bec0-f0c5ce2cbd43.png)
 
 We decided to place greater emphasis on these areas in order to deepen our understanding of the tech stacks and to set-up our web application adequately for more advanced functionalities in the future.
 
