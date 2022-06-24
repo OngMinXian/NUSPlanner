@@ -99,9 +99,12 @@ npm i firebase
 <br></br>
 
 ### 1. Login and authentication system :lock:
-- #### Login page [High]
-- #### Sign-up page [High]
-- #### Forget password page [High]
+
+| Number | Feature | Components | Priority |
+| ------------- | ------------- | ------------- | ------------- |
+|1 | Login page | Not applicable | High |
+|2 | Sign-up page | Not applicable | High |
+|3 | Forget password page | Not applicable | High |
 
 ### 2. Today page :round_pushpin: - Landing page upon login
 
