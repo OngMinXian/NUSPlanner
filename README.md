@@ -377,7 +377,7 @@ Finally, we **integrated the users' account information and in-application data 
 ### Project management and planning :spiral_notepad:
 Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
-![ms1gantt](https://user-images.githubusercontent.com/79785001/175549422-fca67ca0-717f-442b-a4be-ff4b7b1e9357.png)
+![MS1 Architecture Diagram-Page-9 drawio (2)](https://user-images.githubusercontent.com/79785001/175555350-f63f142d-06c3-4c24-ad25-824b355c306d.png)
 
 A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
 
