@@ -89,7 +89,7 @@ npm i firebase
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
 ## Proposed system architecture :label:
-![MS1 Architecture Diagram-Architectural Diagram drawio](https://user-images.githubusercontent.com/79785001/175468532-c2ff5548-21bb-4204-b23f-25ce754878d1.png)
+![MS1 Architecture Diagram-Architectural Diagram drawio](https://user-images.githubusercontent.com/79785001/175468839-5a106b8d-706b-40c3-94d0-5bd1610b9d71.png)
 
 ## Feature list :desktop_computer:
 #### Keys used to prioritise requirements :key:
