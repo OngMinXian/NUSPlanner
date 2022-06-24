@@ -363,6 +363,7 @@ npm i firebase
 | Profile Page :bust_in_silhouette: | 1. Profile page is linked to Firebase and reflects any edits that a user maks to his profile <br /><br /> 2. Upon creating an account, a new “user” object is created into the “Users” collection in Firebase. Some fields are left as “-” by default before the user edits the profile. <br /><br /> 3. Users can upload a profile picture from their computer onto the website. This picture is stored in the storage database. <br /><br /> 4. If no ptofile picture has been uploaded by the user, a default profile picture which has been stored in the storage database will be displayed | Not applicable |
 
 ## Software Engineering Practices :gear:
+
 ### Approach to software design :computer:
 We adopted a [bottom-up approach](https://www.geeksforgeeks.org/difference-between-top-down-and-bottom-up-integration-testing/) towards multi-level design in Milestone 1. 
 ![top2](https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png)
@@ -374,15 +375,27 @@ We then **proceeded to develop more technical features that involved routing, ho
 Finally, we **integrated the users' account information and in-application data to Firebase.** This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product. We strongly feel that the bottom-up approach helped us to develop the fundamental aspects of our web application effectively, thus we will continue to use this approach for future milestones.
 
 ### Project management and planning :spiral_notepad:
+Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
+![ms1gantt](https://user-images.githubusercontent.com/79785001/175549422-fca67ca0-717f-442b-a4be-ff4b7b1e9357.png)
+
+A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
+
+![MS1 Architecture Diagram-MS1 PERT drawio](https://user-images.githubusercontent.com/79785001/175532207-ccbe3cc5-7de4-43b8-ae02-a067c8ed6e27.png)
+
+We decided to place greater emphasis on these areas in order to deepen our understanding of the tech stacks and to set-up our web application adequately for more advanced functionalities in the future.
+
+While coding, we frequently compiled our code and tested it on the deployment server. Code was uploaded to GitHub only after multiple tests were run to prevent errors. Branching was also used to implement new features and pull requests were initiated each time a merge was executed.
+
+On top of merging and checking for prospective loopholes in our code, we added succinct commit messages on GitHub wherever possible to track changes made to the code and to ensure the consistency of our code at all times.
 
 ## Technical difficulties encountered :toolbox:
 
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
 | ------------- | ------------- | ------------- | ------------- |
 | Standardising layout of web page components across all screen sizes | [Issue 3](https://github.com/OngMinXian/NUSPlanner/issues/3) | Solved | Consulted student advisor <br /> <br /> Solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
-| Challenges deploying web application on Firebase and GitHub | [Issue 4](https://github.com/OngMinXian/NUSPlanner/issues/4) | Open | Awaiting response from student advisor |
-| Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Open | Awaiting response from student advisor |
+| Challenges deploying web application on Firebase and GitHub | [Issue 4](https://github.com/OngMinXian/NUSPlanner/issues/4) | Open | Re-styled web application and re-deployed in MS2, to greater success. However, deployed application is not integrated with Firestore backend successfully.  |
+| Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Solved | Solved by following instructions given by out student advisor |
 
 ## Direction for Milestone 2 :arrow_right:
 We will act on our student advisor's comments of **deploying the application** and work towards including **detailed evidence of good software engineering in our Project README**. Additionally, we will update our mentor on our progress for Milestone 1 and request for feedback. 
