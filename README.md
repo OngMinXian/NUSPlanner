@@ -35,7 +35,7 @@ As of 2020, being **ONE in the 33% of Singaporean degree holders[^2]** translate
 With this problem in mind, we hope to design a user-friendly application that will help undergraduates remain cognisant of both their working portfolio and academic progress early on in their university journey. This way, much despair and anxiety can be averted, as one can do the necessary homework and preparation needed to land his dream job
 
 ## User stories :page_facing_up:
-1. \[Epic] As a student, I want to be able to ***track my progress in NUS***, be it academically, work-related or extracurricular, so that I can optimise how I spend my time
+1. **\[Epic]** As a student, I want to be able to ***track my progress in NUS***, be it academically, work-related or extracurricular, so that I can optimise how I spend my time
   - As a student, I can view the proportion of time that I spend across all categories of events that I log into the calendar 
   - As a student, I can store and view important details for events that matter to my portfolio
   - As a student, I can create an academic plan for future semesters and view my degree progress
@@ -89,7 +89,7 @@ npm i firebase
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
 ## Proposed system architecture :label:
-![MS1 Overall Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172174212-c7665734-6d6b-4e4d-bd1e-ac4f0c59bcb3.png)
+![MS1 Architecture Diagram-Architectural Diagram drawio](https://user-images.githubusercontent.com/79785001/175468532-c2ff5548-21bb-4204-b23f-25ce754878d1.png)
 
 ## Feature list :desktop_computer:
 #### Keys used to prioritise requirements :key:
@@ -187,6 +187,9 @@ npm i firebase
     - Course 
     - Matriculation year 
     - Year of graduation
+
+## Use Cases
+  - #### Use case 1 
 
 ## Timeline and Executables :alarm_clock:
 
