@@ -98,108 +98,95 @@ npm i firebase
 - **\[Low]** Low priority
 <br></br>
 
-### 1. \[High] Login and authentication system :lock:
-1. Login page
-2. Sign-up page 
-3. Forget password page 
+### 1. Login and authentication system :lock:
+- #### Login page [High]
+- #### Sign-up page [High]
+- #### Forget password page [High]
 
-### 2. \[High] Today page :round_pushpin:
+### 2. Today page :round_pushpin: - Landing page upon login
 
-| Feature | Components|
-| ------------- | ------------- |
-| Mood tracking system | <br></br> 1. Mood of the day <br></br> 2. Category associated with mood of the day <br></br> |
-| Sleep tracking system  | <br></br> 1. Quality of sleep <br></br> 2. Number of hours of sleep <br></br> |
-| Checklist for events that start and end on that day itself | <br></br> 1. Add event <br></br> 2. Delete event <br></br> 3. Display events in chronological order <br></br> | 
-| Display for calendar events that fall on that day itself | <br></br> 1. Add event <br></br> 2. Delete event <br></br> 3. Display events in chronological order <br></br> 4. Create custom tags <br></br> |
-
-  - Mood tracking system 
+  - #### Mood tracking system [High]
     - Mood of the day
-    - Category associated with mood of the day 
-  - Sleep tracking system 
+    - Categories associated with mood of the day [Medium]
+  - #### Sleep tracking system [High]
     - Quality of sleep 
     - Number of hours of sleep 
-  - Checklist for events that start and end on that day itself
+  - #### Checklist for events that start and end on that day itself [High]
     - Add event 
     - Delete event 
     - Display events in chronological order
-  - Display for calendar events that fall on that day itself
+  - #### Display for calendar events that fall on that day itself [High]
     - Add event 
     - Delete event 
     - Display events in chronological order
-    - Create custom tags
+    - Create custom tags - Refer to "Create custom tags" category under the next section for more details
+    - Delete custom tags
 
 ### 3. Calendar page :calendar:
-- 
 
-  
-### 3. Dashboard page (Landing page upon login) \[High] :chart_with_upwards_trend:
-  - **_Descriptive statistics_** for the following 3 segments:
-    - #### Productivity :fountain_pen:
-      - Productive hours, to be expressed as a percentage in a progress bar and a trend in a line graph
-    - #### Wellness :leaves:
-      - Overall mood of each day to be rated and given an average score over a period of time 
-    - #### Summary :page_facing_up:
-      - Pie chart for user to get a breakdown of the duration that they devote to each category (academics/work/extracurriculars) per week/month/year
+- #### Add Events [High]
+  - Event title 
+  - Start date and time 
+  - End date and time 
+  - Event tag 
+  - Extra input fields -- when the work/extracurriculars tag is selected 
+    - Organisation name 
+    - Description of user's role 
+    - Description of duties undertaken by the user
+    - Event description
+- #### Edit Events [High]
+  - Drag and drop events across timeslots/days 
+  - Resize events to span across different timeslots/days
+  - Delete events 
+- #### Create custom tags [High]
+  - Tag label
+  - Tag colour
+- #### Delete custom tags [High]
 
-### 4. Calendar page :calendar:
-  - Displays a calendar that allows users to **_add, remove, resize, and drag and drop events_**
-    - #### Adding events :heavy_plus_sign:
-      - Events are added by keying in a title for the event, as well as the start date and time and end date and time for the event 
-    - #### Removing events :heavy_minus_sign:
-      - Events can be removed by double clicking on the event, which will trigger a pop up asking the user to confirm the deletion
-    - #### Resizing events :left_right_arrow:
-      - Events can be resized by dragging the top and bottom/ left and right limits of the rectangle that the event spans 
-      - This allows the number of days that the event spans and the event duration to be adjusted with ease 
-    - #### Dragging and dropping events :arrows_counterclockwise:
-      - Events can be dragged and dropped over to different days and timeslots, allowing for customisability without having to delete an existing event and input another in its place
+### 4. Dashboard page :chart_with_upwards_trend:
+- #### Productivity [High]
+  - Productive hours expressed as:
+    - Percentage in a progress bar
+    - Trend in a line graph
+- #### Wellness [High]
+  - Overall mood of each day to be rated and given an average score 
+  - Identify activities most commonly associated with a particular mood
+  - Identify trends in sleep quality and duration
+- #### Summary [High] 
+  - Pie chart for user to get a breakdown of the duration that they devote to each all categories specified in the calendar tags per week/month/year
 
-- Users can **_add events with "special" tags_** which belong to the work or extracurricular categories :briefcase:
-  - #### Adding events with a "special" tag :bookmark:
-    - Triggers extra fields for user to input the details of their activity, which is used for generating the descriptive summaries in the Dashboard page and the content in the Progress Report page 
-    - #### Example 1: When the work special tag is selected, the user will have to fill up the following additional fields: 
-      - User’s role in the workplace
-      - Description of duties undertaken
-      - Duration taken to complete assigned tasks 
-      - Name of organisation that user is employed under
-    - #### Example 2: When the extracurriculars special tag is selected, the user will have to fill up the following additional fields: 
-      - User’s role or responsibility in their co-curricular activity
-      - Hours committed to each activity
-      - Name of organisation that user is a part of 
+### 5. Progress Report page :card_index_dividers:
+  - #### View history of events logged by tag category [High]
+  - #### View a trend in academic data [High]
+      - Best and poorest performing modules
+      - CAP progression by year
 
-### 5. Modules page :bookmark_tabs:
-  - **Advanced feature for Artemis -> Integration with NUSMODs**
-  - Users can plan their modules for every Academic Year/Semester using the following features from the NUSMODs Integration: 
-    - **_Search for modules in web application based on the following criteria:_** 
-      - Name
-      - Module Code
-      - Semester offered
-      - No exam
-      - Number of MCs
-      - Has S/U options
-      - Time
-      - Lessons in school
-      - Venue (Will require extra effort since it involves geographical location, implement if time permits)
-
-### 6. Progress Report page :card_index_dividers:
-  - Helps users to **_track their academic progress_** for their primary major and (if applicable) second degree/major/minor, including their **_progress in work and extracurricular activities_** 
-    - #### Tracking of academic progress :notebook:
-      - Users can input/update their grades for each module per semester
-      - CAP for individual semesters as well as cumulative CAP
-      - Data representation of CAP trend
-      - Progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion
-      - (If applicable) Features here extended to second degree/major/minor
-    - #### Monitoring progress in the work and extracurricular activities :briefcase:
-      - Users can view all their activities that they have logged under the work and extracurricular "special" tags in this page, enabling them to draft out a resume or make plans to boost their portfolio effectively
+### 6. Modules page :bookmark_tabs: - Advanced Artemis feature
+  - #### Search modules by module code [High]
+  - #### Filter modules by multiple criteria [High]
+    - Semester offered 
+    - Has exam 
+    - Number of modular credits (MCs)
+    - Has S/U options
+  - #### Telegram link to group chat for module [Low]
 
 ### 7. Profile page :bust_in_silhouette:
-  - Allows users to **_adjust their account details_** 
-    - #### Fields that can be changed ####
-      - Username 
-      - Email 
-      - Profile picture (default profile picture is set if no pictures are specified)
-      - Course 
-      - Matriculation year 
-      - Year of graduation
+  - #### Course details segment [High]
+    - Modules taken
+    - Verify module code using link to NUSMODs API [Medium]
+    - Corresponding grades for modules taken
+    - Semester that the modules were taken
+    - Second major/minor/degree (if applicable) [Low]
+    - Add semester 
+    - Remove semester
+  - #### Account settings segment [High]
+    - Profile picture (default profile picture is set if no pictures are specified)
+    - Username 
+    - Email 
+    - Faculty
+    - Course 
+    - Matriculation year 
+    - Year of graduation
 
 ## Timeline and Executables :alarm_clock:
 
@@ -209,7 +196,6 @@ npm i firebase
   - [x] UI Design using Figma 
   - [x] Design diagrams 
   - [x] Set up Firebase backend and plan data storage
-  - [x] Set up Google Analytics
 
 #### Set up Stage:
   - [x] Create basic theme and structure for the app
