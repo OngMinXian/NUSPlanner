@@ -349,8 +349,6 @@ npm i firebase
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
 ## Progress in Milestone 1 :triangular_flag_on_post: :one:
-### Technical progress :keyboard:
-![MS1 Current Progress Class Diagram drawio](https://user-images.githubusercontent.com/79785001/172189893-8475d118-ae11-4d5f-a638-cf69ae1d985b.png)
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
