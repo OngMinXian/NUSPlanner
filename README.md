@@ -79,7 +79,7 @@ npm i react-icons
 npm i react-select
 ```
 4. For system testing, install the following packages in the nus-planner folder:
-5. ```bash 
+```bash 
 // Install Mocha, Chai and Enzyme
 npm install mocha --save-dev
 npm install chai chai-enzyme --save-dev --legacy-peer-deps
