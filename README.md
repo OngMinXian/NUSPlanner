@@ -441,13 +441,25 @@ If time permits, we will also gear our application towards integrated user testi
 ## Software Engineering Practices :gear:
 
 ### Approach to software design :computer:
-Our web application is modelled using the n-tier architectural style and the event-driven architectural style. 
+Our web application is modelled using the **n-tier architectural style** and the **event-driven architectural style.** 
 
-The n-tier architectural style was chosen because it is complements our bottom-up approach towards multi-level design. In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must reduce dependencies within our code so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
+![MS1 Architecture Diagram-Architectural Styles drawio (2)](https://user-images.githubusercontent.com/79785001/175817780-2f8bcb68-295b-4192-9e37-5b21ffd8f2fb.png)
 
-Using the n-tier architectural style allows us to develop various components of our web application effectively because it involves dividing our application into 3 tiers: the logic tier, the presentation tier and the data tier. Due to the structually distinct nature of each layer, we can introduce new features to any of the 3 layers without introducing undesirable side-effects to the remaining layers. This not only gives rise to scalability, but code reusability as well, since we can easily abstract out existing ideas and use them to develop related ideas in our web application. 
+The n-tier architectural style was chosen because it is **complements our bottom-up approach towards multi-level design.** In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must **reduce dependencies within our code** so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
 
-The event-driven architectural style was also used in our web application as we had to stage and trigger a wide range of event sequences based on user-input. For example, when a user decides to add an event in the Calendar page, he has to key in several input fields. Every character that he adds or deletes from the input fields triggers a state change in the related hook, which in turn causes the object hook containing the new event to be updated. Ensuring that the correct event sequences are triggered based on a unique set of actions by the user is thus central to the success of our web application.
+Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the logic tier, the presentation tier and the data tier.***
+
+![Screenshot 2022-06-26 at 10 02 01 PM](https://user-images.githubusercontent.com/79785001/175817982-8c642fa5-109b-414c-aced-b174331afe8b.png)
+
+
+Due to the structually distinct nature of each layer, we can introduce new features to any of the 3 layers without introducing undesirable side-effects to the remaining layers. This not only **gives rise to scalability**, but **code reusability** as well, since we can easily abstract out existing ideas and use them to develop related ideas in our web application. 
+
+The [event-driven architectural style](https://se-education.org/se-book/architecture/architecturalStyles/eventDriven/) was also used in our web application as we had to stage and trigger a wide range of event sequences based on user-input. 
+
+![Screenshot 2022-06-26 at 10 10 32 PM](https://user-images.githubusercontent.com/79785001/175818278-ac7c35f1-ee09-4f1e-9690-326acac6123e.png)
+
+
+For example, when a user decides to add an event in the Calendar page, he has to key in several input fields. Every character that he adds or deletes from the input fields triggers a state change in the related hook, which in turn causes the object hook containing the new event to be updated. Ensuring that the **correct event sequences are triggered based on a unique set of actions by the user** is thus central to the success of our web application.
 
 While we do acknowledge that other architectural styles have their own merits, with the peer-to-peer pattern and the client-server architectural style being exceptionally useful in distributed applications, these architectural styles were less applicable to us as our web application is not being developed on an industrial scale. 
 
