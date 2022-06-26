@@ -66,7 +66,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 ## Installation and Set-Up :hammer_and_wrench:
 1. Install react-js from [create-react-app](https://github.com/facebook/create-react-app)
 2. Clone from GitHub repository: https://github.com/OngMinXian/NUSPlanner
-3. Navigate to the src folder and instll the following dependencies 
+3. Navigate to the src folder and install the following dependencies 
 ``` bash 
 npm i react-router-dom
 npm install react-bootstrap bootstrap@5 //command has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0
@@ -77,6 +77,20 @@ npm i date-fns
 npm i styled-components
 npm i react-icons
 npm i react-select
+```
+4. For system testing, install the following packages in the nus-planner folder:
+5. ```bash 
+// Install Mocha, Chai and Enzyme
+npm install mocha --save-dev
+npm install chai chai-enzyme --save-dev --legacy-peer-deps
+npm install enzyme enzyme-adapter-react-16 cheerio --save-dev --legacy-peer-deps
+
+//Install Babel
+npm install @babel/core @babel/register --save-dev
+npm install babel-preset-react-app-babel-7 --save-dev
+npm install @babel/plugin-transform-modules-commonjs --save-dev
+npm install babel-plugin-inline-react-svg --save-dev
+npm install ignore-styles --save-dev
 ```
 **IMPORTANT: bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if this issue is encountered**
 
