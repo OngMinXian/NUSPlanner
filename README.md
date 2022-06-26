@@ -447,7 +447,7 @@ Our web application is modelled using the **n-tier architectural style** and the
 
 The n-tier architectural style was chosen because it is **complements our bottom-up approach towards multi-level design.** In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must **reduce dependencies within our code** so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
 
-Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the logic tier, the presentation tier and the data tier.***
+Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the presentation tier  the logic tier and the data tier.***
 
 ![Screenshot 2022-06-26 at 10 02 01 PM](https://user-images.githubusercontent.com/79785001/175817982-8c642fa5-109b-414c-aced-b174331afe8b.png)
 
@@ -463,9 +463,19 @@ For example, when a user decides to add an event in the Calendar page, he has to
 
 While we do acknowledge that other architectural styles have their own merits, with the peer-to-peer pattern and the client-server architectural style being exceptionally useful in distributed applications, these architectural styles were less applicable to us as our web application is not being developed on an industrial scale. 
 
+### Project management and planning :spiral_notepad:
 
+Approximately 15 man days, the equivalent of 120 hours, was directed towards coding new functionalities, fixing technical issues, testing and deploying our web application in Milestone 2, with the breakdown of tasks by duration (in days) as follows: 
 
+Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
+![MS1 Architecture Diagram-MS2 Gantt chart drawio](https://user-images.githubusercontent.com/79785001/175822048-f7b4f5c9-be30-4c4f-b283-cf0e0d714873.png)
+
+After gaining familiarity with the tech stacks in Milestone 1, our main focus in Milestone 2 was to set up as many functionalities as we could in our web application. The process of setting up each page was prolonged because we conducted extensive error checks and had to resolve the technical issues that we discovered. 
+
+![MS1 Architecture Diagram-MS2 PERT drawio](https://user-images.githubusercontent.com/79785001/175822643-596e187a-0a2c-4749-b5ab-d907b008c4a7.png)
+
+The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we also updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
 
 
 
