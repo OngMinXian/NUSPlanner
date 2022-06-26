@@ -275,6 +275,8 @@ npm i firebase
     - Extensions 
       1a. User adds/removes a semester
 
+### Proposed system workflow :ocean:
+![activityDiagram](https://user-images.githubusercontent.com/79785001/175823334-46bf0672-2b96-4b7a-8a61-82392d8a143f.png)
 
 ## Timeline and Executables :alarm_clock:
 
@@ -477,5 +479,9 @@ After gaining familiarity with the tech stacks in Milestone 1, our main focus in
 
 The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we also updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
 
+## Technical difficulties encountered :toolbox:
+
+| Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
+| ------------- | ------------- | ------------- | ------------- |
 
 
