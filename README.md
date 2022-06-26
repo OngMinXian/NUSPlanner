@@ -394,9 +394,7 @@ Finally, we **integrated the users' account information and in-application data 
 ### Project management and planning :spiral_notepad:
 Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
-
 ![MS1 Architecture Diagram-Page-9 drawio (4)](https://user-images.githubusercontent.com/79785001/175555901-41532f91-557c-4af0-a3a2-8d06db426928.png)
-
 
 A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
 
@@ -413,8 +411,8 @@ On top of merging and checking for prospective loopholes in our code, we added s
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
 | ------------- | ------------- | ------------- | ------------- |
 | Standardising layout of web page components across all screen sizes | [Issue 3](https://github.com/OngMinXian/NUSPlanner/issues/3) | Solved | Consulted student advisor <br /> <br /> Solved by formatting page using react-bootstrap and flexbox instead of pure CSS |
-| Challenges deploying web application on Firebase and GitHub | [Issue 4](https://github.com/OngMinXian/NUSPlanner/issues/4) | Open | Re-styled web application and re-deployed in MS2, to greater success. However, deployed application is not integrated with Firestore backend successfully.  |
-| Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Solved | Solved by following instructions given by out student advisor |
+| Challenges deploying web application on Firebase and GitHub | [Issue 4](https://github.com/OngMinXian/NUSPlanner/issues/4) | Solved | Re-styled web application and re-deployed in MS2, to greater success. However, deployed application is not integrated with Firestore backend successfully. <br></br> Managed to resolve this issue in MS2, refer to Technical Difficulties under Milestone 2 section for more details  |
+| Challenges formatting layout for elements on top of background image for the login page | [Issue 5](https://github.com/OngMinXian/NUSPlanner/issues/5) | Solved | Solved by following instructions given by our student advisor |
 
 ## Direction for Milestone 2 :arrow_right:
 We will act on our student advisor's comments of **deploying the application** and work towards including **detailed evidence of good software engineering in our Project README**. Additionally, we will update our mentor on our progress for Milestone 1 and request for feedback. 
@@ -483,5 +481,12 @@ The quantity of the code produced in Milestone 2 was significantly more extensiv
 
 | Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
 | ------------- | ------------- | ------------- | ------------- |
+| Challenges deploying web application on Firebase | [Issue 6](https://github.com/OngMinXian/NUSPlanner/issues/6) | Solved | Consulted student advisor <br></br> Solved by editing out the return statements in our useEffect hooks for the affected pages |
 
+## Direction for Milestone 3 :arrow_right:
 
+The technical aspect of Milestone 2 was extremely demanding for us as we tried our best to code as many functionalities as possible and made it our priority to check our code extensively for technical problems. As a result, most of our time was channelled towards random testing and fixing the issues that were visible to us. 
+
+In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the **Timeline and Executables** section for Milestone 3 is equally important to us. 
+
+Following the completion of Milestone 2, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
