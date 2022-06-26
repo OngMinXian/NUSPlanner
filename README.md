@@ -84,7 +84,7 @@ npm i react-select
 npm install mocha --save-dev
 npm install chai chai-enzyme --save-dev --legacy-peer-deps
 npm install enzyme enzyme-adapter-react-16 cheerio --save-dev --legacy-peer-deps 
-npm i cheerio@1.0.0-rc.10 --save-dev //DO NOT use latest version of cheerio (v1.0.0-rc.11) which will be installed by the command above, otherwise an import error will be seen when tests are run
+npm i cheerio@1.0.0-rc.10 --save-dev //DO NOT use latest version of cheerio (v1.0.0-rc.11) which will be installed by the command above, otherwise an import error will be seen when tests are run, see link here: https://stackoverflow.com/questions/72346115/i-am-get-an-export-error-when-build-test for explanation
 
 //Install Babel
 npm install @babel/core @babel/register --save-dev
