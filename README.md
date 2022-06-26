@@ -83,7 +83,8 @@ npm i react-select
 // Install Mocha, Chai and Enzyme
 npm install mocha --save-dev
 npm install chai chai-enzyme --save-dev --legacy-peer-deps
-npm install enzyme enzyme-adapter-react-16 cheerio --save-dev --legacy-peer-deps
+npm install enzyme enzyme-adapter-react-16 cheerio --save-dev --legacy-peer-deps 
+npm i cheerio@1.0.0-rc.10 --save-dev //DO NOT use latest version of cheerio (v1.0.0-rc.11) which will be installed by the command above, otherwise an import error will be seen when tests are run
 
 //Install Babel
 npm install @babel/core @babel/register --save-dev
