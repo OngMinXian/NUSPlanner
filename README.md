@@ -438,4 +438,22 @@ If time permits, we will also gear our application towards integrated user testi
 | Dashboard page :chart_with_upwards_trend: | 1. Displays average stress level in the form of raw percentages. Users can select whether they want their stress level to be aggregated against all exisitng records or against records from the most recent 1-12 months <br></br> 2. Displays average sleep hours and sleep quality in the form of raw numbers and percentages. Users can select whether they want their sleep hours and sleep quality to be aggregated against all exisitng records or against records from the most recent 1-12 months <br></br> 3. Displays activity summary in the form of raw numbers and percentages. Users can select which category (tags) they want to compare <br></br> ***Note: The raw numbers and percentages displayed currently will be converted to suitable data forms in MS3*** | Not applicable |
 | Progress Report page :card_index_dividers: | 1. Calculates user's overall CAP and their CAP for individual semesters. Data is displayed as a floating point number <br></br> 2. Displays best and poorest faring modules in descending order of grades attained <br></br> 3. Selecting a category (tags) from the dropdown menu will display all events that have been assigned to that tag <br></br> ***Note: The raw numbers and percentages displayed currently will be converted to suitable data forms in MS3*** | Not applicable |
 
+## Software Engineering Practices :gear:
+
+### Approach to software design :computer:
+Our web application is modelled using the n-tier architectural style and the event-driven architectural style. 
+
+The n-tier architectural style was chosen because it is complements our bottom-up approach towards multi-level design. In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must reduce dependencies within our code so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
+
+Using the n-tier architectural style allows us to develop various components of our web application effectively because it involves dividing our application into 3 tiers: the logic tier, the presentation tier and the data tier. Due to the structually distinct nature of each layer, we can introduce new features to any of the 3 layers without introducing undesirable side-effects to the remaining layers. This not only gives rise to scalability, but code reusability as well, since we can easily abstract out existing ideas and use them to develop related ideas in our web application. 
+
+The event-driven architectural style was also used in our web application as we had to stage and trigger a wide range of event sequences based on user-input. For example, when a user decides to add an event in the Calendar page, he has to key in several input fields. Every character that he adds or deletes from the input fields triggers a state change in the related hook, which in turn causes the object hook containing the new event to be updated. Ensuring that the correct event sequences are triggered based on a unique set of actions by the user is thus central to the success of our web application.
+
+While we do acknowledge that other architectural styles have their own merits, with the peer-to-peer pattern and the client-server architectural style being exceptionally useful in distributed applications, these architectural styles were less applicable to us as our web application is not being developed on an industrial scale. 
+
+
+
+
+
+
 
