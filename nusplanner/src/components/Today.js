@@ -204,9 +204,7 @@ function Today() {
     }
 
     useEffect(() => {
-        return () => {
-            getAllEvents();
-        }
+        getAllEvents();
     }, [])
 
     const todayDate = new Date();
@@ -398,7 +396,7 @@ function Today() {
             <SideBar></SideBar>
 
             <div className="top-spacing">
-                
+
                 <Alert variant="success" className="alert-size" dismissible show={show} onClose={() => setShow(false)}>
                     <Alert.Heading><h3 className="center-and-pad-bottom">Welcome back!</h3></Alert.Heading>
                     <Container>
@@ -740,7 +738,7 @@ function Today() {
                                                 value={newEvent.start}
                                                 onChange={(start) => setNewEvent({ ...newEvent, start })
                                                 } />
-                                        </Col>  
+                                        </Col>
 
                                         <Col>
                                             <Form.Label>End Date and Time</Form.Label>
