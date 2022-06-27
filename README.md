@@ -489,4 +489,4 @@ The technical aspect of Milestone 2 was extremely demanding for us as we tried o
 
 In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the **Timeline and Executables** section for Milestone 3 remains equally important to us. 
 
-As Milestone 2 draws to a close, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
+Moving forward, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
