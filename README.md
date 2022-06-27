@@ -6,8 +6,10 @@ Artemis
 
 ## Link to deployed application
 :link: auth-development-71ec2.web.app
+(Unfortunately, we could not create a clickable link. Please copy and paste the above web link to access the deployed website. Thank you!)
+
 #### :exclamation: Important note to evaluators 
-- Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. Thank you!
+- Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
 - LWXSS:
   - Email: test101@gmail.com
   - PW: 123Test456!
