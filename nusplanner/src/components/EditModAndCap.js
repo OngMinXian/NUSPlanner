@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react'
 import { Table, Button, ButtonGroup, Form, Row, Col, InputGroup } from "react-bootstrap";
 import { db, auth } from "../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
 import { BsFillTrashFill } from 'react-icons/bs';
 import Select from 'react-select'
 import "./CSS/editgrades.css"

@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import SideBar from "./Sidebar"
-import {  doc, getDoc } from "firebase/firestore";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, Timestamp, setDoc, updateDoc, getDoc } from "firebase/firestore";
 import { db, auth } from "../firebase";
-import  Select from 'react-select'
+import "./CSS/task.css"
+import { BsFillTrashFill } from 'react-icons/bs';
+import Popup from "./Popup"
+import DateTimePicker from 'react-datetime-picker'
+import format from "date-fns/format"
+import TimePicker from 'react-time-picker';
+import { Button, Modal, Form, Row, Col, Container, Dropdown, Offcanvas } from "react-bootstrap"
+import  Select, { components } from 'react-select'
 
 function ProgressReport() {
 

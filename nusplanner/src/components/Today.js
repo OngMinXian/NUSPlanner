@@ -8,7 +8,7 @@ import TimePicker from 'react-time-picker';
 import { Button, Modal, Form, Row, Col, Container, Dropdown, Alert, Card, Accordion } from "react-bootstrap"
 import Select from 'react-select'
 
-function TodayNew() {
+function Today() {
 
     //Hook to close pop-up for logging sleep and mood data
     const [show, setShow] = useState(true);
@@ -218,7 +218,7 @@ function TodayNew() {
 
     //Function to check if event occurs today and only today
     const isTdy = (event) => {
-        
+        console.log(event)
         return (
             todayDate.getFullYear() === event.start.getFullYear() &&
             todayDate.getMonth() === event.start.getMonth() &&
@@ -1177,5 +1177,5 @@ function TodayNew() {
     )
 }
 
-export default TodayNew
+export default Today
 

@@ -9,6 +9,7 @@ import ForgotPassword from "./ForgotPassword";
 import DashBoard from "./Dashboard";
 import ProgressReport from "./ProgressReport";
 import Profile from "./Profile";
+import Settings from "./Settings";
 import CreateUserDoc from "./CreateUserDoc";
 import MonthYear from "./MonthYear";
 import Modules from "./Modules";
@@ -34,9 +35,10 @@ function App() {
                         <Route path="/progress-report" exact element={<ProgressReport />} />
                         <Route path="/profile" exact element={<Profile />} />
                         <Route path="/create-user-doc" exact element={<CreateUserDoc />} />
+                        <Route path="/settings" exact element={<Settings />} />
                         <Route path="/modules" exact element={<Modules />} />
                         <Route path="/editmodcap" exact element={<EditModCap />} />
-                        <Route path="/todaynew" exact element={<Today />} />
+                        <Route path="/today" exact element={<Today />} />
                     </Routes>
                 </AuthProvider>
 

@@ -312,9 +312,7 @@ function Modules() {
     }, [debouncedTerm])
 
     useEffect(() => {
-        return () => {
-            fetchModules();
-        }
+        fetchModules();
     }, []);
 
     useEffect(() => {
@@ -335,8 +333,8 @@ function Modules() {
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return (
-        <> 
-        <Sidebar></Sidebar>
+        <>
+            <Sidebar></Sidebar>
             <Container>
                 <Row style={{ marginTop: "50px" }}>
                     <Col sm={9}>

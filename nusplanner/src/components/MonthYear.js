@@ -15,7 +15,8 @@ import Select from 'react-select'
 import { Button, Modal, Form, Row, Col, Container, Dropdown, Offcanvas } from "react-bootstrap"
 import SideBar from "./Sidebar";
 import { db, auth } from "../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
+import { set } from "date-fns";
 
 function MonthYear() {
 
@@ -65,7 +66,7 @@ function MonthYear() {
                         borderRadius: "50%",
                         marginTop: "5px"
                     }}> </div> </Col>
-                    <Col md="auto"><p className = "tag-label-space">
+                    <Col md="auto"><p className="tag-label-space">
                         {x.value}
                     </p> </Col>
                 </Row>
@@ -87,7 +88,7 @@ function MonthYear() {
                             borderRadius: "50%",
                             marginTop: "5px"
                         }}> </div> </Col>
-                        <Col md="auto"><p className = "tag-label-space">
+                        <Col md="auto"><p className="tag-label-space">
                             {x.value}
                         </p> </Col>
                     </Row>
@@ -222,9 +223,7 @@ function MonthYear() {
     }
 
     useEffect(() => {
-        return () => {
-            getAllEvents();
-        }
+        getAllEvents();
     }, [])
 
     //Add an event
@@ -299,11 +298,11 @@ function MonthYear() {
             <SideBar></SideBar>
 
             <div className="eventInput_">
-                <Button variant="outline-primary" className = "add-event-main-button" onClick={
+                <Button variant="outline-primary" className="add-event-main-button" onClick={
                     () => setShowAddEvent(true)
                 }>Add Event</Button>
 
-                <Dropdown className = "pad-dropdown">
+                <Dropdown className="pad-dropdown">
                     <Dropdown.Toggle variant="outline-success" id="dropdown-basic">
                         Edit Tags
                     </Dropdown.Toggle>
@@ -375,7 +374,7 @@ function MonthYear() {
                     <Container>
                         <Row>
                             <Col>
-                                <div className = "pad-bottom">
+                                <div className="pad-bottom">
                                     <Form.Label>Event Title</Form.Label>
                                     <Form.Control
                                         placeholder="Add Title"
@@ -396,7 +395,7 @@ function MonthYear() {
                                                 value={newEvent.start}
                                                 onChange={(start) => setNewEvent({ ...newEvent, start })
                                                 } />
-                                        </Col>  
+                                        </Col>
 
                                         <Col>
                                             <Form.Label>End Date and Time</Form.Label>
@@ -411,7 +410,7 @@ function MonthYear() {
                                 </Container>
 
 
-                                <div className = "pad-top-and-bottom">
+                                <div className="pad-top-and-bottom">
                                     <Form.Label>Event Tag</Form.Label>
                                     <Select options={newList}
                                         placeholder="Choose a tag"
@@ -610,9 +609,9 @@ function MonthYear() {
                     <Form>
                         {newList.map((entry) => {
                             if (entry.id.split(":")[0] > 4)
-                                return <div className = "flex-display">
+                                return <div className="flex-display">
                                     <label>{entry.label} &nbsp; </label>
-                                    <div className = "push-right">
+                                    <div className="push-right">
                                         <Button
                                             variant="outline-danger"
                                             id={entry.id}
@@ -636,7 +635,7 @@ function MonthYear() {
             <Offcanvas show={showEventDetails} onHide={handleEventDetailsClose} placement="bottom" scroll={true} backdrop={true}>
                 <Offcanvas.Header closeButton>
                     <Offcanvas.Title>{eventTitle}
-                        <Button className = "canvas-delete-button" onClick={() => {
+                        <Button className="canvas-delete-button" onClick={() => {
                             deleteEvent(eventSelected)
                         }} variant="danger"> Delete Event</Button>
                     </Offcanvas.Title>

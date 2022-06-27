@@ -1,13 +1,14 @@
 import { React, useState, useEffect } from 'react'
-import { Image, Tab, Tabs, Form, Row, Col, Container, Button } from 'react-bootstrap'
+import { Image, Tab, Tabs, Form, Row, Col, Container, Button, Alert } from 'react-bootstrap'
 import SideBar from './Sidebar.js';
 import { db, auth, storage } from "../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage"
 import "./CSS/profile.css"
 import EditModAndCap from "./EditModAndCap.js"
 
 export default function Profile() {
+  const [error, setError] = useState("")
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -99,16 +100,14 @@ export default function Profile() {
   }
 
   useEffect(() => {
-    return () => {
-      getInfo();
-    }
+    getInfo();
   }, [])
 
   useEffect(() => {
-    if (key!=="") {
+    if (key !== "") {
       updateDoc(userRef, { profileLastLeftOff: key });
-    }   
-}, [key])
+    }
+  }, [key])
 
   return (
     <>
@@ -118,9 +117,9 @@ export default function Profile() {
       <Container>
         <Row>
           <Col xs={4}>
-            {imgLoaded && 
+            {imgLoaded &&
               <Image src={imgurl} className="display-pic" />
-            } 
+            }
           </Col>
 
           <Col xs={5}>
