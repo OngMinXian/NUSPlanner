@@ -5,7 +5,7 @@ A web application integrated with NUSMODs that helps students to optimise their 
 Artemis 
 
 ## Link to deployed application
-:link: auth-development-71ec2.web.app
+:link: auth-development-71ec2.web.app <br />
 (Unfortunately, we could not create a clickable link. Please copy and paste the above web link to access the deployed website. Thank you!)
 
 #### :exclamation: Important note to evaluators 
