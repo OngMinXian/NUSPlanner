@@ -30,6 +30,7 @@ Artemis
 Milestone 2:<br />
 :link: [Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1zaik8HZn4NhvlDV6WhFMfa9Xfu4bS_Jk/view?usp=sharing) <br />
+:link: [Testing Documentation] (https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing) <br />
 
 Milestone 1:<br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing) <br />
@@ -465,7 +466,7 @@ If time permits, we will also gear our application towards integrated user testi
 | Progress Report page :card_index_dividers: | 1. Calculates user's overall CAP and their CAP for individual semesters. Data is displayed as a floating point number <br></br> 2. Displays best and poorest faring modules in descending order of grades attained <br></br> 3. Selecting a category (tags) from the dropdown menu will display all events that have been assigned to that tag <br></br> ***Note: The raw numbers and percentages displayed currently will be converted to suitable data forms in MS3*** | Not applicable |
 
 ## Testing :toolbox:
-The link to our testing documentation can be found :link: [here](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit). <br /> 
+The link to our testing documentation can be found :link: [here](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing). <br /> 
 
 ## Software Engineering Practices :gear:
 
