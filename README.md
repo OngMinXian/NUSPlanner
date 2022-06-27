@@ -475,7 +475,7 @@ After gaining familiarity with the tech stacks in Milestone 1, our main focus in
 
 ![MS1 Architecture Diagram-MS2 PERT drawio](https://user-images.githubusercontent.com/79785001/175822643-596e187a-0a2c-4749-b5ab-d907b008c4a7.png)
 
-The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we also updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
+The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
 
 ## Technical difficulties encountered :toolbox:
 
