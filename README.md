@@ -30,7 +30,7 @@ Artemis
 Milestone 2:<br />
 :link: [Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1zaik8HZn4NhvlDV6WhFMfa9Xfu4bS_Jk/view?usp=sharing) <br />
-:link: [Testing Documentation] (https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing) <br />
+:link: [Testing Documentation](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing) <br />
 
 Milestone 1:<br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing) <br />
