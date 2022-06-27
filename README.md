@@ -5,7 +5,7 @@ A web application integrated with NUSMODs that helps students to optimise their 
 Artemis 
 
 ## Link to deployed application
-:link: [Deployed appplication](auth-development-71ec2.web.app)
+:link: auth-development-71ec2.web.app
 #### :exclamation: Important note to evaluators 
 - Please use the email and passsword assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. Thank you!
 - LWXSS:
