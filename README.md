@@ -9,20 +9,20 @@ Artemis
 #### :exclamation: Important note to evaluators 
 - Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. Thank you!
 - LWXSS:
-  - Email: 
-  - PW:
+  - Email: test101@gmail.com
+  - PW: 123Test456!
 - MetaNDroids:
-  - Email:
-  - PW:
+  - Email: test102@gmail.com
+  - PW: 123Test456!
 - Bit by Bit:
-  - Email: 
-  - PW:
+  - Email: test103@gmail.com
+  - PW: 123Test456!
 - Vinleon:
-  - Email: 
-  - PW:
+  - Email: test104@gmail.com
+  - PW: 123Test456!
 - Varun:
-  - Email: 
-  - PW:
+  - Email: test105@gmail.com
+  - PW: 123Test456!
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
