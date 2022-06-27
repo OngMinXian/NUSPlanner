@@ -8,11 +8,11 @@ Artemis
 :link: [Deployed appplication](auth-development-71ec2.web.app)
 #### :exclamation: Important note to evaluators 
 - Please use the email and passsword assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. Thank you!
-- Team 1:
-- Team 2:
-- Team 3: 
-- Student advisor:
-- Student mentor:
+- LWXSS:
+- MetaNDroids:
+- Bit by Bit:
+- Vinleon:
+- Varun:
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
