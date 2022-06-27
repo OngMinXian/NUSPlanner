@@ -5,7 +5,7 @@ A web application integrated with NUSMODs that helps students to optimise their 
 Artemis 
 
 ## Link to deployed application
-:link: (auth-development-71ec2.web.app)
+:link: auth-development-71ec2.web.app
 #### :exclamation: Important note to evaluators 
 - Please use the email and passsword assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. Thank you!
 - LWXSS:
@@ -26,6 +26,10 @@ Artemis
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
+Milestone 2:
+:link: [Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
+:link: [Video demo of Web App](https://drive.google.com/file/d/1zaik8HZn4NhvlDV6WhFMfa9Xfu4bS_Jk/view?usp=sharing) <br />
+Milestone 1:
 :link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing) <br />
 :link: [Project Poster](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I) <br />
 :link: [Project Video](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I) <br />
