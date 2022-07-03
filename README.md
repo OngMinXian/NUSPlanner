@@ -106,6 +106,7 @@ npm i date-fns
 npm i styled-components
 npm i react-icons
 npm i react-select
+npm i react-chartjs-2 chart.js //Graphing packages for now
 ```
 4. For system testing, install the following packages in the nus-planner folder:
 ```bash 
