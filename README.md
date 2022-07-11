@@ -8,8 +8,9 @@
 </p>
 
 <p align = "center">
-  <a href = "#ms-1">Milestone 1</a> - 
-  <a href = "#ms-2">Miestone 2</a>
+  <a href = "#ms-1">Milestone 1</a> -
+  <a href = "#ms-2">Milestone 2</a> - 
+  <a href = "#ms-3">Milestone 3 </a>
 </p>
 </p>
 
@@ -544,4 +545,5 @@ In Milestone 3, we hope that we can **pivot towards more organised forms of test
 Moving forward, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
 
 
+## <a name = "ms-3"></a> Progress in Milestone 3 :triangular_flag_on_post: :three:
 
