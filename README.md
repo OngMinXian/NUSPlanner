@@ -1,14 +1,15 @@
 <p align = "center">
-<img src = "https://user-images.githubusercontent.com/79785001/178192929-7571296a-a670-4237-b3f0-281f48e6d8bb.png">
+  <img src = "https://user-images.githubusercontent.com/79785001/178192929-7571296a-a670-4237-b3f0-281f48e6d8bb.png">
 
 <p align = "center">
-<a href="https://github.com/OngMinXian/NUSPlanner/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/OngMinXian/NUSPlanner?style=flat-square"></a>
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OngMinXian/NUSPlanner?color=success&style=flat-square">
-<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/OngMinXian/NUSPlanner?color=success&style=flat-square">
+  <a href="https://github.com/OngMinXian/NUSPlanner/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/OngMinXian/NUSPlanner?style=flat-square"></a>
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OngMinXian/NUSPlanner?color=success&style=flat-square">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/OngMinXian/NUSPlanner?color=success&style=flat-square">
 </p>
 
 <p align = "center">
-<a href = "#ms-1">Milestone 1</a>
+  <a href = "#ms-1">Milestone 1</a> - 
+  <a href = "#ms-2">Miestone 2</a>
 </p>
 </p>
 
@@ -469,7 +470,7 @@ For the technical aspect, we hope to accomplish all the deliverables we have pla
 
 If time permits, we will also gear our application towards integrated user testing using Mocha or other frameworks.
 
-## Progress in Milestone 2 :triangular_flag_on_post: :two:
+## <a name = "ms-2"></a> Progress in Milestone 2 :triangular_flag_on_post: :two:
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
