@@ -335,7 +335,7 @@ npm i firebase
       1a. User adds/removes a semester
 
 ### Proposed system workflow :ocean:
-![activityDiagram](https://user-images.githubusercontent.com/79785001/175823334-46bf0672-2b96-4b7a-8a61-82392d8a143f.png)
+![activityDiagram](https://user-images.githubusercontent.com/79785001/178226726-3bf97dcd-9f54-4d00-bb00-de9a34505a5d.png)
 
 ## Timeline and Executables :alarm_clock:
 
