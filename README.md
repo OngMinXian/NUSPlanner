@@ -287,12 +287,10 @@ npm i firebase
  
     - Extensions 
       3a. User selects the work/extracurriculars tag 
-        3a1. An extra pop-up window with additional text fields are triggered, prompting the user to specify the:
+        3a1. Additional text fields are triggered in the same pop-up tab, prompting the user to specify the:
           - Organisation name 
           - Role in organisation
-          - Duties undertaken for the activity that he is involved in 
        3a2. User fills in the required details
-       3a3. User confirms in the extra-pop up window 
        Use case resumes from step 4
      
       3b. User chooses to omit either the start date and time/end date and time of the event
