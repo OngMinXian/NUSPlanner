@@ -519,8 +519,8 @@ If time permits, we will also gear our application towards integrated user testi
 | Dashboard page :chart_with_upwards_trend: | 1. Displays average stress level in the form of raw percentages. Users can select whether they want their stress level to be aggregated against all exisitng records or against records from the most recent 1-12 months <br></br> 2. Displays average sleep hours and sleep quality in the form of raw numbers and percentages. Users can select whether they want their sleep hours and sleep quality to be aggregated against all exisitng records or against records from the most recent 1-12 months <br></br> 3. Displays activity summary in the form of raw numbers and percentages. Users can select which category (tags) they want to compare <br></br> ***Note: The raw numbers and percentages displayed currently will be converted to suitable data forms in MS3*** | Not applicable |
 | Progress Report page :card_index_dividers: | 1. Calculates user's overall CAP and their CAP for individual semesters. Data is displayed as a floating point number <br></br> 2. Displays best and poorest faring modules in descending order of grades attained <br></br> 3. Selecting a category (tags) from the dropdown menu will display all events that have been assigned to that tag <br></br> ***Note: The raw numbers and percentages displayed currently will be converted to suitable data forms in MS3*** | Not applicable |
 
-## Testing :toolbox:
-The link to our testing documentation can be found :link: [here](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing). <br /> 
+## Testing :test_tube:	
+The link to our testing documentation can be found at: :link: [here](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing). <br /> 
 
 ## Software Engineering Practices :gear:
 
