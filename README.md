@@ -395,13 +395,12 @@ npm i firebase
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [x] Add additional user input for stress levels to the Today page :round_pushpin: (if time permits) 
   - [x] User can select a range of activities that are associated with their stress level for the day  
-  - [x] User input for this section is stored in the Firestore database 
+  - [x] User input for this section is stored in the Firestore database <br></br>
 - [x] Complete the Dashboard page of the planner :chart_with_upwards_trend:
-    - [x] Read user input from Firestore accurately and use it to generate all charts in this section
+    - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br></br>
     - [x] Complete graphics and design for the Academics segment by **_30 June 2022_** :100:
       - [x]  Code and design for the multitype chart presenting the user's CAP by semester and the variations in his CAP 
       - [x]  Code and design for the radar chart presenting the user's average CAP for his top 5 most commonly occurring module codes <br></br>
-
     - [x] Complete graphics and design for the Stress Management segment **_by 5 July 2022_** :leaves:
       - [x] Code and design for the pie chart showing the frequency that each stress level is selected by the user (across all 6 stress levels)
       - [x] Analyse data from the stress input system to rank the activities most commonly associated with the onset of certain stress levels
@@ -410,8 +409,7 @@ npm i firebase
         - [x] Past month 
         - [x] Past 6 months 
         - [x] Past year 
-        - [x] All time
-      - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br /> <br />
+        - [x] All time <br></br>
     - [x] Complete graphics and design for the Productivity segment by **_10 July 2022_** :bulb:
       - [x] Code and design for the progress bar displaying the degree of completion (in %) across all 4 default categories for the present day. These categories are:  
         - [x] Work 
@@ -423,7 +421,6 @@ npm i firebase
           - [x] Past week 
           - [x] Past 6 months 
           - [x] Past year <br></br>
-
     - [x] Complete graphics and design for the Sleep Quality segment by **_15 July 2022_** :sleeping_bed:
       - [x] Code and design for the heatmap displaying the frequency that each sleep quality option (categorical) is being selected by the user
       - [x] Code and design for the line chart displaying the trend in the number of hours that the user sleeps
@@ -431,7 +428,6 @@ npm i firebase
         - [x] Past week 
         - [x] Past month 
         - [x] Past year <br></br>
-
 - [x] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
   - [x] Complete the contact details section 
     - [x] User can view saved data eg. email address, name associated with his account 
