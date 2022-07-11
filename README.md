@@ -1,4 +1,15 @@
-# NUSPlanner :books:
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/178192929-7571296a-a670-4237-b3f0-281f48e6d8bb.png">
+
+<p align = "center">
+<a href="https://github.com/OngMinXian/NUSPlanner/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/OngMinXian/NUSPlanner?style=flat-square"></a>
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OngMinXian/NUSPlanner?color=success&style=flat-square">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OngMinXian/NUSPlanner?style=flat-square">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/OngMinXian/NUSPlanner?color=success&style=flat-square">
+</p>
+</p>
+
+## Summary
 A web application integrated with NUSMODs that helps students to optimise their time in the areas of work, academics and extracurricular activities.
 
 ## Proposed level of achievement :bar_chart:
