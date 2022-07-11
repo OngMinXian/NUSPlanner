@@ -72,7 +72,9 @@ which is **nearly 2 times higher** than companies who value traditional qualific
 
 [^1]: https://www.straitstimes.com/singapore/jobs/singapore-employers-prioritise-skills-over-education-experience-linkedin-survey#:~:text=SINGAPORE%20(THE%20BUSINESS%20TIMES)%20%2D,LinkedIn%20said%20in%20a%20report
 
-![Screenshot 2022-05-30 at 2 46 31 PM](https://user-images.githubusercontent.com/79785001/172121911-2c98bb6b-dd3d-44b1-b89d-515441a20abe.png)
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/172121911-2c98bb6b-dd3d-44b1-b89d-515441a20abe.png">
+</p>
 
 If acquiring an arsenal of technical skills like programming and design are not enough to cause headaches for an undergraduate looking to secure his first job, being part of an ever-growing population of university graduates certainly would. 
 
@@ -142,7 +144,9 @@ npm i firebase
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
 
 ## Proposed system architecture :label:
-![MS1 Architecture Diagram-Architectural Diagram drawio (2)](https://user-images.githubusercontent.com/79785001/175491946-c3ca7a57-e034-4f26-83c0-d36e7ecbf7c7.png)
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/175491946-c3ca7a57-e034-4f26-83c0-d36e7ecbf7c7.png">
+</p>
 
 ## Feature list :desktop_computer:
 #### Keys used to prioritise requirements :key:
@@ -476,11 +480,15 @@ Finally, we **integrated the users' account information and in-application data 
 ### Project management and planning :spiral_notepad:
 Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
-![MS1 Architecture Diagram-Page-9 drawio (4)](https://user-images.githubusercontent.com/79785001/175555901-41532f91-557c-4af0-a3a2-8d06db426928.png)
+<p align = "center">
+  <img src ="https://user-images.githubusercontent.com/79785001/175555901-41532f91-557c-4af0-a3a2-8d06db426928.png">
+</p>
 
 A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
 
-![MS1 Architecture Diagram-MS1 PERT drawio (1)](https://user-images.githubusercontent.com/79785001/175554224-07d3f801-9c6e-4dff-bec0-f0c5ce2cbd43.png)
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/175554224-07d3f801-9c6e-4dff-bec0-f0c5ce2cbd43.png">
+</p>
 
 We decided to place greater emphasis on these areas in order to deepen our understanding of the tech stacks and to set-up our web application adequately for more advanced functionalities in the future.
 
@@ -529,21 +537,25 @@ The link to our testing documentation in Milestone 2 can be found [here](https:/
 ### Approach to software design :computer:
 Our web application is modelled using the **n-tier architectural style** and the **event-driven architectural style.** 
 
-![MS1 Architecture Diagram-Architectural Styles drawio (2)](https://user-images.githubusercontent.com/79785001/175817780-2f8bcb68-295b-4192-9e37-5b21ffd8f2fb.png)
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/175817780-2f8bcb68-295b-4192-9e37-5b21ffd8f2fb.png">
+</p>
 
 The n-tier architectural style was chosen because it is **complements our bottom-up approach towards multi-level design.** In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must **reduce dependencies within our code** so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
 
 Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the presentation tier  the logic tier and the data tier.***
 
-![Screenshot 2022-06-26 at 10 02 01 PM](https://user-images.githubusercontent.com/79785001/175817982-8c642fa5-109b-414c-aced-b174331afe8b.png)
-
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/175817982-8c642fa5-109b-414c-aced-b174331afe8b.png">
+</p>
 
 Due to the structually distinct nature of each layer, we can introduce new features to any of the 3 layers without introducing undesirable side-effects to the remaining layers. This not only **gives rise to scalability**, but **code reusability** as well, since we can easily abstract out existing ideas and use them to develop related ideas in our web application. 
 
 The [event-driven architectural style](https://se-education.org/se-book/architecture/architecturalStyles/eventDriven/) was also used in our web application as we had to stage and trigger a wide range of event sequences based on user-input. 
 
-![Screenshot 2022-06-26 at 10 10 32 PM](https://user-images.githubusercontent.com/79785001/175818278-ac7c35f1-ee09-4f1e-9690-326acac6123e.png)
-
+<p align = "center">
+  <img src = "https://user-images.githubusercontent.com/79785001/175818278-ac7c35f1-ee09-4f1e-9690-326acac6123e.png">
+</p>
 
 For example, when a user decides to add an event in the Calendar page, he has to key in several input fields. Every character that he adds or deletes from the input fields triggers a state change in the related hook, which in turn causes the object hook containing the new event to be updated. Ensuring that the **correct event sequences are triggered based on a unique set of actions by the user** is thus central to the success of our web application.
 
@@ -554,12 +566,15 @@ While we do acknowledge that other architectural styles have their own merits, w
 Approximately 15 man days, the equivalent of 120 hours, was directed towards coding new functionalities, fixing technical issues, testing and deploying our web application in Milestone 2, with the breakdown of tasks by duration (in days) as follows: 
 
 Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
-
-![MS1 Architecture Diagram-MS2 Gantt chart drawio](https://user-images.githubusercontent.com/79785001/175822048-f7b4f5c9-be30-4c4f-b283-cf0e0d714873.png)
+<p align = "center">
+  <img src ="https://user-images.githubusercontent.com/79785001/175822048-f7b4f5c9-be30-4c4f-b283-cf0e0d714873.png">
+ </p>
 
 After gaining familiarity with the tech stacks in Milestone 1, our main focus in Milestone 2 was to set up as many functionalities as we could in our web application. The process of setting up each page was prolonged because we conducted extensive error checks and had to resolve the technical issues that we discovered. 
 
-![MS1 Architecture Diagram-MS2 PERT drawio](https://user-images.githubusercontent.com/79785001/175822643-596e187a-0a2c-4749-b5ab-d907b008c4a7.png)
+<p align = "center">
+  <img src="https://user-images.githubusercontent.com/79785001/175822643-596e187a-0a2c-4749-b5ab-d907b008c4a7.png">
+</p>
 
 The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
 
@@ -594,4 +609,29 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 
 ## Software Engineering Practices :gear:
 
-### Approach to software design :computer:
+### Quality Assurance :vertical_traffic_light:
+In Milestone 3, we directed our efforts towards **implementing system testing, regression testing and user testing.** 
+
+Despite having attempted to implement automated testing in Milestone 2 with the aid of Mocha, Chai and Enzyme, we ultimately **decided to go with a non-automated approach.** One important reason is because our **system is heavily reliant on user gestures** to generate specific outcomes, and these **gestures cannot be replicated using a testing framework.** 
+
+For example, when a user resizes a calendar event or chooses to move it across diffferent timeslots in the Calendar page, he would have to perform a set of precise actions with his mouse. Stimulating these gestures using a UI testing framework would not be feasible, and is further complicated by the need to check whether the shifted event has retained its associated properties, such as its title. 
+
+Furthermore, there are **many elements to each component in our web application**, contributing to the **mounting challenges of checking the UI of each component.** 
+
+This is evident in the Today page, where creating an event that falls on the present day will cause an dropdown tab to appear in the events section. In this scenario, it would be insufficient to merely test whether a dropdown tab has appeared after the event has been added. The tests run should extend towards checking the visual effect of adding one event to other exisiting events, as well as opening the dropdown tab to check whether all event details have been stated correctly. Given the vast quantities of visual elements that we have to look out for, non-automated testing would be a more accurate and efficient alternative to unit or integrated testing.
+
+Therefore, non-automated testing was used as it will help us to create a **more polished end product within an optimal period of time.**
+
+### Evidence of system testing and regression testing :microscope:
+
+### Evidence of user testing :busts_in_silhouette:
+
+### Project management and planning :spiral_notepad:
+
+## Technical difficulties encountered :toolbox:
+
+## Direction for Milestone 4 :arrow_right:
+
+
+
+
