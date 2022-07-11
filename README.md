@@ -370,12 +370,12 @@ npm i firebase
 - [x] Complete the code and design required for the user to create events and log their mood + sleep quality in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for events created in the checklist to Firestore **-> Completed in MS1**
     - [x] Link data for events created in the events section to the Calendar Page and Firestore
-    - [x] Implement mood tracking feature where users can select their mood for the day 
+    - [x] Implement stress tracking feature where users can select their stress level for the day 
       - [x] Link user input to Firestore
     - [x] Implement sleep tracking feature where users can select their sleep quality and the number of hours of sleep that they had
       - [x] Link user input to Firestore <br /> <br />
 - [x] Complete the code and design for events with "special" tags, Work and Extracurricular categories **_by 25 June 2022_** :briefcase:
-    - [x] Ensure that default "tags" for work, academics and extracurriculars are being set-up in the Calendar page 
+    - [x] Ensure that default "tags" for work, academics, extracurriculars and others (aka. miscellaneous activities) are being set-up in the Calendar page 
     - [x] Code the event whereby selecting a "special" tag will lead to more input fields for user to key in the relevant data
       - [x] Store user input in Firestore 
     - [x] Allow users to create custom tags by choosing a name and colour for the tag 
@@ -393,28 +393,56 @@ npm i firebase
 - [x] Style all website components that have been implemented <br /> <br />
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
-- [ ] Add additional user input for mood to the Today page :round_pushpin: (if time permits) 
-  - [ ] User can select a range of activities that are associated with their mood of the day  <br /> <br />
-- [ ] Complete the Dashboard page of the planner :chart_with_upwards_trend:
-    - [ ] Complete graphics and design for the Productivity segment by **_30 June 2022_** :fountain_pen:
-      - [ ]  Code and design for productive hours to be expressed in a progress bar 
-      - [ ]  Code and design for productive hours to be expressed as a trend in a line graph 
-      - [x]  User input to be stored in Firebase **-> Completed in MS2**  <br /> <br />
-    - [ ] Complete graphics and design for the Wellness segment **_by 5 July 2022_** :leaves:
-      - [ ] Express duration slept and sleep quality in terms of graphics and descriptive summaries
-      - [ ] Analyse data from the mood input system to identify sentiments most commonly experienced by the user 
-      - [ ] Analyse data from the mood input system to associate activities most likely to trigger the onset of certain emotions  <br /> <br />
-    - [ ] Complete graphics and design for the Summary segment by **_10 July 2022_** :page_facing_up:
-      - [ ] Code and design for pie chart which enables user to get a breakdown of the duration they devote to each category (academics/work/extracurriculars) per week/month/year <br /> <br />
-- [ ] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
-    - [ ] Complete the section which allows users to track their academic progress 	:notebook:
-      - [ ] Calculation of CAP for individual semesters as well as cumulative CAP
-      - [ ] Data representation of CAP trend
-      - [ ] Code and design for progress bar depicting the number of completed modular credits out of the total modular credits required for degree completion 
-      - [ ] Extend features to second degree/major/minor (if time permits)
-    - [x] Complete the section which allows users to track their progress in their work/extracurricular activities :briefcase: 
-      - [x] Code and design for users to view all events they have logged under these categories **-> Completed in MS2**
-- [ ] Style all website components that have been implemented <br /> <br />
+- [x] Add additional user input for stress levels to the Today page :round_pushpin: (if time permits) 
+  - [x] User can select a range of activities that are associated with their stress level for the day  
+  - [x] User input for this section is stored in the Firestore database <br /> <br />
+- [x] Complete the Dashboard page of the planner :chart_with_upwards_trend:
+    - [x] Complete graphics and design for the Academics segment by **_30 June 2022_** :100:
+      - [x]  Code and design for the multitype chart presenting the user's CAP by semester and the variations in his CAP 
+      - [x]  Code and design for the radar chart presenting the user's average CAP for his top 5 most commonly occurring module codes
+      - [x]  Read user input from Firestore accurately and use it to generate all charts in this section <br /> <br />
+    - [x] Complete graphics and design for the Stress Management segment **_by 5 July 2022_** :leaves:
+      - [x] Code and design for the pie chart showing the frequency that each stress level is selected by the user (across all 6 stress levels)
+      - [x] Analyse data from the stress input system to rank the activities most commonly associated with the onset of certain stress levels
+      - [x] Ensure that both visulalisations above re-render correctly when a different time span is selected by the user. The possible time spans used to aggregate the data are: 
+        - [x] Past week 
+        - [x] Past month 
+        - [x] Past 6 months 
+        - [x] Past year 
+        - [x] All time
+      - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br /> <br />
+    - [x] Complete graphics and design for the Productivity segment by **_10 July 2022_** :bulb:
+      - [x] Code and design for the progress bar displaying the degree of completion (in %) across all 4 default categories for the present day. These categories are:  
+        - [x] Work 
+        - [x] CCA 
+        - [x] Academics 
+        - [x] Others
+      - [x] Code and design for the stacked bar plot displaying the percentage breakdown of activities across the Work, CCA and Academics categories
+        - [x] Ensure that visualisation re-renders correctly when a different time span is selected by the user. The possible time spans used to aggregate the data are: 
+          - [x] Past week 
+          - [x] Past 6 months 
+          - [x] Past year
+      - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br /> <br />
+
+    - [x] Complete graphics and design for the Sleep Quality segment by **_15 July 2022_** :sleeping_bed:
+      - [x] Code and design for the heatmap displaying the frequency that each sleep quality option (categorical) is being selected by the user
+      - [x] Code and design for the line chart displaying the trend in the number of hours that the user sleeps
+      - [x] Ensure that both visulalisations above re-render correctly when a different time span is selected by the user. The possible time spans used to aggregate the data are: 
+        - [x] Past week 
+        - [x] Past month 
+        - [x] Past year 
+      - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br></br>
+
+
+- [x] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
+  - [x] Complete the contact details section 
+    - [x] User can view saved data eg. email address, name associated with his account 
+    - [x] User can input and save links to his LinkedIn account and personal website 
+  - [x] Complete the education section 
+    - [x] User can view saved data eg. Overall CAP, faculty associated with his account 
+  - [x] Complete the write-up section 
+    - [x] User can write and save a description about his skillsets and positive attributes 
+    - [x] User can view all events that he has logged under the work, academics and extracurricular tags, ordered by start and end date 
    
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
  - [ ] Create project poster and video
