@@ -14,43 +14,42 @@
 </p>
 </p>
 
-## Summary
+## Summary 	:star2:
 A web application integrated with NUSMODs that helps students to optimise their time in the areas of work, academics and extracurricular activities.
 
 ## Proposed level of achievement :bar_chart:
 Artemis 
 
-## Link to deployed application
+## Link to deployed application :rocket:
+#### :construction: Regarding the link to our website
+Unfortunately, the link to our deployed website cannot be clicked directly. Please copy and paste the link below into your browser to access our deployed website. Thank you! <br/><br/>
 :link: auth-development-71ec2.web.app <br />
-(Unfortunately, we could not create a clickable link. Please copy and paste the above web link to access the deployed website. Thank you!)
 
-#### :exclamation: Important note to evaluators 
-- Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
-- LWXSS:
-  - Email: test101@gmail.com
-  - PW: 123Test456!
-- MetaNDroids:
-  - Email: test102@gmail.com
-  - PW: 123Test456!
-- Bit by Bit:
-  - Email: test103@gmail.com
-  - PW: 123Test456!
-- Vinleon:
-  - Email: test104@gmail.com
-  - PW: 123Test456!
-- Varun:
-  - Email: test105@gmail.com
-  - PW: 123Test456!
+#### :rotating_light: Important note to evaluators 
+Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
+
+| Evaluator  | Designated Email | Password |
+| ------------- | ------------- | ------------- |
+| LWXSS  | test101@gmail.com  | 123Test456! |
+| MetaNDroids | test102@gmail.com  | 123Test456! |
+| Bit by Bit | test103@gmail.com | 123Test456! |
+| Vinleon | test104@gmail.com | 123Test456! |
+| Varun | test105@gmail.com | 123Test456! |
+
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
 
-Milestone 2:<br />
-:link: [Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
-:link: [Video demo of Web App](https://drive.google.com/file/d/1zaik8HZn4NhvlDV6WhFMfa9Xfu4bS_Jk/view?usp=sharing) <br />
+<b> Milestone 3: </b><br/>
+:link: [Project Poster]() <br/>
+:link: [Project Video]() <br/>
+
+<b>Milestone 2: </b><br />
+:link: [Project Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
+:link: [Project Video](https://drive.google.com/file/d/1zaik8HZn4NhvlDV6WhFMfa9Xfu4bS_Jk/view?usp=sharing) <br />
 :link: [Testing Documentation](https://docs.google.com/document/d/18hBhq1a3CiRDjgi2CvH-hZ4rq1_3fXINYQnzB3uom-E/edit?usp=sharing) <br />
 
-Milestone 1:<br />
+<b> Milestone 1: </b><br />
 :link: [Video demo of Web App](https://drive.google.com/file/d/1GWkICfWkSIvc1QIKtg3mpIe213slZZnm/view?usp=sharing) <br />
 :link: [Project Poster](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I) <br />
 :link: [Project Video](https://drive.google.com/drive/folders/1Rqgj6740apkCmYBPgHh6_XaPx1zzyx2I) <br />
@@ -58,14 +57,18 @@ Milestone 1:<br />
 :link: [Figma Video](https://drive.google.com/file/d/1voxKLLNQAammyWgwaj2RplNJAg7oiw5U/view?usp=sharing) <br />
 
 ## Project description :memo:
-NUSPlanner is a productivity-centric web application that utilises statistics and visual summaries to give users a clear view of their time-management in three areas: work, academics and extracurricular activities. This empowers users to manage their priorities effectively so that they can acquire the relevant skills to boost their employability and differentiate themselves from their peers. 
+NUSPlanner is a <b>productivity-centric web application</b> that utilises statistics and visual summaries to give users a <b>clear view of their time-management</b> in three areas: work, academics and extracurricular activities. This <b>empowers users to manage their priorities effectively</b> so that they can acquire the relevant skills to boost their employability and differentiate themselves from their peers. 
 
-Adhering to its core focus of catering to student demographics, NUSPlanner is integrated with NUSMODS, a popular module planning website for students, so that students can also track their modular progress. This ensures that users of NUSPlanner remain focused on their goals and stay ahead of the game at all times.
+Adhering to its core focus of catering to student demographics, NUSPlanner is <b>integrated with NUSMODS</b>, a popular module planning website for students, so that students can also <b>track their modular progress</b>. This ensures that users of NUSPlanner remain focused on their goals and stay ahead of the game at all times.
 
 ## Motivation :fire:
 Contrary to popular belief, education is no longer the ticket to employment in Singapore.
 
-According to a report by professional networking platform LinkedIn, **39% of companies in Singapore look for employees with technical skills, which is nearly 2 times higher than companies who value traditional qualifications such as education and working experience[^1].**
+According to a report by professional networking platform LinkedIn, 
+
+> 39% of companies in Singapore look for employees with technical skills
+
+which is **nearly 2 times higher** than companies who value traditional qualifications such as education and working experience[^1].
 
 [^1]: https://www.straitstimes.com/singapore/jobs/singapore-employers-prioritise-skills-over-education-experience-linkedin-survey#:~:text=SINGAPORE%20(THE%20BUSINESS%20TIMES)%20%2D,LinkedIn%20said%20in%20a%20report
 
@@ -80,22 +83,22 @@ As of 2020, being **ONE in the 33% of Singaporean degree holders[^2]** translate
 With this problem in mind, we hope to design a user-friendly application that will help undergraduates remain cognisant of both their working portfolio and academic progress early on in their university journey. This way, much despair and anxiety can be averted, as one can do the necessary homework and preparation needed to land his dream job
 
 ## User stories :page_facing_up:
-1. **\[Epic]** As a student, I want to be able to ***track my progress in NUS***, be it academically, work-related or extracurricular, so that I can optimise how I spend my time
-  - As a student, I can view the proportion of time that I spend across all categories of events that I log into the calendar 
+1. **\[Epic]** As a student, I want to be able to ***track my progress in NUS***, be it academically, work-related or extracurricular, so that I can optimise how I spend my time :alarm_clock:
+  - As a student, I can view the proportion of time that I spend across all categories of events that I log into my calendar 
   - As a student, I can store and view important details for events that matter to my portfolio
   - As a student, I can create an academic plan for future semesters and view my degree progress
 
-2. As a student, I want to be ***more conscious of my physical and emotional health*** so that I can improve my wellbeing
+2. As a student, I want to be ***more conscious of my physical and emotional health*** so that I can improve my wellbeing :leaves:
   - Conditions
     - [x] Provide a range of moods (eg. stressed, relaxed etc.) for users' to select their mood for the day
-    - [ ] Provide a range of acitivities (eg. studying, exercising) that users can associate with their mood for the day
+    - [x] Provide a range of acitivities (eg. studying, exercising) that users can associate with their mood for the day
     - [x] Create a sleep tracking system where users can indicate their sleep quality and the number of hours that they have rested for the day
 
-3. As a student, I want a ***customisable planning system that is tailored to all aspects of my life*** so that I can stay organised with ease
+3. As a student, I want a ***customisable planning system that is tailored to all aspects of my life*** so that I can stay organised with ease 	:card_index_dividers:
   - Conditions
     - [x] Design custom user tags for users to add and track different categories of activities
     - [x] Users can input their modules taken and their grades for each module 
-    - [ ] Users can view descriptive summaries generated for all categories of events that they log into the calendar
+    - [x] Users can view descriptive summaries generated for all categories of events that they log into the calendar
 
 
 ## Tech stacks involved :electric_plug:
@@ -114,7 +117,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 3. Navigate to the src folder and install the following dependencies 
 ``` bash 
 npm i react-router-dom
-npm install react-bootstrap bootstrap@5 //command has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0
+npm install react-bootstrap bootstrap@5 
 npm install --save react-big-calendar --legacy-peer-deps
 npm i react-datepicker
 npm i react-datetime-picker
@@ -122,28 +125,13 @@ npm i date-fns
 npm i styled-components
 npm i react-icons
 npm i react-select
-//Packages for graphics in Dashboard page
 npm i react-chartjs-2 chart.js 
 npm i react-circular-progressbar
 npm i react-heatmap-grid
-
 ```
-4. For system testing, install the following packages in the nus-planner folder:
-```bash 
-// Install Mocha, Chai and Enzyme
-npm install mocha --save-dev
-npm install chai chai-enzyme --save-dev --legacy-peer-deps
-npm install enzyme enzyme-adapter-react-16 cheerio --save-dev --legacy-peer-deps 
-npm i cheerio@1.0.0-rc.10 --save-dev //DO NOT use latest version of cheerio (v1.0.0-rc.11) which will be installed by the command above, otherwise an import error will be seen when tests are run, see link here: https://stackoverflow.com/questions/72346115/i-am-get-an-export-error-when-build-test for explanation
-
-//Install Babel
-npm install @babel/core @babel/register --save-dev
-npm install babel-preset-react-app-babel-7 --save-dev
-npm install @babel/plugin-transform-modules-commonjs --save-dev
-npm install babel-plugin-inline-react-svg --save-dev
-npm install ignore-styles --save-dev
-```
-**IMPORTANT: bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if this issue is encountered**
+:exclamation: **IMPORTANT:** 
+- **Command to install react-bootstrap has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0** <br/>
+- **bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if such an issue is encountered**
 
 5. Within the src folder, install the dependencies for the Firebase database:
 ```bash 
