@@ -395,7 +395,7 @@ npm i firebase
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [x] Add additional user input for stress levels to the Today page :round_pushpin: (if time permits) 
   - [x] User can select a range of activities that are associated with their stress level for the day  
-  - [x] User input for this section is stored in the Firestore database <br /> <br />
+  - [x] User input for this section is stored in the Firestore database 
 - [x] Complete the Dashboard page of the planner :chart_with_upwards_trend:
     - [x] Read user input from Firestore accurately and use it to generate all charts in this section
     - [x] Complete graphics and design for the Academics segment by **_30 June 2022_** :100:
