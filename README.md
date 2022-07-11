@@ -367,7 +367,7 @@ npm i firebase
     - [x] User is able to add events by day, time and title, as well as to delete events **-> Completed in MS1**
     - [x] Link data for calendar events to Firestore
     - [x] Link data for calendar tags to Firestore <br /><br />  
-- [x] Complete the code and design required for the user to create events and log their mood + sleep quality in the Today page **_by 6 June 2022_** :round_pushpin:
+- [x] Complete the code and design required for the user to create events and log their stress level + sleep quality in the Today page **_by 6 June 2022_** :round_pushpin:
     - [x] Link data for events created in the checklist to Firestore **-> Completed in MS1**
     - [x] Link data for events created in the events section to the Calendar Page and Firestore
     - [x] Implement stress tracking feature where users can select their stress level for the day 
