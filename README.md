@@ -26,7 +26,7 @@ Unfortunately, the link to our deployed website cannot be clicked directly. Plea
 :link: auth-development-71ec2.web.app <br />
 
 #### :rotating_light: Important note to evaluators 
-Please use the email and password assigned to you for signing into our web application, as entering mood/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
+Please use the email and password assigned to you for signing into our web application, as entering stress/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
 
 | Evaluator  | Designated Email | Password |
 | ------------- | ------------- | ------------- |
@@ -90,8 +90,8 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 2. As a student, I want to be ***more conscious of my physical and emotional health*** so that I can improve my wellbeing :leaves:
   - Conditions
-    - [x] Provide a range of moods (eg. stressed, relaxed etc.) for users' to select their mood for the day
-    - [x] Provide a range of acitivities (eg. studying, exercising) that users can associate with their mood for the day
+    - [x] Provide a range of stress levels (eg. very stressed, stressed etc.) for users' to select their stress level for the day
+    - [x] Provide a range of acitivities (eg. studying, exercising) that users can associate with their stress level for the day
     - [x] Create a sleep tracking system where users can indicate their sleep quality and the number of hours that they have rested for the day
 
 3. As a student, I want a ***customisable planning system that is tailored to all aspects of my life*** so that I can stay organised with ease 	:card_index_dividers:
@@ -158,17 +158,17 @@ npm i firebase
 
 ### 2. Today page :round_pushpin: - Landing page upon login
 
-  - #### Mood tracking system [High]
-    - Mood of the day
-    - Categories associated with mood of the day [Medium]
-  - #### Sleep tracking system [High]
+  - #### Stress tracking system [High] :leaves:
+    - Stress level for the day
+    - Activities associated with the stress level of the day 
+  - #### Sleep tracking system [High] :sleeping_bed:
     - Quality of sleep 
     - Number of hours of sleep 
-  - #### Checklist for events that start and end on that day itself [High]
+  - #### Checklist for events that start and end on that day itself [High] :clipboard:
     - Add event 
     - Delete event 
     - Display events in chronological order
-  - #### Display for calendar events that fall on that day itself [High]
+  - #### Display for calendar events that fall on that day itself [High] :date:
     - Add event 
     - Delete event 
     - Display events in chronological order
@@ -177,7 +177,7 @@ npm i firebase
 
 ### 3. Calendar page :calendar:
 
-- #### Add Events [High]
+- #### Add Events [High] :heavy_plus_sign:
   - Event title 
   - Start date and time 
   - End date and time 
@@ -185,46 +185,69 @@ npm i firebase
   - Extra input fields -- when the work/extracurriculars tag is selected 
     - Organisation name 
     - Description of user's role 
-    - Description of duties undertaken by the user
-    - Event description
-- #### Edit Events [High]
+  - Event description
+- #### Edit Events [High] :fountain_pen:
   - Drag and drop events across timeslots/days 
   - Resize events to span across different timeslots/days
   - Delete events 
-- #### Create custom tags [High]
+- #### Create custom tags [High] 	:label:
   - Tag label
   - Tag colour
-- #### Delete custom tags [High]
+- #### Delete custom tags [High] :wastebasket:
 
 ### 4. Dashboard page :chart_with_upwards_trend:
-- #### Productivity [High]
-  - Productive hours expressed as:
-    - Percentage in a progress bar
-    - Trend in a line graph
-- #### Wellness [High]
-  - Overall mood of each day to be rated and given an average score 
-  - Identify activities most commonly associated with a particular mood
-  - Identify trends in sleep quality and duration
-- #### Summary [High] 
-  - Pie chart for user to get a breakdown of the duration that they devote to each all categories specified in the calendar tags per week/month/year
+- #### Academics Segment :100:
+  - Breakdown of CAP by semester and changes in CAP from semester to semester, to be expressed in a multitype chart 
+  - Average CAP for each of the top 5 most commonly occurring module codes (based on module codes input by the user), to be expressed in a radar chart
+- #### Stress Management Segment [High] :leaves:
+  - Pie chart showing the frequency that each stress level is selected by the user (across all 6 stress levels)
+  - Rank the activities most commonly associated with a particular stress level in descending order
+  - The data displayed in the 2 features above can be aggregated based on one of the following time spans chosen by the user:
+    - Past week 
+    - Past month 
+    - Past 6 months
+    - Past year 
+    - All time
+- #### Productivity Segment [High] :bulb:
+  - Progress bar displaying the degree of completion (in %) across all 4 default categories for the present day. These categories are: 
+    - Work 
+    - CCA 
+    - Academics 
+    - Others
+  - Stacked bar plot displaying the percentage breakdown of activities across the Work, CCA and Academics categories 
+  - The data displayed in the stacked bar plot can be aggregated based on one of the following time spans chosen by the user:
+    - Past week
+    - Past 6 months 
+    - Past year 
+- #### Sleep Quality Segment [High] :sleeping_bed:
+  - Heatmap displaying the frequency that each sleep quality option (categorical) is being selected by the user 
+  - Line chart displaying the trend in the number of hours that the user sleeps 
+  - The data displayed in the 2 features above can be aggregated based on one of the following time spans chosen by the user: 
+    - Past week 
+    - Past month 
+    - Past year
 
 ### 5. Progress Report page :card_index_dividers:
-  - #### View history of events logged by tag category [High]
-  - #### View a trend in academic data [High]
-      - Best and poorest performing modules
-      - CAP progression by year
+  - #### View and edit a custom resume that has been generated based on user input [High] :page_facing_up:
+    - Contact Details Section 
+      - Users can add links to their LinkedIn account and personal website 
+    - Education Section 
+      - Display users' education data eg. Overall CAP, faculty and course information 
+    - Write-up Section 
+      - Users can add a description of their skillsets and positive attributes
+      - Display users' work experience, educational and extracurricular achievements based on past events that they have logged in the calendar (ordered by start and end date)
 
 ### 6. Modules page :bookmark_tabs: - Advanced Artemis feature
-  - #### Search modules by module code [High]
-  - #### Filter modules by multiple criteria [High]
+  - #### Search modules by module code [High] :mag:
+  - #### Filter modules by multiple criteria [High] :flashlight:
     - Semester offered 
     - Has exam 
     - Number of modular credits (MCs)
     - Has S/U options
-  - #### Telegram link to group chat for module [Low]
+  - #### Telegram link to group chat for module [Low] :speech_balloon:
 
 ### 7. Profile page :bust_in_silhouette:
-  - #### Course details segment [High]
+  - #### Course details segment [High] :open_book:
     - Modules taken
     - Verify module code using link to NUSMODs API **[Medium]**
     - Corresponding grades for modules taken
@@ -232,7 +255,7 @@ npm i firebase
     - Second major/minor/degree (if applicable) **[Low]**
     - Add semester 
     - Remove semester
-  - #### Account settings segment [High]
+  - #### Account settings segment [High] :gear:
     - Profile picture (default profile picture is set if no pictures are specified)
     - Username 
     - Email 
