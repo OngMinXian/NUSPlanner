@@ -229,11 +229,11 @@ npm i firebase
 
 ### 5. Progress Report page :card_index_dividers:
   - #### View and edit a custom resume that has been generated based on user input [High] :page_facing_up:
-    - Contact Details Section 
+    - Contact Details Section :calling:
       - Users can add links to their LinkedIn account and personal website 
-    - Education Section 
+    - Education Section :school:
       - Display users' education data eg. Overall CAP, faculty and course information 
-    - Write-up Section 
+    - Write-up Section :fountain_pen:
       - Users can add a description of their skillsets and positive attributes
       - Display users' work experience, educational and extracurricular achievements based on past events that they have logged in the calendar (ordered by start and end date)
 
@@ -429,12 +429,12 @@ npm i firebase
         - [x] Past month 
         - [x] Past year <br></br>
 - [x] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
-  - [x] Complete the contact details section 
+  - [x] Complete the contact details section :calling:
     - [x] User can view saved data eg. email address, name associated with his account 
     - [x] User can input and save links to his LinkedIn account and personal website 
-  - [x] Complete the education section 
+  - [x] Complete the education section :school:
     - [x] User can view saved data eg. Overall CAP, faculty associated with his account 
-  - [x] Complete the write-up section 
+  - [x] Complete the write-up section :fountain_pen:
     - [x] User can write and save a description about his skillsets and positive attributes 
     - [x] User can view all events that he has logged under the work, academics and extracurricular tags, ordered by start and end date 
    
