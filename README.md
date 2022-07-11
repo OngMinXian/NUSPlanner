@@ -4,8 +4,11 @@
 <p align = "center">
 <a href="https://github.com/OngMinXian/NUSPlanner/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/OngMinXian/NUSPlanner?style=flat-square"></a>
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/OngMinXian/NUSPlanner?color=success&style=flat-square">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/OngMinXian/NUSPlanner?style=flat-square">
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/OngMinXian/NUSPlanner?color=success&style=flat-square">
+</p>
+
+<p align = "center">
+<a href = "#ms-1">Milestone 1</a>
 </p>
 </p>
 
@@ -410,7 +413,7 @@ npm i firebase
     - [ ] Incorporate Telegram link to modules in the Module page 
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
 
-## Progress in Milestone 1 :triangular_flag_on_post: :one:
+## <a name = "ms-1"></a> Progress in Milestone 1 :triangular_flag_on_post: :one:
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
