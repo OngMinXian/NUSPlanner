@@ -194,14 +194,18 @@ npm i firebase
   - Event description
   - Option to display new event in progress report 
 - #### View Event Details [High] :eyeglasses:
-  - Event description 
+  - Title 
+  - Event description
   - Event category 
   - Organisation name 
   - Role in organisation
+  - Event done
+  - Event to be added Progress Report
 - #### Edit Events [High] :fountain_pen:
   - Drag and drop events across timeslots/days 
   - Resize events to span across different timeslots/days
   - Delete events 
+  - Edit event information on view event details
 - #### Create custom tags [High] 	:label:
   - Tag label
   - Tag colour
@@ -617,7 +621,7 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
 | Today page :round_pushpin:| 1. Changed the styling for the stress and sleep quality tracking systems <br></br> &emsp; a. Input fields are no longer displayed in an open alert, but triggered in a pop-up when the respective buttons for stress and sleep tracking are clicked <br></br> &emsp; b. Stress levels are no longer selected by clicking a button, but by selecting a radio input field. <br></br> 2. Added extra options to the stress tracking system <br></br> &emsp; a. Users can select the activities associated with their current stress level by ticking multiple checkboxes that correspond to 6 different activities <br></br> &emsp; b. All inputs from the stress tracking system are utilised in the Stress Management segment of the Dashboard page, where users can view the activities most likely to trigger a certain stress level of theirs. <br></br> 3. Fixed technical issue where tasks added in the checklist will not be stored properly in the database <br></br> 4. Fixed technical issue where events added will not be stored properly in the database and linked properly to the Calendar page <br></br> 5. Re-styled the entire page and removed redundant code wherever necessary | Not applicable |
-| Calendar page :calendar: | 1. Restyled the modal associated with the "Add Event" functionality for greater clarity <br></br> &emsp; a. Selecting the Work or Extracurriculars special tag no longer triggers a modal with extra input fields, but causes more input fields to appear within the existing modal <br></br> &emsp; b. The organisation description input field has been removed, thus only the organisation name and organisation role input fields will appear in the current modal <br></br> &emsp; c. Users now key descriptions directly into the description field for all events <br></br> 2. Fixed styling issues with the DateTimePicker in the "Add Event" modal which causes inputs to overflow to the next line <br></br> 3. Resolved issues with the database which causes duplicate events to be added to the calendar <br></br> 4. Edited the contents of the OffCanvas component (triggered by clicking on a calendar event) <br></br> &emsp; a. Removed the organisation description input field <br></br> 5. Restructured the Firestore database to reflect the changes in the data stored | Not applicable |
+| Calendar page :calendar: | 1. Restyled the modal associated with the "Add Event" functionality for greater clarity <br></br> &emsp; a. Selecting the Work or Extracurriculars special tag no longer triggers a modal with extra input fields, but causes more input fields to appear within the existing modal <br></br> &emsp; b. The organisation description input field has been removed, thus only the organisation name and organisation role input fields will appear in the current modal <br></br> &emsp; c. Users now key descriptions directly into the description field for all events <br></br> 2. Fixed styling issues with the DateTimePicker in the "Add Event" modal which causes inputs to overflow to the next line <br></br> 3. Resolved issues with the database which causes duplicate events to be added to the calendar <br></br> 4. Edited the contents of the OffCanvas component (triggered by clicking on a calendar event) <br></br> &emsp; a. Removed the organisation description input field <br></br> 5. Restructured the Firestore database to reflect the changes in the data stored <br></br> 6. Added feature that allows users to edit event information | Not applicable |
 | Dashboard page :chart_with_upwards_trend: | 1. Implemented the Academics segment :100: <br></br> &emsp; a. Users' cumulative point average (CAP) and the changes in their CAP are represented in a multitype chart <br></br> &emsp; b. Users can view the average CAP of their top 5 most commonly occurring modules in a radar chart <br></br> 2. Implemented the Stress Management segment :leaves: <br></br> &emsp; a. Users can view the frequency that each stress level occurs through a pie chart <br></br> &emsp; b. Users can view the ranking of the activities most likely to trigger a certain stress level by hovering over the emoji buttons <br></br> &emsp; c. All visualisations in this segment support 5 different views (past week, past month, past 6 months, past year and all time <br></br> 3. Implemented the Productivity segment :bulb: <br></br> &emsp; a. Users can view their progress of the day's tasks through a progress bar for the 4 main categories: Work, CCA, Academics, Others <br></br> &emsp; b. A stacked bar plot gives users a breakdown of the time that they spend across the Work, CCA and Academics categories <br></br> &emsp; c. The stacked bar plot supports 3 different views (past week, past month and past year) <br></br> 4. Implemented the Sleep Quality segment :sleeping_bed: <br></br> &emsp; a. Users can view the frequency that each sleep quality rating (categorical variable) occurs using a heatmap <br></br> &emsp; b. The trend in users' sleep duration is represented through a line graph <br></br> &emsp; c. All visualisations in this segment support 3 different views (past week, past month, past year) <br></br> 4. Manipulated and read user input from the database to transform data into the format required for the data visualisations | Not applicable |
 | Progress Report page :card_index_dividers: | 1. Implemented the contact details, education details and write-up sections <br></br> &emsp; a. Users can view their relevant user data eg. Name, course details, CAP etc. as part of the resume generated <br></br> &emsp; b. Users can also add links to their LinkedIn account, website and a description of their positive attributes <br></br> &emsp;c. All user input will be saved in the Firestore database <br></br> &emsp;d. Information displayed under the Experience, Education and Extracurriculars section of the write-up originate from tasks/events that users have chosen to log in the Progress Report upon task/event creation | Not applicable |
 
@@ -644,7 +648,7 @@ Therefore, non-automated testing was used as it will help us to create a **more 
 
 ## Technical difficulties encountered :toolbox:
 
-## Direction for Milestone 4 :arrow_right:
+## Direction for Splashdown4 :arrow_right:
 
 
 
