@@ -641,8 +641,46 @@ This is evident in the Today page, where creating an event that falls on the pre
 Therefore, non-automated testing was used as it will help us to create a **more polished end product within an optimal period of time.**
 
 ### Evidence of system testing and regression testing :microscope:
+Our dashboard and progress report features require a substantial amount of data to be logged by the user before it can be fully functional. As such, we have turned to creating special accounts that are made by inputting 'tester' into the username field when creating an account. This creates randomly generated events/tasks, modules, sleep and stress data. In doing so, users would be able to test out the various generated data structures on the dashboard page and the summary of events on the progress report page. 
+
+The randomly generated events/tasks consisted of:
+- events that occur today
+- events that occur in the past
+- events that occur in the future
+- tasks that occur today
+- tasks that occur in the past
+- tasks that occur in the future
+
+The following fields for the events/tasks were randomly generated:
+- title
+- category
+- description
+- organisation Name
+- organisation Role
+- start/end date
+- done
+- add to Progress Report
+
+The following fields for the modules were randomly generated:
+- module code
+- module grade
+
+The following fields for the sleep data were randomly generated:
+- level
+- associated activites
+
+The following fields for the stress data were randomly generated:
+- quality
+- sleep
+
+For sleep and stress data, dates were not randomised as we wanted to test out the past [timeframe] feature and at least some data is required in each timeframe to display the data out.
 
 ### Evidence of user testing :busts_in_silhouette:
+Since the target audience of the web application are NUS students, we have decided to only include NUS students in the user testing group. We approached students across different schools, faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
+
+|  User Profile | Feedback | Actionables |
+| ------------- | ------------- | ------------- |
+
 
 ### Project management and planning :spiral_notepad:
 
