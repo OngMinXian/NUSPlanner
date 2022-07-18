@@ -648,7 +648,7 @@ Therefore, non-automated testing was used as it will help us to create a **more 
 
 ## Technical difficulties encountered :toolbox:
 
-## Direction for Splashdown4 :arrow_right:
+## Direction for Splashdown :arrow_right:
 
 
 
