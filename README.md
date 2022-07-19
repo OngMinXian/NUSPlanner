@@ -682,14 +682,15 @@ Since the target audience of the web application are NUS students, we have decid
 
 |  User Profile | Feedback | Actionables |
 | ------------- | ------------- | ------------- |
+| Year: <br>Faculty: <br>Course: | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an exsiting event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
-| Year: Faculty: Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
 
 ### Project management and planning :spiral_notepad:
 
