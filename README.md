@@ -690,7 +690,7 @@ Since the target audience of the web application are NUS students, we have decid
 | Year: <br>Faculty: <br>Course: | If you click task done and then cancel, the checkbox remains ticked. | Bug fixed. |
 | Year: <br>Faculty: <br>Course: | Why limit progress report to events only? My tasks are not showing on the progress report. | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
 | Year: <br>Faculty: <br>Course: | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
-| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as everyone can use English. |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
