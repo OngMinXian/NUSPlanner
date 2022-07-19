@@ -682,7 +682,7 @@ Since the target audience of the web application are NUS students, we have decid
 
 |  User Profile | Feedback | Actionables |
 | ------------- | ------------- | ------------- |
-| Year: Faculty: Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | 2 | 3 |
 | Year: Faculty: Course: | 2 | 3 |
 | Year: Faculty: Course: | 2 | 3 |
 | Year: Faculty: Course: | 2 | 3 |
