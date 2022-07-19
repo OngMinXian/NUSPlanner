@@ -673,7 +673,7 @@ The following fields for the stress data were randomly generated:
 - quality
 - sleep
 
-For sleep and stress data, dates were not randomised as we wanted to test out the past (timeframe) feature and at least some data is required in each timeframe to display the data out.
+For sleep and stress data, dates were not randomised as we wanted to test out the select timeframe feature which means at least some data is required in each timeframe to display the data out. Data also followed a normal distribution weighting in order to simulate a more realistic data as for example, it is unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours.
 
 Furthermore, the number of randomly generated data can be individually controlled which allows us to control the amount of data we want to test and also test large amounts of data without manually creating them ourselves. Further documentation can by found in CreateUserDoc.js.
 
@@ -682,16 +682,16 @@ Since the target audience of the web application are NUS students, we have decid
 
 |  User Profile | Feedback | Actionables |
 | ------------- | ------------- | ------------- |
-| Year: 1 <br>Course: | You can add events that have start date after end date. | Added error message when this occurs. Also added error messages for when any of the other require inputs are empty. Also added alert messages when actions are completed succesfully. |
-| Year: 2 <br>Course: | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
-| Year: 1 <br>Course: | Sometimes when adding events, existing events get duplicated. | Bug fixed. |
-| Year: 1 <br>Course: | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
-| Year: 2 <br>Course: | Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allows users to edit this option in the view event details feature of the calendar. |
-| Year: 3 <br>Course: | If you click task done and then cancel, the checkbox remains ticked. | Bug fixed. |
-| Year: 4 <br>Course: | Why limit progress report to events only? My tasks are not showing on the progress report. | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
-| Year: 1 <br>Course: | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
-| Year: 2 <br>Course: | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as everyone can use English. |
-| Year: 1 <br>Course: | Profile picture shows error image before loading. | Bug fixed. |
+| Year: 1 <br>Course: Computer Science | You can add events that have start date after end date. | Added error message when this occurs. Also added error messages for when any of the other require inputs are empty. Also added alert messages when actions are completed succesfully. |
+| Year: 2 <br>Course: Business Analytics | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
+| Year: 1 <br>Course: Life Science | Sometimes when adding events, existing events get duplicated. | Bug fixed. |
+| | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
+| Year: 2 <br>Course: Business | Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allows users to edit this option in the view event details feature of the calendar. |
+| Year: 3 <br>Course: Economics | If you click task done and then cancel, the checkbox remains ticked. | Bug fixed. |
+| Year: 4 <br>Course: Business | Why limit progress report to events only? My tasks are not showing on the progress report. | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
+| Year: 1 <br>Course: Biomedical Engineering | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
+| Year: 2 <br>Course: Chemical Engineering | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as everyone can use English. |
+| Year: 1 <br>Course: Law | Profile picture shows error image before loading. | Bug fixed. |
 
 ### Project management and planning :spiral_notepad:
 
