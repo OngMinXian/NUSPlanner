@@ -685,7 +685,7 @@ Since the target audience of the web application are NUS students, we have decid
 | Year: 1 <br>Course: Computer Science | You can add events that have start date after end date. | Added error message when this occurs. Also added error messages for when any of the other require inputs are empty. Also added alert messages when actions are completed succesfully. |
 | Year: 2 <br>Course: Business Analytics | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
 | Year: 1 <br>Course: Life Science | Sometimes when adding events, existing events get duplicated. | Bug fixed. |
-| | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
+| Year: 1 <br>Course: Life Science | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
 | Year: 2 <br>Course: Business | Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allows users to edit this option in the view event details feature of the calendar. |
 | Year: 3 <br>Course: Economics | If you click task done and then cancel, the checkbox remains ticked. | Bug fixed. |
 | Year: 4 <br>Course: Business | Why limit progress report to events only? My tasks are not showing on the progress report. | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
