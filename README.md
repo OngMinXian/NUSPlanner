@@ -675,7 +675,7 @@ The following fields for the stress data were randomly generated:
 
 For sleep and stress data, dates were not randomised as we wanted to test out the past (timeframe) feature and at least some data is required in each timeframe to display the data out.
 
-Furthermore, the number of randomly generated data can be individually controlled which allows us to control the amount of data we want to test and also test large amounts of data without manually creating them ourselves.
+Furthermore, the number of randomly generated data can be individually controlled which allows us to control the amount of data we want to test and also test large amounts of data without manually creating them ourselves. Further documentation can by found in CreateUserDoc.js.
 
 ### Evidence of user testing :busts_in_silhouette:
 Since the target audience of the web application are NUS students, we have decided to only include NUS students in the user testing group. We approached students across different schools, faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
