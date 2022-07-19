@@ -682,7 +682,14 @@ Since the target audience of the web application are NUS students, we have decid
 
 |  User Profile | Feedback | Actionables |
 | ------------- | ------------- | ------------- |
-| 1 | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
+| Year: Faculty: Course: | 2 | 3 |
 
 ### Project management and planning :spiral_notepad:
 
