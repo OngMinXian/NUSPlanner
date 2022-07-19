@@ -682,10 +682,10 @@ Since the target audience of the web application are NUS students, we have decid
 
 |  User Profile | Feedback | Actionables |
 | ------------- | ------------- | ------------- |
-| Year: <br>Faculty: <br>Course: | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an exsiting event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
-| Year: <br>Faculty: <br>Course: | 2 | 3 |
-| Year: <br>Faculty: <br>Course: | 2 | 3 |
-| Year: <br>Faculty: <br>Course: | 2 | 3 |
+| Year: <br>Faculty: <br>Course: | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
+| Year: <br>Faculty: <br>Course: | Sometimes when adding events, existing events get duplicated. | Bug fixed. |
+| Year: <br>Faculty: <br>Course: | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
+| Year: <br>Faculty: <br>Course: | Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allows users to edit this option in the view event details feature of the calendar. |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
 | Year: <br>Faculty: <br>Course: | 2 | 3 |
