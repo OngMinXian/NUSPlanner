@@ -697,9 +697,24 @@ Since the target audience of the web application are NUS students, we have decid
 | Year: 1 <br>Course: Law | Profile picture shows error image before loading. | Bug fixed. |
 
 ### Project management and planning :spiral_notepad:
-Approximately 14 man days, the equivalent of 112 hours, was channelled dedicated to ...
+Approximately 14 man days, the equivalent of 112 hours, was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180224618-3caa3e8b-5996-4a2c-a820-1ced84a89def.png">
+</p>
+
+Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3 as we had long grappled with the task of deriving actionable insights from the user data collected. Our attempts to design these pages were hindered further by our threadbare designs in Milestone 2 which we had to completely overhaul. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180240754-600a402a-8ec4-4fa6-ac0c-24267daed55b.png">
+</p>
+
+Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to improve the performance and usability of our web application. In the days that followed, we tested the web application extensively on a regular basis, adding validation checks which would prevent erroneous user inputs from being registered in our Firebase backend. We also added custom error and success messages for greater clarity and ease of troubleshooting. 
+
+Apart from conducting system tests on our end, we invited many students to test our web application and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that users will find relevant to their lives. 
 
 ## Technical difficulties encountered :toolbox:
+No significant technical difficulties were encountered in Milestone 3. However, we did consult our student advisor on the relevance of unit/integrated tests for our web application
 
 ## Direction for Splashdown :arrow_right:
 
