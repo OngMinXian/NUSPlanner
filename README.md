@@ -164,15 +164,15 @@ npm i firebase
 
   - #### Stress tracking system [High] :leaves:
     - Stress level for the day
-    - Activities associated with the stress level of the day 
+    - Activities associated with the stress level for the day 
   - #### Sleep tracking system [High] :sleeping_bed:
     - Quality of sleep 
     - Number of hours of sleep 
   - #### Checklist for tasks (defined as events that start and end on that day itself) [High] :clipboard:
     - Add task 
       - Provide option to display task in progress report 
-    - Delete event 
-    - Display events in chronological order
+    - Complete task
+    - Display tasks in chronological order
   - #### Display for calendar events that fall on that day itself [High] :date:
     - Add event 
       - Provide option to display event in progress report 
@@ -192,20 +192,21 @@ npm i firebase
     - Organisation name 
     - Description of user's role 
   - Event description
-  - Option to display new event in progress report 
+  - Option to display new event in progress report -- when the work, extracurriculars or academics tag is selected 
 - #### View Event Details [High] :eyeglasses:
-  - Title 
-  - Event description
-  - Event category 
-  - Organisation name 
-  - Role in organisation
-  - Event done
-  - Event to be added Progress Report
+  - Fields that can be edited 
+    - Title 
+    - Description 
+    - Organisation Name 
+    - Role in Organisation 
+    - Event done 
+    - Add event to Progress Report
+  - Fields that cannot be edited 
+    - Event Tag
 - #### Edit Events [High] :fountain_pen:
   - Drag and drop events across timeslots/days 
   - Resize events to span across different timeslots/days
   - Delete events 
-  - Edit event information on view event details
 - #### Create custom tags [High] 	:label:
   - Tag label
   - Tag colour
@@ -415,7 +416,7 @@ npm i firebase
 
 ### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [x] Add additional user input for stress levels to the Today page :round_pushpin: (if time permits) 
-  - [x] User can select a range of activities that are associated with their stress level for the day 
+  - [x] User can select a range of activities that are associated with his stress level for the day 
   - [x] User input for this section is stored in the Firestore database <br></br>
 - [x] Complete the Dashboard page of the planner :chart_with_upwards_trend:
     - [x] Read user input from Firestore accurately and use it to generate all charts in this section <br></br>
@@ -449,7 +450,7 @@ npm i firebase
         - [x] Past week 
         - [x] Past month 
         - [x] Past year <br></br>
-- [x] Complete the Progress Report page of the planner by **_23 July 2022_** :card_index_dividers:
+- [x] Complete the Progress Report page of the planner by **_20 July 2022_** :card_index_dividers:
   - [x] Complete the contact details section :calling:
     - [x] User can view saved data eg. email address, name associated with his account 
     - [x] User can input and save links to his LinkedIn account and personal website 
@@ -458,12 +459,15 @@ npm i firebase
   - [x] Complete the write-up section :fountain_pen:
     - [x] User can write and save a description about his skillsets and positive attributes 
     - [x] User can view all events that he has logged under the work, academics and extracurricular tags, ordered by start and end date 
-    - [x] Information displayed under the Experience, Education and Extracurriculars section originate from tasks/events that users have chosen to log in the Progress Report upon task/event creation
-   
+    - [x] Information displayed under the Experience, Education and Extracurriculars section originate from tasks/events that users have chosen to log in the Progress Report upon task/event creation <br></br>
+- [x] Allow users to edit task/event details in the Offcanvas component used for viewing tasks/events in the Calendar page by **_23 July 2022** :calendar:
+  - [x] User can edit the task/event title, task/event description, organisation name, organisation role, whether task/event is done and whether the task/event is added to the Progress Report 
+
+ 
  ### Before: Splashdown (22 Aug 2022) :checkered_flag:
- - [ ] Create project poster and video
- - [ ] Publish web application online
- - [ ] Test web application and fix bugs
+ - [x] Create project poster and video
+ - [x] Publish web application online
+ - [x] Test web application and fix bugs
  - [ ] If there is enough time, the feature below will be implemented:
     - [ ] Incorporate Telegram link to modules in the Module page 
       - [ ] Parse TeleNUS to include a link to the telegram channel within the module’s information page
@@ -615,8 +619,7 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
-- As we are constantly revising the existing features of our web application, some of the tasks listed here may not be in the Timeline and Executables section, which contains our most updated set of features to date
-- All the deliverables required for Milestone 3 are completed
+- All the deliverables required for Milestone 3 are completed, along with the necessary error checks 
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -624,6 +627,7 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 | Calendar page :calendar: | 1. Restyled the modal associated with the "Add Event" functionality for greater clarity <br></br> &emsp; a. Selecting the Work or Extracurriculars special tag no longer triggers a modal with extra input fields, but causes more input fields to appear within the existing modal <br></br> &emsp; b. The organisation description input field has been removed, thus only the organisation name and organisation role input fields will appear in the current modal <br></br> &emsp; c. Users now key descriptions directly into the description field for all events <br></br> 2. Fixed styling issues with the DateTimePicker in the "Add Event" modal which causes inputs to overflow to the next line <br></br> 3. Resolved issues with the database which causes duplicate events to be added to the calendar <br></br> 4. Edited the contents of the OffCanvas component (triggered by clicking on a calendar event) <br></br> &emsp; a. Removed the organisation description input field <br></br> 5. Restructured the Firestore database to reflect the changes in the data stored <br></br> 6. Added feature that allows users to edit event information | Not applicable |
 | Dashboard page :chart_with_upwards_trend: | 1. Implemented the Academics segment :100: <br></br> &emsp; a. Users' cumulative point average (CAP) and the changes in their CAP are represented in a multitype chart <br></br> &emsp; b. Users can view the average CAP of their top 5 most commonly occurring modules in a radar chart <br></br> 2. Implemented the Stress Management segment :leaves: <br></br> &emsp; a. Users can view the frequency that each stress level occurs through a pie chart <br></br> &emsp; b. Users can view the ranking of the activities most likely to trigger a certain stress level by hovering over the emoji buttons <br></br> &emsp; c. All visualisations in this segment support 5 different views (past week, past month, past 6 months, past year and all time <br></br> 3. Implemented the Productivity segment :bulb: <br></br> &emsp; a. Users can view their progress of the day's tasks through a progress bar for the 4 main categories: Work, CCA, Academics, Others <br></br> &emsp; b. A stacked bar plot gives users a breakdown of the time that they spend across the Work, CCA and Academics categories <br></br> &emsp; c. The stacked bar plot supports 3 different views (past week, past month and past year) <br></br> 4. Implemented the Sleep Quality segment :sleeping_bed: <br></br> &emsp; a. Users can view the frequency that each sleep quality rating (categorical variable) occurs using a heatmap <br></br> &emsp; b. The trend in users' sleep duration is represented through a line graph <br></br> &emsp; c. All visualisations in this segment support 3 different views (past week, past month, past year) <br></br> 4. Manipulated and read user input from the database to transform data into the format required for the data visualisations | Not applicable |
 | Progress Report page :card_index_dividers: | 1. Implemented the contact details, education details and write-up sections <br></br> &emsp; a. Users can view their relevant user data eg. Name, course details, CAP etc. as part of the resume generated <br></br> &emsp; b. Users can also add links to their LinkedIn account, website and a description of their positive attributes <br></br> &emsp;c. All user input will be saved in the Firestore database <br></br> &emsp;d. Information displayed under the Experience, Education and Extracurriculars section of the write-up originate from tasks/events that users have chosen to log in the Progress Report upon task/event creation | Not applicable |
+| Additional Features :ladder: | 1. Added custom error and success messages to all pages of the web application <br></br> &emsp; a. Included error checks to prevent form submission whenever input given by the user is invalid eg. User provides numbers as part of his faculty name, Science123 instead of Science <br></br> &emsp; b. Error messages are more specific to assist the user in troubleshooting eg. User will be notified that the event start time should come before the event end time when he has not specified the event start time correctly, rather than a generic error message that his inputs were invalid | Not applicable |
 
 ## Software Engineering Practices :gear:
 
@@ -632,7 +636,7 @@ In Milestone 3, we directed our efforts towards **implementing system testing, r
 
 Despite having attempted to implement automated testing in Milestone 2 with the aid of Mocha, Chai and Enzyme, we ultimately **decided to go with a non-automated approach.** One important reason is because our **system is heavily reliant on user gestures** to generate specific outcomes, and these **gestures cannot be replicated using a testing framework.** 
 
-For example, when a user resizes a calendar event or chooses to move it across diffferent timeslots in the Calendar page, he would have to perform a set of precise actions with his mouse. Stimulating these gestures using a UI testing framework would not be feasible, and is further complicated by the need to check whether the shifted event has retained its associated properties, such as its title. 
+For example, when a user resizes a calendar event or chooses to move it across diffferent timeslots in the Calendar page, he would have to perform a set of precise actions with his mouse. Simulating these gestures using a UI testing framework would not be feasible, and is further complicated by the need to check whether the shifted event has retained its associated properties, such as its title. 
 
 Furthermore, there are **many elements to each component in our web application**, contributing to the **mounting challenges of checking the UI of each component.** 
 
