@@ -649,7 +649,7 @@ Therefore, non-automated testing was used as it will help us to create a **more 
 Please refer to the section titled "Evidence of user testing" below
 
 #### Compatibility Testing :closed_lock_with_key:
-Our web application is being developed on the macOS and ??? operating systems. The appearance and functionality of our web application remains optimal on both operating systems. 
+Our web application is being developed on the macOS and windows operating systems. The appearance and functionality of our web application remains optimal on both operating systems. 
 
 #### Performance Testing :athletic_shoe:
 We have conducted performance tests as part of our load tests (see Load Testing section below). Our application reponds quickly even when large volumes of data are being processed. This is applicable for the Dashboard page too, where users can switch between different time spans without significant lags or disruptions to the data visualisations. 
