@@ -690,6 +690,9 @@ Since the target audience of the web application are NUS students, we have decid
 | Year: 1 <br>Course: Biomedical Engineering | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
 | Year: 2 <br>Course: Chemical Engineering | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as everyone can use English. |
 | Year: 1 <br>Course: Law | Profile picture shows error image before loading. | Bug fixed. |
+| Year: 1 <br>Course: Law | Save changes without any changes deletes every module. | Bug fixed. |
+| Year: 1 <br>Course: Law | Overall CAP displays NaN when there is no modules logged.  | Bug fixed by replacing NaN with 0. |
+| Year: 3 <br>Course: Social Science | Tester account already has sleep and stress logged for the day upon creation. | Bug fixed. |
 
 ### Project management and planning :spiral_notepad:
 Approximately 14 man days, the equivalent of 112 hours, was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
