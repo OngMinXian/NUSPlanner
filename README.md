@@ -643,42 +643,37 @@ This is evident in the Today page, where creating an event that falls on the pre
 
 Therefore, non-automated testing was used as it will help us to create a **more polished end product within an optimal period of time.**
 
-### Evidence of system testing and regression testing :microscope:
-Our dashboard and progress report features require a substantial amount of data to be logged by the user before it can be fully functional. As such, we have turned to creating special accounts that are made by inputting 'tester' into the username field when creating an account. This creates randomly generated events/tasks, modules, sleep and stress data. In doing so, users would be able to test out the various generated data structures on the dashboard page and the summary of events on the progress report page. 
+### Evidence of system testing :microscope:
 
-The randomly generated events/tasks consisted of:
-- events that occur today
-- events that occur in the past
-- events that occur in the future
-- tasks that occur today
-- tasks that occur in the past
-- tasks that occur in the future
+#### Usability Testing :footprints:
+Please refer to the section titled "Evidence of user testing" below
 
-The following fields for the events/tasks were randomly generated:
-- title
-- category
-- description
-- organisation Name
-- organisation Role
-- start/end date
-- done
-- add to Progress Report
+#### Compatibility Testing :closed_lock_with_key:
+Our web application is being developed on the macOS and ??? operating systems. The appearance and functionality of our web application remains optimal on both operating systems. 
 
-The following fields for the modules were randomly generated:
-- module code
-- module grade
+#### Performance Testing :athletic_shoe:
+We have conducted performance tests as part of our load tests (see Load Testing section below). Our application reponds quickly even when large volumes of data are being processed. This is applicable for the Dashboard page too, where users can switch between different time spans without significant lags or disruptions to the data visualisations. 
 
-The following fields for the sleep data were randomly generated:
-- level
-- associated activites
+#### Security Testing :oncoming_police_car:
+We have created private routing in our web application, hence users can access pages beyond the login, forget password or signup pages only when they hace successfully logged in. Modifying the website link to access the pages within the web application will cause users to be redirected to the login page. 
 
-The following fields for the stress data were randomly generated:
-- quality
-- sleep
+Additionally, the risk of existing accounts being hacked is minimised as new accounts cannot be created under emails that are currently registered under existing accounts.
 
-For sleep and stress data, dates were not randomised as we wanted to test out the select timeframe feature which means at least some data is required in each timeframe to display the data out. Data also followed a normal distribution weighting in order to simulate a more realistic data as for example, it is unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours.
+#### Load Testing :balance_scale:
+Our dashboard page and progress report page require a substantial amount of data to be logged by the user before they can become fully functional. This is especially so for the dashboard page which supports a yearly view for certain segments that are being analysed. 
 
-Furthermore, the number of randomly generated data can be individually controlled which allows us to control the amount of data we want to test and also test large amounts of data without manually creating them ourselves. Further documentation can by found in CreateUserDoc.js.
+Given how our web application is only developed in 2022, it would not be possible for us to access user data from 2021 that has been organically generated. Thus we have used a pre-loaded doucment with large quantities of data synced to our Firestore database as a substitute. Users can access this data by creating a new account under the name "tester". All the data in this document is generated randomly, giving user-custom views for: events/tasks, modules, as well as sleep and stress data. By creating accounts that are linked to this pre-loaded data, we can effectively simulate the process of accessing a range of user-generated data during testing. 
+
+This allows us to gain a heightened awareness of how the visual components of our web application respond to a wide spectrum of data, so our user interface can be modified to accommodate different quantities and values of data. 
+
+On top of modifying our UI, we have also used the large quantities of data to test the efficiency of our web application when it has to handle large volumes of data. In total, we have generated 865 data entries, with the breakdown of data entries by category as follows:
+
+| Category | Code | Lines of Data Generated |
+| ----------  | ------------- | ---------------- |
+| Tasks |![Screenshot 2022-07-21 at 11 43 10 PM](https://user-images.githubusercontent.com/79785001/180256734-b7333d04-ddc9-47e2-8d3b-840fc1385798.png)| 5 |
+| Event | ![Screenshot 2022-07-21 at 11 45 46 PM](https://user-images.githubusercontent.com/79785001/180257220-fe961981-8d26-43e0-89ca-1b7a0c0e8e63.png) |100 * 2 = 200, 100 each for events that occur in the present and the future |
+| Stress and Sleep Data | ![Screenshot 2022-07-21 at 11 49 39 PM](https://user-images.githubusercontent.com/79785001/180258004-10045be1-6855-462b-a19c-cf68d0a56b96.png) | 365 * 2 = 730, 365 each for one category <br></br> Data follows a normal distribution for greater accuracy as it would be unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours. | 
+| Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | 30 |
 
 ### Evidence of user testing :busts_in_silhouette:
 Since the target audience of the web application are NUS students, we have decided to only include NUS students in the user testing group. We approached students across different schools, faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
