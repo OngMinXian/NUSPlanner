@@ -156,11 +156,18 @@ npm i firebase
 <br></br>
 
 ### 1. Login and authentication system :lock:
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180361351-052565c4-6251-4d00-8ff5-ace0053d0132.png">
+</p>
+
 - #### Login page [High]
 - #### Sign-up page [High]
 - #### Forget password page [High]
 
 ### 2. Today page :round_pushpin: - Landing page upon login
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180363348-1cb9c863-e317-47ae-9d94-c2c8ccd41ab9.png">
+</p> 
 
   - #### Stress tracking system [High] :leaves:
     - Stress level for the day
@@ -182,6 +189,10 @@ npm i firebase
     - Delete custom tags
 
 ### 3. Calendar page :calendar:
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180364823-eb40b8d2-d6af-4cfc-84e0-aeec7cd46b29.png">
+</p>
 
 - #### Add Events [High] :heavy_plus_sign:
   - Event title 
@@ -213,6 +224,11 @@ npm i firebase
 - #### Delete custom tags [High] :wastebasket:
 
 ### 4. Dashboard page :chart_with_upwards_trend:
+
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/79785001/180366776-dc498e1b-31e9-42e0-8953-8545b0918226.png">
+</p>
+
 - #### Academics Segment :100:
   - Breakdown of CAP by semester and changes in CAP from semester to semester, to be expressed in a multitype chart 
   - Average CAP for each of the top 5 most commonly occurring module codes (based on module codes input by the user), to be expressed in a radar chart
@@ -255,6 +271,11 @@ npm i firebase
       - Display users' work experience, educational and extracurricular achievements based on past events that they have logged in the calendar (ordered by start and end date)
 
 ### 6. Modules page :bookmark_tabs: - Advanced Artemis feature
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180367332-be178400-f3f5-49ad-9235-e606f15dacc8.png">
+</p>
+
   - #### Search modules by module code [High] :mag:
   - #### Filter modules by multiple criteria [High] :flashlight:
     - Semester offered 
@@ -460,7 +481,7 @@ npm i firebase
     - [x] User can write and save a description about his skillsets and positive attributes 
     - [x] User can view all events that he has logged under the work, academics and extracurricular tags, ordered by start and end date 
     - [x] Information displayed under the Experience, Education and Extracurriculars section originate from tasks/events that users have chosen to log in the Progress Report upon task/event creation <br></br>
-- [x] Allow users to edit task/event details in the Offcanvas component used for viewing tasks/events in the Calendar page by **_23 July 2022** :calendar:
+- [x] Allow users to edit task/event details in the Offcanvas component used for viewing tasks/events in the Calendar page by **_23 July 2022_** :calendar:
   - [x] User can edit the task/event title, task/event description, organisation name, organisation role, whether task/event is done and whether the task/event is added to the Progress Report 
 
  
@@ -601,7 +622,7 @@ The quantity of the code produced in Milestone 2 was significantly more extensiv
 
 ## Technical difficulties encountered :toolbox:
 
-| Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up
+| Nature of Issue  | Reference on GitHub | Solved/Open | Follow-up |
 | ------------- | ------------- | ------------- | ------------- |
 | Challenges deploying web application on Firebase | [Issue 6](https://github.com/OngMinXian/NUSPlanner/issues/6) | Solved | Consulted student advisor <br></br> Solved by editing out the return statements in our useEffect hooks for the affected pages |
 
@@ -649,31 +670,31 @@ Therefore, non-automated testing was used as it will help us to create a **more 
 Please refer to the section titled "Evidence of user testing" below
 
 #### Compatibility Testing :closed_lock_with_key:
-Our web application is being developed on the macOS and windows operating systems. The appearance and functionality of our web application remains optimal on both operating systems. 
+Our web application is being developed on the macOS and Windows operating systems. The **appearance and functionality of our web application remains optimal** on both operating systems. 
 
 #### Performance Testing :athletic_shoe:
-We have conducted performance tests as part of our load tests (see Load Testing section below). Our application reponds quickly even when large volumes of data are being processed. This is applicable for the Dashboard page too, where users can switch between different time spans without significant lags or disruptions to the data visualisations. 
+We have conducted **performance tests as part of our load tests** (see Load Testing section below). Our application **reponds quickly even when large volumes of data are being processed.** This is applicable for the Dashboard page too, as users can switch between different time spans without significant lags or disruptions to the data visualisations. 
 
 #### Security Testing :oncoming_police_car:
-We have created private routing in our web application, hence users can access pages beyond the login, forget password or signup pages only when they hace successfully logged in. Modifying the website link to access the pages within the web application will cause users to be redirected to the login page. 
+We have **created private routing** in our web application, hence users can access pages beyond the login, forget password or signup pages only when they have successfully logged in. Modifying the website link to access the pages within the web application will cause users to be redirected to the login page. 
 
-Additionally, the risk of existing accounts being hacked is minimised as new accounts cannot be created under emails that are currently registered under existing accounts.
+Additionally, the **risk of existing accounts being hacked is minimised** as new accounts cannot be created under emails that are currently registered under existing accounts.
 
 #### Load Testing :balance_scale:
 Our dashboard page and progress report page require a substantial amount of data to be logged by the user before they can become fully functional. This is especially so for the dashboard page which supports a yearly view for certain segments that are being analysed. 
 
-Given how our web application is only developed in 2022, it would not be possible for us to access user data from 2021 that has been organically generated. Thus we have used a pre-loaded doucment with large quantities of data synced to our Firestore database as a substitute. Users can access this data by creating a new account under the name "tester". All the data in this document is generated randomly, giving user-custom views for: events/tasks, modules, as well as sleep and stress data. By creating accounts that are linked to this pre-loaded data, we can effectively simulate the process of accessing a range of user-generated data during testing. 
+Given how our web application is only developed in 2022, it would not be possible for us to access user data from 2021 that has been organically generated. Thus we have **used a pre-loaded document with large quantities of data synced to our Firestore database** as a substitute. Users can access this data by creating a new account under the name "tester". Wherever possible, the **data in this document is generated randomly,** giving user-custom views for: events/tasks, modules, as well as sleep and stress data. 
 
-This allows us to gain a heightened awareness of how the visual components of our web application respond to a wide spectrum of data, so our user interface can be modified to accommodate different quantities and values of data. 
+By creating accounts that are linked to this pre-loaded data, we can effectively **simulate the process of accessing a range of user-generated data** during testing. This allows us to gain a heightened **awareness of how the visual components of our web application respond to a wide spectrum of data**, so our user interface can be modified to accommodate different quantities and values of data. 
 
-On top of modifying our UI, we have also used the large quantities of data to test the efficiency of our web application when it has to handle large volumes of data. In total, we have generated 865 data entries, with the breakdown of data entries by category as follows:
+On top of refining our UI, we have also **used the large quantities of data to test the efficiency** of our web application when it has to process heavy loads. In total, we have **generated 865 data entries,** with the breakdown of data entries by category as follows:
 
 | Category | Code | Lines of Data Generated |
 | ----------  | ------------- | ---------------- |
-| Tasks |![Screenshot 2022-07-21 at 11 43 10 PM](https://user-images.githubusercontent.com/79785001/180256734-b7333d04-ddc9-47e2-8d3b-840fc1385798.png)| 5 |
-| Event | ![Screenshot 2022-07-21 at 11 45 46 PM](https://user-images.githubusercontent.com/79785001/180257220-fe961981-8d26-43e0-89ca-1b7a0c0e8e63.png) |100 * 2 = 200, 100 each for events that occur in the present and the future |
-| Stress and Sleep Data | ![Screenshot 2022-07-21 at 11 49 39 PM](https://user-images.githubusercontent.com/79785001/180258004-10045be1-6855-462b-a19c-cf68d0a56b96.png) | 365 * 2 = 730, 365 each for one category <br></br> Data follows a normal distribution for greater accuracy as it would be unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours. | 
-| Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | 30 |
+| Tasks |![Screenshot 2022-07-21 at 11 43 10 PM](https://user-images.githubusercontent.com/79785001/180256734-b7333d04-ddc9-47e2-8d3b-840fc1385798.png)| **5** |
+| Events | ![Screenshot 2022-07-21 at 11 45 46 PM](https://user-images.githubusercontent.com/79785001/180257220-fe961981-8d26-43e0-89ca-1b7a0c0e8e63.png) |100 * 2 = **200**, 100 each for events that occur in the present and the future |
+| Stress and Sleep Data | ![Screenshot 2022-07-21 at 11 49 39 PM](https://user-images.githubusercontent.com/79785001/180258004-10045be1-6855-462b-a19c-cf68d0a56b96.png) | 365 * 2 = **730**, 365 each for one category <br></br> Data follows a normal distribution for greater accuracy as it would be unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours. | 
+| Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | **30** |
 
 ### Evidence of user testing :busts_in_silhouette:
 Since the target audience of the web application are NUS students, we have decided to only include NUS students in the user testing group. We approached students across different schools, faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
@@ -701,7 +722,7 @@ Approximately 14 man days, the equivalent of 112 hours, was dedicated to complet
 <img src = "https://user-images.githubusercontent.com/79785001/180224618-3caa3e8b-5996-4a2c-a820-1ced84a89def.png">
 </p>
 
-Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3 as we had long grappled with the task of deriving actionable insights from the user data collected. Our attempts to design these pages were hindered further by our threadbare designs in Milestone 2 which we had to completely overhaul. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
+Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3 as we had long grappled with the task of deriving actionable insights from the user data collected. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
 
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/79785001/180240754-600a402a-8ec4-4fa6-ac0c-24267daed55b.png">
@@ -709,7 +730,7 @@ Figuring out a coherent direction for the Dashboard page and Progress report pag
 
 Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to improve the performance and usability of our web application. In the days that followed, we tested the web application extensively on a regular basis, adding validation checks which would prevent erroneous user inputs from being registered in our Firebase backend. We also added custom error and success messages for greater clarity and ease of troubleshooting. 
 
-Apart from conducting system tests on our end, we invited many students to test our web application and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that users will find relevant to their lives. 
+Apart from conducting system tests on our end, we invited many students from diverse backgrounds to test our web application and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that is relevant to users' lives.
 
 ## Technical difficulties encountered :toolbox:
 No significant technical difficulties were encountered in Milestone 3. However, we did consult our student advisor on the relevance of unit/integrated tests for our web application
