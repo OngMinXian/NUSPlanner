@@ -531,13 +531,13 @@ We then **proceeded to develop more technical features that involved routing, ho
 Finally, we **integrated the users' account information and in-application data to Firebase.** This step was crucial in binding our the frontend and backend of our web application together, enabling us to produce a viable end product. We strongly feel that the bottom-up approach helped us to develop the fundamental aspects of our web application effectively, thus we will continue to use this approach for future milestones.
 
 ### Project management and planning :spiral_notepad:
-Approximately 12 man days, the equivalent of 96 hours, was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
+Approximately **12 man days, the equivalent of 96 hours,** was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
 <p align = "center">
   <img src ="https://user-images.githubusercontent.com/79785001/175555901-41532f91-557c-4af0-a3a2-8d06db426928.png">
 </p>
 
-A significantly larger proportion of time was allocated towards learning the tech stacks required, coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
+A significantly **larger proportion of time was allocated towards learning the tech stacks required,** coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
 
 <p align = "center">
   <img src = "https://user-images.githubusercontent.com/79785001/175554224-07d3f801-9c6e-4dff-bec0-f0c5ce2cbd43.png">
@@ -545,7 +545,7 @@ A significantly larger proportion of time was allocated towards learning the tec
 
 We decided to place greater emphasis on these areas in order to deepen our understanding of the tech stacks and to set-up our web application adequately for more advanced functionalities in the future.
 
-While coding, we frequently compiled our code and tested it on the deployment server. Code was uploaded to GitHub only after multiple tests were run to prevent errors. Branching was also used to implement new features and pull requests were initiated each time a merge was executed.
+While coding, we **frequently compiled our code and tested it on the deployment server.** Code was uploaded to GitHub only after multiple tests were run to prevent errors. Branching was also used to implement new features and pull requests were initiated each time a merge was executed.
 
 On top of merging and checking for prospective loopholes in our code, we added succinct commit messages on GitHub wherever possible to track changes made to the code and to ensure the consistency of our code at all times.
 
@@ -616,19 +616,19 @@ While we do acknowledge that other architectural styles have their own merits, w
 
 ### Project management and planning :spiral_notepad:
 
-Approximately 15 man days, the equivalent of 120 hours, was directed towards coding new functionalities, fixing technical issues, testing and deploying our web application in Milestone 2, with the breakdown of tasks by duration (in days) as follows: 
+Approximately **15 man days, the equivalent of 120 hours,** was directed towards coding new functionalities, fixing technical issues, testing and deploying our web application in Milestone 2, with the breakdown of tasks by duration (in days) as follows: 
 
 <p align = "center">
   <img src ="https://user-images.githubusercontent.com/79785001/175822048-f7b4f5c9-be30-4c4f-b283-cf0e0d714873.png">
  </p>
 
-After gaining familiarity with the tech stacks in Milestone 1, our main focus in Milestone 2 was to set up as many functionalities as we could in our web application. The process of setting up each page was prolonged because we conducted extensive error checks and had to resolve the technical issues that we discovered. 
+After gaining familiarity with the tech stacks in Milestone 1, our **main focus in Milestone 2 was to set up as many functionalities as we could** in our web application. The process of setting up each page was prolonged because we **conducted extensive error checks** and had to resolve the technical issues that we discovered. 
 
 <p align = "center">
   <img src="https://user-images.githubusercontent.com/79785001/175822643-596e187a-0a2c-4749-b5ab-d907b008c4a7.png">
 </p>
 
-The quantity of the code produced in Milestone 2 was significantly more extensive than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we updated the technical aspect of our README regularly to ensure that the set-up procedure is up-to-date. We also created issues in our GitHub page for technical difficulties that we struggled to resolve. 
+The quantity of the code produced in Milestone 2 was significantly greater than in Milestone 1, hence there was an urgent need for proper communication and project planning. Apart from updating each other about our progress in coding and the changes that we made to the code files, we **updated the technical aspect of our README regularly** to ensure that the set-up procedure is up-to-date. We also **created issues in our GitHub page** for technical difficulties that we struggled to resolve. 
 
 ## Technical difficulties encountered :toolbox:
 
@@ -707,45 +707,52 @@ On top of refining our UI, we have also **used the large quantities of data to t
 | Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | **30** |
 
 ### Evidence of user testing :busts_in_silhouette:
-Since the target audience of the web application are NUS students, we have decided to only include NUS students in the user testing group. We approached students across different schools, faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
+Since the target audience of our web application is NUS students, we have decided to only include NUS students in our user testing group. We approached students across different faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
 
-|  User Profile | Feedback | Actionables |
-| ------------- | ------------- | ------------- |
-| Year: 1 <br>Course: Computer Science | You can add events that have start date after end date. | Added error message when this occurs. Also added error messages for when any of the other require inputs are empty. Also added alert messages when actions are completed succesfully. |
-| Year: 2 <br>Course: Business Analytics | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event. | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
-| Year: 1 <br>Course: Life Science | Sometimes when adding events, existing events get duplicated. | Bug fixed. |
-| Year: 1 <br>Course: Life Science | Error message when empty tag name does not disappear on popup close. | Bug fixed. |
-| Year: 2 <br>Course: Business | Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allows users to edit this option in the view event details feature of the calendar. |
-| Year: 3 <br>Course: Economics | If you click task done and then cancel, the checkbox remains ticked. | Bug fixed. |
-| Year: 4 <br>Course: Business | Why limit progress report to events only? My tasks are not showing on the progress report. | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
-| Year: 1 <br>Course: Biomedical Engineering | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
-| Year: 2 <br>Course: Chemical Engineering | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as everyone can use English. |
-| Year: 1 <br>Course: Law | Profile picture shows error image before loading. | Bug fixed. |
-| Year: 1 <br>Course: Law | Save changes without any changes deletes every module. | Bug fixed. |
-| Year: 1 <br>Course: Law | Overall CAP displays NaN when there is no modules logged.  | Bug fixed by replacing NaN with 0. |
-| Year: 3 <br>Course: Social Science | Tester account already has sleep and stress logged for the day upon creation. | Bug fixed. |
+| No. | Year | Course | Feedback | Actionables | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| 1 | 1 | Computer Science | You can add events that have start date after end date. | Added error message when this occurs. Also added error messages for when any of the other require inputs are empty. Also added alert messages when actions are completed succesfully. |
+| 2 | 1 | Business Analytics | Unable to edit events on the calendar. I need to resort to deleting and then adding a new event in order to edit an existing event | Added feature to edit events directly from the calendar. Also moved event details from bottom of the screen to right of the screen for better viewing. |
+| 3 | 1 | Life Science | Existing events are duplicated at times when events are added | Bug fixed. |
+| 4 | 2 | Life Science | Error message for empty tag name does not disappear after closing the pop-up | Bug fixed. |
+| 5 | 2 | Business |  Can consider having an option to choose which events to add to the progress report as having everything displayed by default is very messy. | Gave users option to include event/task into progress report in the creating event/task popup. Also allowed users to edit this option in the view event details feature of the calendar. |
+| 6 | 2 | Business | When you click task done and select cancel, the checkbox remains ticked. | Bug fixed. |
+| 7 | 2 | Economics | Add to Progress Report feature should not be restricted to events, and should include tasks | Reconsidered and added tasks to progress report to not limit user's flexibility in using the web application. |
+| 8 | 3 | Biomedical Engineering | Graph changes very slowly for dashboard. Very laggy and seemingly unresponsive. | Bug fixed by changing animation time for graphs. |
+| 9 | 3 | Chemical Engineering | Does not support languages other than English. | Unfortunately due to time constraints, we are not looking into this as we assume that most users of our web application are proficient in English |
+| 10 | 3 | Law | Profile picture shows error image before loading. | Bug fixed. |
+| 11 | 3 | Law | Clicking the save changes button in the Course Details section without making any changes deletes every module. | Bug fixed. |
+| 12 | 4 | Law | Overall CAP displays NaN when there are no modules logged. | Bug fixed by replacing NaN with 0. |
+| 13 | 4 | Social Science | Tester account already has sleep and stress logged for the day upon creation. | Bug fixed. |
+
 
 ### Project management and planning :spiral_notepad:
-Approximately 14 man days, the equivalent of 112 hours, was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
+Approximately **14 man days, the equivalent of 112 hours,** was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
 
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/79785001/180224618-3caa3e8b-5996-4a2c-a820-1ced84a89def.png">
 </p>
 
-Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3 as we had long grappled with the task of deriving actionable insights from the user data collected. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
+**Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3** as we had long grappled with the task of deriving actionable insights from the user data collected. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
 
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/79785001/180240754-600a402a-8ec4-4fa6-ac0c-24267daed55b.png">
 </p>
 
-Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to improve the performance and usability of our web application. In the days that followed, we tested the web application extensively on a regular basis, adding validation checks which would prevent erroneous user inputs from being registered in our Firebase backend. We also added custom error and success messages for greater clarity and ease of troubleshooting. 
+Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to **improve the performance and usability of our web application.** In the days that followed, we **tested the web application extensively** on a regular basis, **adding validation checks** which would prevent erroneous user inputs from being registered in our Firebase backend. We also **added custom error and success messages** for greater clarity and ease of troubleshooting. 
 
-Apart from conducting system tests on our end, we invited many students from diverse backgrounds to test our web application and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that is relevant to users' lives.
+Apart from conducting system tests on our end, we **invited many students from diverse backgrounds to test our web application** and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that is relevant to users' lives.
 
 ## Technical difficulties encountered :toolbox:
 No significant technical difficulties were encountered in Milestone 3. However, we did consult our student advisor on the relevance of unit/integrated tests for our web application
 
 ## Direction for Splashdown :arrow_right:
+Unlike Milestone 1 and Milestone 2 which were very technically rigorous, Milestone 3 was a test of our endurance and work ethic as we had to stay focused on refining the existing features of our web application, even after we had deemed it as complete. 
+
+On multiple occasions, our perspective of our work was cast in uncertainty as we discovered many technical issues and areas for improvement during testing. While these were moments of frustration, they were also deeply humbling as we learned to evaluate our work with a more critical mindset and to remain consistent in realising loftier goals for our project. 
+
+As Milestone 3 draws to close, we will take the feedback received into serious consideration and make the necessary improvements so that we can present a well-rounded product that is representative of our commitment to this project. 
+
 
 
 
