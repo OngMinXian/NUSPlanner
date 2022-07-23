@@ -261,6 +261,11 @@ npm i firebase
     - Past year
 
 ### 5. Progress Report page :card_index_dividers:
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180586905-f3b4a043-84a0-438f-a1c5-fc0050017446.png">
+</p>
+
   - #### View and edit a custom resume that has been generated based on user input [High] :page_facing_up:
     - Contact Details Section :calling:
       - Users can add links to their LinkedIn account and personal website 
@@ -285,6 +290,11 @@ npm i firebase
   - #### Telegram link to group chat for module [Low] :speech_balloon:
 
 ### 7. Profile page :bust_in_silhouette:
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180587108-9b9e1987-886a-4367-b8da-2dd6aeaff503.png">
+</p>
+
   - #### Course details segment [High] :open_book:
     - Modules taken
     - Verify module code using link to NUSMODs API **[Medium]**
