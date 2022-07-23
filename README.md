@@ -733,7 +733,7 @@ Since the target audience of our web application is NUS students, we have decide
 
 
 ### Project management and planning :spiral_notepad:
-Approximately **14 man days, the equivalent of 112 hours,** was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
+Approximately **13 man days, the equivalent of 104 hours,** was dedicated to completing our web application, enhancing the performance of existing functionalities and rectifying technical issues, with the breakdown of tasks by duration (in days) as follows:
 
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/79785001/180224618-3caa3e8b-5996-4a2c-a820-1ced84a89def.png">
@@ -742,7 +742,7 @@ Approximately **14 man days, the equivalent of 112 hours,** was dedicated to com
 **Figuring out a coherent direction for the Dashboard page and Progress report page was our greatest challenge in Milestone 3** as we had long grappled with the task of deriving actionable insights from the user data collected. Fortunately we managed to gain inspiration and produced the code and design for these pages in a much shorter period of time than we had initially anticipated. 
 
 <p align = "center">
-<img src = "https://user-images.githubusercontent.com/79785001/180240754-600a402a-8ec4-4fa6-ac0c-24267daed55b.png">
+<img src = "https://user-images.githubusercontent.com/79785001/180611319-852d7c52-29d1-43aa-84f0-45d9509604b1.png">
 </p>
 
 Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to **improve the performance and usability of our web application.** In the days that followed, we **tested the web application extensively** on a regular basis, **adding validation checks** which would prevent erroneous user inputs from being registered in our Firebase backend. We also **added custom error and success messages** for greater clarity and ease of troubleshooting. 
