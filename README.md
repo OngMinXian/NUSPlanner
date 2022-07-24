@@ -608,15 +608,15 @@ The link to our testing documentation in Milestone 2 can be found [here](https:/
 Our web application is modelled using the **n-tier architectural style** and the **event-driven architectural style.** 
 
 <p align = "center">
-  <img src = "https://user-images.githubusercontent.com/79785001/175817780-2f8bcb68-295b-4192-9e37-5b21ffd8f2fb.png">
+  <img src = "https://user-images.githubusercontent.com/79785001/180652148-33ada37a-83cd-42a9-8635-de5e8153e5e6.png">
 </p>
 
 The n-tier architectural style was chosen because it is **complements our bottom-up approach towards multi-level design.** In a bottom-up approach, developing basic functionalities are a top priority because they are the foundation for progressively advanced features in an application. This means that as developers, we are always working on a range of components that, when put together, form a feature in our web application. Therefore, we must **reduce dependencies within our code** so that new features can be seamlessly integrated within our system and exisitng features can be refined without leading to conflicts. 
 
-Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the presentation tier  the logic tier and the data tier.***
+Using the [n-tier architectural style](https://stackify.com/n-tier-architecture/) allows us to develop various components of our web application effectively because it involves ***dividing our application into 3 tiers: the presentation tier, the logic tier and the data tier.***
 
 <p align = "center">
-  <img src = "https://user-images.githubusercontent.com/79785001/175817982-8c642fa5-109b-414c-aced-b174331afe8b.png">
+  <img src = "https://user-images.githubusercontent.com/79785001/180652237-99a6baba-dc6a-4b87-b899-736fd25c256c.png">
 </p>
 
 Due to the structually distinct nature of each layer, we can introduce new features to any of the 3 layers without introducing undesirable side-effects to the remaining layers. This not only **gives rise to scalability**, but **code reusability** as well, since we can easily abstract out existing ideas and use them to develop related ideas in our web application. 
