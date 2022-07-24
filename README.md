@@ -710,14 +710,14 @@ Please refer to the section titled <a href = "#user-test3">Evidence of user test
 Our web application is being developed on the macOS and Windows operating systems. The **appearance and functionality of our web application remains optimal** on both operating systems. 
 
 #### Performance Testing :athletic_shoe:
-We have conducted **performance tests as part of our load tests** (see Load Testing section below). Our application **reponds quickly even when large volumes of data are being processed.** This is applicable for the Dashboard page too, as users can switch between different time spans without significant lags or disruptions to the data visualisations. 
+We have conducted **performance tests as part of our load tests** (see <a href = "#load-test">Load Testing section</a> below). Our application **reponds quickly even when large volumes of data are being processed.** This is applicable for the Dashboard page too, as users can switch between different time spans without significant lags or disruptions to the data visualisations. 
 
 #### Security Testing :oncoming_police_car:
 We have **created private routing** in our web application, hence users can access pages beyond the login, forget password or signup pages only when they have successfully logged in. Modifying the website link to access the pages within the web application will cause users to be redirected to the login page. 
 
 Additionally, the **risk of existing accounts being hacked is minimised** as new accounts cannot be created under emails that are currently registered under existing accounts.
 
-#### Load Testing :balance_scale:
+#### <a name = "load-test"></a>Load Testing :balance_scale:
 Our dashboard page and progress report page require a substantial amount of data to be logged by the user before they can become fully functional. This is especially so for the dashboard page which supports a yearly view for certain segments that are being analysed. 
 
 Given how our web application is only developed in 2022, it would not be possible for us to access user data from 2021 that has been organically generated. Thus we have **used a pre-loaded document with large quantities of data synced to our Firestore database** as a substitute. Users can access this data by creating a new account under the name "tester". Wherever possible, the **data in this document is generated randomly,** giving user-custom views for: events/tasks, modules, as well as sleep and stress data. 
@@ -768,7 +768,7 @@ Approximately **13 man days, the equivalent of 104 hours,** was dedicated to com
 
 Our rapid progress through the Dashboard and Progress Report pages gave us the allowance to **improve the performance and usability of our web application.** In the days that followed, we **tested the web application extensively** on a regular basis, **adding validation checks** which would prevent erroneous user inputs from being registered in our Firebase backend. We also **added custom error and success messages** for greater clarity and ease of troubleshooting. 
 
-Apart from conducting system tests on our end, we **invited many students from diverse backgrounds to test our web application** and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that is relevant to users' lives.
+Apart from conducting system tests on our end, we **invited many students from diverse backgrounds to test our web application** and enhanced our functionalities based on their feedback. The greater degree of interaction that we had with our target audience, existing NUS students, was crucial to helping us build a modern and reponsive system that is relevant to their lives.
 
 ## Technical difficulties encountered :toolbox:
 No significant technical difficulties were encountered in Milestone 3. However, we did consult our student advisor on the relevance of unit/integrated tests for our web application
