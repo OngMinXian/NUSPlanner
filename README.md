@@ -51,6 +51,7 @@ Please use the email and password assigned to you for signing into our web appli
 <b> Milestone 3: </b><br/>
 :link: [Project Poster]() <br/>
 :link: [Project Video]() <br/>
+:link: [Video of features added in MS3]() <br/>
 
 <b>Milestone 2: </b><br />
 :link: [Project Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
