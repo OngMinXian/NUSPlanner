@@ -521,7 +521,7 @@ npm i firebase
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the <a href = "#timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
 - As we are constantly revising the existing features of our web application, some of the tasks listed here may not be in the Timeline and Executables section, which contains our most updated set of features to date. 
-- All the <a href = "ms1-deliver">deliverables required for Milestone 1</a> are completed, along with a few <a href = "ms2-deliver">deliverables for Milestone 2</a>
+- All the <a href = "#ms1-deliver">deliverables required for Milestone 1</a> are completed, along with a few <a href = "#ms2-deliver">deliverables for Milestone 2</a>
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -535,7 +535,10 @@ npm i firebase
 
 ### Approach to software design :computer:
 We adopted a [bottom-up approach](https://www.geeksforgeeks.org/difference-between-top-down-and-bottom-up-integration-testing/) towards multi-level design in Milestone 1. 
-![top2](https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png)
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/172364575-37e8bcd9-0b3d-4692-bfa1-53a9b49dc7b8.png">
+</p>
 
 As novices in software engineering, **producing code for the layout and design of the web application was our first priority** as it would allow us to produce a user interface, as well as to hone our understanding of HTML, CSS and ReactJS. 
 
@@ -580,9 +583,9 @@ If time permits, we will also gear our application towards integrated user testi
 ## <a name = "ms-2"></a> Progress in Milestone 2 :triangular_flag_on_post: :two:
 
 ### Summary of tasks completed :white_check_mark:
-- Please refer to the tasks listed under the <a href = "timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
+- Please refer to the tasks listed under the <a href = "#timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
 - As we are constantly revising the existing features of our web application, some of the tasks listed here may not be in the Timeline and Executables section, which contains our most updated set of features to date
-- All the <a href = "ms2-deliver">deliverables required for Milestone 2</a> are completed, along with a few <a href = "ms3-deliver">deliverables for Milestone 3</a>
+- All the <a href = "#ms2-deliver">deliverables required for Milestone 2</a> are completed, along with a few <a href = "#ms3-deliver">deliverables for Milestone 3</a>
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -653,7 +656,7 @@ The quantity of the code produced in Milestone 2 was significantly greater than 
 
 The technical aspect of Milestone 2 was extremely demanding for us as we tried our best to code as many functionalities as possible and made it our priority to check our code extensively for technical problems. As a result, most of our time was channelled towards random testing and fixing the issues that were visible to us. 
 
-In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the <a href = "ms3-deliver">Timeline and Executables section for Milestone 3</a> remains equally important to us. 
+In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the <a href = "#ms3-deliver">Timeline and Executables section for Milestone 3</a> remains equally important to us. 
 
 Moving forward, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
 
@@ -662,7 +665,7 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 
 ### Summary of tasks completed :white_check_mark:
 - Please refer to the tasks listed under the <a href = "timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
-- All the <a href = "ms3-deliver">deliverables required for Milestone 3</a> are completed, along with the necessary error checks 
+- All the <a href = "#ms3-deliver">deliverables required for Milestone 3</a> are completed, along with the necessary error checks 
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
