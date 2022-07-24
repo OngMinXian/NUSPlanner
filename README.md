@@ -661,8 +661,12 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 
 ## Software Engineering Practices :gear:
 
-### Class Diagram
-In milestone 3, we have finalized our class diagram. Due to how firebase works, we have decided to store only one class which is the Users class. This allows the query to look for the correct user ID and retrieve all the user's information. This is faster compared to having many classes such as events and modules where each query would look through the entire relevant database to find which ones matches the user ID. The diagram below shows the functions each field is used in and the functions which writes the field.
+### Database Diagram :film_strip:
+In Milestone 3, we have finalised our database diagram. Due to how Firebase works, we have decided to **store only one class which is the Users class.** This allows the query to search for the correct user ID and retrieve all the user's information. This is **faster compared to having many classes** such as events and modules where each query would look through the entire relevant database to find which one matches the user ID. The diagram below shows how **data is being written to and retrieved from the database for each page through a series of functions**. 
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/180628063-73c023db-aa06-4f3c-b199-21cdf2a1b42e.png">
+</p>
 
 ### Quality Assurance :vertical_traffic_light:
 In Milestone 3, we directed our efforts towards **implementing system testing, regression testing and user testing.** 
