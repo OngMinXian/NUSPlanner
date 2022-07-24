@@ -20,6 +20,10 @@ A web application integrated with NUSMODs that helps students to optimise their 
 ## Proposed level of achievement :bar_chart:
 Artemis 
 
+## Team Details 
+- Team Members
+  - [Test](@wzs02)
+
 ## Link to deployed application :rocket:
 #### :construction: Regarding the link to our website
 Unfortunately, the link to our deployed website cannot be clicked directly. Please copy and paste the link below into your browser to access our deployed website. Thank you! <br/><br/>
@@ -185,7 +189,7 @@ npm i firebase
       - Provide option to display event in progress report 
     - Mark event as complete for the day
     - Display events in chronological order
-    - Create custom tags - Refer to "Create custom tags" category under the next section for more details
+    - Create custom tags - Refer to <a href = "#cust-tags">Create custom tags</a> category under the next section for more details
     - Delete custom tags
 
 ### 3. Calendar page :calendar:
@@ -218,7 +222,7 @@ npm i firebase
   - Drag and drop events across timeslots/days 
   - Resize events to span across different timeslots/days
   - Delete events 
-- #### Create custom tags [High] 	:label:
+- #### <a name = "cust-tags"></a> Create custom tags [High] 	:label:
   - Tag label
   - Tag colour
 - #### Delete custom tags [High] :wastebasket:
@@ -314,7 +318,9 @@ npm i firebase
 
 ## Use Cases
 
-  ![MS1 Architecture Diagram-Use Case Diagram drawio](https://user-images.githubusercontent.com/79785001/175489810-17f6cc50-466f-433a-a991-4e768d13f03f.png)
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/175489810-17f6cc50-466f-433a-a991-4e768d13f03f.png">
+</p>
 
   #### Use Case: UC1 - Creating events
     - System: NUSPlanner
@@ -388,11 +394,14 @@ npm i firebase
       1a. User adds/removes a semester
 
 ### Proposed system workflow :ocean:
-![activityDiagram](https://user-images.githubusercontent.com/79785001/178226726-3bf97dcd-9f54-4d00-bb00-de9a34505a5d.png)
 
-## Timeline and Executables :alarm_clock:
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/79785001/178226726-3bf97dcd-9f54-4d00-bb00-de9a34505a5d.png">
+</p>
 
-### :one: Before: Evaluation Milestone 1 (30 May 2022)
+## <a name = "timeline-executables"></a>Timeline and Executables :alarm_clock:
+
+### <a name = "ms1-deliver"></a>:one: Before: Evaluation Milestone 1 (30 May 2022)
 
 #### Planning Stage:
   - [x] UI Design using Figma 
@@ -412,7 +421,7 @@ npm i firebase
     - [x] Default profile picture is displayed if the user does not set a profile picture
   - [x] Style all website components that have been implemented
 
-### :two: Before: Evaluation Milestone 2 (27 Jun 2022).
+### <a name = "ms2-deliver"></a>:two: Before: Evaluation Milestone 2 (27 Jun 2022)
 
 - [x] Complete the code and design for the Calendar page **_by 13 June 2022_** :calendar:
     - [x] Month and year layout for calendar to be completed **-> Completed in MS1**
@@ -445,7 +454,7 @@ npm i firebase
   - [x] User input is linked to Firestore
 - [x] Style all website components that have been implemented <br /> <br />
 
-### :three: Before: Evaluation Milestone 3 (25 Jul 2022)
+### <a name = "ms3-deliver"></a>:three: Before: Evaluation Milestone 3 (25 Jul 2022)
 - [x] Add additional user input for stress levels to the Today page :round_pushpin: (if time permits) 
   - [x] User can select a range of activities that are associated with his stress level for the day 
   - [x] User input for this section is stored in the Firestore database <br></br>
@@ -506,9 +515,9 @@ npm i firebase
 ## <a name = "ms-1"></a> Progress in Milestone 1 :triangular_flag_on_post: :one:
 
 ### Summary of tasks completed :white_check_mark:
-- Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
+- Please refer to the tasks listed under the <a href = "#timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
 - As we are constantly revising the existing features of our web application, some of the tasks listed here may not be in the Timeline and Executables section, which contains our most updated set of features to date. 
-- All the deliverables required for Milestone 1 are completed, along with a few deliverables for Milestone 2
+- All the <a href = "ms1-deliver">deliverables required for Milestone 1</a> are completed, along with a few <a href = "ms2-deliver">deliverables for Milestone 2</a>
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -560,16 +569,16 @@ On top of merging and checking for prospective loopholes in our code, we added s
 ## Direction for Milestone 2 :arrow_right:
 We will act on our student advisor's comments of **deploying the application** and work towards including **detailed evidence of good software engineering in our Project README**. Additionally, we will update our mentor on our progress for Milestone 1 and request for feedback. 
 
-For the technical aspect, we hope to accomplish all the deliverables we have planned under the **Timeline and Executables** section for Milestone 2 and to **resolve all existing technical difficulties**. 
+For the technical aspect, we hope to accomplish all the deliverables we have planned under the <a href = "#ms2-deliver">Timeline and Executables section for Milestone 2</a> and to **resolve all existing technical difficulties**. 
 
 If time permits, we will also gear our application towards integrated user testing using Mocha or other frameworks.
 
 ## <a name = "ms-2"></a> Progress in Milestone 2 :triangular_flag_on_post: :two:
 
 ### Summary of tasks completed :white_check_mark:
-- Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
+- Please refer to the tasks listed under the <a href = "timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
 - As we are constantly revising the existing features of our web application, some of the tasks listed here may not be in the Timeline and Executables section, which contains our most updated set of features to date
-- All the deliverables required for Milestone 2 are completed, along with a few deliverables for Milestone 3
+- All the <a href = "ms2-deliver">deliverables required for Milestone 2</a> are completed, along with a few <a href = "ms3-deliver">deliverables for Milestone 3</a>
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -622,7 +631,6 @@ Approximately **15 man days, the equivalent of 120 hours,** was directed towards
   <img src ="https://user-images.githubusercontent.com/79785001/180628746-4695761b-f296-4aee-814f-657ccc577462.png">
  </p>
 
-
 After gaining familiarity with the tech stacks in Milestone 1, our **main focus in Milestone 2 was to set up as many functionalities as we could** in our web application. The process of setting up each page was prolonged because we **conducted extensive error checks** and had to resolve the technical issues that we discovered. 
 
 <p align = "center">
@@ -641,7 +649,7 @@ The quantity of the code produced in Milestone 2 was significantly greater than 
 
 The technical aspect of Milestone 2 was extremely demanding for us as we tried our best to code as many functionalities as possible and made it our priority to check our code extensively for technical problems. As a result, most of our time was channelled towards random testing and fixing the issues that were visible to us. 
 
-In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the **Timeline and Executables** section for Milestone 3 remains equally important to us. 
+In Milestone 3, we hope that we can **pivot towards more organised forms of testing** through conducting unit tests or even system tests. We endeavour to set aside more time for **experimenting with different testing frameworks** and to **familiarise ourselves with the syntax used in software testing packages** like chai. At the same time, completing all the deliverables that we have planned under the <a href = "ms3-deliver">Timeline and Executables section for Milestone 3</a> remains equally important to us. 
 
 Moving forward, we will seek the advice of our student advisor and mentor, and use their feedback to make meaningful decisions about the future direction of our project.
 
@@ -649,8 +657,8 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 ## <a name = "ms-3"></a> Progress in Milestone 3 :triangular_flag_on_post: :three:
 
 ### Summary of tasks completed :white_check_mark:
-- Please refer to the tasks listed under the **Timeline and Executables** section above for more details on the tasks completed
-- All the deliverables required for Milestone 3 are completed, along with the necessary error checks 
+- Please refer to the tasks listed under the <a href = "timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
+- All the <a href = "ms3-deliver">deliverables required for Milestone 3</a> are completed, along with the necessary error checks 
 
 |  Task Name | Details | Link (if applicable) |
 | ------------- | ------------- | ------------- |
@@ -688,7 +696,7 @@ We **run a fixed set of test cases on our web application after changes are bein
 ### Evidence of system testing :microscope:
 
 #### Usability Testing :footprints:
-Please refer to the section titled "Evidence of user testing" below
+Please refer to the section titled <a href = "user-test3">Evidence of user testing</a> below
 
 #### Compatibility Testing :closed_lock_with_key:
 Our web application is being developed on the macOS and Windows operating systems. The **appearance and functionality of our web application remains optimal** on both operating systems. 
@@ -717,7 +725,7 @@ On top of refining our UI, we have also **used the large quantities of data to t
 | Stress and Sleep Data | ![Screenshot 2022-07-21 at 11 49 39 PM](https://user-images.githubusercontent.com/79785001/180258004-10045be1-6855-462b-a19c-cf68d0a56b96.png) | 365 * 2 = **730**, 365 each for one category <br></br> Data follows a normal distribution for greater accuracy as it would be unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours. | 
 | Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | **30** |
 
-### Evidence of user testing :busts_in_silhouette:
+### <a name = "user-test3"></a>Evidence of user testing :busts_in_silhouette:
 Since the target audience of our web application is NUS students, we have decided to only include NUS students in our user testing group. We approached students across different faculties and year of study. We asked users to first test the web application freely. Afterwards, we provided users with a test account that has randomly generated data in order to allow users to use some of the features that requires data to be collected across long periods of time. Feedback was collected in the table below.
 
 | No. | Year | Course | Feedback | Actionables | 
@@ -760,7 +768,7 @@ No significant technical difficulties were encountered in Milestone 3. However, 
 ## Direction for Splashdown :arrow_right:
 Unlike Milestone 1 and Milestone 2 which were very technically rigorous, Milestone 3 was a test of our endurance and work ethic as we had to stay focused on refining the existing features of our web application, even after we had deemed it as complete. 
 
-On multiple occasions, our perspective of our work was cast in uncertainty as we discovered many technical issues and areas for improvement during testing. While these were moments of frustration, they were also deeply humbling as we learned to evaluate our work with a more critical mindset and to remain consistent in realising loftier goals for our project. 
+On multiple occasions, our perspective of our work was cast in uncertainty as we discovered many technical issues and areas for improvement during testing. While these were moments of frustration, they were also humbling as we learned to evaluate our work with a more critical mindset and to remain consistent in realising loftier goals for our project. 
 
 As Milestone 3 draws to close, we will take the feedback received into serious consideration and make the necessary improvements so that we can present a well-rounded product that is representative of our commitment to this project. 
 
