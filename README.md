@@ -101,7 +101,7 @@ With this problem in mind, we hope to design a user-friendly application that wi
 
 2. As a student, I want to be ***more conscious of my physical and emotional health*** so that I can improve my wellbeing :leaves:
   - Conditions
-    - [x] Provide a range of stress levels (eg. very stressed, stressed etc.) for users' to select their stress level for the day
+    - [x] Provide a range of stress levels (eg. very stressed, stressed etc.) for users to select their stress level for the day
     - [x] Provide a range of acitivities (eg. studying, exercising) that users can associate with their stress level for the day
     - [x] Create a sleep tracking system where users can indicate their sleep quality and the number of hours that they have rested for the day
 
@@ -144,7 +144,7 @@ npm i react-heatmap-grid
 - **Command to install react-bootstrap has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0** <br/>
 - **bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if such an issue is encountered**
 
-5. Within the src folder, install the dependencies for the Firebase database:
+5. Within the src folder, install the dependencies for the Firestore database:
 ```bash 
 npm i firebase
 ```
@@ -154,7 +154,7 @@ npm i firebase
 
 ## Proposed system architecture :label:
 <p align = "center">
-  <img src = "https://user-images.githubusercontent.com/79785001/175491946-c3ca7a57-e034-4f26-83c0-d36e7ecbf7c7.png">
+  <img src = "https://user-images.githubusercontent.com/79785001/180651219-6e2efff5-d95b-4bf0-b267-39205e23420c.png">
 </p>
 
 ## Feature list :desktop_computer:
@@ -217,17 +217,17 @@ npm i firebase
   - Fields that can be edited 
     - Title 
     - Description 
-    - Organisation Name 
-    - Role in Organisation 
+    - Organisation Name -- for tasks/events with the work/extracurriculars tag
+    - Role in Organisation -- for tasks/events with the work/extracurriculars tag
     - Event done 
-    - Add event to Progress Report
+    - Add event to Progress Report -- for tasks/events with the work/extracurriculars/academics tag
   - Fields that cannot be edited 
     - Event Tag
 - #### Edit Events [High] :fountain_pen:
   - Drag and drop events across timeslots/days 
   - Resize events to span across different timeslots/days
   - Delete events 
-- #### <a name = "cust-tags"></a> Create custom tags [High] 	:label:
+- #### <a name = "cust-tags"></a> Create custom tags [High] :label:
   - Tag label
   - Tag colour
 - #### Delete custom tags [High] :wastebasket:
@@ -242,7 +242,7 @@ npm i firebase
   - Breakdown of CAP by semester and changes in CAP from semester to semester, to be expressed in a multitype chart 
   - Average CAP for each of the top 5 most commonly occurring module codes (based on module codes input by the user), to be expressed in a radar chart
 - #### Stress Management Segment [High] :leaves:
-  - Pie chart showing the frequency that each stress level is selected by the user (across all 6 stress levels)
+  - Pie chart showing the frequency that each stress level is selected by the user (across all 5 stress levels)
   - Rank the activities most commonly associated with a particular stress level in descending order
   - The data displayed in the 2 features above can be aggregated based on one of the following time spans chosen by the user:
     - Past week 
