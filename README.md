@@ -664,7 +664,7 @@ Moving forward, we will seek the advice of our student advisor and mentor, and u
 ## <a name = "ms-3"></a> Progress in Milestone 3 :triangular_flag_on_post: :three:
 
 ### Summary of tasks completed :white_check_mark:
-- Please refer to the tasks listed under the <a href = "timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
+- Please refer to the tasks listed under the <a href = "#timeline-executables">Timeline and Executables</a> section above for more details on the tasks completed
 - All the <a href = "#ms3-deliver">deliverables required for Milestone 3</a> are completed, along with the necessary error checks 
 
 |  Task Name | Details | Link (if applicable) |
@@ -703,7 +703,7 @@ We **run a fixed set of test cases on our web application after changes are bein
 ### Evidence of system testing :microscope:
 
 #### Usability Testing :footprints:
-Please refer to the section titled <a href = "user-test3">Evidence of user testing</a> below
+Please refer to the section titled <a href = "#user-test3">Evidence of user testing</a> below
 
 #### Compatibility Testing :closed_lock_with_key:
 Our web application is being developed on the macOS and Windows operating systems. The **appearance and functionality of our web application remains optimal** on both operating systems. 
