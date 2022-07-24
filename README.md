@@ -22,7 +22,7 @@ Artemis
 
 ## Team Details 
 - Team Members
-  - [Test](@wzs02)
+  - [Test](https://github.com/OngMinXian)
 
 ## Link to deployed application :rocket:
 #### :construction: Regarding the link to our website
