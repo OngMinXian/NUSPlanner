@@ -20,9 +20,13 @@ A web application integrated with NUSMODs that helps students to optimise their 
 ## Proposed level of achievement :bar_chart:
 Artemis 
 
-## Team Details 
-- Team Members
-  - [Test](https://github.com/OngMinXian)
+## Collaborators :flags:
+  - :octocat: [Ong Min Xian](https://github.com/OngMinXian)
+  - :octocat: [Sng Wei Zhen Shanice](https://github.com/wzs02)
+
+## Team Details :wind_chime:
+  - Team ID: 5008
+  - Advisor: Koh Vinleon
 
 ## Link to deployed application :rocket:
 #### :construction: Regarding the link to our website
