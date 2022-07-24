@@ -534,7 +534,7 @@ Finally, we **integrated the users' account information and in-application data 
 Approximately **12 man days, the equivalent of 96 hours,** was channelled towards the coding of our web application in Milestone 1, with the breakdown of tasks by duration (in days) as follows:
 
 <p align = "center">
-  <img src ="https://user-images.githubusercontent.com/79785001/175555901-41532f91-557c-4af0-a3a2-8d06db426928.png">
+  <img src ="https://user-images.githubusercontent.com/79785001/180628679-d613c401-d639-4c78-bdf3-1ed216090d06.png">
 </p>
 
 A significantly **larger proportion of time was allocated towards learning the tech stacks required,** coding the required functionalities, as well as reading and writing data from our web application to Firestore. 
@@ -619,8 +619,9 @@ While we do acknowledge that other architectural styles have their own merits, w
 Approximately **15 man days, the equivalent of 120 hours,** was directed towards coding new functionalities, fixing technical issues, testing and deploying our web application in Milestone 2, with the breakdown of tasks by duration (in days) as follows: 
 
 <p align = "center">
-  <img src ="https://user-images.githubusercontent.com/79785001/175822048-f7b4f5c9-be30-4c4f-b283-cf0e0d714873.png">
+  <img src ="https://user-images.githubusercontent.com/79785001/180628746-4695761b-f296-4aee-814f-657ccc577462.png">
  </p>
+
 
 After gaining familiarity with the tech stacks in Milestone 1, our **main focus in Milestone 2 was to set up as many functionalities as we could** in our web application. The process of setting up each page was prolonged because we **conducted extensive error checks** and had to resolve the technical issues that we discovered. 
 
