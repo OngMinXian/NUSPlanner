@@ -36,11 +36,11 @@ You can use the following accounts to test our web application as they come with
 
 | Evaluator  | Designated Email | Password |
 | ------------- | ------------- | ------------- |
-| LWXSS  | test101@test.com  | 123Test456! |
-| MetaNDroids | test102@test.com  | 123Test456! |
-| Bit by Bit | test103@test.com | 123Test456! |
-| Vinleon | test104@test.com | 123Test456! |
-| Varun | test105@test.com | 123Test456! |
+| LWXSS  | test101<span>@</span>test.com  | 123Test456! |
+| MetaNDroids | test102<span>@</span>test.com  | 123Test456! |
+| Bit by Bit | test103<span>@</span>test.com | 123Test456! |
+| Vinleon | test104<span>@</span>test.com | 123Test456! |
+| Varun | test105<span>@</span>test.com | 123Test456! |
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
