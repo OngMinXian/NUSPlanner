@@ -29,8 +29,6 @@ Artemis
   - Advisor: Koh Vinleon
 
 ## Link to deployed application :rocket:
-#### :construction: Regarding the link to our website
-Unfortunately, the link to our deployed website cannot be clicked directly. Please copy and paste the link below into your browser to access our deployed website. Thank you! <br/><br/>
 :link: [Link](https://auth-development-71ec2.web.app/) <br />
 
 #### :rotating_light: Important note to evaluators 
