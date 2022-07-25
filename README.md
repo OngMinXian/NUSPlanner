@@ -726,8 +726,8 @@ On top of refining our UI, we have also **used the large quantities of data to t
 
 | Category | Code | Lines of Data Generated |
 | ----------  | ------------- | ---------------- |
-| Tasks |![Screenshot 2022-07-21 at 11 43 10 PM](https://user-images.githubusercontent.com/79785001/180256734-b7333d04-ddc9-47e2-8d3b-840fc1385798.png)| **5** |
-| Events | ![Screenshot 2022-07-21 at 11 45 46 PM](https://user-images.githubusercontent.com/79785001/180257220-fe961981-8d26-43e0-89ca-1b7a0c0e8e63.png) |100 * 2 = **200**, 100 each for events that occur in the present and the future |
+| Tasks |![Screenshot 2022-07-21 at 11 43 10 PM](https://user-images.githubusercontent.com/79785001/180256734-b7333d04-ddc9-47e2-8d3b-840fc1385798.png)| 5 today + 100 past + 100 future = **205** |
+| Events | ![Screenshot 2022-07-21 at 11 45 46 PM](https://user-images.githubusercontent.com/79785001/180257220-fe961981-8d26-43e0-89ca-1b7a0c0e8e63.png) | 5 today + 100 past + 100 future = **205** |
 | Stress and Sleep Data | ![Screenshot 2022-07-21 at 11 49 39 PM](https://user-images.githubusercontent.com/79785001/180258004-10045be1-6855-462b-a19c-cf68d0a56b96.png) | 365 * 2 = **730**, 365 each for one category <br></br> Data follows a normal distribution for greater accuracy as it would be unrealistic to choose a number from 0 to 24 with every number having equal weighting for sleep hours. | 
 | Module code and grade | ![Screenshot 2022-07-21 at 11 51 57 PM](https://user-images.githubusercontent.com/79785001/180259575-34689203-85bd-4602-828b-c80c42a1799b.png) | **30** |
 
