@@ -34,16 +34,15 @@ Unfortunately, the link to our deployed website cannot be clicked directly. Plea
 :link: auth-development-71ec2.web.app <br />
 
 #### :rotating_light: Important note to evaluators 
-Please use the email and password assigned to you for signing into our web application, as entering stress/sleep data into the Today page of our web application will cause the input fields to disappear for the day. But feel free to create your own account too. Thank you!
+You can use the following accounts to test our web application as they come with randomly generated data. You are free to create your own account as well. If you would like to create an account with randomly generated data, input tester into the username field when creating an account.
 
 | Evaluator  | Designated Email | Password |
 | ------------- | ------------- | ------------- |
-| LWXSS  | test101@gmail.com  | 123Test456! |
-| MetaNDroids | test102@gmail.com  | 123Test456! |
-| Bit by Bit | test103@gmail.com | 123Test456! |
-| Vinleon | test104@gmail.com | 123Test456! |
-| Varun | test105@gmail.com | 123Test456! |
-
+| LWXSS  | test101@test.com  | 123Test456! |
+| MetaNDroids | test102@test.com  | 123Test456! |
+| Bit by Bit | test103@test.com | 123Test456! |
+| Vinleon | test104@test.com | 123Test456! |
+| Varun | test105@test.com | 123Test456! |
 
 ## Links to project materials :mag:
 :link: [Project Log](https://docs.google.com/spreadsheets/d/1VgjFcwcWWh3wxjAQzy2Xt01viB7zWkEqdCqpskZgZOU/edit?usp=sharing) <br />
