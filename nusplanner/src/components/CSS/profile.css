@@ -30,6 +30,10 @@
     justify-content: center;
 }
 
+.show-toast {
+    z-index: 2000;
+}
+
 
 
 

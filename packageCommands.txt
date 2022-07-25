@@ -1,4 +1,0 @@
-## Within my-app of React ##
-
-npm i react-router-dom react-bootstrap bootstrap@5 react-datepicker react-datetime-picker date-fns styled-components react-icons react-select firebase
-npm install --save react-big-calendar --legacy-peer-deps

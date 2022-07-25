@@ -14,4 +14,12 @@
 .addModButton {
     display: flex;
     justify-content: center;
+}  
+
+.show-toast {
+    z-index: 2000;
+}
+
+.bottom-rectangle {
+    height: 50px;
 }

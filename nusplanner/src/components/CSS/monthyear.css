@@ -16,7 +16,7 @@
 }
 
 .pad-dropdown {
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-left: 20px;
 }
 
@@ -24,12 +24,13 @@
     margin-bottom: 10px;
 }
 
-.inline-display {
-    display: inline-block;
-}  
+.inline-style {
+    display: flex;
+    justify-content: space-between;
+}
 
 .pad-top-and-bottom {
-    margin-top: 10px; 
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -42,5 +43,26 @@
 }
 
 .canvas-delete-button {
-    margin-left: 100px;
+    position: absolute;
+    margin-left: 10px;
 }
+
+.adjust-form-width {
+    width: 45%;
+}
+
+.add-pr-switch {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrap-offcanvas-title {
+    width: 250px;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.show-toast {
+    z-index: 2000;
+}
+ 

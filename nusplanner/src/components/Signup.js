@@ -68,7 +68,7 @@ const Signup = () => {
                                                     <Form.Control
                                                         required
                                                         type="text"
-                                                        placeholder="Username"
+                                                        placeholder="Name"
                                                         ref={usernameRef}
                                                         className="inputField" />
                                                 </Form.Group>

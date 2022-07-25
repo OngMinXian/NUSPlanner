@@ -1,10 +1,12 @@
 import { React, useState, useEffect } from 'react'
-import { Table, Button, ButtonGroup, Form, Row, Col, InputGroup } from "react-bootstrap";
+import { Table, Button, ButtonGroup, Form, Row, Col, InputGroup, Toast, ToastContainer } from "react-bootstrap";
 import { db, auth } from "../firebase";
-import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { BsFillTrashFill } from 'react-icons/bs';
 import Select from 'react-select'
 import "./CSS/editgrades.css"
+import { BiErrorCircle } from "react-icons/bi";
+import { GiConfirmed } from "react-icons/gi";
 
 export default function EditModAndCap() {
 
@@ -42,6 +44,7 @@ export default function EditModAndCap() {
     setNoSems(docu.data().noOfSems);
     setCurrentSem(docu.data().lastpage);
     setAllMods(docu.data().modgradeinfo);
+    setTempMods(docu.data().modgradeinfo);
     setLoaded(true);
   }
 
@@ -133,12 +136,36 @@ export default function EditModAndCap() {
   const [modCode, setModCode] = useState("");
   const [modGrade, setModGrade] = useState("");
 
+  //Hooks for checking whether module code and module grade have been input 
+  const [modCodeError, setModCodeError] = useState(false);
+  const [modGradeError, setModGradeError] = useState(false);
+
+  //Hooks for confirming module has been added 
+  const [confirmAddMod, setConfirmAddMod] = useState(false);
+
+  //Hooks for confirming changes to module
+  const [confirmModChanges, setConfirmModChanges] = useState(false);
+
   //Add mod
   const addMod = (e) => {
-    e.preventDefault();
-    setUpdatedMods([]);
-    setUpdatedMods(updatedMods => [...allMods, { sem: currentSem, code: modCode, grade: modGrade }]);
-    setChanged(true);
+    if (modCode.length === 0) {
+      e.preventDefault();
+      setModCodeError(true);
+      return false
+    } else if (modGrade.length === 0) {
+      e.preventDefault();
+      setModGradeError(true);
+      return false
+    }
+    else {
+      e.preventDefault();
+      setUpdatedMods([]);
+      setUpdatedMods(updatedMods => [...allMods, { sem: currentSem, code: modCode, grade: modGrade }]);
+      setConfirmAddMod(true)
+      setChanged(true);
+      setModGrade(null)
+      setModCode("")
+    }
   };
 
   //Delete mod
@@ -162,9 +189,9 @@ export default function EditModAndCap() {
       if (!(i.sem === s &&
         i.code === c &&
         i.grade === g)) {
-          setTempMods(tempMods => [...tempMods, i]);
+        setTempMods(tempMods => [...tempMods, i]);
       } else {
-          setTempMods(tempMods => [...tempMods, { sem: s, code: event.target.value, grade: g }])
+        setTempMods(tempMods => [...tempMods, { sem: s, code: event.target.value, grade: g }])
       }
     })
   }
@@ -176,33 +203,25 @@ export default function EditModAndCap() {
       if (!(i.sem === s &&
         i.code === c &&
         i.grade === g)) {
-          setTempMods(tempMods => [...tempMods, i]);
+        setTempMods(tempMods => [...tempMods, i]);
       } else {
-          setTempMods(tempMods => [...tempMods, { sem: s, code: c, grade: event.label }])
+        setTempMods(tempMods => [...tempMods, { sem: s, code: c, grade: event.label }])
       }
     })
   }
 
   const saveModGrade = () => {
     setApply(true)
-    window.confirm("Changes Saved");
-    // window.location.reload(false);
-  }
-
-  const logInfo = () => {
-    console.log(allMods);
-    console.log(mods)
-    console.log(tempMods);
-    console.log(apply);
+    setConfirmModChanges(true)
   }
 
   return (
     <>
-    
-      {currentSem!==0 
-      ? <h6 className="bottom-spacing">Currently Viewing: {convertNumToSem(currentSem)} </h6>
-      : <h6 className="bottom-spacing">Currently Viewing: Select a semester! </h6> }
-      
+
+      {currentSem !== 0
+        ? <h6 className="bottom-spacing">Currently Viewing: {convertNumToSem(currentSem)} </h6>
+        : <h6 className="bottom-spacing">No Semester Selected </h6>}
+
       <div className="bottom-spacing">
         <ButtonGroup className="mb-2" >
           <Button onClick={addSem} variant="outline-secondary"> Add Sem</Button>
@@ -247,7 +266,7 @@ export default function EditModAndCap() {
                     </InputGroup>
                   </td>
                   <td>
-                    <Select type="text" options={gradeOptions} defaultValue={{label: i.grade, value: i.grade}} onChange={(event) => {
+                    <Select type="text" options={gradeOptions} defaultValue={{ label: i.grade, value: i.grade }} onChange={(event) => {
                       updateModGrade(event, i.sem, i.code, i.grade, index)
                     }
                     }>
@@ -272,21 +291,83 @@ export default function EditModAndCap() {
               <div className="modCode">
                 <InputGroup className="mb-2">
                   <InputGroup.Text>Module Code</InputGroup.Text>
-                  <Form.Control id="inlineFormInputGroup" onChange={(event) => setModCode(event.target.value)} />
+                  <Form.Control id="inlineFormInputGroup" value={modCode} onChange={(event) => setModCode(event.target.value)} />
                 </InputGroup>
               </div>
 
               <div className="modGrade">
-                <Select options={gradeOptions} placeholder="Select Grade Attained" onChange={(event) => setModGrade(event.label)}></Select>
+
+                <Form.Label> Grade Attained</Form.Label>
+                <Select options={gradeOptions} value={{ label: modGrade }} onChange={(event) => {
+                  setModGrade(event.label)
+                }}></Select>
               </div>
 
               <div className='addModButton'>
                 <Button variant="outline-primary" onClick={addMod}>Add Module</Button>
               </div>
+
+              <div className="bottom-rectangle"></div>
             </Col>
           </Row>
         </Form>
       }
+
+      {/* Toast for empty module code here */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setModCodeError(false)} show={modCodeError} delay={3000} autohide position="top-center" bg="danger">
+          <Toast.Header>
+            <BiErrorCircle className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Error</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Please enter a module code
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+
+      {/* Toast for empty module grade here */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setModGradeError(false)} show={modGradeError} delay={3000} autohide position="top-center" bg="danger">
+          <Toast.Header>
+            <BiErrorCircle className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Error</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Please select a grade for your module
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+
+      {/* When the module has been successfully added */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setConfirmAddMod(false)} show={confirmAddMod} delay={3000} autohide position="top-center" bg="success">
+          <Toast.Header>
+            <GiConfirmed className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your module has been added
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+
+      {/* When the module details have been successfully changed */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setConfirmModChanges(false)} show={confirmModChanges} delay={3000} autohide position="top-center" bg="success">
+          <Toast.Header>
+            <GiConfirmed className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your changes have been saved
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
 
 
     </>

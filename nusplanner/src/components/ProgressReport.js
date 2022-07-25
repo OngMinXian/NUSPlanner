@@ -1,49 +1,82 @@
 import React, { useState, useEffect } from 'react'
 import SideBar from "./Sidebar"
-import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, Timestamp, setDoc, updateDoc, getDoc } from "firebase/firestore";
-import { db, auth } from "../firebase";
-import "./CSS/task.css"
-import { BsFillTrashFill } from 'react-icons/bs';
-import Popup from "./Popup"
-import DateTimePicker from 'react-datetime-picker'
-import format from "date-fns/format"
-import TimePicker from 'react-time-picker';
-import { Button, Modal, Form, Row, Col, Container, Dropdown, Offcanvas } from "react-bootstrap"
-import  Select, { components } from 'react-select'
+import { doc, updateDoc, getDoc } from "firebase/firestore";
+import { db, auth, storage } from "../firebase";
+import "./CSS/progressreport.css"
+import { ref, listAll, getDownloadURL } from "firebase/storage"
+import { Button, Form, Row, Col, Container, Card, Image, Toast, ToastContainer } from "react-bootstrap"
+import { BsEnvelope, BsTelephone, BsLinkedin, BsGlobe } from 'react-icons/bs';
+import { GoLocation } from 'react-icons/go';
+import { FaUniversity, FaGraduationCap, FaScroll } from 'react-icons/fa';
+import { TbReportAnalytics } from 'react-icons/tb';
+import { GiConfirmed } from "react-icons/gi";
 
 function ProgressReport() {
 
   //Get data from Firebase
   const userRef = doc(db, "Users", auth.currentUser.uid);
-  
+
+  //Hook for success notification 
+  const [notifySaved, setNotifySaved] = useState(false)
+
   //Hooks for data retrieval
-  const [noSems, setNoSems] = useState(0);
-  const [semArr, setSemArr] = useState([]);
+  const [name, setName] = useState("");
+  const [gradYear, setGradYear] = useState("");
+  const [faculty, setFaculty] = useState("");
+  const [course, setCourse] = useState("");
+  const [email, setEmail] = useState("");
   const [allMods, setAllMods] = useState([]);
-  const [allTags, setAllTags] = useState([]);
   const [allEvents, setAllEvents] = useState([]);
-  const [loaded, setLoaded] = useState(false);
+  const [userLinkedin, setUserLinkedin] = useState("");
+  const [userWebsite, setUserWebsite] = useState("");
+  const [userDescription, setUserDescription] = useState("");
+ 
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const [imgurl, setImgurl] = useState("");
+  const imgDefault = ref(storage, `profilePics/Default`);
+  const imgListRef = ref(storage, `profilePics/${auth.currentUser.uid}`);
 
   const getAllData = async () => {
     const docu = await getDoc(userRef);
-    setNoSems(docu.data().noOfSems);
+
+    setName(docu.data().username);
+    setGradYear(docu.data().gradyear);
+    setFaculty(docu.data().faculty);
+    setCourse(docu.data().course);
+    setEmail(docu.data().email);
     setAllMods(docu.data().modgradeinfo);
-    setAllTags(docu.data().tags);
     setAllEvents(docu.data().events);
-    setLoaded(true);
+    setUserLinkedin(docu.data().linkedin);
+    setUserWebsite(docu.data().website);
+    setUserDescription(docu.data().selfdescription);
+
+    if (!docu.data().picSet) {
+      await listAll(imgDefault).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImgurl(url);
+            setImgLoaded(true);
+          })
+        })
+      })
+    }
+    else {
+      await listAll(imgListRef).then((response) => {
+        response.items.forEach((item) => {
+          getDownloadURL(item).then((url) => {
+            setImgurl(url);
+            setImgLoaded(true);
+          })
+        })
+      })
+    }
   }
 
   useEffect(() => {
     getAllData();
   }, [])
 
-  useEffect(() => {
-    for (let i=1; i<= noSems; i++) {
-      setSemArr(semArr => [...semArr, i]);
-    } 
-  }, [noSems])
-
-  //Cap calculator
+  //Cap calculator -- NEEDED IN FINAL VERS
   const calcOverallCAP = (arr) => {
     const gradeToCAP = {
       "A+": 5,
@@ -61,191 +94,328 @@ function ProgressReport() {
     var res = 0;
     var count = 0;
     arr.map((i) => {
-      if ((i.grade!=="SU" && i.grade!=="")) {
+      if ((i.grade !== "SU" && i.grade !== "" && i.grade !== "Not taken")) {
         count += 1;
         res += gradeToCAP[i.grade];
       }
     })
-    return (res/count).toFixed(2);
+    return (res / count).toFixed(2);
   }
 
-  const calcCAP = (arr, s) => {
-    const gradeToCAP = {
-      "A+": 5,
-      "A": 5,
-      "A-": 4.5,
-      "B+": 4,
-      "B": 3.5,
-      "B-": 3,
-      "C+": 2.5,
-      "C": 2,
-      "D+": 1.5,
-      "D": 1,
-      "F": 0,
-    }
-    var res = 0;
-    var count = 0;
-    arr.map((i) => {
-      if ((i.grade!=="SU" && i.grade!=="") && i.sem==s) {
-        count += 1;
-        res += gradeToCAP[i.grade];
-      }
-    })
-    return (res/count).toFixed(2);
+  //Handle add LinkedIn, website, self description field to database 
+  const uploadItems = async (e) => {
+    try {
+      await updateDoc(userRef,
+        {
+          linkedin: userLinkedin,
+          website: userWebsite,
+          selfdescription: userDescription,
+        }
+      )
+      setNotifySaved(true)
+    } catch {
+      console.log("failed")
+    };
   }
 
-  //Sort Modules
-  const [sortedMods, setsortedMods] = useState([]);
-  const modsSorter = () => {
-    var gradeArr = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "D+", "D", "F"]
-    allMods.map((i) => {
-      if (i.grade===gradeArr[0]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[1]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[2]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[3]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[4]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[5]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[6]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[7]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[8]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[9]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-    allMods.map((i) => {
-      if (i.grade===gradeArr[10]) {
-        setsortedMods(sortedMods => [...sortedMods, i]);
-      }
-    })
-  }
+  //Constants to output text and their subsitutues if no data is present 
+  const gradYearString = gradYear.length === 0 ? "Graduation year not stated" : `Class of ${gradYear}`;
+  const courseString = (faculty.length === 0 || course.length === 0) ? "Missing fields for course and faculty" : `Faculty of ${faculty}, ${course}`;
+  const overallCAPString = calcOverallCAP(allMods) !== "NaN" ? `${calcOverallCAP(allMods)} Cumulative Point Average` : "Missing fields for modules and grades";
 
+  //Work category
+  const [workEvents, setWorkEvents] = useState([]);
   useEffect(() => {
-    modsSorter();
-  }, [allMods])
-
-  //Generate tags as options
-  const [tagsArr, setTagsArr] = useState([]);
-  useEffect(() => {
-    allTags.map((i) => {
-      setTagsArr(tagsArr => [...tagsArr, {label: i.value, value: i.value}]);
-    })
-  }, [allTags])
-
-  //Handle select category and display events of that category
-  const [selectedEvents, setSelectedEvents] = useState([]);
-  const handleSelectCat = (e) => {
-    setSelectedEvents([]);
     allEvents.map((i) => {
-      if (i.category===e.value) {
-        setSelectedEvents(selectedEvents => [...selectedEvents, i]);
+      if (i.category==="Work") {
+        if (i.PR) {
+          if (i.end.toDate() <= new Date() || i.start.toDate() <= new Date()) {
+            setWorkEvents(workEvents => [...workEvents, i])
+          }
+        }
       }
     })
-  }
+  }, [allEvents])
 
-  const logInfo = () => {
-    console.log(allEvents)
-    console.log(selectedEvents)
-    console.log(sortedMods)
-  }
+  //Acads category
+  const [acadEvents, setAcadEvents] = useState([]);
+  useEffect(() => {
+    allEvents.map((i) => {
+      if (i.category==="Academics") {
+        if (i.PR) {
+          if (i.end.toDate() <= new Date() || i.start.toDate() <= new Date()) {
+            setAcadEvents(acadEvents => [...acadEvents, i])
+          }
+        }
+      }
+    })
+  }, [allEvents])
 
-    return (
-      <>
+  //CCA category
+  const [ccaEvents, setCCAEvents] = useState([]);
+  useEffect(() => {
+    allEvents.map((i) => {
+      if (i.category==="Extracurriculars") {
+        if (i.PR) {
+          if (i.end.toDate() <= new Date() || i.start.toDate() <= new Date()) {
+            setCCAEvents(ccaEvents => [...ccaEvents, i])
+          }
+        }
+      }
+    })
+  }, [allEvents])
+
+  return (
+    <>
       <SideBar></SideBar>
 
-      {loaded && 
-      <>
+      <div className="top-space"></div>
+      <Container>
+        <Card>
+          <Card.Body>
+            <Row>
+              <Col xs={4}>
+                <Card className="custom-contact-bg">
 
-      {calcOverallCAP(allMods)!=="NaN"
-            ? <h2>Overall CAP: {calcOverallCAP(allMods)}</h2>
-            : <h2>Overall CAP: No Module/Grade Input</h2> }
+                  <div className="small-space"></div>
+                  <div className="center-dp">
+                    {imgLoaded &&
+                      <Image src={imgurl} className="display-pic" />
+                    }
+                    
+                  </div>
 
-      {semArr.map((i) => {
-        return (
-          <>
-            {calcCAP(allMods, i)!=="NaN"
-            ? <p>{i}: {calcCAP(allMods, i)}</p>
-            : <p>{i}: No Module/Grade Input</p>}
-          </>
-        )
-      })
-      }
-      <h3>Your best modules:</h3>
-      {[...sortedMods].splice(0, 5).map((i) => {
-        return (
-          <>
-            <p>Module Code: {i.code} Grade: {i.grade}</p>
-          </>
-        )  
-      })}
-      
-      <h3>Your worst modules:</h3>
-      {[...sortedMods].reverse().splice(0, 5).map((i) => {
-        return (
-          <>
-            <p>Module Code: {i.code} Grade: {i.grade}</p>
-          </>
-        )  
-      })}
+                  <div className="pad-all-around">
+                    <p className="resume-header">CONTACT</p> <br></br>
 
-      <label>Select category to display:</label>
-      <Select
-        options={tagsArr}
-        onChange={(event) => handleSelectCat(event)}  
-      />
-      {selectedEvents.map((i) => {
-        return (
-          <>
-          <h2>{i.title}</h2>
-          <b>Description: </b> {i.description} <br></br>
-          <b>Date: </b>  {i.start.toDate().toString()} to {i.end.toDate().toString()} <br></br>
-          <b>Organisation name: </b> {i.orgName} <br></br>
-          <b>Role in Organisation:</b> {i.orgRole} <br></br>
-          <b>Description of Tasks: </b> {i.orgDesc} <br></br>
-          </>
-        )
-      })}
+                    <div className="contact-field-style">
+                      <BsEnvelope color="white" fontSize="1.5em" /> <span className="emoji-space">{email}</span>
+                    </div>
 
-      </>
-      }
+                    <div className="contact-field-style">
+                      <BsTelephone color="white" fontSize="1.5em" /> <span className="emoji-space"><input placeholder='Phone Number' disabled className="disabled-bg"></input></span>
+                    </div>
 
-      </>
-    )
-  }
+                    <div className="contact-field-style">
+                      <GoLocation color="white" fontSize="1.5em" /> <span className="emoji-space"><input placeholder='Address' disabled className="disabled-bg"></input></span>
+                    </div>
+
+                    <div className="contact-field-style">
+                      <BsLinkedin color="white" fontSize="1.5em" /> <span className="emoji-space"><input placeholder='LinkedIn' defaultValue={userLinkedin} onBlur={(i) => { setUserLinkedin(i.target.value); }}></input></span>
+                    </div>
+
+                    <div className="contact-field-style">
+                      <BsGlobe color="white" fontSize="1.5em" /> <span className="emoji-space"><input placeholder='Personal Website' defaultValue={userWebsite} onBlur={(i) => { setUserWebsite(i.target.value); }}></input></span>
+                    </div>
+
+                    <div className="small-space"></div>
+                    <p className="resume-header">EDUCATION</p> <br></br>
+
+                    <div className="contact-field-style">
+                      <FaUniversity color="white" fontSize="1.5em" /> <span className="emoji-space">National University of Singapore</span>
+                    </div>
+
+                    <div className="contact-field-style">
+                      <FaGraduationCap color="white" fontSize="1.5em" /> <span className="emoji-space">{gradYearString}</span>
+                    </div>
+
+                    <div className="contact-field-style">
+                      <TbReportAnalytics color="white" fontSize="1.5em" /> <span className="emoji-space">{overallCAPString}</span>
+                    </div>
+
+                    <div className="contact-field-style">
+                      <FaScroll color="white" fontSize="1.5em" /> <span className="emoji-space">{courseString}</span>
+                    </div>
+
+                  </div>
+
+                </Card>
+              </Col>
+
+              <Col>
+                <Row>
+                  <Card xs={8} className="custom-name-bg">
+
+                    <div class="text-center"><h1 className="name-header">{name}</h1></div>
+
+                    <div class="text-center"><p className="role-header">Student, National University of Singapore</p></div>
+                  </Card>
+                </Row>
+
+                <Row>
+                  <div className="small-space"></div>
+                  <div className="position-summary-header">
+                    <div className="role-details-div">
+                      <p className="resume-header-dark">SUMMARY</p>
+                      <div>
+                        <Button onClick={uploadItems} variant="outline-danger">Save Report</Button>
+                      </div>
+                    </div>
+
+                    <Form.Group>
+                      <Form.Control as="textarea" placeholder="A short description of your skills and positive attributes here" defaultValue={userDescription} onBlur={(i) => setUserDescription(i.target.value)} rows={3} />
+                    </Form.Group>
+                  </div>
+                </Row>
+
+
+                <Row>
+                  <div className="position-sub-header">
+                    <p className="resume-header-no-space">EXPERIENCE</p>
+                  </div>
+
+                  {workEvents.sort((first, second) => {
+                    let startDiff = first.start - second.start;
+                    let endDiff = first.end - second.end;
+                    return endDiff != 0 ? -endDiff : -startDiff;
+                  }).map(event => {
+                    //get correct string for start date
+                    let startMonth = event.start.toDate().toLocaleString('default', { month: 'long' });
+                    let startYear = event.start.toDate().getFullYear();
+                    let startString = `${startMonth} ${startYear}`;
+
+                    //get correct string for end date
+                    let endMonth = event.end.toDate().toLocaleString('default', { month: 'long', });
+                    let endYear = event.end.toDate().getFullYear();
+                    let checkPresent = event.end.toDate() >= new Date();
+                    let endString = checkPresent ? "Present" : `${endMonth} ${endYear}`;
+
+                    //get correct organisation role 
+                    let eventOrgRole = event.orgRole.length === 0 ? "Role in event is not specified" : event.orgRole;
+                    //get correct organisation name 
+                    let eventOrgName = event.orgName.length === 0 ? "Organisation associated with event is not specified" : event.orgName;
+                    //get correct event description 
+                    let eventDescString = event.description.length === 0 ? "Event description is not specified" : event.description;
+
+                      return (<div className="role-content-div">
+                        <div className="role-details-div">
+                          <div>
+                            <b>{eventOrgRole}</b> <br></br> <p className="reduce-p-spacing">{eventOrgName}</p>
+                            <ul>
+                              <li>{eventDescString}</li>
+                            </ul>
+                          </div>
+                          { startString !== endString ?
+                          <p><b>{`${startString} - ${endString}`}</b></p> :
+                          <p><b>{`${startString}`}</b></p>}
+                        </div>
+                      </div>)
+                    
+                  })}
+                </Row>
+
+                <div className="small-space"></div>
+                <Row>
+                  <div className="position-sub-header">
+                    <p className="resume-header-no-space">EDUCATION</p>
+                  </div>
+
+                  {acadEvents.sort((first, second) => {
+                    let startDiff = first.start - second.start;
+                    let endDiff = first.end - second.end;
+                    return endDiff != 0 ? -endDiff : -startDiff;
+                  }).map(event => {
+                    //get correct string for start date
+                    let startMonth = event.start.toDate().toLocaleString('default', { month: 'long' });
+                    let startYear = event.start.toDate().getFullYear();
+                    let startString = `${startMonth} ${startYear}`;
+
+                    //get correct string for end date
+                    let endMonth = event.end.toDate().toLocaleString('default', { month: 'long', });
+                    let endYear = event.end.toDate().getFullYear();
+                    let checkPresent = event.end.toDate() >= new Date();
+                    let endString = checkPresent ? "Present" : `${endMonth} ${endYear}`;
+
+                    //get correct event title 
+                    let eventTitleString = event.title.length === 0 ? "Event title is not specified" : event.title;
+                    //get correct event description
+                    let eventDescString = event.description.length === 0 ? "Event description is not specified" : event.description;
+
+                      return (<div className="role-content-div">
+                        <div className="role-details-div">
+                          <div>
+                            <b>{eventTitleString}</b> <br></br>
+                            <ul>
+                              <li>{eventDescString}</li>
+                            </ul>
+                          </div>
+                          { startString !== endString ?
+                          <p><b>{`${startString} - ${endString}`}</b></p> :
+                          <p><b>{`${startString}`}</b></p>}
+                        </div>
+                      </div>)
+                    
+                  })}
+                </Row>
+
+                <div className="small-space"></div>
+                <Row>
+                  <div className="position-sub-header">
+                    <p className="resume-header-no-space">EXTRACURRICULARS</p>
+                  </div>
+
+                  {ccaEvents.sort((first, second) => {
+                    let startDiff = first.start - second.start;
+                    let endDiff = first.end - second.end;
+                    return endDiff != 0 ? -endDiff : -startDiff;
+                  }).map(event => {
+                    //get correct string for start date
+                    let startMonth = event.start.toDate().toLocaleString('default', { month: 'long' });
+                    let startYear = event.start.toDate().getFullYear();
+                    let startString = `${startMonth} ${startYear}`;
+
+                    //get correct string for end date
+                    let endMonth = event.end.toDate().toLocaleString('default', { month: 'long', });
+                    let endYear = event.end.toDate().getFullYear();
+                    let checkPresent = event.end.toDate() >= new Date();
+                    let endString = checkPresent ? "Present" : `${endMonth} ${endYear}`;
+
+                    //get correct organisation role 
+                    let eventOrgRole = event.orgRole.length === 0 ? "Role in event is not specified" : event.orgRole;
+                    //get correct organisation name 
+                    let eventOrgName = event.orgName.length === 0 ? "Organisation associated with event is not specified" : event.orgName;
+                    //get correct event description 
+                    let eventDescString = event.description.length === 0 ? "Event description is not specified" : event.description;
+
+                      return (<div className="role-content-div">
+                        <div className="role-details-div">
+                          <div>
+                            <b>{eventOrgRole}</b> <br></br> <p className="reduce-p-spacing">{eventOrgName}</p>
+                            <ul>
+                              <li>{eventDescString}</li>
+                            </ul>
+                          </div>
+                          { startString !== endString ?
+                          <p><b>{`${startString} - ${endString}`}</b></p> :
+                          <p><b>{`${startString}`}</b></p>}
+                          
+                        </div>
+                      </div>)
+                    
+                  })}
+                </Row>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+        <div className="top-space"></div>
+      </Container>
+
+      {/* Toast for saved notification here */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setNotifySaved(false)} show={notifySaved} delay={3000} autohide position="top-center" bg="success">
+          <Toast.Header>
+            <GiConfirmed className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your changes have been saved
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+    </>
+  )
+}
 
 export default ProgressReport

@@ -1,14 +1,15 @@
 import { React, useState, useEffect } from 'react'
-import { Image, Tab, Tabs, Form, Row, Col, Container, Button, Alert } from 'react-bootstrap'
+import { Image, Tab, Tabs, Form, Row, Col, Container, Button, Toast, ToastContainer } from 'react-bootstrap'
 import SideBar from './Sidebar.js';
 import { db, auth, storage } from "../firebase";
-import { addDoc, collection, getDocs, deleteDoc, doc, where, query, orderBy, getDoc, updateDoc } from "firebase/firestore";
+import {  doc, getDoc, updateDoc } from "firebase/firestore";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage"
 import "./CSS/profile.css"
 import EditModAndCap from "./EditModAndCap.js"
+import { BiErrorCircle } from "react-icons/bi";
+import { GiConfirmed } from "react-icons/gi";
 
 export default function Profile() {
-  const [error, setError] = useState("")
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -20,6 +21,12 @@ export default function Profile() {
   const [img, setImg] = useState(null);
   const [imgLoaded, setImgLoaded] = useState(false);
   const [imgurl, setImgurl] = useState("");
+
+  //Hook to check whether correct format is given for all input forms 
+  const [showIncorrectFormat, setShowIncorrectFormat] = useState(false)
+
+  //Hooks to trigger successful profile update notification 
+  const [showUpdateSuccess, setShowUpdateSuccess] = useState(false)
 
   //For module code validation 
   const [validated, setValidated] = useState(false)
@@ -70,25 +77,26 @@ export default function Profile() {
     const form = e.currentTarget
     setValidated(true)
     if (form.checkValidity() === false) {
-      window.confirm("incorrect inputs were given")
+      setShowIncorrectFormat(true)
       e.preventDefault()
-      e.stopPropagation()
+      return false
+    } else {
+      try {
+        await updateDoc(userRef,
+          {
+            username: username,
+            email: email,
+            faculty: faculty,
+            course: course,
+            matricyear: matricyear,
+            gradyear: gradyear,
+          }
+        )
+        setShowUpdateSuccess(true)
+      } catch {
+        console.log("failed")
+      };
     }
-    try {
-      await updateDoc(userRef,
-        {
-          username: username,
-          email: email,
-          faculty: faculty,
-          course: course,
-          matricyear: matricyear,
-          gradyear: gradyear,
-        }
-      )
-      window.alert("Changes Saved!")
-    } catch {
-      console.log("failed")
-    };
   }
 
   const editProfilePic = async () => {
@@ -149,15 +157,14 @@ export default function Profile() {
                 <Form noValidate validated={validated} onSubmit={handleChange}>
                   <Row className="mb-3">
                     <Form.Group as={Col}>
-                      <Form.Label>Username</Form.Label>
-                      <Form.Control type="text" defaultValue={username} onChange={(event) => { setUsername(event.target.value); }} />
-                      <Form.Control.Feedback type="invalid">Please provide a username</Form.Control.Feedback>
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control type="text" defaultValue={username} onChange={(event) => { setUsername(event.target.value); }} pattern="[a-zA-Z][a-zA-Z ]+" />
+                      <Form.Control.Feedback type="invalid">Please provide a valid name</Form.Control.Feedback>
                     </Form.Group>
 
                     <Form.Group as={Col}>
                       <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" defaultValue={email} onChange={(event) => { setEmail(event.target.value); }} />
-                      <Form.Control.Feedback type="invalid">Please provide a valid email</Form.Control.Feedback>
+                      <Form.Control disabled type="email" defaultValue={email} onChange={(event) => { setEmail(event.target.value); }} />
                     </Form.Group>
                   </Row>
 
@@ -190,7 +197,6 @@ export default function Profile() {
 
                   <div className="confim-profile-update ">
                     <Button type="submit" variant="outline-primary"
-                      onClick={handleChange}
                     >Update Profile</Button>
                   </div>
                 </Form>
@@ -199,6 +205,35 @@ export default function Profile() {
           </Col>
         </Row>
       </Container>
+
+      {/* Toast for wrong input formats here */}
+
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setShowIncorrectFormat(false)} show={showIncorrectFormat} delay={3000} autohide position="top-center" bg="danger">
+          <Toast.Header>
+            <BiErrorCircle className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Error</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Please ensure that all your inputs are in an appropriate format
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+
+      {/* Toast for successful profile update here */}
+      <ToastContainer className="show-toast" position="top-center">
+        <Toast onClose={() => setShowUpdateSuccess(false)} show={showUpdateSuccess} delay={3000} autohide position="top-center" bg="success">
+          <Toast.Header>
+            <GiConfirmed className="me-2" size={20} />
+            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <small>now</small>
+          </Toast.Header>
+          <Toast.Body className="text-white">
+            Your profile has been updated
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
     </>
   )
-}
+} 

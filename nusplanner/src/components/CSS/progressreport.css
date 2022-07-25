@@ -1,0 +1,118 @@
+.display-pic {
+    height: 200px;
+    width: 200px;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+.center-dp {
+    display: flex;
+    justify-content: center;
+}
+
+.top-space {
+    height: 50px;
+}
+
+.small-space {
+    height: 25px;
+}
+
+.resume-header {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: Verdana;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.resume-header-dark {
+    border-bottom: 3px solid rgb(0, 105, 92);
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: Verdana;
+    color: rgb(0, 105, 92);
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.resume-header-no-space {
+    border-bottom: 3px solid rgb(0, 105, 92);
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-family: Verdana;
+    color: rgb(0, 105, 92);
+    display: inline-block;
+}
+
+.name-header {
+    font-size: 50px;
+    font-family: Verdana;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.role-header {
+    font-size: 20px;
+    font-family: Georgia;
+}
+
+.contact-field-style {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.pad-all-around {
+    margin: 30px;
+}
+
+.contact-space {
+    height: 10px;
+}
+
+.emoji-space {
+    margin-left: 10px;
+}
+
+.custom-contact-bg {
+    color: white !important;
+    background: rgb(17, 120, 100) !important;
+    height: 100%;
+}
+
+.custom-name-bg {
+    background: rgb(248, 249, 249) !important;
+}
+
+.position-summary-header {
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.position-sub-header {
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.role-details-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.role-content-div {
+    margin-right: 30px;
+}
+
+.reduce-p-spacing {
+    margin-bottom: 2.5px;
+}
+
+.disabled-bg {
+    background-color: rgb(215, 219, 221);
+}
+
+.show-toast {
+    z-index: 2000;
+}

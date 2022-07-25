@@ -1,7 +1,11 @@
+.button-left-space {
+    margin-left: 20px;
+}
+
 .center-content-horizontally {
     display: flex;
     justify-content: center;
-}
+} 
 
 .center-and-pad-bottom {
     display: flex;
@@ -19,29 +23,26 @@
     margin-right: 20px;
 }
 
-.emoji-button {
-    height: 50px;
-    width: 50px;
-    background-color: #d1e7dd !important;
-    border-color: #d1e7dd !important;
-    margin: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+.emoji-row {
+    display: flex; 
+    justify-content: space-between; 
+    margin:0px 30px;
 }
 
 .emoji-size {
-    font-size: 40px;
+    font-size: 30px;
+    margin-right: 10px;
 }
 
 .emoji-label {
-    margin: auto;
+    margin-top: 10px;
 }
 
 .top-spacing {
     display: flex; 
-    justify-content: center; 
+    justify-content: flex-end; 
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .alert-size {
@@ -67,10 +68,6 @@
     text-align: center;
 }
 
-.top-space {
-    margin-top: 20px;
-}
-
 .right-space {
     margin-right: 20px;
 }
@@ -85,10 +82,32 @@
 }
 
 .inline-style {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .top-bottom-space {
     margin-top: 10px; 
     margin-bottom: 10px;
 }  
+
+.modal-border {
+    margin: 0px 30px;
+}
+
+.adjust-form-width-margin {
+    margin-right: 10px;
+}
+
+.adjust-form-width {
+    width : 45%;
+}
+
+.add-pr-switch {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.show-toast {
+    z-index: 2000;
+}
