@@ -29,7 +29,7 @@ Artemis
   - Advisor: Koh Vinleon
 
 ## Link to deployed application :rocket:
-:link: [Link](https://auth-development-71ec2.web.app/) <br />
+:link: [Link to deployed application](https://auth-development-71ec2.web.app/) <br />
 
 #### :rotating_light: Important note to evaluators 
 You can use the following accounts to test our web application as they come with randomly generated data. You are free to create your own account as well. If you would like to create an account with randomly generated data, input tester into the username field when creating an account.
