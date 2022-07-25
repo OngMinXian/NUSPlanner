@@ -213,20 +213,20 @@ npm i firebase
     - Description of user's role 
   - Event description
   - Option to display new event in progress report -- when the work, extracurriculars or academics tag is selected 
-- #### View Event Details [High] :eyeglasses:
+- #### View Task/Event Details [High] :eyeglasses:
   - Fields that can be edited 
     - Title 
     - Description 
     - Organisation Name -- for tasks/events with the work/extracurriculars tag
     - Role in Organisation -- for tasks/events with the work/extracurriculars tag
-    - Event done 
+    - Task/Event done 
     - Add event to Progress Report -- for tasks/events with the work/extracurriculars/academics tag
   - Fields that cannot be edited 
     - Event Tag
-- #### Edit Events [High] :fountain_pen:
-  - Drag and drop events across timeslots/days 
-  - Resize events to span across different timeslots/days
-  - Delete events 
+- #### Edit Tasks/Events [High] :fountain_pen:
+  - Drag and drop tasks/events across timeslots/days 
+  - Resize tasks/events to span across different timeslots/days
+  - Delete tasks/events 
 - #### <a name = "cust-tags"></a> Create custom tags [High] :label:
   - Tag label
   - Tag colour
