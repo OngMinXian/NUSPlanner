@@ -238,7 +238,7 @@ npm i firebase
 <img src="https://user-images.githubusercontent.com/79785001/180366776-dc498e1b-31e9-42e0-8953-8545b0918226.png">
 </p>
 
-- #### Academics Segment :100:
+- #### Academics Segment [High] :100:
   - Breakdown of CAP by semester and changes in CAP from semester to semester, to be expressed in a multitype chart 
   - Average CAP for each of the top 5 most commonly occurring module codes (based on module codes input by the user), to be expressed in a radar chart
 - #### Stress Management Segment [High] :leaves:
