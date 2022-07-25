@@ -220,7 +220,7 @@ npm i firebase
     - Organisation Name -- for tasks/events with the work/extracurriculars tag
     - Role in Organisation -- for tasks/events with the work/extracurriculars tag
     - Task/Event done 
-    - Add event to Progress Report -- for tasks/events with the work/extracurriculars/academics tag
+    - Add task/event to Progress Report -- for tasks/events with the work/extracurriculars/academics tag
   - Fields that cannot be edited 
     - Event Tag
 - #### Edit Tasks/Events [High] :fountain_pen:
