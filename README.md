@@ -699,7 +699,7 @@ This is evident in the Today page, where creating an event that falls on the pre
 Therefore, non-automated testing was used as it will help us to create a **more polished end product within an optimal period of time.**
 
 ### Evidence of regression testing :leftwards_arrow_with_hook:
-We **run a fixed set of test cases on our web application after changes are being made.** This ensures that all our components are mounted properly and that no unwanted side effects are introduced as a result of our edits. To view the documentation of our test cases, please click [here] (https://docs.google.com/document/d/1KEAojeEqUlKQzfPyOg3qbnODtDZ-xHAs4DB4-NfbTkE/edit?usp=sharing)
+We **run a fixed set of test cases on our web application after changes are being made.** This ensures that all our components are mounted properly and that no unwanted side effects are introduced as a result of our edits. To view the documentation of our test cases, please click [here](https://docs.google.com/document/d/1KEAojeEqUlKQzfPyOg3qbnODtDZ-xHAs4DB4-NfbTkE/edit?usp=sharing)
 
 ### Evidence of system testing :microscope:
 
