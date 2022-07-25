@@ -49,6 +49,7 @@ You can use the following accounts to test our web application as they come with
 :link: [Project Poster](https://drive.google.com/file/d/1MtYPYbSQdPuOYbfGdWgXzRU18m6I7rtf/view?usp=sharing) <br/>
 :link: [Project Video](https://drive.google.com/file/d/1m0AL59PjmT898QtdrROlmtfG5dr7Q1sl/view?usp=sharing) <br/>
 :link: [Video of features added in MS3](https://drive.google.com/file/d/1QJ8-7Dgd6U_he8k8PoSXgh8TgOzAiCbm/view?usp=sharing) <br/>
+:link: [Regression Testing documentation](https://docs.google.com/document/d/1KEAojeEqUlKQzfPyOg3qbnODtDZ-xHAs4DB4-NfbTkE/edit?usp=sharing) <br/>
 
 <b>Milestone 2: </b><br />
 :link: [Project Poster](https://drive.google.com/file/d/1asewEdoED50rUM3b5CMAdAWdc5vp2imi/view?usp=sharing) <br />
