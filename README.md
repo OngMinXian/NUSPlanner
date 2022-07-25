@@ -722,7 +722,7 @@ Given how our web application is only developed in 2022, it would not be possibl
 
 By creating accounts that are linked to this pre-loaded data, we can effectively **simulate the process of accessing a range of user-generated data** during testing. This allows us to gain a heightened **awareness of how the visual components of our web application respond to a wide spectrum of data**, so our user interface can be modified to accommodate different quantities and values of data. 
 
-On top of refining our UI, we have also **used the large quantities of data to test the efficiency** of our web application when it has to process heavy loads. In total, we have **generated 865 data entries,** with the breakdown of data entries by category as follows:
+On top of refining our UI, we have also **used the large quantities of data to test the efficiency** of our web application when it has to process heavy loads. In total, we have **generated 1170 data entries,** with the breakdown of data entries by category as follows:
 
 | Category | Code | Lines of Data Generated |
 | ----------  | ------------- | ---------------- |
