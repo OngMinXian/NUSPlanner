@@ -31,7 +31,7 @@ Artemis
 ## Link to deployed application :rocket:
 #### :construction: Regarding the link to our website
 Unfortunately, the link to our deployed website cannot be clicked directly. Please copy and paste the link below into your browser to access our deployed website. Thank you! <br/><br/>
-:link: [Link]([auth-development-71ec2.web.app](https://auth-development-71ec2.web.app/)) <br />
+:link: [Link](https://auth-development-71ec2.web.app/) <br />
 
 #### :rotating_light: Important note to evaluators 
 You can use the following accounts to test our web application as they come with randomly generated data. You are free to create your own account as well. If you would like to create an account with randomly generated data, input tester into the username field when creating an account.
