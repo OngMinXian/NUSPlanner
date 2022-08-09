@@ -139,7 +139,7 @@ npm i react-circular-progressbar
 npm i react-heatmap-grid
 ```
 :exclamation: **IMPORTANT:** 
-- **Command to install react-bootstrap has not been tested yet, previous one that did not work is: npm install react-bootstrap bootstrap@4.6.0** <br/>
+- **Previous command to install bootstrap (styling did not work) is: npm install react-bootstrap bootstrap@4.6.0** <br/>
 - **bootstrap version must be compatible with react bootstrap version in order for styling to work properly. Visit this [link](https://stackoverflow.com/questions/65472384/react-bootstrap-only-close-button-styling-not-working) for troubleshooting if such an issue is encountered**
 
 5. Within the src folder, install the dependencies for the Firestore database:
@@ -149,6 +149,30 @@ npm i firebase
 6. Create the .env.local file containing the Firebase API keys
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
+  
+## Deployment to Firebase :earth_asia:
+1. Within the nus-planner folder, navigate to the command line and run: 
+``` bash 
+sudo npm install -g firebase-tools 
+npm run build 
+firebase init 
+```
+
+2. Select the option to **configure files for Firebase Hosting and (optionally) set up GitHub Action deploys**
+
+3. Choose these options for the subsequent config options 
+- Please select an option: **Use an existing project** 
+- Select a default Firebase project for this directory: **auth-development-71ec2(NUSPlanner)**
+- What do you want to use as your public directory? **build**
+- Configure as a single-page app (rewrite all urls to /index.html)? **Yes**
+- Set up automatic builds and deploys with GitHub? **No**
+- File build/index.html already exists. Overwrite? **No**
+
+4. Follow up by running 
+```bash 
+firebase deploy 
+```
+
 
 ## Proposed system architecture :label:
 <p align = "center">
