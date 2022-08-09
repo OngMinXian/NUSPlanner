@@ -151,7 +151,7 @@ npm i firebase
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
   
 ## Deployment to Firebase :earth_asia:
-1. Within the nus-planner folder, navigate to the command line and run: 
+1. Within the nusplanner folder, navigate to the command line and run: 
 ``` bash 
 sudo npm install -g firebase-tools 
 npm run build 
