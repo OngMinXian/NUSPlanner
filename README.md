@@ -160,9 +160,9 @@ firebase init
 
 2. Select the option to **configure files for Firebase Hosting and (optionally) set up GitHub Action deploys**
 
-3. Choose these options for the subsequent config options 
+3. Choose these options for the subsequent config options: 
 - Please select an option: **Use an existing project** 
-- Select a default Firebase project for this directory: **auth-development-71ec2(NUSPlanner)**
+- Select a default Firebase project for this directory: **auth-development-71ec2 (NUSPlanner)**
 - What do you want to use as your public directory? **build**
 - Configure as a single-page app (rewrite all urls to /index.html)? **Yes**
 - Set up automatic builds and deploys with GitHub? **No**
