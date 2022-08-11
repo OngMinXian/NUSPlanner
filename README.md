@@ -150,7 +150,88 @@ npm i firebase
   - This file should be created on the same level as the src folder
   - Email Shanice at e0774411@u.nus.edu for details on the Firebase API keys 
   
+## Checkstyle with ESLint :broom:
+
+:exclamation: **IMPORTANT:** 
+- If you are unable to suppress the checkstyle errors from appearing as compilation warnings, it is best to **complete all your changes before downloading ESLint and running checkstyle**
+- To prevent your checkstyle errors from appearing as compilation warnings, one fix could be navigatating to the src folder and running:
+```bash 
+npx eslint components //Checks through all files in the components directory 
+npx eslint components --fix //Rectifies style errors identified from checkstyle 
+```
+each time after changes are made to the file and the file is saved 
+
+<hr></hr>
+
+1. Navigate to the NUSPlanner folder and install ESLint 
+```bash 
+npm install eslint 
+npm install eslint-plugin-unused-imports //Enables ESLint to automatically remove unused imports
+```
+2. Generate the ESLint configuration file 
+```bash 
+npx eslint --init
+```
+
+3. Choose the following options in the subsequent config steps 
+- How would you like to use ESLint? **To check syntax and find problems**
+- What type of modules does your project use? **Javscript modules (import/export)**
+- Which framework does your project use? **React**
+- Does your project use TypeScript? **No**
+- Where does your code run? **Browser**
+- What format do you want your config file to be in? **JSON**
+- Would you like to install (the dependencies required) now? **Yes**
+- Which package manager do you want to use? **npm**
+
+4. Navigate to eslintrc.json and paste the following code 
+```bash 
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "standard"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "unused-imports"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+   "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
+
+```
+
+5. To run ESLint on all code files, execute the following commands 
+```bash 
+cd src
+npx eslint components //Checks through all files in the components directory 
+npx eslint components --fix //Rectifies style errors identified from checkstyle 
+```
+  
 ## Deployment to Firebase :earth_asia:
+
+:exclamation: **IMPORTANT:** 
+- **DO NOT deploy files with an active ESLint config** as the checkstyle errors could be raised as compilation errors when you compile the app into a build folder
+- If the above issue is encountered, **paste all checkstyled files into a separate repository without an active ESLint config,** then try deploying the application again
+
+<hr></hr>
+
 1. Within the nusplanner folder, navigate to the command line and run: 
 ``` bash 
 sudo npm install -g firebase-tools 
