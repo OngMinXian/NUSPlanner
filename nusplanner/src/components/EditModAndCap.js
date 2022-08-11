@@ -1,27 +1,26 @@
 import { React, useState, useEffect } from 'react'
-import { Table, Button, ButtonGroup, Form, Row, Col, InputGroup, Toast, ToastContainer } from "react-bootstrap";
-import { db, auth } from "../firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
-import { BsFillTrashFill } from 'react-icons/bs';
+import { Table, Button, ButtonGroup, Form, Row, Col, InputGroup, Toast, ToastContainer } from 'react-bootstrap'
+import { db, auth } from '../firebase'
+import { doc, getDoc, updateDoc } from 'firebase/firestore'
+import { BsFillTrashFill } from 'react-icons/bs'
 import Select from 'react-select'
-import "./CSS/editgrades.css"
-import { BiErrorCircle } from "react-icons/bi";
-import { GiConfirmed } from "react-icons/gi";
+import './CSS/editgrades.css'
+import { BiErrorCircle } from 'react-icons/bi'
+import { GiConfirmed } from 'react-icons/gi'
 
-export default function EditModAndCap() {
+export default function EditModAndCap () {
+  const userRef = doc(db, 'Users', auth.currentUser.uid)
+  const [noSems, setNoSems] = useState(0)
+  const [currentSem, setCurrentSem] = useState(0)
+  const [allMods, setAllMods] = useState([])
+  const [changed, setChanged] = useState(false)
+  const [updatedMods, setUpdatedMods] = useState([])
+  const [apply, setApply] = useState(false)
+  const [loaded, setLoaded] = useState(false)
+  const [clicked, setClicked] = useState(false)
+  const [tempMods, setTempMods] = useState([])
 
-  const userRef = doc(db, "Users", auth.currentUser.uid);
-  const [noSems, setNoSems] = useState(0);
-  const [currentSem, setCurrentSem] = useState(0);
-  const [allMods, setAllMods] = useState([]);
-  const [changed, setChanged] = useState(false);
-  const [updatedMods, setUpdatedMods] = useState([]);
-  const [apply, setApply] = useState(false);
-  const [loaded, setLoaded] = useState(false);
-  const [clicked, setClicked] = useState(false);
-  const [tempMods, setTempMods] = useState([]);
-
-  //Options for grades select bar 
+  // Options for grades select bar
   const gradeOptions = [
     { value: ' ', label: 'Not taken' },
     { value: 'A+', label: 'A+' },
@@ -35,90 +34,91 @@ export default function EditModAndCap() {
     { value: 'D+', label: 'D+' },
     { value: 'D', label: 'D' },
     { value: 'F', label: 'F' },
-    { value: 'SU', label: 'SU' },
-  ];
+    { value: 'SU', label: 'SU' }
+  ]
 
-  //Retrieve data from Firebase
+  // Retrieve data from Firebase
   const getAllModGrade = async () => {
-    const docu = await getDoc(userRef);
-    setNoSems(docu.data().noOfSems);
-    setCurrentSem(docu.data().lastpage);
-    setAllMods(docu.data().modgradeinfo);
-    setTempMods(docu.data().modgradeinfo);
-    setLoaded(true);
+    const docu = await getDoc(userRef)
+    setNoSems(docu.data().noOfSems)
+    setCurrentSem(docu.data().lastpage)
+    setAllMods(docu.data().modgradeinfo)
+    setTempMods(docu.data().modgradeinfo)
+    setLoaded(true)
   }
 
   useEffect(() => {
-    getAllModGrade();
+    getAllModGrade()
   }, [])
 
-  //Create semester functionality
-  const semPageNumber = [];
+  // Create semester functionality
+  const semPageNumber = []
   for (let i = 1; i <= noSems; i++) {
-    semPageNumber.push(i);
+    semPageNumber.push(i)
   }
 
   const convertNumToSem = (n) => {
-    return "Y" + (Math.ceil(n / 2)) + "S" + ([2, 1][n % 2])
+    return 'Y' + (Math.ceil(n / 2)) + 'S' + ([2, 1][n % 2])
   }
 
   const addSem = async () => {
-    await updateDoc(userRef, { noOfSems: noSems + 1 });
-    window.location.reload(false);
+    await updateDoc(userRef, { noOfSems: noSems + 1 })
+    window.location.reload(false)
   }
 
   const remSem = async () => {
-    await updateDoc(userRef, { noOfSems: noSems - 1 });
-    window.location.reload(false);
+    await updateDoc(userRef, { noOfSems: noSems - 1 })
+    window.location.reload(false)
   }
 
   const handleSelectSem = (n) => {
-    setCurrentSem(n);
-    setClicked(true);
+    setCurrentSem(n)
+    setClicked(true)
   }
 
-  //Create ModGrade functionality
-  const [mods, setMods] = useState([]);
+  // Create ModGrade functionality
+  const [mods, setMods] = useState([])
 
-  //Get the mods for the selected semester
+  // Get the mods for the selected semester
   const getMod = () => {
-    setMods([]);
+    setMods([])
     allMods.map((i) => {
       if (i.sem === currentSem) {
-        setMods(mods => [...mods, i]);
+        setMods(mods => [...mods, i])
       }
     })
   }
 
   const updateLastPage = async () => {
-    await updateDoc(userRef, { lastpage: currentSem });
-    window.location.reload(false);
+    await updateDoc(userRef, { lastpage: currentSem })
+    window.location.reload(false)
   }
 
   const updateModGradeInfo = async () => {
-    await updateDoc(userRef, { modgradeinfo: updatedMods });
-    getAllModGrade();
+    await updateDoc(userRef, { modgradeinfo: updatedMods })
+    getAllModGrade()
   }
 
   const applyModGradeInfo = async () => {
-    await updateDoc(userRef, { modgradeinfo: tempMods });
-    getAllModGrade();
+    await updateDoc(userRef, { modgradeinfo: tempMods })
+    getAllModGrade()
   }
 
   useEffect(() => {
     if (currentSem !== 0 && clicked) {
-      updateLastPage();
+      updateLastPage()
     }
   }, [currentSem])
 
   useEffect(() => {
-    getMod();
+    getMod()
   }, [allMods])
 
   useEffect(() => {
     if (changed) {
-      setChanged(false);
-      updateModGradeInfo();
+      setChanged(false)
+      updateModGradeInfo()
+      window.location.reload(false)
     }
   }, [updatedMods])
 
@@ -128,82 +128,81 @@ export default function EditModAndCap() {
 
   useEffect(() => {
     if (apply) {
-      applyModGradeInfo();
-      setApply(false);
+      applyModGradeInfo()
+      setApply(false)
     }
   }, [apply])
 
-  const [modCode, setModCode] = useState("");
-  const [modGrade, setModGrade] = useState("");
+  const [modCode, setModCode] = useState('')
+  const [modGrade, setModGrade] = useState('')
 
-  //Hooks for checking whether module code and module grade have been input 
-  const [modCodeError, setModCodeError] = useState(false);
-  const [modGradeError, setModGradeError] = useState(false);
+  // Hooks for checking whether module code and module grade have been input
+  const [modCodeError, setModCodeError] = useState(false)
+  const [modGradeError, setModGradeError] = useState(false)
 
-  //Hooks for confirming module has been added 
-  const [confirmAddMod, setConfirmAddMod] = useState(false);
+  // Hooks for confirming module has been added
+  const [confirmAddMod, setConfirmAddMod] = useState(false)
 
-  //Hooks for confirming changes to module
-  const [confirmModChanges, setConfirmModChanges] = useState(false);
+  // Hooks for confirming changes to module
+  const [confirmModChanges, setConfirmModChanges] = useState(false)
 
-  //Add mod
+  // Add mod
   const addMod = (e) => {
     if (modCode.length === 0) {
-      e.preventDefault();
-      setModCodeError(true);
+      e.preventDefault()
+      setModCodeError(true)
       return false
     } else if (modGrade.length === 0) {
-      e.preventDefault();
-      setModGradeError(true);
+      e.preventDefault()
+      setModGradeError(true)
       return false
-    }
-    else {
-      e.preventDefault();
-      setUpdatedMods([]);
-      setUpdatedMods(updatedMods => [...allMods, { sem: currentSem, code: modCode, grade: modGrade }]);
+    } else {
+      e.preventDefault()
+      setUpdatedMods([])
+      setUpdatedMods(updatedMods => [...allMods, { sem: currentSem, code: modCode, grade: modGrade }])
       setConfirmAddMod(true)
-      setChanged(true);
+      setChanged(true)
       setModGrade(null)
-      setModCode("")
+      setModCode('')
     }
-  };
+  }
 
-  //Delete mod
+  // Delete mod
   const delMod = (m) => {
-    setUpdatedMods([]);
+    setUpdatedMods([])
     allMods.map((i) => {
       if (!(i.sem === m.sem &&
         i.code === m.code &&
         i.grade === m.grade)
       ) {
-        setUpdatedMods(updatedMods => [...updatedMods, i]);
+        setUpdatedMods(updatedMods => [...updatedMods, i])
       }
     })
-    setChanged(true);
+    setChanged(true)
   }
 
-  //Edit mod code
+  // Edit mod code
   const updateModCode = (event, s, c, g, ind) => {
-    setTempMods([]);
+    setTempMods([])
     allMods.map((i) => {
       if (!(i.sem === s &&
         i.code === c &&
         i.grade === g)) {
-        setTempMods(tempMods => [...tempMods, i]);
+        setTempMods(tempMods => [...tempMods, i])
       } else {
         setTempMods(tempMods => [...tempMods, { sem: s, code: event.target.value, grade: g }])
       }
     })
   }
 
-  //Edit mod grade
+  // Edit mod grade
   const updateModGrade = (event, s, c, g, ind) => {
-    setTempMods([]);
+    setTempMods([])
     allMods.map((i) => {
       if (!(i.sem === s &&
         i.code === c &&
         i.grade === g)) {
-        setTempMods(tempMods => [...tempMods, i]);
+        setTempMods(tempMods => [...tempMods, i])
       } else {
         setTempMods(tempMods => [...tempMods, { sem: s, code: c, grade: event.label }])
       }
@@ -291,7 +290,7 @@ export default function EditModAndCap() {
               <div className="modCode">
                 <InputGroup className="mb-2">
                   <InputGroup.Text>Module Code</InputGroup.Text>
-                  <Form.Control id="inlineFormInputGroup" value={modCode} onChange={(event) => setModCode(event.target.value)} />
+                  <Form.Control id="inlineFormInputGroup" value={modCode} onChange={(event) => setModCode(event.target.value.toUpperCase())} />
                 </InputGroup>
               </div>
 
@@ -318,7 +317,7 @@ export default function EditModAndCap() {
         <Toast onClose={() => setModCodeError(false)} show={modCodeError} delay={3000} autohide position="top-center" bg="danger">
           <Toast.Header>
             <BiErrorCircle className="me-2" size={20} />
-            <strong className="me-auto" style={{ fontSize: "18px" }}>Error</strong>
+            <strong className="me-auto" style={{ fontSize: '18px' }}>Error</strong>
             <small>now</small>
           </Toast.Header>
           <Toast.Body className="text-white">
@@ -332,7 +331,7 @@ export default function EditModAndCap() {
         <Toast onClose={() => setModGradeError(false)} show={modGradeError} delay={3000} autohide position="top-center" bg="danger">
           <Toast.Header>
             <BiErrorCircle className="me-2" size={20} />
-            <strong className="me-auto" style={{ fontSize: "18px" }}>Error</strong>
+            <strong className="me-auto" style={{ fontSize: '18px' }}>Error</strong>
             <small>now</small>
           </Toast.Header>
           <Toast.Body className="text-white">
@@ -346,7 +345,7 @@ export default function EditModAndCap() {
         <Toast onClose={() => setConfirmAddMod(false)} show={confirmAddMod} delay={3000} autohide position="top-center" bg="success">
           <Toast.Header>
             <GiConfirmed className="me-2" size={20} />
-            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <strong className="me-auto" style={{ fontSize: '18px' }}>Success</strong>
             <small>now</small>
           </Toast.Header>
           <Toast.Body className="text-white">
@@ -360,7 +359,7 @@ export default function EditModAndCap() {
         <Toast onClose={() => setConfirmModChanges(false)} show={confirmModChanges} delay={3000} autohide position="top-center" bg="success">
           <Toast.Header>
             <GiConfirmed className="me-2" size={20} />
-            <strong className="me-auto" style={{ fontSize: "18px" }}>Success</strong>
+            <strong className="me-auto" style={{ fontSize: '18px' }}>Success</strong>
             <small>now</small>
           </Toast.Header>
           <Toast.Body className="text-white">
@@ -368,7 +367,6 @@ export default function EditModAndCap() {
           </Toast.Body>
         </Toast>
       </ToastContainer>
-
 
     </>
   )

@@ -1,60 +1,60 @@
 .loginBG {
-    background-image: url("../../images/background.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
+  background-image: url("../../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
 }
 
 .borderBox {
-    width: 340px;
-    margin-top: 50px;
+  width: 340px;
+  margin-top: 50px;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .logo {
-    height: 100px;
-    width: 80px;
+  height: 100px;
+  width: 80px;
 }
 
 .appName {
-    margin-left: 20px;
-    font-family: Verdana;
+  margin-left: 20px;
+  font-family: Verdana;
 }
 
 .alert {
-    width: 300px;
+  width: 300px;
 }
 
 .emailField {
-    width: 300px;
+  width: 300px;
 }
 
 .pwField {
-    width: 300px;
+  width: 300px;
 }
 
 .signInButton {
-    width: 300px;
-    margin-bottom: 10px;
+  width: 300px;
+  margin-bottom: 10px;
 }
 
 .forgetPW {
-    margin-top: 20px;
-    text-align: center;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .link {
-    color: #a7a7a7;
-    text-decoration: None;
-    font-size: 1.8rem;
+  color: #a7a7a7;
+  text-decoration: None;
+  font-size: 1.8rem;
 }
 
 .signupButton {
-    width: 300px;
+  width: 300px;
 }

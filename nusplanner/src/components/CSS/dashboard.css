@@ -1,138 +1,137 @@
 .veryStressedEmoji {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(222, 49, 99, 1) !important;
-    border-color: rgba(222, 49, 99, 1) !important;
-    margin: auto !important;
-    display: flex !important; 
-    justify-content: center !important;
-    align-items: center !important;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(222, 49, 99, 1) !important;
+  border-color: rgba(222, 49, 99, 1) !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .stressedEmoji {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 127, 80, 1) !important;
-    border-color: rgba(255, 127, 80, 1) !important;
-    margin: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 127, 80, 1) !important;
+  border-color: rgba(255, 127, 80, 1) !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .neutralEmoji {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 191, 0, 1) !important;
-    border-color: rgba(255, 191, 0, 1) !important;
-    margin: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 191, 0, 1) !important;
+  border-color: rgba(255, 191, 0, 1) !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .relaxedEmoji {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(88, 214, 141, 1) !important;
-    border-color: rgba(88, 214, 141, 1) !important;
-    margin: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(88, 214, 141, 1) !important;
+  border-color: rgba(88, 214, 141, 1) !important;
+  margin: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .veryRelaxedEmoji {
-    height: 50px;
-    width: 50px;
-    background-color: rgba(23, 165, 137, 1) !important;
-    border-color: rgba(23, 165, 137, 1) !important;
-    display: flex !important;
-    margin: auto !important;
-    justify-content: center !important;
-    align-items: center !important;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(23, 165, 137, 1) !important;
+  border-color: rgba(23, 165, 137, 1) !important;
+  display: flex !important;
+  margin: auto !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .center-content-horizontally {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .center-horizontally-pad-top {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .text-right-end {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .stress-instructions {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .bg-work {
-    background-color: rgba(85, 255, 127) !important;
+  background-color: rgba(85, 255, 127) !important;
 }
 
 .bg-cca {
-    background-color: rgba(85, 128, 255, 0.8) !important;
+  background-color: rgba(85, 128, 255, 0.8) !important;
 }
 
 .bg-academics {
-    background-color: rgba(255, 85, 213, 0.8) !important;
+  background-color: rgba(255, 85, 213, 0.8) !important;
 }
 
 .bg-others {
-    background-color: rgba(255, 212, 85, 0.8) !important;
+  background-color: rgba(255, 212, 85, 0.8) !important;
 }
 
 .progress-label {
-    float: left;
-    margin-right: 1em;
-
+  float: left;
+  margin-right: 1em;
 }
 
 .full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .prodSpacing {
-    height: 90px;
+  height: 90px;
 }
 
 .prodDropdownSpacing {
-    height: 20px;
+  height: 20px;
 }
 
 .cardSpacing {
-    height: 50px;
+  height: 50px;
 }
 
 .sleepSpacing {
-    height: 100px;
+  height: 100px;
 }
 
 .stressDropdownSpacing {
-    margin-bottom: 20px;;
+  margin-bottom: 20px;
 }
 
 .titleSpacing {
-    height: 30px;
+  height: 30px;
 }
 
 .acadsAndCAP {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .acadsRightSpace {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .sleep-second-row {
-    margin-top: 50px;
+  margin-top: 50px;
 }

@@ -1,68 +1,67 @@
 .tag-label-space {
-    margin-left: 5px;
-    margin-top: 2.5px;
+  margin-left: 5px;
+  margin-top: 2.5px;
 }
 
 .eventInput_ {
-    display: flex;
-    margin-top: 20px;
-    margin-right: 60px;
+  display: flex;
+  margin-top: 20px;
+  margin-right: 60px;
 }
 
 .add-event-main-button {
-    margin-top: 10px;
-    margin-left: auto;
-    height: 40px;
+  margin-top: 10px;
+  margin-left: auto;
+  height: 40px;
 }
 
 .pad-dropdown {
-    margin-top: 10px;
-    margin-left: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .pad-bottom {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .inline-style {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .pad-top-and-bottom {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .flex-display {
-    display: flex;
+  display: flex;
 }
 
 .push-right {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .canvas-delete-button {
-    position: absolute;
-    margin-left: 10px;
+  position: absolute;
+  margin-left: 10px;
 }
 
 .adjust-form-width {
-    width: 45%;
+  width: 45%;
 }
 
 .add-pr-switch {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .wrap-offcanvas-title {
-    width: 250px;
-    white-space: normal;
-    word-break: break-all;
+  width: 250px;
+  white-space: normal;
+  word-break: break-all;
 }
 
 .show-toast {
-    z-index: 2000;
+  z-index: 2000;
 }
- 

@@ -1,25 +1,25 @@
 .bottom-spacing {
-    margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .modCode {
-    margin-bottom: 20px;
-    margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .modGrade {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .addModButton {
-    display: flex;
-    justify-content: center;
-}  
+  display: flex;
+  justify-content: center;
+}
 
 .show-toast {
-    z-index: 2000;
+  z-index: 2000;
 }
 
 .bottom-rectangle {
-    height: 50px;
+  height: 50px;
 }

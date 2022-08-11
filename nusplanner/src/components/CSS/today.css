@@ -1,113 +1,113 @@
 .button-left-space {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .center-content-horizontally {
-    display: flex;
-    justify-content: center;
-} 
+  display: flex;
+  justify-content: center;
+}
 
 .center-and-pad-bottom {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .pad-top-and-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .emotions-div {
-    display: inline-block;
-    margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .emoji-row {
-    display: flex; 
-    justify-content: space-between; 
-    margin:0px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
 }
 
 .emoji-size {
-    font-size: 30px;
-    margin-right: 10px;
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 .emoji-label {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .top-spacing {
-    display: flex; 
-    justify-content: flex-end; 
-    margin-top: 20px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .alert-size {
-    width: 90% !important;
+  width: 90% !important;
 }
 
 .submit-sleep-data {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .flex-display {
-    display: flex;
+  display: flex;
 }
 
 .push-right {
-    margin-left: auto; 
+  margin-left: auto;
 }
 
 .center-heading {
-    display: inline-block;
-    text-align: center;
+  display: inline-block;
+  text-align: center;
 }
 
 .right-space {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .push-multiple-right {
-    display: flex; 
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .bottom-space-small {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .inline-style {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .top-bottom-space {
-    margin-top: 10px; 
-    margin-bottom: 10px;
-}  
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .modal-border {
-    margin: 0px 30px;
+  margin: 0px 30px;
 }
 
 .adjust-form-width-margin {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .adjust-form-width {
-    width : 45%;
+  width: 45%;
 }
 
 .add-pr-switch {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .show-toast {
-    z-index: 2000;
+  z-index: 2000;
 }

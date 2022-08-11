@@ -1,12 +1,22 @@
 import React, { useState, useEffect, useMemo } from 'react'
-import SideBar from "./Sidebar"
-import { doc, getDoc } from "firebase/firestore";
-import { db, auth } from "../firebase";
-import "./CSS/dashboard.css"
-import { Button, Row, Col, Container, Card, OverlayTrigger, Stack, Popover, ProgressBar } from "react-bootstrap"
-import ReactSpeedometer from "react-d3-speedometer"
-import HeatMap from "react-heatmap-grid";
-import Select  from 'react-select'
+import SideBar from './Sidebar'
+import { doc, getDoc } from 'firebase/firestore'
+import { db, auth } from '../firebase'
+import './CSS/dashboard.css'
+import {
+  Button,
+  Row,
+  Col,
+  Container,
+  Card,
+  OverlayTrigger,
+  Stack,
+  Popover,
+  ProgressBar
+} from 'react-bootstrap'
+import ReactSpeedometer from 'react-d3-speedometer'
+import HeatMap from 'react-heatmap-grid'
+import Select from 'react-select'
 import {
   Chart as ChartJS,
   ArcElement,
@@ -19,48 +29,59 @@ import {
   LineElement,
   Filler,
   Tooltip,
-  Legend,
-} from 'chart.js';
-import { PolarArea, Pie, Chart, Bar, Line } from 'react-chartjs-2';
+  Legend
+} from 'chart.js'
+import { PolarArea, Pie, Chart, Bar, Line } from 'react-chartjs-2'
 
+export default function Dashboard () {
+  const tdyDate = new Date()
+  const yr = tdyDate.getFullYear()
+  const mth = tdyDate.getMonth()
+  const date = tdyDate.getDate()
+  const day = tdyDate.getDay()
 
-export default function Dashboard() {
+  const weeks = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
+  const months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+  ]
 
-  const tdyDate = new Date();
-  const yr = tdyDate.getFullYear();
-  const mth = tdyDate.getMonth();
-  const date = tdyDate.getDate();
-  const day = tdyDate.getDay();
-
-  const weeks = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
-  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-  //Get data from Firebase
-  const userRef = doc(db, "Users", auth.currentUser.uid);
-  const [stressData, setStressData] = useState([]);
-  const [sleepData, setSleepData] = useState([]);
-  const [allEvents, setAllEvents] = useState([]);
-  const [allTags, setAllTags] = useState([]);
-  const [loaded, setLoaded] = useState(false);
-  const [noSems, setNoSems] = useState(0);
-  const [allMods, setAllMods] = useState([]);
+  // Get data from Firebase
+  const userRef = doc(db, 'Users', auth.currentUser.uid)
+  const [stressData, setStressData] = useState([])
+  const [sleepData, setSleepData] = useState([])
+  const [allEvents, setAllEvents] = useState([])
+  const [allTags, setAllTags] = useState([])
+  const [loaded, setLoaded] = useState(false)
+  const [noSems, setNoSems] = useState(0)
+  const [allMods, setAllMods] = useState([])
 
   const getAllEvents = async () => {
-    const docu = await getDoc(userRef);
-    setStressData(docu.data().stress);
-    setSleepData(docu.data().sleep);
-    setAllEvents(docu.data().events);
-    setAllTags(docu.data().tags);
-    setNoSems(docu.data().noOfSems);
-    setAllMods(docu.data().modgradeinfo);
-    setLoaded(true);
+    const docu = await getDoc(userRef)
+    setStressData(docu.data().stress)
+    setSleepData(docu.data().sleep)
+    setAllEvents(docu.data().events)
+    setAllTags(docu.data().tags)
+    setNoSems(docu.data().noOfSems)
+    setAllMods(docu.data().modgradeinfo)
+    setLoaded(true)
   }
 
   useEffect(() => {
-    getAllEvents();
+    getAllEvents()
   }, [])
 
-  //chartjs test data
+  // chartjs test data
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -73,20 +94,22 @@ export default function Dashboard() {
     Filler,
     Tooltip,
     Legend
-  );
+  )
 
-  //Calculate average hours
+  // Calculate average hours
   const calcHoursAvg = (dat) => {
-    var sum = 0;
-    dat.forEach(function (i) { sum += i.hours })
-    return (sum / dat.length).toFixed(2);
+    let sum = 0
+    dat.forEach(function (i) {
+      sum += i.hours
+    })
+    return (sum / dat.length).toFixed(2)
   }
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
   // CAP //
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  //Data for CAP and CAP change multitype chart 
+  // Data for CAP and CAP change multitype chart
   const gradesMultitypeOptions = {
     responsive: true,
     animation: {
@@ -94,108 +117,113 @@ export default function Dashboard() {
     },
     plugins: {
       legend: {
-        position: 'top',
+        position: 'top'
       },
       title: {
         display: true,
-        text: 'CAP by Semester and Changes in CAP',
-      },
-    },
-  };
+        text: 'CAP by Semester and Changes in CAP'
+      }
+    }
+  }
 
   const convertNumToSem = (n) => {
-    return "Y" + (Math.ceil(n / 2)) + "S" + ([2, 1][n % 2])
+    return 'Y' + Math.ceil(n / 2) + 'S' + [2, 1][n % 2]
   }
 
   const calcCAP = (arr, s) => {
     const gradeToCAP = {
-      "A+": 5,
-      "A": 5,
-      "A-": 4.5,
-      "B+": 4,
-      "B": 3.5,
-      "B-": 3,
-      "C+": 2.5,
-      "C": 2,
-      "D+": 1.5,
-      "D": 1,
-      "F": 0,
+      'A+': 5,
+      A: 5,
+      'A-': 4.5,
+      'B+': 4,
+      B: 3.5,
+      'B-': 3,
+      'C+': 2.5,
+      C: 2,
+      'D+': 1.5,
+      D: 1,
+      F: 0
     }
-    var res = 0;
-    var count = 0;
+    let res = 0
+    let count = 0
     arr.map((i) => {
-      if ((i.grade !== "SU" && i.grade !== "") && i.sem == s && i.grade !== "Not taken") {
-        count += 1;
-        res += gradeToCAP[i.grade];
+      if (
+        i.grade !== 'SU' &&
+        i.grade !== '' &&
+        i.sem === s &&
+        i.grade !== 'Not taken'
+      ) {
+        count += 1
+        res += gradeToCAP[i.grade]
       }
     })
-    return (res / count).toFixed(2);
+    return (res / count).toFixed(2)
   }
 
   const calcCAPTwo = (arr) => {
     const gradeToCAP = {
-      "A+": 5,
-      "A": 5,
-      "A-": 4.5,
-      "B+": 4,
-      "B": 3.5,
-      "B-": 3,
-      "C+": 2.5,
-      "C": 2,
-      "D+": 1.5,
-      "D": 1,
-      "F": 0,
+      'A+': 5,
+      A: 5,
+      'A-': 4.5,
+      'B+': 4,
+      B: 3.5,
+      'B-': 3,
+      'C+': 2.5,
+      C: 2,
+      'D+': 1.5,
+      D: 1,
+      F: 0
     }
-    var res = 0;
-    var count = 0;
+    let res = 0
+    let count = 0
     arr.map((i) => {
-      if ((i !== "SU" && i !== "" && i !== "Not taken")) {
-        count += 1;
-        res += gradeToCAP[i];
+      if (i !== 'SU' && i !== '' && i !== 'Not taken') {
+        count += 1
+        res += gradeToCAP[i]
       }
     })
-    return (res / count).toFixed(2);
+    return (res / count).toFixed(2)
   }
 
-  const [semArr, setSemArr] = useState([]);
+  const [semArr, setSemArr] = useState([])
   useEffect(() => {
     for (let i = 1; i <= noSems; i++) {
-      setSemArr(semArr => [...semArr, convertNumToSem(i)]);
+      setSemArr((semArr) => [...semArr, convertNumToSem(i)])
     }
   }, [noSems])
 
-  const [capArr, setCapArr] = useState([]);
-  const [changeCapArr, setChangeCapArr] = useState([]);
+  const [capArr, setCapArr] = useState([])
+  const [changeCapArr, setChangeCapArr] = useState([])
 
   const calcOverallCAP = (arr) => {
     const gradeToCAP = {
-      "A+": 5,
-      "A": 5,
-      "A-": 4.5,
-      "B+": 4,
-      "B": 3.5,
-      "B-": 3,
-      "C+": 2.5,
-      "C": 2,
-      "D+": 1.5,
-      "D": 1,
-      "F": 0,
+      'A+': 5,
+      A: 5,
+      'A-': 4.5,
+      'B+': 4,
+      B: 3.5,
+      'B-': 3,
+      'C+': 2.5,
+      C: 2,
+      'D+': 1.5,
+      D: 1,
+      F: 0
     }
-    var res = 0;
-    var count = 0;
+    let res = 0
+    let count = 0
     arr.map((i) => {
-      if ((i.grade !== "SU" && i.grade !== "" && i.grade !== "Not taken")) {
-        count += 1;
-        res += gradeToCAP[i.grade];
+      if (i.grade !== 'SU' && i.grade !== '' && i.grade !== 'Not taken') {
+        count += 1
+        res += gradeToCAP[i.grade]
       }
     })
-    return (res / count).toFixed(2);
+    return (res / count).toFixed(2)
   }
 
   const shortCode = (i) => {
-    const validCode = new RegExp('^[A-Za-z]$');
-    let res = '';
-    i.split("").forEach((j) => {
+    const validCode = new RegExp('^[A-Za-z]$')
+    let res = ''
+    i.split('').forEach((j) => {
       if (validCode.test(j)) {
         res += j
       }
@@ -203,45 +231,47 @@ export default function Dashboard() {
     return res
   }
 
-  const [subCAP, setsubCAP] = useState(0);
+  const [subCAP, setsubCAP] = useState(0)
 
-  const [topFiveCode, settopFiveCode] = useState([]);
-  const [topFiveCAP, settopFiveCAP] = useState([]);
+  const [topFiveCode, settopFiveCode] = useState([])
+  const [topFiveCAP, settopFiveCAP] = useState([])
 
   useEffect(() => {
-
     for (let i = 1; i <= noSems; i++) {
-      setCapArr(capArr => [...capArr, calcCAP(allMods, i)])
+      setCapArr((capArr) => [...capArr, calcCAP(allMods, i)])
     }
 
-    setChangeCapArr([0]);
+    setChangeCapArr([0])
     for (let i = 2; i <= noSems; i++) {
-      setChangeCapArr(changeCapArr => [...changeCapArr, calcCAP(allMods, i) - calcCAP(allMods, i - 1)])
+      setChangeCapArr((changeCapArr) => [
+        ...changeCapArr,
+        calcCAP(allMods, i) - calcCAP(allMods, i - 1)
+      ])
     }
 
-    if (calcOverallCAP(allMods)==="NaN") {
+    if (calcOverallCAP(allMods) === 'NaN') {
       setsubCAP(0)
-    }
-    else {
-      setsubCAP(calcOverallCAP(allMods));
+    } else {
+      setsubCAP(calcOverallCAP(allMods))
     }
 
-    const allCodes = {};
+    const allCodes = {}
     allMods.forEach((i) => {
-      allCodes[shortCode(i.code + "")] = 0;
+      allCodes[shortCode(i.code + '')] = 0
     })
     allMods.forEach((i) => {
-      allCodes[shortCode(i.code + "")] = allCodes[shortCode(i.code + "")] + 1;
+      allCodes[shortCode(i.code + '')] = allCodes[shortCode(i.code + '')] + 1
     })
 
-
-    const allCodesArr = [];
+    const allCodesArr = []
     Object.keys(allCodes).map((k, ind) => {
       allCodesArr.push({ code: k, count: allCodes[k] })
     })
 
-    const sortedallCodesArr = [...allCodesArr].sort((a, b) => a.count > b.count ? -1 : 1,)
-    const topFiveArr = [];
+    const sortedallCodesArr = [...allCodesArr].sort((a, b) =>
+      a.count > b.count ? -1 : 1
+    )
+    const topFiveArr = []
 
     for (let i = 0; i < 5; i++) {
       if (sortedallCodesArr[i] !== undefined) {
@@ -249,9 +279,9 @@ export default function Dashboard() {
       }
     }
 
-    const topFiveCAPArr = [];
+    const topFiveCAPArr = []
     topFiveArr.forEach((i) => {
-      const moodDataArr = [];
+      const moodDataArr = []
       allMods.forEach((m) => {
         if (i === shortCode(m.code)) {
           moodDataArr.push(m.grade)
@@ -262,7 +292,6 @@ export default function Dashboard() {
 
     settopFiveCode(topFiveArr)
     settopFiveCAP(topFiveCAPArr)
-
   }, [allMods])
 
   const [gradesMultitypeData, setgradesMultitypeData] = useState({
@@ -273,16 +302,17 @@ export default function Dashboard() {
         label: 'Change in CAP',
         borderColor: 'rgb(255,85,85)',
         borderWidth: 2,
-        fill: false,
+        fill: false
       },
       {
         type: 'bar',
         label: 'CAP',
         backgroundColor: 'rgba(159, 243, 233, 0.6)',
         borderColor: 'rgb(75, 151, 75)',
-        borderWidth: 2,
-      },]
-  });
+        borderWidth: 2
+      }
+    ]
+  })
 
   useMemo(() => {
     setgradesMultitypeData({
@@ -294,7 +324,7 @@ export default function Dashboard() {
           borderColor: 'rgb(255,85,85)',
           borderWidth: 2,
           fill: false,
-          data: changeCapArr,
+          data: changeCapArr
         },
         {
           type: 'bar',
@@ -302,12 +332,13 @@ export default function Dashboard() {
           backgroundColor: 'rgba(159, 243, 233, 0.6)',
           borderColor: 'rgb(75, 151, 75)',
           data: capArr,
-          borderWidth: 2,
-        },]
+          borderWidth: 2
+        }
+      ]
     })
   }, [capArr])
 
-  //Data for mod grades polar area chart 
+  // Data for mod grades polar area chart
   const gradesPolarOptions = {
     responsive: true,
     animation: {
@@ -315,14 +346,14 @@ export default function Dashboard() {
     },
     plugins: {
       legend: {
-        position: 'top',
+        position: 'top'
       },
       title: {
         display: true,
-        text: 'Average Grades for Top 5 Most Common Module Codes',
-      },
-    },
-  };
+        text: 'Average Grades for Top 5 Most Common Module Codes'
+      }
+    }
+  }
 
   const [gradesPolarData, setgradesPolarData] = useState({
     datasets: [
@@ -333,15 +364,14 @@ export default function Dashboard() {
           'rgba(204, 255, 204, 0.6)',
           'rgba(255, 204, 153, 0.6)',
           'rgba(98, 37, 209, 0.6)',
-          'rgba(255, 0, 191, 0.6)',
+          'rgba(255, 0, 191, 0.6)'
         ],
-        borderWidth: 1,
-      },
-    ],
-  });
+        borderWidth: 1
+      }
+    ]
+  })
 
   useEffect(() => {
-
     setgradesPolarData({
       labels: topFiveCode,
       datasets: [
@@ -353,29 +383,28 @@ export default function Dashboard() {
             'rgba(204, 255, 204, 0.6)',
             'rgba(255, 204, 153, 0.6)',
             'rgba(98, 37, 209, 0.6)',
-            'rgba(255, 0, 191, 0.6)',
+            'rgba(255, 0, 191, 0.6)'
           ],
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     })
-
   }, [topFiveCAP])
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
   // Stress //
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  //Data for mood pie chart 
+  // Data for mood pie chart
 
-
-  //Dropdown options to select mood 
+  // Dropdown options to select mood
   const moodInterval = [
     { value: '1', label: 'Past week' },
     { value: '2', label: 'Past month' },
     { value: '3', label: 'Past 6 months' },
     { value: '4', label: 'Past year' },
-    { value: '5', label: 'All time' }]
+    { value: '5', label: 'All time' }
+  ]
 
   const moodPieOptions = {
     responsive: true,
@@ -384,14 +413,14 @@ export default function Dashboard() {
     },
     plugins: {
       legend: {
-        position: 'top',
+        position: 'top'
       },
       title: {
         display: true,
-        text: 'Breakdown of Stress Levels',
-      },
-    },
-  };
+        text: 'Breakdown of Stress Levels'
+      }
+    }
+  }
 
   const [moodPieData, setmoodPieData] = useState({
     labels: ['Very Stressed', 'Stressed', 'Neutral', 'Relaxed', 'Very Relaxed'],
@@ -403,103 +432,121 @@ export default function Dashboard() {
           'rgba(255, 127, 80 , 1)',
           'rgba(255, 191, 0, 1)',
           'rgba(88, 214, 141 , 1)',
-          'rgba(23, 165, 137 , 1)',
+          'rgba(23, 165, 137 , 1)'
         ],
         borderColor: [
           'rgba(222, 49, 99, 1)',
           'rgba(255, 127, 80 , 1)',
           'rgba(255, 191, 0, 1)',
           'rgba(88, 214, 141 , 1)',
-          'rgba(23, 165, 137 , 1)',
+          'rgba(23, 165, 137 , 1)'
         ],
-        borderWidth: 1,
-      },
+        borderWidth: 1
+      }
     ]
   })
 
   const checkDate = (d, n) => {
-    return new Date(yr, mth, date - n).getTime() <= d.toDate().getTime();
+    return new Date(yr, mth, date - n).getTime() <= d.toDate().getTime()
   }
 
-  const [stressSelect, setstressSelect] = useState("3");
-  const [moodData, setmoodData] = useState([]);
+  const [stressSelect, setstressSelect] = useState('3')
+  const [moodData, setmoodData] = useState([])
 
-  const [oneActivity, setoneActivity] = useState([]);
-  const [twoActivity, settwoActivity] = useState([]);
-  const [threeActivity, setthreeActivity] = useState([]);
-  const [fourActivity, setfourActivity] = useState([]);
-  const [fiveActivity, setfiveActivity] = useState([]);
+  const [oneActivity, setoneActivity] = useState([])
+  const [twoActivity, settwoActivity] = useState([])
+  const [threeActivity, setthreeActivity] = useState([])
+  const [fourActivity, setfourActivity] = useState([])
+  const [fiveActivity, setfiveActivity] = useState([])
 
   const handleSelectStress = (v) => {
-    setstressSelect(v);
+    setstressSelect(v)
   }
 
-  const [xLabels, setxLabels] = useState(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']);
-  const [yLabels, setyLabels] = useState(["Poor", "Ok", "Good"]);
+  const [xLabels, setxLabels] = useState([
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+  ])
+  const [yLabels, setyLabels] = useState(['Poor', 'Ok', 'Good'])
   const moodDatadata = new Array(yLabels.length)
     .fill(0)
     .map(() =>
-      new Array(xLabels.length).fill(0).map(() => Math.floor(Math.random() * 10))
-    );
-  const [data, setData] = useState(moodDatadata);
+      new Array(xLabels.length)
+        .fill(0)
+        .map(() => Math.floor(Math.random() * 10))
+    )
+  const [data, setData] = useState(moodDatadata)
 
   useEffect(() => {
-    let one = 0;
-    let two = 0;
-    let three = 0;
-    let four = 0;
-    let five = 0;
+    let one = 0
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
 
-    setmoodData([]);
+    setmoodData([])
     const stressSelectHelper = [7, 30, 187, 365, 9999]
 
     stressData.forEach((i) => {
       if (checkDate(i.date, stressSelectHelper[parseInt(stressSelect) - 1])) {
         if (i.level === 1) {
-          one += 1;
+          one += 1
         }
         if (i.level === 2) {
-          two += 1;
+          two += 1
         }
         if (i.level === 3) {
-          three += 1;
+          three += 1
         }
         if (i.level === 4) {
-          four += 1;
+          four += 1
         }
         if (i.level === 5) {
-          five += 1;
+          five += 1
         }
       }
     })
-    setmoodData(moodData => [...moodData, one]);
-    setmoodData(moodData => [...moodData, two]);
-    setmoodData(moodData => [...moodData, three]);
-    setmoodData(moodData => [...moodData, four]);
-    setmoodData(moodData => [...moodData, five]);
+    setmoodData((moodData) => [...moodData, one])
+    setmoodData((moodData) => [...moodData, two])
+    setmoodData((moodData) => [...moodData, three])
+    setmoodData((moodData) => [...moodData, four])
+    setmoodData((moodData) => [...moodData, five])
 
     for (let x = 1; x <= 5; x++) {
       const stressCounter = {
-        "Studying": 0,
-        "Work + Intern": 0,
-        "CCA": 0,
-        "Exercising": 0,
-        "Socialising": 0,
-        "Leisure": 0,
-      };
+        Studying: 0,
+        'Work + Intern': 0,
+        CCA: 0,
+        Exercising: 0,
+        Socialising: 0,
+        Leisure: 0
+      }
       stressData.forEach((i) => {
-        if (checkDate(i.date, stressSelectHelper[parseInt(stressSelect) - 1]) && i.level === x) {
+        if (
+          checkDate(i.date, stressSelectHelper[parseInt(stressSelect) - 1]) &&
+          i.level === x
+        ) {
           i.tag.forEach((j) => {
-            stressCounter[j] += 1;
+            stressCounter[j] += 1
           })
         }
       })
-      const valueArr = [];
+      const valueArr = []
       Object.keys(stressCounter).map((k, ind) => {
-        valueArr.push(stressCounter[k]);
+        valueArr.push(stressCounter[k])
       })
       valueArr.sort((a, b) => b - a)
-      const foundTags = [];
+      const foundTags = []
       valueArr.slice(0, 3).forEach((i) => {
         if (i !== 0) {
           Object.keys(stressCounter).map((k, ind) => {
@@ -509,75 +556,87 @@ export default function Dashboard() {
           })
         }
       })
-      if (x === 1) { setoneActivity([...new Set(foundTags)]) }
-      if (x === 2) { settwoActivity([...new Set(foundTags)]) }
-      if (x === 3) { setthreeActivity([...new Set(foundTags)]) }
-      if (x === 4) { setfourActivity([...new Set(foundTags)]) }
-      if (x === 5) { setfiveActivity([...new Set(foundTags)]) }
+      if (x === 1) {
+        setoneActivity([...new Set(foundTags)])
+      }
+      if (x === 2) {
+        settwoActivity([...new Set(foundTags)])
+      }
+      if (x === 3) {
+        setthreeActivity([...new Set(foundTags)])
+      }
+      if (x === 4) {
+        setfourActivity([...new Set(foundTags)])
+      }
+      if (x === 5) {
+        setfiveActivity([...new Set(foundTags)])
+      }
     }
-
   }, [stressSelect])
 
   useEffect(() => {
-    let one = 0;
-    let two = 0;
-    let three = 0;
-    let four = 0;
-    let five = 0;
+    let one = 0
+    let two = 0
+    let three = 0
+    let four = 0
+    let five = 0
 
-    setmoodData([]);
+    setmoodData([])
     const stressSelectHelper = [7, 30, 187, 365, 9999]
 
     stressData.forEach((i) => {
-      if (stressSelect === "3") {
+      if (stressSelect === '3') {
         if (checkDate(i.date, 187)) {
           if (i.level === 1) {
-            one += 1;
+            one += 1
           }
           if (i.level === 2) {
-            two += 1;
+            two += 1
           }
           if (i.level === 3) {
-            three += 1;
+            three += 1
           }
           if (i.level === 4) {
-            four += 1;
+            four += 1
           }
           if (i.level === 5) {
-            five += 1;
+            five += 1
           }
         }
       }
     })
 
-    setmoodData(moodData => [...moodData, one]);
-    setmoodData(moodData => [...moodData, two]);
-    setmoodData(moodData => [...moodData, three]);
-    setmoodData(moodData => [...moodData, four]);
-    setmoodData(moodData => [...moodData, five]);
+    setmoodData((moodData) => [...moodData, one])
+    setmoodData((moodData) => [...moodData, two])
+    setmoodData((moodData) => [...moodData, three])
+    setmoodData((moodData) => [...moodData, four])
+    setmoodData((moodData) => [...moodData, five])
 
     for (let x = 1; x <= 5; x++) {
       const stressCounter = {
-        "Studying": 0,
-        "Work + Intern": 0,
-        "CCA": 0,
-        "Exercising": 0,
-        "Socialising": 0,
-        "Leisure": 0,
-      };
+        Studying: 0,
+        'Work + Intern': 0,
+        CCA: 0,
+        Exercising: 0,
+        Socialising: 0,
+        Leisure: 0
+      }
       stressData.forEach((i) => {
-        if (checkDate(i.date, stressSelectHelper[parseInt(stressSelect) - 1]) && i.level === x) {
+        if (
+          checkDate(i.date, stressSelectHelper[parseInt(stressSelect) - 1]) &&
+          i.level === x
+        ) {
           i.tag.forEach((j) => {
-            stressCounter[j] += 1;
+            stressCounter[j] += 1
           })
         }
       })
-      const valueArr = [];
+      const valueArr = []
       Object.keys(stressCounter).map((k, ind) => {
-        valueArr.push(stressCounter[k]);
+        valueArr.push(stressCounter[k])
       })
       valueArr.sort((a, b) => b - a)
-      const foundTags = [];
+      const foundTags = []
       valueArr.slice(0, 3).forEach((i) => {
         if (i !== 0) {
           Object.keys(stressCounter).map((k, ind) => {
@@ -587,18 +646,33 @@ export default function Dashboard() {
           })
         }
       })
-      if (x === 1) { setoneActivity([...new Set(foundTags)]) }
-      if (x === 2) { settwoActivity([...new Set(foundTags)]) }
-      if (x === 3) { setthreeActivity([...new Set(foundTags)]) }
-      if (x === 4) { setfourActivity([...new Set(foundTags)]) }
-      if (x === 5) { setfiveActivity([...new Set(foundTags)]) }
+      if (x === 1) {
+        setoneActivity([...new Set(foundTags)])
+      }
+      if (x === 2) {
+        settwoActivity([...new Set(foundTags)])
+      }
+      if (x === 3) {
+        setthreeActivity([...new Set(foundTags)])
+      }
+      if (x === 4) {
+        setfourActivity([...new Set(foundTags)])
+      }
+      if (x === 5) {
+        setfiveActivity([...new Set(foundTags)])
+      }
     }
-
   }, [stressData])
 
   useEffect(() => {
     setmoodPieData({
-      labels: ['Very Stressed', 'Stressed', 'Neutral', 'Relaxed', 'Very Relaxed'],
+      labels: [
+        'Very Stressed',
+        'Stressed',
+        'Neutral',
+        'Relaxed',
+        'Very Relaxed'
+      ],
       datasets: [
         {
           label: '%',
@@ -608,23 +682,23 @@ export default function Dashboard() {
             'rgba(255, 127, 80 , 1)',
             'rgba(255, 191, 0, 1)',
             'rgba(88, 214, 141 , 1)',
-            'rgba(23, 165, 137 , 1)',
+            'rgba(23, 165, 137 , 1)'
           ],
           borderColor: [
             'rgba(222, 49, 99, 1)',
             'rgba(255, 127, 80 , 1)',
             'rgba(255, 191, 0, 1)',
             'rgba(88, 214, 141 , 1)',
-            'rgba(23, 165, 137 , 1)',
+            'rgba(23, 165, 137 , 1)'
           ],
-          borderWidth: 1,
-        },
+          borderWidth: 1
+        }
       ]
     })
   })
 
-  //All popovers for mood section here 
-  const [veryStressedPopover, setveryStressedPopover] = useState({});
+  // All popovers for mood section here
+  const [veryStressedPopover, setveryStressedPopover] = useState({})
 
   const [stressedPopover, setstressedPopover] = useState({})
 
@@ -635,7 +709,6 @@ export default function Dashboard() {
   const [veryRelaxedPopover, setveryRelaxedPopover] = useState({})
 
   useEffect(() => {
-
     setveryStressedPopover(
       <Popover id="popover-basic">
         <Popover.Header as="h3">Very Stressed</Popover.Header>
@@ -643,11 +716,8 @@ export default function Dashboard() {
           Associated Activities
           <ol>
             {oneActivity.map((i) => {
-              return (
-                <li>{i}</li>
-              )
-            })
-            }
+              return <li>{i}</li>
+            })}
           </ol>
         </Popover.Body>
       </Popover>
@@ -660,11 +730,8 @@ export default function Dashboard() {
           Associated Activities
           <ol>
             {twoActivity.map((i) => {
-              return (
-                <li>{i}</li>
-              )
-            })
-            }
+              return <li>{i}</li>
+            })}
           </ol>
         </Popover.Body>
       </Popover>
@@ -677,11 +744,8 @@ export default function Dashboard() {
           Associated Activities
           <ol>
             {threeActivity.map((i) => {
-              return (
-                <li>{i}</li>
-              )
-            })
-            }
+              return <li>{i}</li>
+            })}
           </ol>
         </Popover.Body>
       </Popover>
@@ -694,11 +758,8 @@ export default function Dashboard() {
           Associated Activities
           <ol>
             {fourActivity.map((i) => {
-              return (
-                <li>{i}</li>
-              )
-            })
-            }
+              return <li>{i}</li>
+            })}
           </ol>
         </Popover.Body>
       </Popover>
@@ -711,163 +772,178 @@ export default function Dashboard() {
           Associated Activities
           <ol>
             {fiveActivity.map((i) => {
-              return (
-                <li>{i}</li>
-              )
-            })
-            }
+              return <li>{i}</li>
+            })}
           </ol>
         </Popover.Body>
       </Popover>
     )
-
   }, [fiveActivity])
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
   // Productivity //
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
 
-  //All data for activity breakdown (productivity section) here
-
+  // All data for activity breakdown (productivity section) here
 
   const prodActivityOptions = {
     plugins: {
       title: {
         display: true,
-        text: 'Percentage Breakdown of Activities',
-      },
+        text: 'Percentage Breakdown of Activities'
+      }
     },
     animation: {
       duration: 300
     },
     scales: {
       x: {
-        stacked: true,
+        stacked: true
       },
       y: {
-        stacked: true,
-      },
-    },
-  };
+        stacked: true
+      }
+    }
+  }
 
   const [prodActivityData, setprodActivityData] = useState({})
 
-  //Dropdown options for productivity time interval (used in stacked bar chart)
+  // Dropdown options for productivity time interval (used in stacked bar chart)
   const productivityInterval = [
     { value: '1', label: 'Past week' },
     { value: '2', label: 'Past month' },
-    { value: '3', label: 'Past year' }]
+    { value: '3', label: 'Past year' }
+  ]
 
-  const [prodSelect, setprodSelect] = useState("3");
+  const [prodSelect, setprodSelect] = useState('3')
 
-  const [prodLabel, setprodLabel] = useState([]);
+  const [prodLabel, setprodLabel] = useState([])
 
-  const [workProg, setworkProg] = useState(100);
-  const [ccaProg, setccaProg] = useState(100);
-  const [acadProg, setacadProg] = useState(100);
-  const [otherProg, setotherProg] = useState(100);
+  const [workProg, setworkProg] = useState(100)
+  const [ccaProg, setccaProg] = useState(100)
+  const [acadProg, setacadProg] = useState(100)
+  const [otherProg, setotherProg] = useState(100)
 
   const handleProdSelect = (v) => {
-    setprodSelect(v);
+    setprodSelect(v)
   }
 
   const isPresent = (d) => {
-    return d.toDate() <= new Date();
+    return d.toDate() <= new Date()
   }
 
   const diffInMinutes = (d1, d2) => {
-    return Math.abs(d2 - d1) / (1000 * 60);
+    return Math.abs(d2 - d1) / (1000 * 60)
   }
 
   const sameDay = (d1, d2) => {
-    return d1.toDate().getFullYear() === d2.toDate().getFullYear() && d1.toDate().getMonth() === d2.toDate().getMonth() && d1.toDate().getDate() === d2.toDate().getDate();
+    return (
+      d1.toDate().getFullYear() === d2.toDate().getFullYear() &&
+      d1.toDate().getMonth() === d2.toDate().getMonth() &&
+      d1.toDate().getDate() === d2.toDate().getDate()
+    )
   }
 
   useEffect(() => {
     if (prodSelect === '1') {
-      setprodLabel([]);
+      setprodLabel([])
       for (let i = 0; i <= 6; i++) {
-        setprodLabel(prodLabel => [weeks[(7 + (day - i - 1)) % 7], ...prodLabel])
+        setprodLabel((prodLabel) => [
+          weeks[(7 + (day - i - 1)) % 7],
+          ...prodLabel
+        ])
       }
     }
 
     if (prodSelect === '2') {
-      setprodLabel([]);
+      setprodLabel([])
       for (let i = 29; i >= 0; i--) {
         const prodDataDate = new Date(yr, mth, date - i)
-        setprodLabel(prodLabel => [...prodLabel, prodDataDate.getDate() + "/" + (prodDataDate.getMonth() + 1)])
+        setprodLabel((prodLabel) => [
+          ...prodLabel,
+          prodDataDate.getDate() + '/' + (prodDataDate.getMonth() + 1)
+        ])
       }
     }
 
     if (prodSelect === '3') {
-      setprodLabel([]);
+      setprodLabel([])
       for (let i = 11; i >= 0; i--) {
-        setprodLabel(prodLabel => [...prodLabel, months[(12 + (mth - i)) % 12]])
+        setprodLabel((prodLabel) => [
+          ...prodLabel,
+          months[(12 + (mth - i)) % 12]
+        ])
       }
     }
-
   }, [prodSelect])
 
-  const [workData, setworkData] = useState([]);
-  const [CCAData, setCCAData] = useState([]);
-  const [acadData, setacadData] = useState([]);
+  const [workData, setworkData] = useState([])
+  const [CCAData, setCCAData] = useState([])
+  const [acadData, setacadData] = useState([])
 
   useEffect(() => {
-
     const prodSelectHelper = [7, 30, 365]
-    const taskArr = [];
+    const taskArr = []
 
     allEvents.forEach((i) => {
-      if (checkDate(i.start, prodSelectHelper[parseInt(prodSelect) - 1]) && isPresent(i.end) && sameDay(i.start, i.end)) {
-        if (i.category === "Academics" || i.category === "Work" || i.category === "Extracurriculars") {
+      if (
+        checkDate(i.start, prodSelectHelper[parseInt(prodSelect) - 1]) &&
+        isPresent(i.end) &&
+        sameDay(i.start, i.end)
+      ) {
+        if (
+          i.category === 'Academics' ||
+          i.category === 'Work' ||
+          i.category === 'Extracurriculars'
+        ) {
           taskArr.push(i)
         }
       }
     })
 
-    const E0 = [];
-    const E1 = [];
-    const E2 = [];
-    const E3 = [];
-    const E4 = [];
-    const E5 = [];
-    const E6 = [];
-    const E7 = [];
-    const E8 = [];
-    const E9 = [];
-    const E10 = [];
-    const E11 = [];
-    const E12 = [];
-    const E13 = [];
-    const E14 = [];
-    const E15 = [];
-    const E16 = [];
-    const E17 = [];
-    const E18 = [];
-    const E19 = [];
-    const E20 = [];
-    const E21 = [];
-    const E22 = [];
-    const E23 = [];
-    const E24 = [];
-    const E25 = [];
-    const E26 = [];
-    const E27 = [];
-    const E28 = [];
-    const E29 = [];
-    const E30 = [];
-    const EJan = [];
-    const EFeb = [];
-    const EMar = [];
-    const EApr = [];
-    const EMay = [];
-    const EJun = [];
-    const EJul = [];
-    const EAug = [];
-    const ESep = [];
-    const EOct = [];
-    const ENov = [];
-    const EDec = [];
+    const E0 = []
+    const E1 = []
+    const E2 = []
+    const E3 = []
+    const E4 = []
+    const E5 = []
+    const E6 = []
+    const E7 = []
+    const E8 = []
+    const E9 = []
+    const E10 = []
+    const E11 = []
+    const E12 = []
+    const E13 = []
+    const E14 = []
+    const E15 = []
+    const E16 = []
+    const E17 = []
+    const E18 = []
+    const E19 = []
+    const E20 = []
+    const E21 = []
+    const E22 = []
+    const E23 = []
+    const E24 = []
+    const E25 = []
+    const E26 = []
+    const E27 = []
+    const E28 = []
+    const E29 = []
+    const E30 = []
+    const EJan = []
+    const EFeb = []
+    const EMar = []
+    const EApr = []
+    const EMay = []
+    const EJun = []
+    const EJul = []
+    const EAug = []
+    const ESep = []
+    const EOct = []
+    const ENov = []
+    const EDec = []
 
     taskArr.forEach((i) => {
       if (checksDateEqual(i.start, 0)) {
@@ -1001,87 +1077,135 @@ export default function Dashboard() {
       }
     })
 
-    const workDataTemp = [];
-    const CCADataTemp = [];;
-    const acadDataTemp = [];
+    const workDataTemp = []
+    const CCADataTemp = []
+    const acadDataTemp = []
 
     const prodHelper = (dataArr, workArr, CCAArr, acadArr) => {
-      let totalCount = 0;
-      let workCount = 0;
-      let CCACount = 0;
-      let acadCount = 0;
+      let totalCount = 0
+      let workCount = 0
+      let CCACount = 0
+      let acadCount = 0
 
       dataArr.forEach((i) => {
-        totalCount += diffInMinutes(i.start, i.end);
-        if (i.category === "Work" && i.done) {
-          workCount += diffInMinutes(i.start, i.end);
+        totalCount += diffInMinutes(i.start, i.end)
+        if (i.category === 'Work' && i.done) {
+          workCount += diffInMinutes(i.start, i.end)
         }
-        if (i.category === "Extracurriculars" && i.done) {
-          CCACount += diffInMinutes(i.start, i.end);
+        if (i.category === 'Extracurriculars' && i.done) {
+          CCACount += diffInMinutes(i.start, i.end)
         }
-        if (i.category === "Academics" && i.done) {
-          acadCount += diffInMinutes(i.start, i.end);
+        if (i.category === 'Academics' && i.done) {
+          acadCount += diffInMinutes(i.start, i.end)
         }
       })
-      workArr.push(totalCount !== 0 ? (workCount / totalCount) * 100 : 0);
-      CCAArr.push(totalCount !== 0 ? (CCACount / totalCount) * 100 : 0);
-      acadArr.push(totalCount !== 0 ? (acadCount / totalCount) * 100 : 0);
+      workArr.push(totalCount !== 0 ? (workCount / totalCount) * 100 : 0)
+      CCAArr.push(totalCount !== 0 ? (CCACount / totalCount) * 100 : 0)
+      acadArr.push(totalCount !== 0 ? (acadCount / totalCount) * 100 : 0)
     }
 
-    if (prodSelect === "1") {
+    if (prodSelect === '1') {
       [E6, E5, E4, E3, E2, E1, E0].forEach((i) => {
-        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp);
+        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp)
       })
     }
-    if (prodSelect === "2") {
-      [E29, E28, E27, E26, E25, E24, E23, E22, E21, E20,
-        E19, E18, E17, E16, E15, E14, E13, E12, E11, E10,
-        E9, E8, E7, E6, E5, E4, E3, E2, E1, E0].forEach((i) => {
-          prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp);
-        })
+    if (prodSelect === '2') {
+      [
+        E29,
+        E28,
+        E27,
+        E26,
+        E25,
+        E24,
+        E23,
+        E22,
+        E21,
+        E20,
+        E19,
+        E18,
+        E17,
+        E16,
+        E15,
+        E14,
+        E13,
+        E12,
+        E11,
+        E10,
+        E9,
+        E8,
+        E7,
+        E6,
+        E5,
+        E4,
+        E3,
+        E2,
+        E1,
+        E0
+      ].forEach((i) => {
+        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp)
+      })
     }
-    if (prodSelect === "3") {
-      [EDec, ENov, EOct, ESep, EAug, EJul, EJun, EMay, EApr, EMar, EFeb, EJan].forEach((i) => {
-        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp);
+    if (prodSelect === '3') {
+      [
+        EDec,
+        ENov,
+        EOct,
+        ESep,
+        EAug,
+        EJul,
+        EJun,
+        EMay,
+        EApr,
+        EMar,
+        EFeb,
+        EJan
+      ].forEach((i) => {
+        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp)
       })
     }
 
-    setworkData(workDataTemp);
-    setCCAData(CCADataTemp);
-    setacadData(acadDataTemp);
-
+    setworkData(workDataTemp)
+    setCCAData(CCADataTemp)
+    setacadData(acadDataTemp)
   }, [prodLabel])
 
   useEffect(() => {
-
     const prodSelectHelper = [7, 30, 365]
-    const taskArr = [];
+    const taskArr = []
 
     allEvents.forEach((i) => {
-      if (checkDate(i.start, prodSelectHelper[parseInt(prodSelect) - 1]) && isPresent(i.end) && sameDay(i.start, i.end)) {
+      if (
+        checkDate(i.start, prodSelectHelper[parseInt(prodSelect) - 1]) &&
+        isPresent(i.end) &&
+        sameDay(i.start, i.end)
+      ) {
         taskArr.push(i)
       }
     })
 
-    const E0 = [];
-    const EJan = [];
-    const EFeb = [];
-    const EMar = [];
-    const EApr = [];
-    const EMay = [];
-    const EJun = [];
-    const EJul = [];
-    const EAug = [];
-    const ESep = [];
-    const EOct = [];
-    const ENov = [];
-    const EDec = [];
+    const E0 = []
+    const EJan = []
+    const EFeb = []
+    const EMar = []
+    const EApr = []
+    const EMay = []
+    const EJun = []
+    const EJul = []
+    const EAug = []
+    const ESep = []
+    const EOct = []
+    const ENov = []
+    const EDec = []
 
     taskArr.forEach((i) => {
       if (checksDateEqual(i.start, 0)) {
         E0.push(i)
       }
-      if (i.category === "Academics" || i.category === "Work" || i.category === "Extracurriculars") {
+      if (
+        i.category === 'Academics' ||
+        i.category === 'Work' ||
+        i.category === 'Extracurriculars'
+      ) {
         if (checksMonthEqual(i.start, 0)) {
           EJan.push(i)
         }
@@ -1121,86 +1245,108 @@ export default function Dashboard() {
       }
     })
 
-    const workDataTemp = [];
-    const CCADataTemp = [];;
-    const acadDataTemp = [];
+    const workDataTemp = []
+    const CCADataTemp = []
+    const acadDataTemp = []
 
     const prodHelper = (dataArr, workArr, CCAArr, acadArr) => {
-      let totalCount = 0;
-      let workCount = 0;
-      let CCACount = 0;
-      let acadCount = 0;
+      let totalCount = 0
+      let workCount = 0
+      let CCACount = 0
+      let acadCount = 0
 
       dataArr.forEach((i) => {
-        totalCount += diffInMinutes(i.start, i.end);
-        if (i.category === "Work" && i.done) {
-          workCount += diffInMinutes(i.start, i.end);
+        totalCount += diffInMinutes(i.start, i.end)
+        if (i.category === 'Work' && i.done) {
+          workCount += diffInMinutes(i.start, i.end)
         }
-        if (i.category === "Extracurriculars" && i.done) {
-          CCACount += diffInMinutes(i.start, i.end);
+        if (i.category === 'Extracurriculars' && i.done) {
+          CCACount += diffInMinutes(i.start, i.end)
         }
-        if (i.category === "Academics" && i.done) {
-          acadCount += diffInMinutes(i.start, i.end);
+        if (i.category === 'Academics' && i.done) {
+          acadCount += diffInMinutes(i.start, i.end)
         }
       })
-      workArr.push(totalCount !== 0 ? (workCount / totalCount) * 100 : 0);
-      CCAArr.push(totalCount !== 0 ? (CCACount / totalCount) * 100 : 0);
-      acadArr.push(totalCount !== 0 ? (acadCount / totalCount) * 100 : 0);
+      workArr.push(totalCount !== 0 ? (workCount / totalCount) * 100 : 0)
+      CCAArr.push(totalCount !== 0 ? (CCACount / totalCount) * 100 : 0)
+      acadArr.push(totalCount !== 0 ? (acadCount / totalCount) * 100 : 0)
     }
-    if (prodSelect === "3") {
-      [EDec, ENov, EOct, ESep, EAug, EJul, EJun, EMay, EApr, EMar, EFeb, EJan].forEach((i) => {
-        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp);
+    if (prodSelect === '3') {
+      [
+        EDec,
+        ENov,
+        EOct,
+        ESep,
+        EAug,
+        EJul,
+        EJun,
+        EMay,
+        EApr,
+        EMar,
+        EFeb,
+        EJan
+      ].forEach((i) => {
+        prodHelper(i, workDataTemp, CCADataTemp, acadDataTemp)
       })
     }
 
-    setworkData(workDataTemp);
-    setCCAData(CCADataTemp);
-    setacadData(acadDataTemp);
+    setworkData(workDataTemp)
+    setCCAData(CCADataTemp)
+    setacadData(acadDataTemp)
 
-    let workCount = 0;
-    let workTotal = 0;
-    let CCACount = 0;
-    let CCATotal = 0;
-    let acadCount = 0;
-    let acadTotal = 0;
-    let otherCount = 0;
-    let otherTotal = 0;
+    let workCount = 0
+    let workTotal = 0
+    let CCACount = 0
+    let CCATotal = 0
+    let acadCount = 0
+    let acadTotal = 0
+    let otherCount = 0
+    let otherTotal = 0
 
     E0.forEach((i) => {
-      if (i.category === "Work") {
+      if (i.category === 'Work') {
         if (i.done) {
-          workCount += diffInMinutes(i.start, i.end);
+          workCount += diffInMinutes(i.start, i.end)
         }
-        workTotal += diffInMinutes(i.start, i.end);
+        workTotal += diffInMinutes(i.start, i.end)
       }
-      if (i.category === "Extracurriculars") {
+      if (i.category === 'Extracurriculars') {
         if (i.done) {
-          CCACount += diffInMinutes(i.start, i.end);
+          CCACount += diffInMinutes(i.start, i.end)
         }
-        CCATotal += diffInMinutes(i.start, i.end);
+        CCATotal += diffInMinutes(i.start, i.end)
       }
-      if (i.category === "Academics") {
+      if (i.category === 'Academics') {
         if (i.done) {
-          acadCount += diffInMinutes(i.start, i.end);
+          acadCount += diffInMinutes(i.start, i.end)
         }
-        acadTotal += diffInMinutes(i.start, i.end);
+        acadTotal += diffInMinutes(i.start, i.end)
       }
-      if (i.category !== "Work" && i.category !== "Work" && i.category !== "Work") {
+      if (
+        i.category !== 'Work' &&
+        i.category !== 'Work' &&
+        i.category !== 'Work'
+      ) {
         if (i.done) {
-          otherCount += diffInMinutes(i.start, i.end);
+          otherCount += diffInMinutes(i.start, i.end)
         }
-        otherTotal += diffInMinutes(i.start, i.end);
+        otherTotal += diffInMinutes(i.start, i.end)
       }
     })
 
-    setworkProg(workTotal !== 0 ? ((workCount / workTotal) * 100).toFixed(0) : 0);
-    setccaProg(CCATotal !== 0 ? ((CCACount / CCATotal) * 100).toFixed(0) : 0);
-    setacadProg(acadTotal !== 0 ? ((acadCount / acadTotal) * 100).toFixed(0) : 0);
-    setotherProg(otherTotal !== 0 ? ((otherCount / otherTotal) * 100).toFixed(0) : 0);
-
+    setworkProg(
+      workTotal !== 0 ? ((workCount / workTotal) * 100).toFixed(0) : 0
+    )
+    setccaProg(CCATotal !== 0 ? ((CCACount / CCATotal) * 100).toFixed(0) : 0)
+    setacadProg(
+      acadTotal !== 0 ? ((acadCount / acadTotal) * 100).toFixed(0) : 0
+    )
+    setotherProg(
+      otherTotal !== 0 ? ((otherCount / otherTotal) * 100).toFixed(0) : 0
+    )
   }, [allEvents])
 
-  let delayed;
+  let delayed
 
   useMemo(() => {
     setprodActivityData({
@@ -1209,25 +1355,25 @@ export default function Dashboard() {
         {
           label: 'Academics',
           data: acadData,
-          backgroundColor: 'rgba(79, 195, 247 )',
+          backgroundColor: 'rgba(79, 195, 247 )'
         },
         {
           label: 'Work',
           data: workData,
-          backgroundColor: 'rgba(111, 247, 79)',
+          backgroundColor: 'rgba(111, 247, 79)'
         },
         {
           label: 'CCA',
           data: CCAData,
-          backgroundColor: 'rgba(247, 131, 79)',
-        },
-      ],
+          backgroundColor: 'rgba(247, 131, 79)'
+        }
+      ]
     })
   }, [acadData])
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
   // Sleep //
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /// //////////////////////////////////////////////////////////////////////////////////////////////////
 
   const sleepTimeOptions = {
     responsive: true,
@@ -1236,203 +1382,254 @@ export default function Dashboard() {
     },
     plugins: {
       legend: {
-        position: 'top',
+        position: 'top'
       },
       title: {
         display: true,
-        text: 'Sleep Duration',
-      },
-    },
-  };
+        text: 'Sleep Duration'
+      }
+    }
+  }
 
-  //Dropdown for customising display of heatmap and line chart in the sleep quality section 
+  // Dropdown for customising display of heatmap and line chart in the sleep quality section
   const sleepQualityInterval = [
     { value: '1', label: 'Past week' },
     { value: '2', label: 'Past month' },
-    { value: '3', label: 'Past year' }]
+    { value: '3', label: 'Past year' }
+  ]
 
-  const [sleepSelect, setSleepSelect] = useState("3");
+  const [sleepSelect, setSleepSelect] = useState('3')
 
-  const [sleepLabel, setsleepLabel] = useState([]);
-  const [sleepQualityData, setsleepQualityData] = useState([]);
-  const [sleepHoursData, setsleepHoursData] = useState([]);
+  const [sleepLabel, setsleepLabel] = useState([])
+  const [sleepQualityData, setsleepQualityData] = useState([])
+  const [sleepHoursData, setsleepHoursData] = useState([])
 
   const handleSleepSelect = (v) => {
-    setSleepSelect(v);
+    setSleepSelect(v)
   }
 
   const checksDateEqual = (d, n) => {
-    return new Date(yr, mth, date - n).toDateString() === d.toDate().toDateString();
+    return (
+      new Date(yr, mth, date - n).toDateString() === d.toDate().toDateString()
+    )
   }
 
   const checksMonthEqual = (d, n) => {
-    const moodDataDate = new Date(yr, mth - n, date);
-    return moodDataDate.getMonth() === d.toDate().getMonth() && moodDataDate.getFullYear() === d.toDate().getFullYear();
+    const moodDataDate = new Date(yr, mth - n, date)
+    return (
+      moodDataDate.getMonth() === d.toDate().getMonth() &&
+      moodDataDate.getFullYear() === d.toDate().getFullYear()
+    )
   }
 
   useEffect(() => {
-    setsleepQualityData([]);
-    const filteredHours = [];
+    setsleepQualityData([])
+    const filteredHours = []
 
-    const poorArr = [];
-    const okArr = [];
-    const goodArr = [];
+    const poorArr = []
+    const okArr = []
+    const goodArr = []
 
     if (sleepSelect === '1') {
-      setsleepLabel([]);
+      setsleepLabel([])
       for (let i = 0; i <= 6; i++) {
-        setsleepLabel(sleepLabel => [weeks[(7 + (day - i - 1)) % 7], ...sleepLabel])
+        setsleepLabel((sleepLabel) => [
+          weeks[(7 + (day - i - 1)) % 7],
+          ...sleepLabel
+        ])
       }
 
       for (let j = 6; j >= 0; j--) {
-        let found = false;
-        let poor = 0;
-        let ok = 0;
-        let good = 0;
+        let found = false
+        let poor = 0
+        let ok = 0
+        let good = 0
         sleepData.forEach((i) => {
           if (checksDateEqual(i.date, j)) {
-            filteredHours.push(i.hours);
-            found = true;
-            if (i.quality === 1) { poor += 1; }
-            if (i.quality === 2) { ok += 1; }
-            if (i.quality === 3) { good += 1; }
+            filteredHours.push(i.hours)
+            found = true
+            if (i.quality === 1) {
+              poor += 1
+            }
+            if (i.quality === 2) {
+              ok += 1
+            }
+            if (i.quality === 3) {
+              good += 1
+            }
           }
         })
-        if (!found) { filteredHours.push(NaN) }
-        poorArr.push(poor);
-        okArr.push(ok);
-        goodArr.push(good);
+        if (!found) {
+          filteredHours.push(NaN)
+        }
+        poorArr.push(poor)
+        okArr.push(ok)
+        goodArr.push(good)
       }
 
-
-      setsleepHoursData(filteredHours);
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, poorArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, okArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, goodArr])
-
+      setsleepHoursData(filteredHours)
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, poorArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, okArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, goodArr])
     }
 
     if (sleepSelect === '2') {
-      setsleepLabel([]);
+      setsleepLabel([])
       for (let i = 29; i >= 0; i--) {
         if ((i + 1) % 3 === 0) {
           const moodDataDate = new Date(yr, mth, date - i)
-          setsleepLabel(sleepLabel => [...sleepLabel, moodDataDate.getDate() + "/" + (moodDataDate.getMonth() + 1)])
-        }
-        else {
-          setsleepLabel(sleepLabel => [...sleepLabel, ""])
+          setsleepLabel((sleepLabel) => [
+            ...sleepLabel,
+            moodDataDate.getDate() + '/' + (moodDataDate.getMonth() + 1)
+          ])
+        } else {
+          setsleepLabel((sleepLabel) => [...sleepLabel, ''])
         }
       }
 
       for (let j = 29; j >= 0; j--) {
-        let found = false;
-        let poor = 0;
-        let ok = 0;
-        let good = 0;
+        let found = false
+        let poor = 0
+        let ok = 0
+        let good = 0
         sleepData.forEach((i) => {
           if (checksDateEqual(i.date, j)) {
-            filteredHours.push(i.hours);
-            found = true;
-            if (i.quality === 1) { poor += 1; }
-            if (i.quality === 2) { ok += 1; }
-            if (i.quality === 3) { good += 1; }
+            filteredHours.push(i.hours)
+            found = true
+            if (i.quality === 1) {
+              poor += 1
+            }
+            if (i.quality === 2) {
+              ok += 1
+            }
+            if (i.quality === 3) {
+              good += 1
+            }
           }
         })
-        if (!found) { filteredHours.push(NaN) }
-        poorArr.push(poor);
-        okArr.push(ok);
-        goodArr.push(good);
-
+        if (!found) {
+          filteredHours.push(NaN)
+        }
+        poorArr.push(poor)
+        okArr.push(ok)
+        goodArr.push(good)
       }
-      setsleepHoursData(filteredHours);
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, poorArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, okArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, goodArr])
-
+      setsleepHoursData(filteredHours)
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, poorArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, okArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, goodArr])
     }
 
     if (sleepSelect === '3') {
-      setsleepLabel([]);
+      setsleepLabel([])
       for (let i = 11; i >= 0; i--) {
-        setsleepLabel(sleepLabel => [...sleepLabel, months[(12 + (mth - i)) % 12]])
+        setsleepLabel((sleepLabel) => [
+          ...sleepLabel,
+          months[(12 + (mth - i)) % 12]
+        ])
       }
 
       for (let j = 11; j >= 0; j--) {
-        let moodDataSleep = [];
-        let poor = 0;
-        let ok = 0;
-        let good = 0;
+        const moodDataSleep = []
+        let poor = 0
+        let ok = 0
+        let good = 0
         sleepData.forEach((i) => {
           if (checksMonthEqual(i.date, j)) {
-            moodDataSleep.push(i);
-            if (i.quality === 1) { poor += 1; }
-            if (i.quality === 2) { ok += 1; }
-            if (i.quality === 3) { good += 1; }
+            moodDataSleep.push(i)
+            if (i.quality === 1) {
+              poor += 1
+            }
+            if (i.quality === 2) {
+              ok += 1
+            }
+            if (i.quality === 3) {
+              good += 1
+            }
           }
         })
-        filteredHours.push(parseFloat(calcHoursAvg(moodDataSleep)));
-        poorArr.push(poor);
-        okArr.push(ok);
-        goodArr.push(good);
+        filteredHours.push(parseFloat(calcHoursAvg(moodDataSleep)))
+        poorArr.push(poor)
+        okArr.push(ok)
+        goodArr.push(good)
       }
-      setsleepHoursData(filteredHours);
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, poorArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, okArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, goodArr])
-
+      setsleepHoursData(filteredHours)
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, poorArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, okArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, goodArr])
     }
-
   }, [sleepSelect])
 
   useEffect(() => {
-    setsleepQualityData([]);
-    const filteredHours = [];
-    const poorArr = [];
-    const okArr = [];
-    const goodArr = [];
+    setsleepQualityData([])
+    const filteredHours = []
+    const poorArr = []
+    const okArr = []
+    const goodArr = []
 
     if (sleepSelect === '3') {
-      setsleepLabel([]);
+      setsleepLabel([])
       for (let i = 0; i <= 11; i++) {
-        setsleepLabel(sleepLabel => [...sleepLabel, months[(12 + (mth - i)) % 12]])
+        setsleepLabel((sleepLabel) => [
+          ...sleepLabel,
+          months[(12 + (mth - i)) % 12]
+        ])
       }
 
       for (let j = 11; j >= 0; j--) {
-        let moodDataSleep = [];
-        let poor = 0;
-        let ok = 0;
-        let good = 0;
+        const moodDataSleep = []
+        let poor = 0
+        let ok = 0
+        let good = 0
         sleepData.forEach((i) => {
           if (checksMonthEqual(i.date, j)) {
-            moodDataSleep.push(i);
-            if (i.quality === 1) { poor += 1; }
-            if (i.quality === 2) { ok += 1; }
-            if (i.quality === 3) { good += 1; }
+            moodDataSleep.push(i)
+            if (i.quality === 1) {
+              poor += 1
+            }
+            if (i.quality === 2) {
+              ok += 1
+            }
+            if (i.quality === 3) {
+              good += 1
+            }
           }
         })
-        filteredHours.push(parseFloat(calcHoursAvg(moodDataSleep)));
-        poorArr.push(poor);
-        okArr.push(ok);
-        goodArr.push(good);
+        filteredHours.push(parseFloat(calcHoursAvg(moodDataSleep)))
+        poorArr.push(poor)
+        okArr.push(ok)
+        goodArr.push(good)
       }
-      setsleepHoursData(filteredHours);
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, poorArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, okArr])
-      setsleepQualityData(sleepQualityData => [...sleepQualityData, goodArr])
-
+      setsleepHoursData(filteredHours)
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, poorArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, okArr])
+      setsleepQualityData((sleepQualityData) => [...sleepQualityData, goodArr])
     }
   }, [sleepData])
 
   const [sleepTimeData, setsleepTimeData] = useState({
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec'
+    ],
     datasets: [
       {
         fill: true,
         label: 'Average Duration',
         borderColor: 'rgb(255, 51, 153 )',
-        backgroundColor: 'rgba(248, 200, 220,0.3)',
-      },
-    ],
+        backgroundColor: 'rgba(248, 200, 220,0.3)'
+      }
+    ]
   })
 
   useMemo(() => {
@@ -1444,14 +1641,14 @@ export default function Dashboard() {
           label: 'Average Duration',
           data: sleepHoursData,
           borderColor: 'rgb(255, 51, 153 )',
-          backgroundColor: 'rgba(248, 200, 220,0.3)',
-        },
-      ],
+          backgroundColor: 'rgba(248, 200, 220,0.3)'
+        }
+      ]
     })
   }, [sleepHoursData])
 
   useEffect(() => {
-    setxLabels(sleepLabel);
+    setxLabels(sleepLabel)
     setData(sleepQualityData)
   }, [sleepQualityData])
 
@@ -1471,29 +1668,42 @@ export default function Dashboard() {
                   <Card>
                     <Card.Body>
                       <h5>Discover trends in your academic progress</h5>
-                      <em>View an analysis of your CAP, the changes in your CAP, as well as the grades that you can expect for modules taken under your top 5 most commonly occurring module codes</em>
+                      <em>
+                        View an analysis of your CAP, the changes in your CAP,
+                        as well as the grades that you can expect for modules
+                        taken under your top 5 most commonly occurring module
+                        codes
+                      </em>
                     </Card.Body>
                   </Card>
                 </div>
 
                 <ReactSpeedometer
-                  currentValueText='Current CAP: ${value}'
-                  valueTextFontSize='10px'
-                  labelFontSize='10px'
+                  currentValueText="Current CAP: ${value}"
+                  valueTextFontSize="10px"
+                  labelFontSize="10px"
                   minValue={0}
                   maxValue={5}
                   segments={5}
                   value={subCAP}
                   width={170}
-                  height={170} />
+                  height={170}
+                />
               </div>
               <Col sm={8}>
-                <Chart type='bar' data={gradesMultitypeData} options={gradesMultitypeOptions} />
+                <Chart
+                  type="bar"
+                  data={gradesMultitypeData}
+                  options={gradesMultitypeOptions}
+                />
               </Col>
 
               <Col sm={4}>
                 <Row>
-                  <PolarArea data={gradesPolarData} options={gradesPolarOptions} />
+                  <PolarArea
+                    data={gradesPolarData}
+                    options={gradesPolarOptions}
+                  />
                 </Row>
               </Col>
             </Row>
@@ -1507,7 +1717,9 @@ export default function Dashboard() {
         <Card>
           <Card.Body>
             <Row>
-              <div className="text-right-end"><h3>Stress Management</h3></div>
+              <div className="text-right-end">
+                <h3>Stress Management</h3>
+              </div>
 
               <div className="titleSpacing"></div>
 
@@ -1522,12 +1734,19 @@ export default function Dashboard() {
                   <Card>
                     <Card.Body>
                       <div className="stressDropdownSpacing">
-                        <h5>All your stress levels and their associated triggers, analysed</h5>
-                        <em>View patterns in your stress levels here and understand the activities associated with each stress level by hovering your mouse over the emoji buttons</em>
+                        <h5>
+                          All your stress levels and their associated triggers,
+                          analysed
+                        </h5>
+                        <em>
+                          View patterns in your stress levels here and
+                          understand the activities associated with each stress
+                          level by hovering your mouse over the emoji buttons
+                        </em>
                       </div>
 
                       <Select
-                        defaultValue={{ label: "Past 6 months", value: '3' }}
+                        defaultValue={{ label: 'Past 6 months', value: '3' }}
                         options={moodInterval}
                         onChange={(event) => handleSelectStress(event.value)}
                       />
@@ -1535,20 +1754,27 @@ export default function Dashboard() {
                       <div className="center-horizontally-pad-top">
                         <Stack direction="horizontal" gap={5}>
                           <div>
-                            <OverlayTrigger trigger="hover" placement="top" overlay={veryStressedPopover}>
+                            <OverlayTrigger
+                              trigger="hover"
+                              placement="top"
+                              overlay={veryStressedPopover}
+                            >
                               <Button className="veryStressedEmoji">
-                                <div style={{ fontSize: "40px" }}>
+                                <div style={{ fontSize: '40px' }}>
                                   &#128555;
                                 </div>
                               </Button>
                             </OverlayTrigger>
                           </div>
 
-
                           <div>
-                            <OverlayTrigger trigger="hover" placement="bottom" overlay={stressedPopover}>
+                            <OverlayTrigger
+                              trigger="hover"
+                              placement="bottom"
+                              overlay={stressedPopover}
+                            >
                               <Button className="stressedEmoji">
-                                <div style={{ fontSize: "40px" }}>
+                                <div style={{ fontSize: '40px' }}>
                                   &#128531;
                                 </div>
                               </Button>
@@ -1556,9 +1782,13 @@ export default function Dashboard() {
                           </div>
 
                           <div>
-                            <OverlayTrigger trigger="hover" placement="top" overlay={neutralPopover}>
+                            <OverlayTrigger
+                              trigger="hover"
+                              placement="top"
+                              overlay={neutralPopover}
+                            >
                               <Button className="neutralEmoji">
-                                <div style={{ fontSize: "40px" }}>
+                                <div style={{ fontSize: '40px' }}>
                                   &#128528;
                                 </div>
                               </Button>
@@ -1566,10 +1796,13 @@ export default function Dashboard() {
                           </div>
 
                           <div>
-                            <OverlayTrigger trigger="hover" placement="bottom" overlay={relaxedPopover}>
-                              <Button
-                                className="relaxedEmoji">
-                                <div style={{ fontSize: "40px" }}>
+                            <OverlayTrigger
+                              trigger="hover"
+                              placement="bottom"
+                              overlay={relaxedPopover}
+                            >
+                              <Button className="relaxedEmoji">
+                                <div style={{ fontSize: '40px' }}>
                                   &#128524;
                                 </div>
                               </Button>
@@ -1577,11 +1810,13 @@ export default function Dashboard() {
                           </div>
 
                           <div>
-                            <OverlayTrigger trigger="hover" placement="top" overlay={veryRelaxedPopover}>
-                              <Button
-                                className="veryRelaxedEmoji"
-                              >
-                                <div style={{ fontSize: "40px" }}>
+                            <OverlayTrigger
+                              trigger="hover"
+                              placement="top"
+                              overlay={veryRelaxedPopover}
+                            >
+                              <Button className="veryRelaxedEmoji">
+                                <div style={{ fontSize: '40px' }}>
                                   &#128522;
                                 </div>
                               </Button>
@@ -1593,7 +1828,6 @@ export default function Dashboard() {
                   </Card>
                 </div>
               </Col>
-
             </Row>
           </Card.Body>
         </Card>
@@ -1611,7 +1845,10 @@ export default function Dashboard() {
                 <Card>
                   <Card.Body>
                     <h5>Your progress of today's tasks, sorted by category </h5>
-                    <em>Keep working towards a 100% progress bar by completing the tasks that you have planned for today</em>
+                    <em>
+                      Keep working towards a 100% progress bar by completing the
+                      tasks that you have planned for today
+                    </em>
                   </Card.Body>
                 </Card>
               </Col>
@@ -1623,7 +1860,11 @@ export default function Dashboard() {
                       <h6>Work</h6>
                     </td>
                     <td className="full-width">
-                      <ProgressBar variant="work" now={workProg} label={workProg}></ProgressBar>
+                      <ProgressBar
+                        variant="work"
+                        now={workProg}
+                        label={workProg}
+                      ></ProgressBar>
                     </td>
                   </tr>
 
@@ -1631,7 +1872,11 @@ export default function Dashboard() {
                     <h6>CCA</h6>
                   </td>
                   <td className="full-width">
-                    <ProgressBar variant="cca" now={ccaProg} label={ccaProg}></ProgressBar>
+                    <ProgressBar
+                      variant="cca"
+                      now={ccaProg}
+                      label={ccaProg}
+                    ></ProgressBar>
                   </td>
 
                   <tr>
@@ -1639,7 +1884,11 @@ export default function Dashboard() {
                       <h6>Academics&emsp;</h6>
                     </td>
                     <td className="full-width">
-                      <ProgressBar variant="academics" now={acadProg} label={acadProg}></ProgressBar>
+                      <ProgressBar
+                        variant="academics"
+                        now={acadProg}
+                        label={acadProg}
+                      ></ProgressBar>
                     </td>
                   </tr>
 
@@ -1648,7 +1897,11 @@ export default function Dashboard() {
                       <h6>Others</h6>
                     </td>
                     <td className="full-width">
-                      <ProgressBar variant="others" now={otherProg} label={otherProg}></ProgressBar>
+                      <ProgressBar
+                        variant="others"
+                        now={otherProg}
+                        label={otherProg}
+                      ></ProgressBar>
                     </td>
                   </tr>
                 </table>
@@ -1664,15 +1917,20 @@ export default function Dashboard() {
                 <div className="prodSpacing"></div>
                 <Card>
                   <Card.Body>
-                    <h5>The distribution of your time, across 3 important categories</h5>
-                    <em>Select an option in the dropdown below to customise the time frame that the graph spans across</em>
+                    <h5>
+                      The distribution of your time, across 3 important
+                      categories
+                    </h5>
+                    <em>
+                      Select an option in the dropdown below to customise the
+                      time frame that the graph spans across
+                    </em>
 
                     <div className="prodDropdownSpacing"></div>
                     <Select
-                      defaultValue={{ label: "Past year", value: '3' }}
+                      defaultValue={{ label: 'Past year', value: '3' }}
                       options={productivityInterval}
                       onChange={(event) => handleProdSelect(event.value)}
-
                     />
                   </Card.Body>
                 </Card>
@@ -1695,11 +1953,13 @@ export default function Dashboard() {
               yLabelWidth={50}
               data={data}
               cellStyle={(background, value, min, max, data, x, y) => ({
-                background: `rgb(239, 108, 0  , ${1 - (max - value) / (max - min)})`,
-                fontSize: "11.5px",
-                color: "#000",
+                background: `rgb(239, 108, 0  , ${
+                  1 - (max - value) / (max - min)
+                })`,
+                fontSize: '11.5px',
+                color: '#000'
               })}
-              cellRender={value => value && <div>{value}</div>}
+              cellRender={(value) => value && <div>{value}</div>}
             />
 
             <div className="titleSpacing"></div>
@@ -1709,11 +1969,17 @@ export default function Dashboard() {
                   <div className="sleep-second-row">
                     <Card>
                       <Card.Body>
-                        <h5>Your sleep quality, evaluated in categorical and numerical terms</h5>
-                        <em>Select an option in the dropdown below to customise the time frame that both graphs span across</em>
+                        <h5>
+                          Your sleep quality, evaluated in categorical and
+                          numerical terms
+                        </h5>
+                        <em>
+                          Select an option in the dropdown below to customise
+                          the time frame that both graphs span across
+                        </em>
                         <div className="prodDropdownSpacing"></div>
                         <Select
-                          defaultValue={{ label: "Past year", value: '3' }}
+                          defaultValue={{ label: 'Past year', value: '3' }}
                           options={sleepQualityInterval}
                           onChange={(event) => handleSleepSelect(event.value)}
                         />

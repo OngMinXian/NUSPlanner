@@ -1,44 +1,44 @@
 .forgetPWBG {
-    background-image: url("../../images/background.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
+  background-image: url("../../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .logo {
-    height: 100px;
-    width: 80px;
+  height: 100px;
+  width: 80px;
 }
 
 .appName {
-    margin-left: 20px;
-    font-family: Verdana;
+  margin-left: 20px;
+  font-family: Verdana;
 }
 
 .alert {
-    width: 300px;
+  width: 300px;
 }
 
 .emailField {
-    width: 300px;
+  width: 300px;
 }
 
 .resetPWButton {
-    display: block;
-    margin: auto;
-    width: 300px;
-    margin-bottom: 10px;
+  display: block;
+  margin: auto;
+  width: 300px;
+  margin-bottom: 10px;
 }
 
 .signInButton {
-    display: block;
-    margin: auto;
-    width: 300px;
+  display: block;
+  margin: auto;
+  width: 300px;
 }

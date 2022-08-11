@@ -1,40 +1,35 @@
 .display-pic {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 160px;
-    width: 160px;
-    border-width: 1px;
-    border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 160px;
+  width: 160px;
+  border-width: 1px;
+  border-radius: 10px;
 }
 
 .top-spacing {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .file-and-profile-div {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 .file-input {
-    display: inline-block;
+  display: inline-block;
 }
 
 .confirm-image {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .confim-profile-update {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .show-toast {
-    z-index: 2000;
+  z-index: 2000;
 }
-
-
-
-
-
