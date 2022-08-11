@@ -154,7 +154,7 @@ npm i firebase
 
 :exclamation: **IMPORTANT:** 
 - If you are unable to suppress the checkstyle errors from appearing as compilation warnings, it is best to **complete all your changes before downloading ESLint and running checkstyle**
-- To prevent your checkstyle errors from appearing as compilation warnings, one fix could be navigatating to the src folder and running:
+- To prevent your checkstyle errors from appearing as compilation warnings, one fix could be navigating to the src folder and running:
 ```bash 
 npx eslint components //Checks through all files in the components directory 
 npx eslint components --fix //Rectifies style errors identified from checkstyle 
